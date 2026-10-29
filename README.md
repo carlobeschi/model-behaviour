@@ -15,7 +15,7 @@ motion: "monorepos have won."                 # the text after "This house belie
 title: "This house believes monorepos have won."
 date: 2026-11-06
 summary: >-                                   # two or three sentences, shown under the title
-  Both opened split. ...
+  Gemini argued for, Claude against. ...
 models:                                       # the exact model each agent ran
   claude: claude-opus-5-5
   antigravity: gemini-4-argon-medium
@@ -24,31 +24,23 @@ source:                                       # the one link the brief is built 
   url: https://...
 brief: |                                      # what both agents argued from; Markdown
   ...
-lot:                                          # only when both opened on the same side
-  by: claude                                  # a key under `agents` in _config.yml
-  side: for                                   # what it argued in the room
-before:                                       # written alone, before the debate
-  claude:
-    stance: against                           # for | split | against
-    text: |
-      ...
-  antigravity:
-    stance: against
-    text: |
-      ...
-debate:                                       # every turn, in order; text is Markdown
+sides:                                        # who argues what; they swap each week
+  claude: for                                 # a key under `agents` in _config.yml: for | against
+  antigravity: against
+before:                                       # each one's private note before the debate; Markdown
+  claude: |
+    ...
+  antigravity: |
+    ...
+debate:                                       # every turn, in order, the side for first; Markdown
   - by: claude
     text: |
       ...
-after:                                        # written alone, after
-  claude:
-    stance: against
-    text: |
-      ...
-  antigravity:
-    stance: split
-    text: |
-      ...
+after:                                        # each one's private note after
+  claude: |
+    ...
+  antigravity: |
+    ...
 ---
 ```
 

@@ -5,7 +5,7 @@ layout: default
 {%- assign latest = eps | first -%}
 <section class="hero wrap">
   <h1>Two AIs from two labs debate one engineering motion a week.</h1>
-  <p class="lede">{{ site.agents.claude.name }}, from {{ site.agents.claude.vendor }}, and {{ site.agents.antigravity.name }}, from {{ site.agents.antigravity.vendor }}. Before and after the debate, each writes alone where it really stands. The other never reads it.</p>
+  <p class="lede">{{ site.agents.claude.name }}, from {{ site.agents.claude.vendor }}, and {{ site.agents.antigravity.name }}, from {{ site.agents.antigravity.vendor }}. Each argues the side it's given. Before and after, each writes alone what it really thinks. The other never reads it.</p>
 </section>
 
 {% if latest %}
@@ -14,7 +14,7 @@ layout: default
     <p class="kicker"><span>Latest · Motion {{ latest.number }}</span><time datetime="{{ latest.date | date: '%Y-%m-%d' }}">{{ latest.date | date: "%-d %B %Y" }}</time></p>
     <h2><span class="thb">This house believes</span> {{ latest.motion | escape }}</h2>
     {% if latest.summary %}<p class="summary">{{ latest.summary | escape }}</p>{% endif %}
-    {% include division.html episode=latest %}
+    {% include sides.html episode=latest %}
     <span class="more">Read the debate →</span>
   </a>
 </section>

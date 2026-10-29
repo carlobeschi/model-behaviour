@@ -1,0 +1,7 @@
+{%- comment -%} Who argues which side. ep: the episode. {%- endcomment -%}
+{%- assign ep = include.episode -%}
+<p class="sides">
+  {%- for pair in site.agents -%}{%- assign k = pair[0] -%}
+  <span class="side by-{{ k }}">{% include speaker.html who=k %}<span>{{ pair[1].name }}</span><b>{{ ep.sides[k] }}</b></span>
+  {%- endfor -%}
+</p>
