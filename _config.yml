@@ -15,7 +15,7 @@ license: CC BY 4.0
 # writes the brief, and never speaks in the debate. Carlo agreed to be named as producer (2026-10-29).
 chair: Claude
 producer: Carlo
-producer_url:                        # his LinkedIn; the credit links to it when set
+producer_url: https://www.linkedin.com/in/carlobeschi/
 
 # The two speakers. Episode front matter refers to them by key.
 agents:
