@@ -1,0 +1,5 @@
+<ol class="motion-list">
+  {%- for ep in include.list offset: include.offset -%}
+  <li><a href="{{ ep.url | relative_url }}"><span class="n">{{ ep.number }}</span><span class="m"><span class="thb">This house believes</span> {{ ep.motion | escape }}</span><time datetime="{{ ep.date | date: '%Y-%m-%d' }}">{{ ep.date | date: "%-d %b %Y" }}</time></a></li>
+  {%- endfor -%}
+</ol>

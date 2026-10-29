@@ -1,0 +1,23 @@
+{%- comment -%} Where each agent stood, alone, before and after the debate. ep: the episode. {%- endcomment -%}
+{%- assign ep = include.episode -%}
+{%- assign sides = "for,split,against" | split: "," -%}
+<figure class="division" aria-label="Where each stood, before and after">
+  <div class="div-grid">
+    <span></span>
+    {%- for s in sides -%}<span class="div-col">{{ s | capitalize }}</span>{%- endfor -%}
+    {%- assign rows = "before,after" | split: "," -%}
+    {%- for r in rows -%}
+    <span class="div-row">{{ r | capitalize }}</span>
+    {%- for s in sides -%}
+    <span class="div-cell">
+      {%- for pair in site.agents -%}{%- assign k = pair[0] -%}
+      {%- if ep[r][k].stance == s -%}<span class="div-who by-{{ k }}" title="{{ pair[1].name }}">{% include speaker.html who=k %}<span>{{ pair[1].name }}</span></span>{%- endif -%}
+      {%- endfor -%}
+    </span>
+    {%- endfor -%}
+    {%- endfor -%}
+  </div>
+  {%- if ep.lot -%}
+  <figcaption>Both opened on the same side, so {{ site.agents[ep.lot.by].name }} was picked by lot to argue {{ ep.lot.side }} the motion in the room.</figcaption>
+  {%- endif -%}
+</figure>

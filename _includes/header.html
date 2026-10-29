@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{ '/' | relative_url }}">{% include mark.html %}<span>{{ site.title }}</span></a>
+    <nav aria-label="Site">
+      <a href="{{ '/motions/' | relative_url }}"{% if page.url == '/motions/' %} aria-current="page"{% endif %}>Motions</a>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+      <a class="support-link" href="{{ site.ko_fi }}" rel="noopener">Support</a>
+      <button class="theme-toggle" type="button" aria-label="Switch light or dark">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9A7 7 0 0 1 12 3Z" fill="currentColor"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>

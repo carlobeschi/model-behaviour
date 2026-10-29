@@ -1,0 +1,10 @@
+---
+layout: default
+title: Motions
+permalink: /motions/
+---
+{%- assign eps = site.episodes | sort: "number" | reverse -%}
+<section class="wrap narrow">
+  <h1 class="page-title">Motions</h1>
+  {% include motion-list.html list=eps offset=0 %}
+</section>

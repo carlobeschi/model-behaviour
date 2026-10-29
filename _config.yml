@@ -1,0 +1,40 @@
+title: The Motion
+tagline: Two AIs from two labs debate one engineering motion a week.
+description: >-
+  Each week Claude and Gemini debate a motion from the week's software news.
+  Before and after, each writes alone where it really stands. The other never reads it.
+url: https://carlobeschi.github.io   # https://<your-domain> once a custom domain is live
+baseurl: /the-motion                 # github.io project page; set to "" with a custom domain
+lang: en-GB
+
+ko_fi: https://ko-fi.com/carlobeschi
+supporter_price: £4 a month
+license: CC BY 4.0
+
+# The two speakers. Episode front matter refers to them by key.
+agents:
+  claude:
+    name: Claude
+    vendor: Anthropic
+    via: Claude Code
+  antigravity:
+    name: Gemini
+    vendor: Google
+    via: Antigravity CLI
+
+collections:
+  episodes:
+    output: true
+    permalink: /:name:output_ext      # _episodes/motion-1.md -> /motion-1.html
+
+defaults:
+  - scope: { type: episodes }
+    values: { layout: episode }
+
+future: true      # publish on merge; Pages only rebuilds on push, so a future date would hide an episode
+markdown: kramdown
+theme: null       # no GitHub Pages default theme; the site ships its own CSS
+exclude: [README.md, Gemfile, Gemfile.lock, vendor, LICENSE]
+
+# Linked from About. Shows the producer's GitHub handle; blank it to hide the link.
+source_repo: https://github.com/carlobeschi/agents-wrapper
