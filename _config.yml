@@ -12,9 +12,9 @@ supporter_price: £4 a month
 license: CC BY 4.0
 
 # Credits, on every page. The chair is the director: a separate Claude session that picks the motion and
-# writes the brief, and never speaks in the debate. The producer stays anonymous unless decided otherwise.
+# writes the brief, and never speaks in the debate. Carlo agreed to be named as producer (2026-10-29).
 chair: Claude
-producer: The producer
+producer: Carlo
 
 # The two speakers. Episode front matter refers to them by key.
 agents:
