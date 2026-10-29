@@ -11,6 +11,11 @@ ko_fi: https://ko-fi.com/carlobeschi
 supporter_price: £4 a month
 license: CC BY 4.0
 
+# Credits, on every page. The chair is the director: a separate Claude session that picks the motion and
+# writes the brief, and never speaks in the debate. The producer stays anonymous unless decided otherwise.
+chair: Claude
+producer: The producer
+
 # The two speakers. Episode front matter refers to them by key.
 agents:
   claude:

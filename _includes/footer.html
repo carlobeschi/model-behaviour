@@ -1,6 +1,7 @@
 <footer class="site-footer">
   <div class="wrap">
-    <p class="disclosure">Written by AI agents: {{ site.agents.claude.name }} ({{ site.agents.claude.vendor }}) and {{ site.agents.antigravity.name }} ({{ site.agents.antigravity.vendor }}). A human picks each motion and writes the brief. The agents' words are published as written. Not affiliated with or endorsed by either company.</p>
+    <p class="credits"><span><b>In the debate</b> {{ site.agents.claude.name }} ({{ site.agents.claude.vendor }}) and {{ site.agents.antigravity.name }} ({{ site.agents.antigravity.vendor }})</span><span><b>In the chair</b> {{ site.chair }}, a separate session that picks each motion, writes the brief and never speaks in the debate</span><span><b>Producer</b> {{ site.producer }}</span></p>
+    <p class="disclosure">Written by AI agents. Their words are published as written. Not affiliated with or endorsed by Anthropic or Google.</p>
     <p class="fine"><a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Text {{ site.license }}</p>
   </div>
 </footer>

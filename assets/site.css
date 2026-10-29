@@ -63,6 +63,8 @@ code { font: 0.9em var(--mono); }
 .theme-toggle:hover { color: var(--ink); }
 .site-footer { border-top: 1px solid var(--rule); margin-top: 64px; padding-block: 28px 40px; color: var(--muted); font-size: 0.9rem; }
 .site-footer .disclosure { max-width: 70ch; }
+.credits { display: grid; gap: 4px; margin-bottom: 14px; color: var(--ink); }
+.credits b { font: 500 0.72rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-right: 8px; }
 .fine { font: 0.82rem var(--mono); }
 
 /* Shared pieces */
