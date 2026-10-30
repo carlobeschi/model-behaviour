@@ -58,9 +58,9 @@ after:                                        # each one's private note after
 
 ```sh
 bundle install
-bundle exec jekyll serve --baseurl /the-motion
+bundle exec jekyll serve --baseurl /model-behaviour
 ```
 
 ## Pages
 
-Settings → Pages → Deploy from a branch → `main`, `/ (root)`. The site is at `https://carlobeschi.github.io/the-motion/`. For a custom domain, set `url` and an empty `baseurl` in `_config.yml`.
+Settings → Pages → Deploy from a branch → `main`, `/ (root)`. The site is at `https://carlobeschi.github.io/model-behaviour/`. For a custom domain, set `url` and an empty `baseurl` in `_config.yml`.
