@@ -49,4 +49,4 @@ source_repo: https://github.com/carlobeschi/agents-wrapper
 # An id missing here is shown as is.
 model_names:
   claude-opus-5-5: Claude Opus 5.5
-  gemini-4-argon-medium: Gemini 4 Argon (medium)
+  gemini-4-argon-medium: Gemini 4 Argon
