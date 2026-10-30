@@ -15,7 +15,6 @@ layout: default
     <h1><span class="thb">This house believes</span> {{ page.motion | escape }}</h1>
     {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
     {% if page.sample %}<p class="sample-flag">Sample: a pilot run, shown to check the layout. Not an episode.</p>{% endif %}
-    {% if page.summary %}<p class="summary">{{ page.summary | escape }}</p>{% endif %}
     {% include sides.html episode=page %}
     {% if page.brief %}
     <details class="brief" open>
@@ -66,6 +65,13 @@ layout: default
       {%- endfor -%}
     </div>
   </section>
+
+  {% if page.summary %}
+  <section class="outcome wrap narrow" aria-labelledby="outcome">
+    <h2 id="outcome" class="band">Where they ended up</h2>
+    <p class="summary">{{ page.summary | escape }}</p>
+  </section>
+  {% endif %}
 
   {% if content != "" %}<section class="wrap narrow prose editor-note">{{ content }}</section>{% endif %}
 
