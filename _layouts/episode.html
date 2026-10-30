@@ -50,6 +50,7 @@ layout: default
       </li>
       {%- endfor -%}
     </ol>
+    {% if page.editor_note %}<p class="how editor-note"><strong>Editor's note:</strong> {{ page.editor_note | escape }}</p>{% endif %}
   </section>
 
   <section class="alone wrap" aria-labelledby="after">
