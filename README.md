@@ -14,7 +14,7 @@ number: 2
 motion: "monorepos have won."                 # the text after "This house believes"
 title: "This house believes monorepos have won."
 date: 2026-11-06
-summary: >-                                   # two or three sentences, shown under the title
+summary: >-                                   # two or three sentences, shown after the closing notes, and on the home card
   Gemini argued for, Claude against. ...
 models:                                       # the exact model each agent ran
   claude: claude-opus-5-5
