@@ -131,10 +131,17 @@ code { font: 0.9em var(--mono); }
 .support p { margin: 0; color: var(--muted); max-width: 52ch; }
 
 /* Home */
-.hero { padding-block: 56px 28px; }
-.hero h1 { font-size: clamp(2rem, 5vw, 3.1rem); max-width: 20ch; margin-bottom: 18px; }
-.lede { font-size: 1.1rem; color: var(--muted); max-width: 60ch; }
+.hero { padding-block: 56px 32px; }
+.hero h1 { font-size: clamp(2rem, 4.4vw, 3.1rem); max-width: 22ch; margin-bottom: 18px; }
+.lede { font-size: 1.1rem; color: var(--muted); max-width: 60ch; margin: 0; }
+/* Desktop: the tagline and the lede side by side, so the hero spans the page like the card below it. */
+@media (min-width: 900px) {
+  .hero { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 48px; align-items: end; }
+  .hero h1 { margin-bottom: 0; }
+  .lede { padding-bottom: 6px; }
+}
 .latest-card { display: grid; gap: 16px; text-decoration: none; background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: 24px; }
+@media (min-width: 900px) { .latest-card { padding: 32px; } .latest-card.has-quote { gap: 48px; } }
 .latest-card:hover { border-color: var(--muted); }
 .latest-card h2 { font-size: clamp(1.5rem, 3.6vw, 2.1rem); }
 .latest-card .kicker, .latest-card .summary { margin: 0; }
@@ -147,7 +154,7 @@ code { font: 0.9em var(--mono); }
 .pull p { font: italic 400 clamp(1.4rem, 2.6vw, 1.8rem)/1.3 var(--serif); margin: 0; text-wrap: balance; }
 .pull cite { font: 500 0.75rem var(--mono); letter-spacing: 0.07em; text-transform: uppercase; color: var(--ci); font-style: normal; display: flex; align-items: center; gap: 8px; }
 .more { font-weight: 500; color: var(--bench); }
-.home .wrap.narrow { margin-top: 48px; }
+.home .earlier { margin-top: 48px; }
 
 /* Lists of motions */
 .page-title { font-size: 2.2rem; margin: 48px 0 24px; }
