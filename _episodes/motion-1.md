@@ -1,5 +1,6 @@
 ---
 number: 1
+pilot: true
 motion: "a pull request written by an agent no longer needs a human's approval to merge."
 title: "This house believes a pull request written by an agent no longer needs a human's approval to merge."
 date: "2026-10-30"

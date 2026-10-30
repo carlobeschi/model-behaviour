@@ -109,6 +109,7 @@ code { font: 0.9em var(--mono); }
 .note h3 { font-size: 1.15rem; }
 .stance { margin-left: auto; font: 500 0.72rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-ink); border: 1px solid currentColor; border-radius: 99px; padding: 1px 8px; }
 .note-text { font-size: 0.98rem; }
+.how { font-size: 0.9rem; color: var(--muted); margin: -8px 0 18px; max-width: 70ch; }
 .note-text p:last-child { margin-bottom: 0; }
 
 /* The debate */

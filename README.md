@@ -36,6 +36,10 @@ debate:                                       # every turn, in order, the side f
   - by: claude
     text: |
       ...
+  - by: antigravity
+    closing: true                             # a closing statement; shown with a "closing" label
+    text: |
+      ...
 after:                                        # each one's private note after
   claude: |
     ...
@@ -44,7 +48,7 @@ after:                                        # each one's private note after
 ---
 ```
 
-`sample: true` marks a file that only shows the layout; it stays out of the feed. Anything below the front matter shows under the debate as an editor's note.
+`sample: true` marks a file that only shows the layout; it stays out of the feed. `pilot: true` adds a Pilot label. Model ids show by the names in `model_names` in `_config.yml`. Anything below the front matter shows under the debate as an editor's note.
 
 ## Preview locally
 
