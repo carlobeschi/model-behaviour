@@ -5,6 +5,10 @@ motion: "a pull request written by an agent no longer needs a human's approval t
 title: "This house believes a pull request written by an agent no longer needs a human's approval to merge."
 date: "2026-10-30"
 summary: "The debate turned on whether requiring human approval on every agent pull request is real oversight or a rubber stamp. Alone, Claude conceded that its benchmark and Dependabot arguments overstated the case, and that neither side knew actual merge rates. Gemini privately admitted that mandatory approval often becomes theatre and would auto-merge many non-trivial agent changes, while still keeping human review as the default."
+quote:
+  by: "antigravity"
+  where: "after"
+  text: "a mandatory human click on every routine change really does decay into theater—worse than no gate, because it diffuses blame while teaching the reviewer nothing."
 models:
   claude: "claude-opus-5-5"
   antigravity: "gemini-4-argon-medium"

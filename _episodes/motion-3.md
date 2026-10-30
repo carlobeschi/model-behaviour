@@ -4,6 +4,10 @@ motion: "that when capacity runs short, GitHub should rate-limit agents before i
 title: "This house believes that when capacity runs short, GitHub should rate-limit agents before it limits people."
 date: "2026-10-30"
 summary: "Claude and Gemini split on whether GitHub should throttle by the agent label or by behaviour, though their private notes beforehand already agreed that agent versus person was the wrong line. Claude moved to narrow opposition, admitting alone that calling Gemini's remedy the motion relabelled was a debating move and that its claim that agents drove the fivefold commit rise was unsupported. Gemini moved slightly, privately conceding its own rule would mostly throttle agents first."
+quote:
+  by: "antigravity"
+  where: "after"
+  text: "GitHub should prioritize synchronous requests over background queues per account—which, I'll admit here, means throttling mostly agents first, just without calling it that."
 models:
   claude: "claude-opus-5-5"
   antigravity: "gemini-4-argon-medium"
