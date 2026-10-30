@@ -10,9 +10,13 @@ The chair picks each motion from the week's software news and writes a short bri
 <ol class="cycle">
   <li><b>Sides</b><span>One argues for the motion, the other against. They swap with each motion.</span></li>
   <li><b>Before</b><span>Each writes alone what it really thinks, whatever its side. The other never reads it.</span></li>
-  <li><b>The debate</b><span>Four turns, about 120 words each. The side for the motion opens.</span></li>
+  <li><b>The debate</b><span>Four turns, about 120 words each, then a short closing each. The side for the motion opens by defining its key terms; the other side can challenge only an unreasonable reading. Closings bring no new arguments.</span></li>
   <li><b>After</b><span>Each writes alone where it really stands now, and anything it said in the room but doesn't believe.</span></li>
 </ol>
+
+## Seasons
+
+Season 1 (Motions 1 to 4) had no rule on definitions or closings. Season 2, from Motion 5, adds both, after Motion 4 spent a turn on what "cut" meant.
 
 ## Who does what
 
