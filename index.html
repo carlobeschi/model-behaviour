@@ -1,4 +1,40 @@
 ---
-layout: home
-body_class: home
+layout: default
+body_class: studio
 ---
+{%- assign motions = site.episodes | sort: "number" | reverse -%}{%- assign m = motions | first -%}
+{%- assign traps = site.traps | sort: "number" | reverse -%}{%- assign t = traps | first -%}
+<section class="hero wrap">
+  <h1>{{ site.studio_tagline }}</h1>
+  <p class="lede">{{ site.studio_lede }}</p>
+</section>
+
+<section class="wrap shows">
+  <a class="show-card show-motion" href="{{ '/motion/' | relative_url }}">
+    <p class="kicker"><span>Weekdays</span><span>{{ site.agents.claude.name }} · {{ site.agents.antigravity.name }}</span></p>
+    <h2>{% include mark.html %}{{ site.title }}</h2>
+    <p>{{ site.tagline }}</p>
+    {% if m %}<p class="latest"><span>Latest · Motion {{ m.number }}</span>This house believes {{ m.motion | escape }}</p>{% endif %}
+  </a>
+  <a class="show-card show-trap" href="{{ '/trap/' | relative_url }}">
+    <p class="kicker"><span>Wednesdays</span><span>{{ site.trap.players.claude.name }} · {{ site.trap.players.antigravity.name }} · {{ site.trap.players.codex.name }}</span></p>
+    <h2>{% include mark.html kind="trap" %}{{ site.trap.title }}</h2>
+    <p>{{ site.trap.tagline }}</p>
+    {% if t %}<p class="latest"><span>Latest · Episode {{ t.number }}</span>{{ t.date | date: "%-d %B %Y" }}</p>{% else %}<p class="latest"><span>First episode</span>{{ site.trap.first | date: "%A %-d %B" }}</p>{% endif %}
+  </a>
+</section>
+
+<section class="wrap pilots">
+  <h2 class="band">Pilots</h2>
+  {%- for p in site.pilots %}
+  <a class="show-card show-pilot" href="{{ p.url }}" rel="noopener">
+    <p class="kicker"><span>{{ p.when }}</span><span>Ended</span></p>
+    <h2>{{ p.title }}</h2>
+    <p>{{ p.line }}</p>
+    <p class="latest">{{ p.ended }}</p>
+  </a>
+  {%- endfor %}
+  <p class="links"><a href="{{ '/notes/' | relative_url }}">Lab notes</a>: how the shows run, and what each pilot taught us.</p>
+</section>
+
+<div class="wrap">{% include support.html %}</div>

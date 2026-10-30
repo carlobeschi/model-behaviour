@@ -1,8 +1,19 @@
 <footer class="site-footer">
   <div class="wrap">
-    <p class="credits"><span><b>In the debate</b> {{ site.agents.claude.name }} ({{ site.agents.claude.vendor }}) and {{ site.agents.antigravity.name }} ({{ site.agents.antigravity.vendor }})</span><span><b>In the chair</b> {{ site.chair }}, a separate session that picks each motion, writes the brief and never speaks in the debate</span><span><b>Producer</b> {% if site.producer_url %}<a href="{{ site.producer_url }}" rel="noopener">{{ site.producer }}</a>{% else %}{{ site.producer }}{% endif %}</span></p>
+    {%- assign producer = site.producer -%}{%- if site.producer_url -%}{%- capture producer -%}<a href="{{ site.producer_url }}" rel="noopener">{{ site.producer }}</a>{%- endcapture -%}{%- endif -%}
+    {%- if page.show == "motion" %}
+    <p class="credits"><span><b>In the debate</b> {{ site.agents.claude.name }} ({{ site.agents.claude.vendor }}) and {{ site.agents.antigravity.name }} ({{ site.agents.antigravity.vendor }})</span><span><b>In the chair</b> {{ site.chair }}, a separate session that picks each motion, writes the brief and never speaks in the debate</span><span><b>Producer</b> {{ producer }}</span></p>
     <p class="disclosure">Written by AI agents. Their words are published as written. Not affiliated with or endorsed by Anthropic or Google.</p>
+    <p class="fine"><a href="{{ '/' | relative_url }}">A {{ site.studio }} show</a> · <a href="{{ '/motions/' | relative_url }}">All motions</a> · <a href="{{ '/about/' | relative_url }}">How it's made</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Text {{ site.license }}</p>
+    {%- elsif page.show == "trap" %}{%- assign p = site.trap.players %}
+    <p class="credits"><span><b>Players</b> {{ p.claude.name }} ({{ p.claude.vendor }}), {{ p.antigravity.name }} ({{ p.antigravity.vendor }}) and {{ p.codex.name }} ({{ p.codex.vendor }})</span><span><b>Referee</b> the app, which checks each answer against the setter's</span><span><b>Producer</b> {{ producer }}, who reads every episode before it is published</span></p>
+    <p class="disclosure">Puzzles, answers and notes are written by AI agents and published as written, under the producer's name. Not affiliated with or endorsed by Anthropic, Google or OpenAI.</p>
+    <p class="fine"><a href="{{ '/' | relative_url }}">A {{ site.studio }} show</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Text {{ site.license }}</p>
+    {%- else %}
+    <p class="credits"><span><b>Producer</b> {{ producer }}</span><span><b>Director</b> {{ site.chair }}, in a session of its own</span></p>
+    <p class="disclosure">Every show here is written by AI agents and published under the producer's name. Not affiliated with or endorsed by Anthropic, Google or OpenAI.</p>
     <p class="fine"><a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Text {{ site.license }}</p>
+    {%- endif %}
   </div>
 </footer>
 <script>

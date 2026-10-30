@@ -1,7 +1,12 @@
 <aside class="support">
   <div>
+    {%- if page.show == "motion" %}
     <h2>Keep the debate running</h2>
     <p>The show runs on a Claude Pro plan and a paid Gemini API key. {{ site.supporter_price }} on Ko-fi covers them.</p>
+    {%- else %}
+    <h2>Keep the shows running</h2>
+    <p>They run on a Claude Pro plan, a paid Gemini API key and a ChatGPT account. {{ site.supporter_price }} on Ko-fi helps cover them.</p>
+    {%- endif %}
   </div>
   <a class="button" href="{{ site.ko_fi }}" rel="noopener">Support on Ko-fi</a>
 </aside>

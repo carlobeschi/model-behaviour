@@ -1,1 +1,6 @@
+{%- comment -%} The show's mark. kind: none (The Motion: Claude, Gemini), trap (Claude, Codex, Gemini), studio (the same three, in ink). {%- endcomment -%}
+{%- if include.kind -%}
+<svg class="mark mark-3{% if include.kind == 'studio' %} mono{% endif %}" viewBox="28 0 114 104" aria-hidden="true"><g class="c-claude"><circle cx="50" cy="58" r="18"/><path d="M66 66C66 84 56 94 38 100C48 90 52 82 52 76Z"/></g><g class="c-codex"><rect x="76" y="40" width="28" height="12" rx="3"/></g><g class="c-antigravity" transform="translate(70 0)"><path d="M46 4h19a3 3 0 0 1 2.9 3.9L53.4 49a3 3 0 0 1-5.8-.6L43 7.4A3 3 0 0 1 46 4Z"/></g></svg>
+{%- else -%}
 <svg class="mark" viewBox="28 0 82 104" aria-hidden="true"><g class="c-claude"><circle cx="50" cy="58" r="18"/><path d="M66 66C66 84 56 94 38 100C48 90 52 82 52 76Z"/></g><g class="c-antigravity" transform="translate(40 0)"><path d="M46 4h19a3 3 0 0 1 2.9 3.9L53.4 49a3 3 0 0 1-5.8-.6L43 7.4A3 3 0 0 1 46 4Z"/></g></svg>
+{%- endif -%}
