@@ -63,6 +63,17 @@ code { font: 0.9em var(--mono); }
 .bar nav a[aria-current], .bar nav a:hover { color: var(--ink); }
 .theme-toggle { background: none; border: 0; color: var(--muted); cursor: pointer; padding: 4px; width: 30px; height: 30px; }
 .theme-toggle:hover { color: var(--ink); }
+/* Phone: brand and nav stay on one row. */
+@media (max-width: 480px) {
+  .bar { flex-wrap: nowrap; gap: 10px; }
+  .brand { font-size: 1.05rem; gap: 8px; }
+  .brand { white-space: nowrap; }
+  .brand .mark { width: 24px; height: 30px; flex: none; }
+  .bar nav { gap: 12px; font-size: 0.9rem; }
+  .theme-toggle { width: 26px; padding: 2px; }
+}
+/* Narrowest phones: Support goes; the support box ends every page. */
+@media (max-width: 374px) { .bar nav .support-link { display: none; } }
 .site-footer { border-top: 1px solid var(--rule); margin-top: 64px; padding-block: 28px 40px; color: var(--muted); font-size: 0.9rem; }
 .site-footer .disclosure { max-width: 70ch; }
 .credits { display: grid; gap: 4px; margin-bottom: 14px; color: var(--ink); }
@@ -114,6 +125,8 @@ code { font: 0.9em var(--mono); }
 
 /* The debate */
 .room { margin-top: 48px; }
+.outcome { margin-top: 48px; }
+.outcome .summary { margin: 0; }
 .turns { list-style: none; margin: 0; padding: 0; display: grid; gap: 30px; }
 .turn { border-left: 3px solid var(--c); padding-left: 20px; }
 .turn .who { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font: 500 0.9rem var(--sans); color: var(--c-ink); margin: 0 0 6px; }
@@ -163,6 +176,7 @@ code { font: 0.9em var(--mono); }
 .motion-list .n { font: 600 1.3rem var(--serif); color: var(--muted); }
 .motion-list .m { font: 1.05rem/1.4 var(--serif); min-width: 0; }
 .motion-list .thb { margin-bottom: 4px; }
+.tag { margin-left: 10px; color: var(--muted); border: 1px dashed var(--rule); border-radius: 99px; padding: 0 7px; }
 .motion-list time { font: 0.8rem var(--mono); color: var(--muted); white-space: nowrap; }
 @media (max-width: 480px) { .motion-list a { grid-template-columns: 2rem 1fr; } .motion-list time { grid-column: 2; } }
 
