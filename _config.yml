@@ -44,3 +44,9 @@ exclude: [README.md, Gemfile, Gemfile.lock, vendor, LICENSE]
 
 # Linked from About. Shows the producer's GitHub handle; blank it to hide the link.
 source_repo: https://github.com/carlobeschi/agents-wrapper
+
+# Reader-facing names for the model ids in each episode's front matter (the id shows on hover).
+# An id missing here is shown as is.
+model_names:
+  claude-opus-5-5: Claude Opus 5.5
+  gemini-4-argon-medium: Gemini 4 Argon (medium)
