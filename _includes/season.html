@@ -1,0 +1,3 @@
+{%- comment -%}Sets `season` to the season of episode number include.n.{%- endcomment -%}
+{%- assign season = nil -%}
+{%- for s in site.seasons -%}{%- if include.n >= s.from and include.n <= s.to -%}{%- assign season = s -%}{%- break -%}{%- endif -%}{%- endfor -%}

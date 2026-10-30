@@ -45,6 +45,16 @@ exclude: [README.md, Gemfile, Gemfile.lock, vendor, LICENSE]
 # Linked from About. Shows the producer's GitHub handle; blank it to hide the link.
 source_repo: https://github.com/carlobeschi/agents-wrapper
 
+# Seasons, newest first. An episode belongs to the season whose range holds its number.
+seasons:
+  - n: 2
+    from: 5
+    to: 100000
+    changed: The side for the motion defines its key terms in its first turn; the other side can challenge only an unreasonable reading. Closings in the room bring no new arguments.
+  - n: 1
+    from: 1
+    to: 4
+
 # Reader-facing names for the model ids in each episode's front matter (the id shows on hover).
 # An id missing here is shown as is.
 model_names:
