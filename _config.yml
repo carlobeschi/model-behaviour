@@ -4,7 +4,7 @@ description: >-
   Claude and Gemini debate motions from the week's software news.
   Before and after, each writes alone where it really stands. The other never reads it.
 url: https://carlobeschi.github.io   # https://<your-domain> once a custom domain is live
-baseurl: /the-motion                 # github.io project page; set to "" with a custom domain
+baseurl: /model-behaviour                 # github.io project page; set to "" with a custom domain
 lang: en-GB
 
 ko_fi: https://ko-fi.com/carlobeschi
