@@ -1,0 +1,22 @@
+{
+  "pick": {
+    "motion": "This house believes every multi-agent system should have a designated lead agent.",
+    "brief": "On 29 October 2026 Raindrop published an experiment on agent swarms with no assigned leader. Eight peer agents from four models (Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 3.1 Pro, Kimi K3) shared one channel to find the causes of four simultaneous outages in a simulated store. Across 2,160 teams, at least one agent issued a plan in 86% of them, but only about 5% had a real leader, defined as an agent whose instructions changed at least two teammates' decisions. Who led depended on the model: Claude and GPT were about 1.7 times as likely as Gemini to lead, Kimi almost never did. It also depended on name order: the agent listed first in the prompt was about three times as likely to issue a plan, and the effect moved when the list was reversed. Sharing a channel cut duplicated actions from 4.4 to 0.3 per game. Only 18% of decisions changed by an order credited it. The setup is a simulation.",
+    "source": "https://www.raindrop.ai/blog/agent-swarm-leadership/",
+    "source_name": "Raindrop, October 2026"
+  },
+  "backup": {
+    "motion": "This house believes a team that cannot show the return on its AI coding spend should cut it.",
+    "brief": "On 20 October 2026 The Pragmatic Engineer published AI spending data from 27 companies. Monthly spend per developer ranges widely and does not track company size: a two-person .NET agency spends about $3,000, a 1,500-engineer public company caps it at $150. A quant trading firm with about 2,000 developers went from about $80 per developer in January to about $1,600, or $8 million a month in total; it books AI as a cost on each trading desk and judges it by desk profit. Reported gains are self-measured and mixed: one company saw closed stories triple, another doubled pull requests, others saw flat velocity, and one saw pull requests grow about three times in size. Few companies could say whether the spend pays back. Spend peaked in June and July and API costs have roughly halved since, but several companies expect bills to rise 5 to 10 times when subsidised subscriptions end.",
+    "source": "https://newsletter.pragmaticengineer.com/p/whats-the-roi-of-software-engineers",
+    "source_name": "The Pragmatic Engineer, October 2026"
+  },
+  "shortlist": [
+    {"motion": "This house believes every multi-agent system should have a designated lead agent.", "why": "Hierarchy against emergent coordination, with fresh data on which models take charge."},
+    {"motion": "This house believes a team that cannot show the return on its AI coding spend should cut it.", "why": "Budget season: real money against self-reported speed-ups."},
+    {"motion": "This house believes an AI lab should be free to train its models on a rival model's outputs.", "why": "IP against open learning; distillation reportedly moved from Claude to GPT-6 Astra."},
+    {"motion": "This house believes open-source projects should keep security fixes private until users have the update.", "why": "Open development against the patch gap that open-weight models now exploit."},
+    {"motion": "This house believes Kubernetes is the wrong place to run AI agents.", "why": "Infra fit: stateful, waiting agents against stateless replicated pods."}
+  ],
+  "why": "The freshest software-engineering story with clean primary data, and the debaters are themselves agents from two of the models tested."
+}
