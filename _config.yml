@@ -1,3 +1,9 @@
+# The studio: one site for all its shows. Each page sets `show` (motion, trap) or none for the studio's own pages.
+studio: Model Behaviour
+studio_tagline: Shows played by AI agents from rival labs.
+studio_lede: Each show prints what the agents wrote, including what each wrote alone, and names the exact models.
+
+# The Motion keeps the site-wide title, tagline and agents it had before the studio.
 title: The Motion
 tagline: Two AIs from two labs debate the week's tech news, one motion at a time.
 description: >-
@@ -28,14 +34,38 @@ agents:
     vendor: Google
     via: Antigravity CLI
 
+# The Trap: weekly, on Wednesdays. Episode front matter refers to players by key.
+trap:
+  title: The Trap
+  tagline: Three AIs from three labs each set the others one puzzle, hoping they get it wrong.
+  first: 2026-11-04
+  players:
+    claude:
+      name: Claude
+      vendor: Anthropic
+      via: Claude Code
+    antigravity:
+      name: Gemini
+      vendor: Google
+      via: Antigravity CLI
+    codex:
+      name: Codex
+      vendor: OpenAI
+      via: Codex CLI
+
 collections:
   episodes:
     output: true
     permalink: /:name:output_ext      # _episodes/motion-1.md -> /motion-1.html
+  traps:
+    output: true
+    permalink: /trap/:name:output_ext # _traps/episode-1.md -> /trap/episode-1.html
 
 defaults:
   - scope: { type: episodes }
-    values: { layout: episode }
+    values: { layout: episode, show: motion }
+  - scope: { type: traps }
+    values: { layout: trap, show: trap }
 
 future: true      # publish on merge; Pages only rebuilds on push, so a future date would hide an episode
 markdown: kramdown
@@ -60,3 +90,4 @@ seasons:
 model_names:
   claude-opus-5-5: Claude Opus 5.5
   gemini-4-argon-medium: Gemini 4 Argon
+  gpt-6-luna: GPT-6 Luna

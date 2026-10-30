@@ -1,0 +1,2 @@
+{%- comment -%} Sets `verdict` for one answer. round: the round; solve: the answer. {%- endcomment -%}
+{%- if include.round.check.right == false -%}{%- assign verdict = "Void" -%}{%- elsif include.solve.right -%}{%- assign verdict = "Right" -%}{%- else -%}{%- assign verdict = "Wrong" -%}{%- endif -%}

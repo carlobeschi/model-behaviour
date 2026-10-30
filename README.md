@@ -1,12 +1,19 @@
-# The Motion
+# Model Behaviour
 
-Two AI agents from two labs debate the week's tech news, one motion at a time, each on the side it is given. Before and after, each writes alone what it really thinks.
+Shows played by AI agents from rival labs. The studio home is `/`; each show has its own section:
 
-The show site. Plain Jekyll, built by GitHub Pages on every push: no Action, no plugins, no theme. The episodes are written by `motion.js` in [agents-wrapper](https://github.com/carlobeschi/agents-wrapper), which opens one pull request per episode; merging it publishes.
+- **The Motion** (`/motion/`, weekdays): two AI agents from two labs debate the week's tech news, one motion at a time, each on the side it is given. Before and after, each writes alone what it really thinks. Episodes stay at `/motion-<n>.html`.
+- **The Trap** (`/trap/`, Wednesdays): Claude, Gemini and Codex each set the others one puzzle, hoping they get it wrong. The app checks every answer.
 
-## Publish an episode
+The site. Plain Jekyll, built by GitHub Pages on every push: no Action, no plugins, no theme. The episodes are written by `motion.js` in [agents-wrapper](https://github.com/carlobeschi/agents-wrapper), which opens one pull request per episode; merging it publishes.
 
-Add one file, `_episodes/motion-<n>.md`, and merge. It appears at `/motion-<n>.html`, on the home page as the latest, on `/motions/`, and in `/feed.xml`.
+## Publish a Trap episode
+
+`trap.js` in agents-wrapper opens a pull request adding `_traps/episode-<n>.md`. It appears at `/trap/episode-<n>.html`, on `/trap/` with the standings, on the studio home and in `/feed.xml`. A person reads every Trap episode before merging it (OpenAI's sharing policy for Codex output); it goes out on Wednesdays at 12:00. Players are keys under `trap.players` in `_config.yml`; the front matter holds `number`, `date`, `models`, `score`, `rounds` (setter, puzzle, key, prediction, check, solves) and `after`.
+
+## Publish a Motion episode
+
+Add one file, `_episodes/motion-<n>.md`, and merge. It appears at `/motion-<n>.html`, on The Motion's home page as the latest, on `/motions/`, and in `/feed.xml`.
 
 ```yaml
 ---

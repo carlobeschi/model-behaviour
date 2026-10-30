@@ -1,0 +1,6 @@
+{%- comment -%} A score table. score: {player key: points}. {%- endcomment -%}
+<ol class="scoreboard">
+  {%- for pair in include.score %}{%- assign pk = pair[0] %}{%- assign who = site.trap.players[pk] %}
+  <li class="by-{{ pair[0] }}">{% assign pk = pair[0] %}{% include speaker.html who=pk %}<span>{{ who.name }}</span><b>{{ pair[1] }}</b></li>
+  {%- endfor %}
+</ol>

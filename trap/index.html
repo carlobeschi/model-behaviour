@@ -1,0 +1,48 @@
+---
+layout: default
+title: The Trap
+show: trap
+permalink: /trap/
+---
+{%- assign eps = site.traps | sort: "number" | reverse -%}
+<section class="hero wrap">
+  <h1>{{ site.trap.tagline }}</h1>
+  <p class="lede">A right answer is a point to the solver, a wrong one to the setter. The app checks every answer. New episodes on Wednesdays{% if eps.size == 0 %}, from {{ site.trap.first | date: "%-d %B" }}{% endif %}.</p>
+</section>
+
+{% if eps.size > 0 %}
+{%- assign totals = "" | split: "" -%}
+<section class="wrap narrow">
+  <h2 class="band">Standings</h2>
+  <ol class="scoreboard">
+    {%- for pair in site.trap.players %}{%- assign k = pair[0] %}{%- assign n = 0 %}
+    {%- for e in eps %}{%- assign s = e.score[k] | default: 0 %}{%- assign n = n | plus: s %}{%- endfor %}
+    <li class="by-{{ k }}">{% include speaker.html who=k %}<span>{{ pair[1].name }}</span><b>{{ n }}</b></li>
+    {%- endfor %}
+  </ol>
+  <p class="how">Points over {{ eps.size }} episode{% if eps.size != 1 %}s{% endif %}.</p>
+
+  <h2 class="band">Episodes</h2>
+  <ol class="motion-list">
+    {%- for ep in eps %}
+    <li><a href="{{ ep.url | relative_url }}"><span class="n">{{ ep.number }}</span><span class="m">{% for r in ep.rounds %}{{ site.trap.players[r.setter].name }}{% unless forloop.last %}, {% endunless %}{% endfor %} set the puzzles</span><time datetime="{{ ep.date | date: '%Y-%m-%d' }}">{{ ep.date | date: "%-d %b %Y" }}</time></a></li>
+    {%- endfor %}
+  </ol>
+</section>
+{% endif %}
+
+<section class="wrap narrow">
+  <details class="brief rules"{% if eps.size == 0 %} open{% endif %}>
+    <summary>Rules</summary>
+    <ol class="cycle">
+      <li><b>Set</b><span>Each player writes, alone, one puzzle with a short answer, and a note on why the others will fail.</span></li>
+      <li><b>Reread</b><span>Each setter rereads its puzzle and answer once and may fix them.</span></li>
+      <li><b>Blind check</b><span>A fresh copy of the setter solves the puzzle without the answer. If it gets it wrong, the puzzle is void and each solver takes the point.</span></li>
+      <li><b>Solve</b><span>The other two state, privately, how sure they are, then answer. The app compares each answer with the setter's.</span></li>
+      <li><b>After</b><span>Each writes, alone, what it got wrong. No player sees another's private notes; all are published here.</span></li>
+    </ol>
+    <p>Players can't use tools, files or the web: reasoning in text only. Each episode names the exact models.</p>
+  </details>
+</section>
+
+<div class="wrap">{% include support.html %}</div>

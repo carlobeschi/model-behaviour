@@ -1,0 +1,65 @@
+---
+layout: default
+---
+{%- assign all = site.traps | sort: "number" -%}
+{%- assign prev = nil -%}{%- assign next = nil -%}
+{%- for e in all -%}{%- if e.number == page.number -%}{%- assign i = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- if i > 0 -%}{%- assign pi = i | minus: 1 -%}{%- assign prev = all[pi] -%}{%- endif -%}
+{%- assign ni = i | plus: 1 -%}{%- assign next = all[ni] -%}
+<article class="episode trap-ep">
+  <header class="ep-head wrap narrow">
+    <p class="kicker"><span>The Trap</span><span>Episode {{ page.number }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+    <h1>Episode {{ page.number }}</h1>
+    {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
+    <p class="how">Each puzzle has one short answer. Try it before you open the answers.</p>
+  </header>
+
+  {%- for r in page.rounds %}{%- assign setter = site.trap.players[r.setter] %}
+  <section class="round wrap narrow by-{{ r.setter }}" aria-labelledby="round-{{ forloop.index }}">
+    <h2 id="round-{{ forloop.index }}" class="band">{% include speaker.html who=r.setter %} {{ setter.name }}'s puzzle</h2>
+    <div class="puzzle">{{ r.puzzle | markdownify }}</div>
+    {% if r.revised %}<p class="how">{{ setter.name }} revised it on rereading.</p>{% endif %}
+    <details class="reveal">
+      <summary>Answers and ruling</summary>
+      {%- for x in r.solves %}{%- assign who = site.trap.players[x.by] %}{% include trap-verdict.html round=r solve=x %}
+      <div class="answer by-{{ x.by }}">
+        <p class="who">{% include speaker.html who=x.by %}{{ who.name }}{% if x.confidence %} <span class="lot">privately {{ x.confidence }}% sure</span>{% endif %}</p>
+        <div class="work">{{ x.working | markdownify }}</div>
+        <p class="res"><code>{{ x.answer | default: "(no answer)" | escape }}</code><span class="chip chip-{{ verdict | downcase }}">{{ verdict }}</span><span>point to {{ site.trap.players[x.point].name }}</span></p>
+      </div>
+      {%- endfor %}
+      <p class="key">Answer: <code>{{ r.key | escape }}</code>. {{ setter.name }}'s blind check, by a fresh copy without the answer: <code>{{ r.check.answer | default: "(no answer)" | escape }}</code>, {% if r.check.right %}passed{% else %}failed, so the puzzle is void and each solver takes the point{% endif %}.</p>
+      {% if r.prediction %}
+      <article class="note by-{{ r.setter }}">
+        <header>{% include speaker.html who=r.setter %}<h3>{{ setter.name }}</h3><span class="stance">before, alone</span></header>
+        <div class="note-text">{{ r.prediction | markdownify }}</div>
+      </article>
+      {% endif %}
+    </details>
+  </section>
+  {%- endfor %}
+
+  <section class="alone wrap" aria-labelledby="after">
+    <h2 id="after" class="band">After · written alone</h2>
+    <div class="pair three">
+      {%- for pair in page.after %}{%- assign k = pair[0] %}{%- assign who = site.trap.players[k] %}
+      <article class="note by-{{ k }}">
+        <header>{% include speaker.html who=k %}<h3>{{ who.name }}</h3></header>
+        <div class="note-text">{{ pair[1] | markdownify }}</div>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="outcome wrap narrow" aria-labelledby="score">
+    <h2 id="score" class="band">Score</h2>
+    {% include trap-score.html score=page.score %}
+  </section>
+
+  <nav class="ep-nav wrap narrow" aria-label="Episodes">
+    {% if prev %}<a class="prev" href="{{ prev.url | relative_url }}"><span>Episode {{ prev.number }}</span>{{ prev.date | date: "%-d %B %Y" }}</a>{% else %}<span></span>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url | relative_url }}"><span>Episode {{ next.number }}</span>{{ next.date | date: "%-d %B %Y" }}</a>{% else %}<a class="next" href="{{ '/trap/' | relative_url }}"><span>All episodes</span></a>{% endif %}
+  </nav>
+
+  <div class="wrap narrow">{% include support.html %}</div>
+</article>

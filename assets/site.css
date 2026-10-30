@@ -1,4 +1,4 @@
-/* The Motion. Layout: one reading column for the debate, framed by two side-by-side bands of private notes
+/* Model Behaviour, the studio site, and its shows. The Motion. Layout: one reading column for the debate, framed by two side-by-side bands of private notes
    (before, after); a small division grid shows where each stood. Paper and ink like a debating society's
    order paper. The Marks: Claude in Anthropic's terracotta, Gemini cobalt. --claude fills the mark and rules;
    --claude-ink is the same hue dark enough for small text on paper (AA). */
@@ -16,6 +16,10 @@
   --antigravity: #2a4fc0;
   --claude-soft: #f6e4db;
   --antigravity-soft: #e1e7f8;
+  --codex: #0f9b78;
+  --codex-ink: #0a6e55;
+  --codex-soft: #dcf1e9;
+  --trap: #a35c12;
 
   --serif: "Spectral", Georgia, "Times New Roman", serif;
   --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -26,12 +30,14 @@
   :root:not([data-theme="light"]) {
     --paper: #121514; --paper-2: #1a1e1c; --card: #191d1b; --ink: #e5e8e3; --muted: #9ba39e; --rule: #2d3330;
     --bench: #8cc4a6; --claude: #d97757; --claude-ink: #d97757; --antigravity: #93acff; --claude-soft: #2e1e17; --antigravity-soft: #1b2236;
+    --codex: #4cc9a3; --codex-ink: #4cc9a3; --codex-soft: #13281f; --trap: #e3a55a;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #121514; --paper-2: #1a1e1c; --card: #191d1b; --ink: #e5e8e3; --muted: #9ba39e; --rule: #2d3330;
   --bench: #8cc4a6; --claude: #d97757; --claude-ink: #d97757; --antigravity: #93acff; --claude-soft: #2e1e17; --antigravity-soft: #1b2236;
+    --codex: #4cc9a3; --codex-ink: #4cc9a3; --codex-soft: #13281f; --trap: #e3a55a;
   color-scheme: dark;
 }
 
@@ -58,6 +64,10 @@ code { font: 0.9em var(--mono); }
 .brand .mark { width: 30px; height: 38px; }
 .c-claude { fill: var(--claude); }
 .c-antigravity { fill: var(--antigravity); }
+.c-codex { fill: var(--codex); }
+.brand .mark-3 { width: 40px; }
+.mark-3.mono g { fill: currentColor; }
+@media (max-width: 480px) { .brand .mark-3 { width: 32px; } }
 .bar nav { display: flex; align-items: center; gap: 18px; font-size: 0.95rem; }
 .bar nav a { text-decoration: none; color: var(--muted); }
 .bar nav a[aria-current], .bar nav a:hover { color: var(--ink); }
@@ -72,8 +82,8 @@ code { font: 0.9em var(--mono); }
   .bar nav { gap: 12px; font-size: 0.9rem; }
   .theme-toggle { width: 26px; padding: 2px; }
 }
-/* Narrowest phones: Support goes; the support box ends every page. */
-@media (max-width: 374px) { .bar nav .support-link { display: none; } }
+/* Phones: Support goes; the support box ends every page. */
+@media (max-width: 420px) { .bar nav .support-link { display: none; } }
 .site-footer { border-top: 1px solid var(--rule); margin-top: 64px; padding-block: 28px 40px; color: var(--muted); font-size: 0.9rem; }
 .site-footer .disclosure { max-width: 70ch; }
 .credits { display: grid; gap: 4px; margin-bottom: 14px; color: var(--ink); }
@@ -87,6 +97,7 @@ code { font: 0.9em var(--mono); }
 .speaker { width: 0.9em; height: 1.4em; vertical-align: -0.35em; flex: none; }
 .sp-claude { fill: var(--claude); }
 .sp-antigravity { fill: var(--antigravity); width: 0.7em; }
+.sp-codex { fill: var(--codex); }
 .button { display: inline-block; background: var(--ink); color: var(--paper); text-decoration: none; padding: 10px 18px; border-radius: 4px; font-weight: 500; white-space: nowrap; }
 .button:hover { opacity: 0.88; }
 .summary { font: 1.15rem/1.55 var(--serif); max-width: 62ch; }
@@ -116,6 +127,9 @@ code { font: 0.9em var(--mono); }
 .note { background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--c); border-radius: 4px; padding: 18px 20px; min-width: 0; }
 .note.by-claude, .turn.by-claude { --c: var(--claude); --c-ink: var(--claude-ink); }
 .note.by-antigravity, .turn.by-antigravity { --c: var(--antigravity); --c-ink: var(--antigravity); }
+.by-codex { --c: var(--codex); --c-ink: var(--codex-ink); }
+.answer.by-claude, .scoreboard .by-claude { --c: var(--claude); --c-ink: var(--claude-ink); }
+.answer.by-antigravity, .scoreboard .by-antigravity { --c: var(--antigravity); --c-ink: var(--antigravity); }
 .note header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
 .note h3 { font-size: 1.15rem; }
 .stance { margin-left: auto; font: 500 0.72rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-ink); border: 1px solid currentColor; border-radius: 99px; padding: 1px 8px; }
@@ -189,5 +203,52 @@ code { font: 0.9em var(--mono); }
 .cycle li { display: grid; grid-template-columns: 7rem 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--rule); }
 .cycle b { font-family: var(--serif); font-size: 1.05rem; }
 @media (max-width: 480px) { .cycle li { grid-template-columns: 1fr; gap: 2px; } }
+
+/* Studio home */
+.links { font-size: 0.95rem; color: var(--muted); margin-top: 32px; }
+.shows { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 760px) { .shows { grid-template-columns: 1fr; } }
+.show-card { display: grid; gap: 12px; align-content: start; text-decoration: none; background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--accent); border-radius: 4px; padding: 24px; }
+.show-card:hover { border-color: var(--muted); border-top-color: var(--accent); }
+.show-motion { --accent: var(--bench); }
+.show-trap { --accent: var(--trap); }
+.show-card h2 { display: flex; align-items: center; gap: 12px; font-size: clamp(1.6rem, 3.4vw, 2.1rem); }
+.show-card h2 .mark { width: 32px; height: 40px; flex: none; }
+.show-card h2 .mark-3 { width: 42px; }
+.show-card p { margin: 0; }
+.show-card .kicker { margin: 0; }
+.show-card .latest { font: 1rem/1.4 var(--serif); padding-top: 12px; border-top: 1px solid var(--rule); }
+.show-card .latest span { display: block; font: 500 0.75rem var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+
+/* The Trap */
+.show-trap { --bench: var(--trap); }
+body.show-trap { --bench: var(--trap); }
+.round { margin-top: 48px; }
+.round .band { display: flex; align-items: center; gap: 8px; }
+.puzzle { font: 1.15rem/1.6 var(--serif); background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--c); border-radius: 4px; padding: 20px 22px; }
+.puzzle p:last-child, .puzzle ol:last-child, .puzzle ul:last-child { margin-bottom: 0; }
+.round > .how { margin: 10px 0 0; }
+.reveal { margin-top: 16px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding-block: 12px; }
+.reveal > summary { cursor: pointer; font-weight: 500; color: var(--bench); }
+.reveal[open] > summary { margin-bottom: 18px; }
+.answer { border-left: 3px solid var(--c); padding-left: 20px; margin-bottom: 24px; }
+.answer .who { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font: 500 0.9rem var(--sans); color: var(--c-ink); margin: 0 0 6px; }
+.work { font-size: 0.98rem; }
+.work p:last-child, .work ul:last-child { margin-bottom: 0; }
+.res { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 10px 0 0; font-size: 0.9rem; color: var(--muted); }
+.res code, .key code { font: 500 0.95rem var(--mono); color: var(--ink); background: var(--paper-2); padding: 1px 6px; border-radius: 3px; }
+.chip { font: 500 0.72rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; border-radius: 99px; padding: 2px 9px; border: 1px solid currentColor; }
+.chip-right { color: var(--bench); }
+.chip-wrong { color: var(--ink); }
+.chip-void { color: var(--muted); border-style: dashed; }
+.key { font-size: 0.95rem; margin: 0 0 20px; }
+.pair.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .pair.three { grid-template-columns: 1fr; } }
+.scoreboard { list-style: none; margin: 0 0 12px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.scoreboard li { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--c); border-radius: 4px; padding: 12px 14px; font-weight: 500; }
+.scoreboard b { margin-left: auto; font: 600 1.6rem var(--serif); }
+@media (max-width: 480px) { .scoreboard { grid-template-columns: 1fr; } }
+.rules .cycle { margin: 12px 0; }
+.rules p { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

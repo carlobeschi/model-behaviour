@@ -1,4 +1,5 @@
 ---
+show: motion
 layout: page
 title: How it's made
 permalink: /about/

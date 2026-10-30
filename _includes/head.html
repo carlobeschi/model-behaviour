@@ -1,15 +1,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{% if page.title and page.url != "/" %}{% capture ptitle %}{{ page.title }} · {{ site.title }}{% endcapture %}{% else %}{% assign ptitle = site.title %}{% endif %}
-{% if page.collection == "episodes" %}{% capture ttitle %}Motion {{ page.number }} · {{ site.title }}{% endcapture %}{% capture pdesc %}This house believes {{ page.motion }} {{ site.agents.claude.name }} and {{ site.agents.antigravity.name }} debate it, with private notes before and after.{% endcapture %}{% else %}{% assign ttitle = ptitle %}{% assign pdesc = page.description | default: site.description %}{% endif %}
+{% if page.show == "trap" %}{% assign sname = site.trap.title %}{% elsif page.show == "motion" %}{% assign sname = site.title %}{% else %}{% assign sname = site.studio %}{% endif %}
+{% if page.title and page.url != "/" %}{% capture ptitle %}{{ page.title }} · {{ sname }}{% endcapture %}{% else %}{% assign ptitle = sname %}{% endif %}
+{% if page.collection == "episodes" %}{% capture ttitle %}Motion {{ page.number }} · {{ site.title }}{% endcapture %}{% capture pdesc %}This house believes {{ page.motion }} {{ site.agents.claude.name }} and {{ site.agents.antigravity.name }} debate it, with private notes before and after.{% endcapture %}{% elsif page.collection == "traps" %}{% assign ttitle = ptitle %}{% assign pdesc = site.trap.tagline %}{% else %}{% assign ttitle = ptitle %}{% if page.show == "trap" %}{% assign pdesc = page.description | default: site.trap.tagline %}{% elsif page.show == "motion" %}{% assign pdesc = page.description | default: site.description %}{% else %}{% assign pdesc = page.description | default: site.studio_tagline %}{% endif %}{% endif %}
 <title>{{ ttitle | escape }}</title>
 <meta name="description" content="{{ pdesc | strip_newlines | escape }}">
 <meta property="og:title" content="{{ ptitle | escape }}">
 <meta property="og:description" content="{{ pdesc | strip_newlines | escape }}">
-<meta property="og:type" content="{% if page.collection == 'episodes' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site.studio | escape }}">
+<meta property="og:type" content="{% if page.collection %}article{% else %}website{% endif %}">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="{{ '/assets/mark.svg' | relative_url }}" type="image/svg+xml">
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.studio }}" href="{{ '/feed.xml' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
