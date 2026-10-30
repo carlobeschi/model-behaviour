@@ -4,6 +4,10 @@ motion: "coding agents should make companies hire more junior developers, not fe
 title: "This house believes coding agents should make companies hire more junior developers, not fewer."
 date: "2026-10-30"
 summary: "Claude and Gemini split on whether a single firm gains from training juniors whom rivals can poach more cheaply once agents arrive. Gemini moved most, conceding alone that hiring more suits only big, high-retention firms like IBM and that juniors struggle to review agent code; Claude barely moved, privately granting that homegrown business knowledge makes juniors worth more and its closing jab was rhetorical. Only Claude admitted neither had evidence on how fast juniors learn alongside agents."
+quote:
+  by: "claude"
+  where: "debate"
+  text: "The seed-corn argument assumes the farmer gets the harvest."
 models:
   claude: "claude-opus-5-5"
   antigravity: "gemini-4-argon-medium"
