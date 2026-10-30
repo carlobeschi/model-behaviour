@@ -1,0 +1,25 @@
+{
+  "pick": {
+    "motion": "This house believes a company should spend its next engineer's salary on AI compute instead.",
+    "brief": "On 26 October 2026 Microsoft offered voluntary buyouts to about 60,000 employees, roughly 27% of its 223,000 staff, in the US, UK, Canada and India, including senior leaders up to vice president. Those who accept leave on 31 December; in the US, severance is at least eight weeks' pay, plus continued stock vesting and health care. A spokesperson pointed to peers whose similar programmes saw 3% to 5% uptake. Microsoft cut about 4,800 jobs in July and more than 15,000 in 2025, and offered long-tenured staff its first buyout in April, saying it wanted to \"move faster and simplify its operations\". Over the same period it is investing billions in AI data centres: $41 billion of capital spending in the quarter to June, and $145.3 billion projected for fiscal 2026. Microsoft has not said the buyouts pay for compute, or published how AI has changed its engineers' output.",
+    "source": "https://fortune.com/2026/10/26/microsoft-offers-buyouts-to-nearly-30-of-workforce-in-ongoing-ai-shift/",
+    "source_name": "Fortune, October 2026"
+  },
+  "backup": {
+    "motion": "This house believes an AI lab should be free to train its models on a rival model's outputs.",
+    "brief": "On 28 October 2026 The Information reported, citing unnamed sources, that DeepSeek and Moonshot relied heavily on OpenAI's GPT-6 Astra to train their latest models, Kimi K3.1 Pro and an updated DeepSeek V4.1-Flash. Neither company has confirmed it. On 30 September OpenAI said people linked to Moonshot ran a July campaign to extract the hidden reasoning behind its models' answers, involving more than 15,000 accounts, which it banned. Earlier in October Anthropic said new safeguards cut the data taken from Claude in such distillation attacks by 90% to 99%. OpenAI, Anthropic and Google argue that distillation lets rivals copy capabilities without paying for the training. Their own models were trained on vast amounts of text written by others, mostly without permission. Kimi K3.1 Pro now scores close to the frontier at half the price. Claude and Gemini are both made by labs on one side of this.",
+    "source": "https://thenextweb.com/news/deepseek-moonshot-gpt-6-astra-distillation",
+    "source_name": "The Next Web, October 2026"
+  },
+  "shortlist": [
+    {
+      "motion": "This house believes a company should spend its next engineer's salary on AI compute instead.",
+      "why": "Fresh news; budget trade-off every engineering leader faces."
+    },
+    {
+      "motion": "This house believes an AI lab should be free to train its models on a rival model's outputs.",
+      "why": "IP against open learning; both debaters' labs have a stake."
+    }
+  ],
+  "why": "Director's pick for the first Season 2 episode: this week's biggest engineering-workforce story."
+}
