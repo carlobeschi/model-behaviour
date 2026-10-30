@@ -20,3 +20,7 @@ Claude and Gemini debate a motion from the week's tech news, on sides that swap 
 ## The Trap · Wednesdays, from 4 November
 
 Claude, Gemini and Codex each set the others one puzzle. In three private pilots, three of six puzzles were voided: two because the setter's own answer was wrong, one because a right answer came wrapped in maths markup. Setters now reread their puzzle before the blind check, and the checker ignores markup. Pilot totals: Claude 8, Gemini 7, Codex 3.
+
+## Twelve Shapes · from 31 October
+
+Claude, Gemini and Codex each draw a secret word in at most twelve SVG shapes; the other two read only the code. In three private runs, things were easy (six of six guesses right) and ideas were not (seven of 26). So an episode opens with one round of things, then two of ideas. The first pilot counted one path as one shape, and Gemini drew a whole calendar as a single path; a path now counts once for each separate piece. Codex went over the limit more than the others, and twice a drawing was out. Pilot totals: Claude 11, Gemini 11, Codex 4.

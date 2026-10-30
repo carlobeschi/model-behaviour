@@ -258,3 +258,28 @@ body.show-trap { --bench: var(--trap); }
 .rules p { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Twelve Shapes: each drawing on a white board, the word and guesses behind a reveal. */
+:root { --shapes: #7a3f8f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --shapes: #cf9ae0; } }
+:root[data-theme="dark"] { --shapes: #cf9ae0; }
+.show-shapes { --accent: var(--shapes); }
+body.show-shapes { --bench: var(--shapes); }
+.round .band .kind { font: 500 0.75rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sketch { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 24px; align-items: start; padding-block: 20px; border-top: 1px solid var(--rule); }
+.sketch:first-of-type { border-top: 0; }
+@media (max-width: 720px) { .sketch { grid-template-columns: 1fr; } .sketch figure { max-width: 360px; } }
+.sketch figure { margin: 0; display: grid; gap: 8px; }
+.drawing { display: block; width: 100%; height: auto; aspect-ratio: 1; background: #fff; border: 1px solid var(--rule); border-radius: 4px; }
+.drawing.blank { display: grid; place-items: center; background: var(--card); border-style: dashed; font: 0.85rem var(--mono); color: var(--muted); }
+.sketch figcaption { display: flex; align-items: center; gap: 8px; font-weight: 500; color: var(--c-ink); }
+.sketch figcaption .count { margin-left: auto; font: 0.8rem var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.sketch-body { min-width: 0; }
+.sketch .reveal { margin-top: 0; }
+.out-line { margin: 0 0 12px; font-size: 0.95rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.source { margin-top: 16px; }
+.source summary { cursor: pointer; font: 500 0.8rem var(--mono); color: var(--muted); }
+.source pre { overflow-x: auto; background: var(--paper-2); border-radius: 4px; padding: 12px; font: 0.78rem/1.45 var(--mono); margin: 8px 0 0; }
+.shows { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.sketch.by-claude { --c: var(--claude); --c-ink: var(--claude-ink); }
+.sketch.by-antigravity { --c: var(--antigravity); --c-ink: var(--antigravity); }

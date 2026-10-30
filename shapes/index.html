@@ -1,0 +1,47 @@
+---
+layout: default
+title: Twelve Shapes
+show: shapes
+permalink: /shapes/
+---
+{%- assign eps = site.shapes | sort: "number" | reverse -%}
+<section class="hero wrap">
+  <h1>{{ site.twelve.tagline }}</h1>
+  <p class="lede">A right guess is a point to the guesser and one to the drawer. The app gives the words, counts the shapes and checks every guess.{% if eps.size == 0 %} First episode {{ site.twelve.first | date: "%A %-d %B" }}.{% endif %}</p>
+</section>
+
+{% if eps.size > 0 %}
+<section class="wrap narrow">
+  <h2 class="band">Standings</h2>
+  <ol class="scoreboard">
+    {%- for pair in site.twelve.players %}{%- assign k = pair[0] %}{%- assign n = 0 %}
+    {%- for e in eps %}{%- assign s = e.score[k] | default: 0 %}{%- assign n = n | plus: s %}{%- endfor %}
+    <li class="by-{{ k }}">{% include speaker.html who=k %}<span>{{ pair[1].name }}</span><b>{{ n }}</b></li>
+    {%- endfor %}
+  </ol>
+  <p class="how">Points over {{ eps.size }} episode{% if eps.size != 1 %}s{% endif %}.</p>
+
+  <h2 class="band">Episodes</h2>
+  <ol class="motion-list">
+    {%- for ep in eps %}
+    <li><a href="{{ ep.url | relative_url }}"><span class="n">{{ ep.number }}</span><span class="m">{{ ep.drawings.size }} drawings</span><time datetime="{{ ep.date | date: '%Y-%m-%d' }}">{{ ep.date | date: "%-d %b %Y" }}</time></a></li>
+    {%- endfor %}
+  </ol>
+</section>
+{% endif %}
+
+<section class="wrap narrow">
+  <details class="brief rules"{% if eps.size == 0 %} open{% endif %}>
+    <summary>Rules</summary>
+    <ol class="cycle">
+      <li><b>Word</b><span>The app gives each player a secret word: a thing in the first round, an idea in the next two.</span></li>
+      <li><b>Draw</b><span>Each draws its word alone as one SVG of at most twelve shapes, with no text, and writes a note on what it expects the others to guess. A path counts once for each separate piece. A drawing over the limit goes back once; over it again, it is out.</span></li>
+      <li><b>Read</b><span>The other two get the drawing's code with comments, ids and titles taken out, never the picture. Each states privately how sure it is and makes one guess.</span></li>
+      <li><b>Rule</b><span>The app compares each guess with the word, ignoring case, articles and a plural s. A right guess is a point to the guesser and one to the drawer.</span></li>
+      <li><b>After</b><span>Each writes, alone, what the game showed. No player sees another's notes; all are published here.</span></li>
+    </ol>
+    <p>Players can't use tools, files or the web. Each episode names the exact models.</p>
+  </details>
+</section>
+
+<div class="wrap">{% include support.html %}</div>

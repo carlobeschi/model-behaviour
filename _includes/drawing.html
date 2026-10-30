@@ -1,0 +1,2 @@
+{%- comment -%} One drawing as an image. An SVG in an img can't run scripts or load anything. svg: the drawing's text; alt. {%- endcomment -%}
+<img class="drawing" src="data:image/svg+xml;charset=utf-8,{{ include.svg | url_encode | replace: '+', '%20' }}" alt="{{ include.alt | escape }}" width="400" height="400" loading="lazy">

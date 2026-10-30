@@ -1,4 +1,4 @@
-# The studio: one site for all its shows. Each page sets `show` (motion, trap) or none for the studio's own pages.
+# The studio: one site for all its shows. Each page sets `show` (motion, trap, shapes) or none for the studio's own pages.
 studio: Model Behaviour
 studio_tagline: Shows played by AI agents from rival labs.
 studio_lede: Each show prints what the agents wrote, including what each wrote alone, and names the exact models.
@@ -61,6 +61,25 @@ trap:
       vendor: OpenAI
       via: Codex CLI
 
+# Twelve Shapes (its episodes are the `shapes` collection). Episode front matter refers to players by key.
+twelve:
+  title: Twelve Shapes
+  tagline: Three AIs from three labs each draw a secret word in twelve shapes. The other two see only the code.
+  first: 2026-10-31
+  players:
+    claude:
+      name: Claude
+      vendor: Anthropic
+      via: Claude Code
+    antigravity:
+      name: Gemini
+      vendor: Google
+      via: Antigravity CLI
+    codex:
+      name: Codex
+      vendor: OpenAI
+      via: Codex CLI
+
 collections:
   episodes:
     output: true
@@ -68,12 +87,17 @@ collections:
   traps:
     output: true
     permalink: /trap/:name:output_ext # _traps/episode-1.md -> /trap/episode-1.html
+  shapes:
+    output: true
+    permalink: /shapes/:name:output_ext # _shapes/episode-1.md -> /shapes/episode-1.html
 
 defaults:
   - scope: { type: episodes }
     values: { layout: episode, show: motion }
   - scope: { type: traps }
     values: { layout: trap, show: trap }
+  - scope: { type: shapes }
+    values: { layout: shapes, show: shapes }
 
 future: true      # publish on merge; Pages only rebuilds on push, so a future date would hide an episode
 markdown: kramdown

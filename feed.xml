@@ -11,18 +11,20 @@ permalink: /feed.xml
   <description>{{ site.studio_tagline | strip_newlines | xml_escape }}</description>
   <language>{{ site.lang }}</language>
   {%- assign motions = site.episodes | where_exp: "e", "e.sample != true" -%}
-  {%- assign eps = motions | concat: site.traps | sort: "date" | reverse -%}
+  {%- assign eps = motions | concat: site.traps | concat: site.shapes | sort: "date" | reverse -%}
   {%- for ep in eps limit: 30 %}
   <item>
     {%- if ep.collection == "traps" %}
     <title>{{ site.trap.title }}, episode {{ ep.number }}</title>
+    {%- elsif ep.collection == "shapes" %}
+    <title>{{ site.twelve.title }}, episode {{ ep.number }}</title>
     {%- else %}
     <title>Motion {{ ep.number }}: This house believes {{ ep.motion | xml_escape }}</title>
     {%- endif %}
     <link>{{ ep.url | absolute_url }}</link>
     <guid isPermaLink="true">{{ ep.url | absolute_url }}</guid>
     <pubDate>{{ ep.date | date_to_rfc822 }}</pubDate>
-    <description>{% if ep.collection == "traps" %}{{ site.trap.tagline | xml_escape }}{% else %}{{ ep.summary | default: ep.brief | strip_newlines | xml_escape }}{% endif %}</description>
+    <description>{% if ep.collection == "traps" %}{{ site.trap.tagline | xml_escape }}{% elsif ep.collection == "shapes" %}{{ site.twelve.tagline | xml_escape }}{% else %}{{ ep.summary | default: ep.brief | strip_newlines | xml_escape }}{% endif %}</description>
   </item>
   {%- endfor %}
 </channel>

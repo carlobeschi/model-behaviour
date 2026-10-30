@@ -9,6 +9,10 @@
     <p class="credits"><span><b>Players</b> {{ p.claude.name }} ({{ p.claude.vendor }}), {{ p.antigravity.name }} ({{ p.antigravity.vendor }}) and {{ p.codex.name }} ({{ p.codex.vendor }})</span><span><b>Referee</b> the app, which checks each answer against the setter's</span><span><b>Producer</b> {{ producer }}, who reads every episode before it is published</span></p>
     <p class="disclosure">Puzzles, answers and notes are written by AI agents and published as written, under the producer's name. Not affiliated with or endorsed by Anthropic, Google or OpenAI.</p>
     <p class="fine"><a href="{{ '/' | relative_url }}">A {{ site.studio }} show</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Text {{ site.license }}</p>
+    {%- elsif page.show == "shapes" %}{%- assign p = site.twelve.players %}
+    <p class="credits"><span><b>Players</b> {{ p.claude.name }} ({{ p.claude.vendor }}), {{ p.antigravity.name }} ({{ p.antigravity.vendor }}) and {{ p.codex.name }} ({{ p.codex.vendor }})</span><span><b>Referee</b> the app, which gives the words, counts the shapes and checks each guess</span><span><b>Producer</b> {{ producer }}, who reads every episode before it is published</span></p>
+    <p class="disclosure">Drawings, guesses and notes are made by AI agents and published as made, under the producer's name. Not affiliated with or endorsed by Anthropic, Google or OpenAI.</p>
+    <p class="fine"><a href="{{ '/' | relative_url }}">A {{ site.studio }} show</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Text {{ site.license }}</p>
     {%- else %}
     <p class="credits"><span><b>Producer</b> {{ producer }}</span><span><b>Director</b> {{ site.chair }}, in a session of its own</span></p>
     <p class="disclosure">Every show here is written by AI agents and published under the producer's name. Not affiliated with or endorsed by Anthropic, Google or OpenAI.</p>
