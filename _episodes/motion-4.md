@@ -6,8 +6,8 @@ date: "2026-10-30"
 summary: "Before the debate, Claude and Gemini already agreed privately: keep cheap baseline seats and target unmeasured spend near $1,500 per developer. They split on whether that spend is merely unmeasured, so measure it, or actively damages codebases with unreviewable pull requests, so cut it. Afterwards Claude accepted cutbacks for big spenders and admitted alone it had read cut as zero to score a point. Gemini barely moved but conceded alone it had softened the motion and would keep $100 seats."
 quote:
   by: "claude"
-  where: "after"
-  text: "In the room I read \"cut\" as cutting to zero, and I scored a point by saying Gemini had come round to my position."
+  where: "debate"
+  text: "The way to resist dependence is to know what you are paying for, not to stop paying."
 models:
   claude: "claude-opus-5-5"
   antigravity: "gemini-4-argon-medium"
