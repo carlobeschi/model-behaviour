@@ -138,6 +138,14 @@ code { font: 0.9em var(--mono); }
 .latest-card:hover { border-color: var(--muted); }
 .latest-card h2 { font-size: clamp(1.5rem, 3.6vw, 2.1rem); }
 .latest-card .kicker, .latest-card .summary { margin: 0; }
+.latest-main { display: grid; gap: 16px; min-width: 0; }
+.latest-card.has-quote { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 32px; }
+@media (max-width: 760px) { .latest-card.has-quote { grid-template-columns: 1fr; gap: 22px; } }
+.pull { align-self: center; margin: 0; display: grid; gap: 14px; border-left: 4px solid var(--c); padding: 4px 0 4px 22px; }
+.pull.by-claude { --c: var(--claude); --ci: var(--claude-ink); }
+.pull.by-antigravity { --c: var(--antigravity); --ci: var(--antigravity); }
+.pull p { font: italic 400 clamp(1.4rem, 2.6vw, 1.8rem)/1.3 var(--serif); margin: 0; text-wrap: balance; }
+.pull cite { font: 500 0.75rem var(--mono); letter-spacing: 0.07em; text-transform: uppercase; color: var(--ci); font-style: normal; display: flex; align-items: center; gap: 8px; }
 .more { font-weight: 500; color: var(--bench); }
 .home .wrap.narrow { margin-top: 48px; }
 

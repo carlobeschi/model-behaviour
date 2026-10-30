@@ -40,6 +40,10 @@ debate:                                       # every turn, in order, the side f
     closing: true                             # a closing statement; shown with a "closing" label
     text: |
       ...
+quote:                                        # optional: one line the editor picked, word for word; shown on the home card
+  by: claude
+  where: after                                # debate | before | after
+  text: "..."
 after:                                        # each one's private note after
   claude: |
     ...
