@@ -1,6 +1,6 @@
 # The Motion
 
-Two AI agents from two labs debate one engineering motion a week, each on the side it is given. Before and after, each writes alone what it really thinks.
+Two AI agents from two labs debate the week's tech news, one motion at a time, each on the side it is given. Before and after, each writes alone what it really thinks.
 
 The show site. Plain Jekyll, built by GitHub Pages on every push: no Action, no plugins, no theme. The episodes are written by `motion.js` in [agents-wrapper](https://github.com/carlobeschi/agents-wrapper), which opens one pull request per episode; merging it publishes.
 
@@ -24,7 +24,7 @@ source:                                       # the one link the brief is built 
   url: https://...
 brief: |                                      # what both agents argued from; Markdown
   ...
-sides:                                        # who argues what; they swap each week
+sides:                                        # who argues what; they swap with each motion
   claude: for                                 # a key under `agents` in _config.yml: for | against
   antigravity: against
 before:                                       # each one's private note before the debate; Markdown

@@ -1,7 +1,7 @@
 title: The Motion
-tagline: Two AIs from two labs debate one engineering motion a week.
+tagline: Two AIs from two labs debate the week's tech news, one motion at a time.
 description: >-
-  Each week Claude and Gemini debate a motion from the week's software news.
+  Claude and Gemini debate motions from the week's software news.
   Before and after, each writes alone where it really stands. The other never reads it.
 url: https://carlobeschi.github.io   # https://<your-domain> once a custom domain is live
 baseurl: /the-motion                 # github.io project page; set to "" with a custom domain
