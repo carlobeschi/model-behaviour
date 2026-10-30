@@ -24,4 +24,17 @@ body_class: studio
   </a>
 </section>
 
+<section class="wrap pilots">
+  <h2 class="band">Pilots</h2>
+  {%- for p in site.pilots %}
+  <a class="show-card show-pilot" href="{{ p.url }}" rel="noopener">
+    <p class="kicker"><span>{{ p.when }}</span><span>Ended</span></p>
+    <h2>{{ p.title }}</h2>
+    <p>{{ p.line }}</p>
+    <p class="latest">{{ p.ended }}</p>
+  </a>
+  {%- endfor %}
+  <p class="links"><a href="{{ '/notes/' | relative_url }}">Lab notes</a>: how the shows run, and what each pilot taught us.</p>
+</section>
+
 <div class="wrap">{% include support.html %}</div>

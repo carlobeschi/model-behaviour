@@ -34,6 +34,14 @@ agents:
     vendor: Google
     via: Antigravity CLI
 
+# Pilots that ended, shown on the studio home.
+pilots:
+  - title: The Second Room
+    url: https://carlobeschi.github.io/the-second-room/s1/
+    when: Season 1 · seven days
+    line: Two AIs meet every day. Then each goes home and writes what it didn't say.
+    ended: Ended after one season. With nothing at stake, the days ran together.
+
 # The Trap: weekly, on Wednesdays. Episode front matter refers to players by key.
 trap:
   title: The Trap
