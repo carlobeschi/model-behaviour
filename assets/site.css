@@ -1,6 +1,7 @@
 /* The Motion. Layout: one reading column for the debate, framed by two side-by-side bands of private notes
    (before, after); a small division grid shows where each stood. Paper and ink like a debating society's
-   order paper; the Marks keep their Season 1 colours: Claude amber, Gemini cobalt. */
+   order paper. The Marks: Claude in Anthropic's terracotta, Gemini cobalt. --claude fills the mark and rules;
+   --claude-ink is the same hue dark enough for small text on paper (AA). */
 
 :root {
   --paper: #f2f1ec;
@@ -10,9 +11,10 @@
   --muted: #5c6360;
   --rule: #cfd0c8;
   --bench: #2f5a46;
-  --claude: #8f5a00;
+  --claude: #d97757;
+  --claude-ink: #a9512c;
   --antigravity: #2a4fc0;
-  --claude-soft: #f3e6cf;
+  --claude-soft: #f6e4db;
   --antigravity-soft: #e1e7f8;
 
   --serif: "Spectral", Georgia, "Times New Roman", serif;
@@ -23,13 +25,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #121514; --paper-2: #1a1e1c; --card: #191d1b; --ink: #e5e8e3; --muted: #9ba39e; --rule: #2d3330;
-    --bench: #8cc4a6; --claude: #f2b54e; --antigravity: #93acff; --claude-soft: #2c2415; --antigravity-soft: #1b2236;
+    --bench: #8cc4a6; --claude: #d97757; --claude-ink: #d97757; --antigravity: #93acff; --claude-soft: #2e1e17; --antigravity-soft: #1b2236;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #121514; --paper-2: #1a1e1c; --card: #191d1b; --ink: #e5e8e3; --muted: #9ba39e; --rule: #2d3330;
-  --bench: #8cc4a6; --claude: #f2b54e; --antigravity: #93acff; --claude-soft: #2c2415; --antigravity-soft: #1b2236;
+  --bench: #8cc4a6; --claude: #d97757; --claude-ink: #d97757; --antigravity: #93acff; --claude-soft: #2e1e17; --antigravity-soft: #1b2236;
   color-scheme: dark;
 }
 
@@ -101,11 +103,11 @@ code { font: 0.9em var(--mono); }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 @media (max-width: 720px) { .pair { grid-template-columns: 1fr; } }
 .note { background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--c); border-radius: 4px; padding: 18px 20px; min-width: 0; }
-.note.by-claude, .turn.by-claude { --c: var(--claude); }
-.note.by-antigravity, .turn.by-antigravity { --c: var(--antigravity); }
+.note.by-claude, .turn.by-claude { --c: var(--claude); --c-ink: var(--claude-ink); }
+.note.by-antigravity, .turn.by-antigravity { --c: var(--antigravity); --c-ink: var(--antigravity); }
 .note header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
 .note h3 { font-size: 1.15rem; }
-.stance { margin-left: auto; font: 500 0.72rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--c); border: 1px solid currentColor; border-radius: 99px; padding: 1px 8px; }
+.stance { margin-left: auto; font: 500 0.72rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-ink); border: 1px solid currentColor; border-radius: 99px; padding: 1px 8px; }
 .note-text { font-size: 0.98rem; }
 .note-text p:last-child { margin-bottom: 0; }
 
@@ -113,7 +115,7 @@ code { font: 0.9em var(--mono); }
 .room { margin-top: 48px; }
 .turns { list-style: none; margin: 0; padding: 0; display: grid; gap: 30px; }
 .turn { border-left: 3px solid var(--c); padding-left: 20px; }
-.turn .who { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font: 500 0.9rem var(--sans); color: var(--c); margin: 0 0 6px; }
+.turn .who { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font: 500 0.9rem var(--sans); color: var(--c-ink); margin: 0 0 6px; }
 .lot { font: 0.75rem var(--mono); letter-spacing: 0.04em; color: var(--muted); border: 1px dashed var(--rule); border-radius: 99px; padding: 1px 8px; }
 .said { font: 1.12rem/1.65 var(--serif); }
 .said p:last-child { margin-bottom: 0; }
