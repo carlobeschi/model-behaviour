@@ -1,0 +1,6 @@
+{%- comment -%} One line the editor picked from the episode, word for word. quote: {by, where: debate | before | after, text}; sides: the episode's sides {%- endcomment -%}
+{%- assign q = include.quote -%}{%- assign side = include.sides[q.by] -%}
+<blockquote class="pull by-{{ q.by }}">
+  <p>“{{ q.text | escape }}”</p>
+  <cite>{% include speaker.html who=q.by %}<span>{{ site.agents[q.by].name }}{% if side %}, who argued {{ side }}{% endif %} · {% if q.where == "debate" %}in the debate{% elsif q.where == "before" %}before, alone{% else %}afterwards, alone{% endif %}</span></cite>
+</blockquote>

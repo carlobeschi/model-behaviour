@@ -10,12 +10,15 @@ layout: default
 
 {% if latest %}
 <section class="wrap">
-  <a class="latest-card" href="{{ latest.url | relative_url }}">
+  <a class="latest-card{% if latest.quote %} has-quote{% endif %}" href="{{ latest.url | relative_url }}">
+    <div class="latest-main">
     <p class="kicker"><span>Latest · Motion {{ latest.number }}</span><time datetime="{{ latest.date | date: '%Y-%m-%d' }}">{{ latest.date | date: "%-d %B %Y" }}</time></p>
     <h2><span class="thb">This house believes</span> {{ latest.motion | escape }}</h2>
     {% if latest.summary %}<p class="summary">{{ latest.summary | escape }}</p>{% endif %}
     {% include sides.html episode=latest %}
     <span class="more">Read the debate →</span>
+    </div>
+    {% if latest.quote %}{% include pull-quote.html quote=latest.quote sides=latest.sides %}{% endif %}
   </a>
 </section>
 {% if eps.size > 1 %}
