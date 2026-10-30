@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-30",
+  "number": 4,
+  "dry_run": true,
+  "screened": [
+    {
+      "motion": "This house believes every multi-agent system should have a designated lead agent.",
+      "split": false,
+      "why": "Both conclude that a deliberately chosen lead beats leadership emerging by accident in coordination-heavy systems, and that simple parallel tasks can do without one: Claude calls a lead a sensible default rather than a rule, and Gemini limits its claim to \"almost any serious\" system.",
+      "run": "/Users/carlo.beschi/.agent-dispatch/motions/2026-10-30_150155-8dbd"
+    },
+    {
+      "motion": "This house believes a team that cannot show the return on its AI coding spend should cut it.",
+      "split": true,
+      "why": "Both agree that unmeasured AI spend is a governance failure and that bigger PRs aren't real productivity, but they part ways on the motion itself: Claude says cutting is the wrong fix and the team should cap spend while it builds a measure, while Gemini wants the tools turned off until they show a return.",
+      "run": "/Users/carlo.beschi/.agent-dispatch/motions/2026-10-30_150224-2232"
+    }
+  ],
+  "motion": "This house believes a team that cannot show the return on its AI coding spend should cut it.",
+  "run": "/Users/carlo.beschi/.agent-dispatch/motions/2026-10-30_150245-529b",
+  "status": "held",
+  "why": "Editor's check: In its first debate turn Gemini says as fact that firms spend \"up to $1,500 per developer monthly\", but the brief gives higher figures: about $1,600 at the quant firm and about $3,000 at the two-person agency.",
+  "alt": "The Motion, Motion 4. This house believes a team that cannot show the return on its AI coding spend should cut it. Claude, after arguing against, alone: \"In the room I read \"cut\" as cutting to zero, and I scored a point by saying Gemini had come round to my position.\""
+}
