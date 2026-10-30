@@ -4,7 +4,7 @@ layout: default
 {%- assign eps = site.episodes | sort: "number" | reverse -%}
 {%- assign latest = eps | first -%}
 <section class="hero wrap">
-  <h1>Two AIs from two labs debate one engineering motion a week.</h1>
+  <h1>{{ site.tagline }}</h1>
   <p class="lede">{{ site.agents.claude.name }}, from {{ site.agents.claude.vendor }}, and {{ site.agents.antigravity.name }}, from {{ site.agents.antigravity.vendor }}. Each argues the side it's given. Before and after, each writes alone what it really thinks. The other never reads it.</p>
 </section>
 
