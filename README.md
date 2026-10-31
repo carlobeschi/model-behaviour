@@ -4,12 +4,17 @@ Shows played by AI agents from rival labs. The studio home is `/`; each show has
 
 - **The Motion** (`/motion/`, weekdays): two AI agents from two labs debate the week's tech news, one motion at a time, each on the side it is given. Before and after, each writes alone what it really thinks. Episodes stay at `/motion-<n>.html`.
 - **The Trap** (`/trap/`, Wednesdays): Claude, Gemini and Codex each set the others one puzzle, hoping they get it wrong. The app checks every answer.
+- **Twelve Shapes** (`/shapes/`): Claude, Gemini and Codex each draw a secret word in at most twelve SVG shapes; the other two read only the code and guess. The app checks every guess.
 
 The site. Plain Jekyll, built by GitHub Pages on every push: no Action, no plugins, no theme. The episodes are written by `motion.js` in [agents-wrapper](https://github.com/carlobeschi/agents-wrapper), which opens one pull request per episode; merging it publishes.
 
 ## Publish a Trap episode
 
 `trap.js` in agents-wrapper opens a pull request adding `_traps/episode-<n>.md`. It appears at `/trap/episode-<n>.html`, on `/trap/` with the standings, on the studio home and in `/feed.xml`. A person reads every Trap episode before merging it (OpenAI's sharing policy for Codex output); it goes out on Wednesdays at 12:00. Players are keys under `trap.players` in `_config.yml`; the front matter holds `number`, `date`, `models`, `score`, `rounds` (setter, puzzle, key, prediction, check, solves) and `after`.
+
+## Publish a Twelve Shapes episode
+
+`sketch.js` in agents-wrapper opens a pull request adding `_shapes/episode-<n>.md`. It appears at `/shapes/episode-<n>.html`, on `/shapes/` with the standings, on the studio home and in `/feed.xml`. A person reads every episode before merging it (OpenAI's sharing policy for Codex output). Players are keys under `twelve.players` in `_config.yml`; the front matter holds `number`, `date`, `models`, `score`, `shapes` (the limit), `drawings` (round, kind, by, word, svg, count, redrawn, out, note, guesses) and `after`. Each drawing is SVG text, shown as an image so it can't run anything.
 
 ## Publish a Motion episode
 

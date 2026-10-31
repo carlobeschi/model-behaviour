@@ -1,0 +1,82 @@
+---
+layout: default
+---
+{%- assign all = site.shapes | sort: "number" -%}
+{%- assign prev = nil -%}{%- assign next = nil -%}
+{%- for e in all -%}{%- if e.number == page.number -%}{%- assign i = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- if i > 0 -%}{%- assign pi = i | minus: 1 -%}{%- assign prev = all[pi] -%}{%- endif -%}
+{%- assign ni = i | plus: 1 -%}{%- assign next = all[ni] -%}
+{%- assign players = site.twelve.players -%}
+{%- assign cap = page.shapes | default: 12 -%}
+{%- assign rounds = page.drawings | group_by: "round" -%}
+<article class="episode shapes-ep">
+  <header class="ep-head wrap narrow">
+    <p class="kicker"><span>Twelve Shapes</span><span>Episode {{ page.number }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+    <h1>Episode {{ page.number }}</h1>
+    {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
+    <p class="how">Guess each word before you open the answers.</p>
+  </header>
+
+  {%- for g in rounds %}{%- assign first = g.items | first %}
+  <section class="round wrap" aria-labelledby="round-{{ g.name }}">
+    <h2 id="round-{{ g.name }}" class="band">Round {{ g.name }}{% if first.kind %} <span class="kind">{{ first.kind }}</span>{% endif %}</h2>
+    {%- for d in g.items %}{%- assign who = players[d.by] %}
+    <div class="sketch by-{{ d.by }}">
+      <figure>
+        {% if d.svg %}{% capture alt %}{{ who.name }}'s drawing{% if d.out %}, out{% endif %}{% endcapture %}{% include drawing.html svg=d.svg alt=alt %}{% else %}<div class="drawing blank">No drawing</div>{% endif %}
+        <figcaption>{% include speaker.html who=d.by %}{{ who.name }}{% if d.count %}<span class="count">{{ d.count }} of {{ cap }} shapes</span>{% endif %}</figcaption>
+      </figure>
+      <div class="sketch-body">
+        {% if d.out %}<p class="out-line"><span class="chip chip-void">Out</span> {% if d.redrawn %}First try {{ d.redrawn | remove: "it has " }}; second try {{ d.out | remove: "it has " }}{% else %}{{ d.out | remove: "it has " | capitalize }}{% endif %}. No one was asked to guess it.</p>{% elsif d.redrawn %}<p class="how">Redrawn: the first try had {{ d.redrawn | remove: "it has " }}.</p>{% endif %}
+        <details class="reveal">
+          <summary>The word{% unless d.out %} and the guesses{% endunless %}</summary>
+          <p class="key">The word: <code>{{ d.word | escape }}</code></p>
+          {%- for x in d.guesses %}{%- assign gw = players[x.by] %}
+          <div class="answer by-{{ x.by }}">
+            <p class="who">{% include speaker.html who=x.by %}{{ gw.name }}{% if x.confidence %} <span class="lot">privately {{ x.confidence }}% sure</span>{% endif %}</p>
+            <div class="work">{{ x.working | markdownify }}</div>
+            <p class="res"><code>{{ x.answer | default: "(no answer)" | escape }}</code><span class="chip chip-{% if x.right %}right{% else %}wrong{% endif %}">{% if x.right %}Right{% else %}Wrong{% endif %}</span></p>
+          </div>
+          {%- endfor %}
+          {% if d.note %}
+          <article class="note by-{{ d.by }}">
+            <header>{% include speaker.html who=d.by %}<h3>{{ who.name }}</h3><span class="stance">before, alone</span></header>
+            <div class="note-text">{{ d.note | markdownify }}</div>
+          </article>
+          {% endif %}
+          {% if d.svg %}<details class="source"><summary>{% if d.out %}The code{% else %}What the guessers got{% endif %}</summary><pre><code>{{ d.svg | escape }}</code></pre></details>{% endif %}
+        </details>
+      </div>
+    </div>
+    {%- endfor %}
+  </section>
+  {%- endfor %}
+
+  <section class="alone wrap" aria-labelledby="after">
+    <h2 id="after" class="band">After · written alone</h2>
+    <div class="pair three">
+      {%- for pair in page.after %}{%- assign k = pair[0] %}{%- assign who = players[k] %}
+      <article class="note by-{{ k }}">
+        <header>{% include speaker.html who=k %}<h3>{{ who.name }}</h3></header>
+        <div class="note-text">{{ pair[1] | markdownify }}</div>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="outcome wrap narrow" aria-labelledby="score">
+    <h2 id="score" class="band">Score</h2>
+    <ol class="scoreboard">
+      {%- for pair in page.score %}{%- assign pk = pair[0] %}
+      <li class="by-{{ pk }}">{% include speaker.html who=pk %}<span>{{ players[pk].name }}</span><b>{{ pair[1] }}</b></li>
+      {%- endfor %}
+    </ol>
+  </section>
+
+  <nav class="ep-nav wrap narrow" aria-label="Episodes">
+    {% if prev %}<a class="prev" href="{{ prev.url | relative_url }}"><span>Episode {{ prev.number }}</span>{{ prev.date | date: "%-d %B %Y" }}</a>{% else %}<span></span>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url | relative_url }}"><span>Episode {{ next.number }}</span>{{ next.date | date: "%-d %B %Y" }}</a>{% else %}<a class="next" href="{{ '/shapes/' | relative_url }}"><span>All episodes</span></a>{% endif %}
+  </nav>
+
+  <div class="wrap narrow">{% include support.html %}</div>
+</article>

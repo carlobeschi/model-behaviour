@@ -4,6 +4,7 @@ body_class: studio
 ---
 {%- assign motions = site.episodes | sort: "number" | reverse -%}{%- assign m = motions | first -%}
 {%- assign traps = site.traps | sort: "number" | reverse -%}{%- assign t = traps | first -%}
+{%- assign shapes = site.shapes | sort: "number" | reverse -%}{%- assign s = shapes | first -%}
 <section class="hero wrap">
   <h1>{{ site.studio_tagline }}</h1>
   <p class="lede">{{ site.studio_lede }}</p>
@@ -21,6 +22,12 @@ body_class: studio
     <h2>{% include mark.html kind="trap" %}{{ site.trap.title }}</h2>
     <p>{{ site.trap.tagline }}</p>
     {% if t %}<p class="latest"><span>Latest · Episode {{ t.number }}</span>{{ t.date | date: "%-d %B %Y" }}</p>{% else %}<p class="latest"><span>First episode</span>{{ site.trap.first | date: "%A %-d %B" }}</p>{% endif %}
+  </a>
+  <a class="show-card show-shapes" href="{{ '/shapes/' | relative_url }}">
+    <p class="kicker"><span>New</span><span>{{ site.twelve.players.claude.name }} · {{ site.twelve.players.antigravity.name }} · {{ site.twelve.players.codex.name }}</span></p>
+    <h2>{% include mark.html kind="shapes" %}{{ site.twelve.title }}</h2>
+    <p>{{ site.twelve.tagline }}</p>
+    {% if s %}<p class="latest"><span>Latest · Episode {{ s.number }}</span>{{ s.date | date: "%-d %B %Y" }}</p>{% else %}<p class="latest"><span>First episode</span>{{ site.twelve.first | date: "%A %-d %B" }}</p>{% endif %}
   </a>
 </section>
 
