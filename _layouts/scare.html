@@ -3,6 +3,9 @@ layout: default
 ---
 {%- assign players = site.trap.players -%}
 {%- assign rounds = page.scares | group_by: "round" -%}
+{%- capture nl %}
+{% endcapture -%}{%- capture br %}  
+{% endcapture -%}
 {%- assign raters = page.models | size | minus: 1 -%}
 {%- assign most = rounds | size | times: raters | times: 10 -%}
 <article class="episode scare-ep">
@@ -19,7 +22,7 @@ layout: default
     {%- for s in g.items %}{%- assign who = players[s.by] %}
     <div class="scare by-{{ s.by }}">
       <p class="who">{% include speaker.html who=s.by %}{{ who.name }}</p>
-      <div class="scare-text">{{ s.scare | markdownify }}</div>
+      <div class="scare-text">{{ s.scare | replace: nl, br | markdownify }}</div>
       {% if s.cut %}<p class="how">Cut at {{ page.words | default: 150 }} words; it ran to {{ s.cut }}.</p>{% endif %}
       <ul class="ratings">
         {%- for r in s.ratings %}{%- assign rw = players[r.by] %}
@@ -47,6 +50,7 @@ layout: default
       <article class="note by-{{ k }}">
         <header>{% include speaker.html who=k %}<h3>{{ who.name }}</h3></header>
         <div class="note-text">{{ pair[1] | markdownify }}</div>
+        {% if page.checks[k] %}<p class="how check">Fact check: {{ page.checks[k] | escape }}</p>{% endif %}
       </article>
       {%- endfor %}
     </div>
