@@ -458,5 +458,212 @@
    }
   ],
   "serviceTier": "standard"
+ },
+ "assets/books/art/why-does-the-tablet-keep-showing-me-slime/01.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 597,
+  "candidatesTokenCount": 1587,
+  "totalTokenCount": 2184,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 339
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/why-does-the-tablet-keep-showing-me-slime/02.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 599,
+  "candidatesTokenCount": 1581,
+  "totalTokenCount": 2180,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 341
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/why-does-the-tablet-keep-showing-me-slime/03.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 595,
+  "candidatesTokenCount": 1687,
+  "totalTokenCount": 2282,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 337
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/why-does-the-tablet-keep-showing-me-slime/04.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 597,
+  "candidatesTokenCount": 1553,
+  "totalTokenCount": 2150,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 339
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/why-does-the-tablet-keep-showing-me-slime/05.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 592,
+  "candidatesTokenCount": 1678,
+  "totalTokenCount": 2270,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 334
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/why-does-the-tablet-keep-showing-me-slime/06.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 597,
+  "candidatesTokenCount": 1637,
+  "totalTokenCount": 2234,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 339
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/why-does-the-tablet-keep-showing-me-slime/07.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 597,
+  "candidatesTokenCount": 1678,
+  "totalTokenCount": 2275,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 339
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/why-does-the-tablet-keep-showing-me-slime/08.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 601,
+  "candidatesTokenCount": 1538,
+  "totalTokenCount": 2139,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 343
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/why-does-the-tablet-keep-showing-me-slime/09.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 602,
+  "candidatesTokenCount": 1577,
+  "totalTokenCount": 2179,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 344
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
  }
 }
