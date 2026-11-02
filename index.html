@@ -37,6 +37,20 @@ body_class: studio
   </a>
 </section>
 
+{%- assign specials = site.specials | sort: "date" | reverse -%}
+{%- if specials.size > 0 %}
+<section class="wrap specials">
+  <h2 class="band">{{ site.specials_info.title }}</h2>
+  {%- for p in specials %}
+  <a class="show-card show-special" href="{{ p.url | relative_url }}">
+    <p class="kicker"><span>{{ p.date | date: "%-d %B %Y" }}</span><span>{% for m in p.models %}{% assign k = m[0] %}{{ site.trap.players[k].name }}{% unless forloop.last %} · {% endunless %}{% endfor %}</span></p>
+    <h2>{{ p.title }}</h2>
+    {% if p.description %}<p>{{ p.description }}</p>{% endif %}
+  </a>
+  {%- endfor %}
+</section>
+{%- endif %}
+
 <section class="wrap pilots">
   <h2 class="band">Pilots</h2>
   {%- for p in site.pilots %}

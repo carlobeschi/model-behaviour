@@ -86,6 +86,11 @@ books:
   title: Books
   tagline: Stories that explain AI to children, made with AI and checked by people.
 
+# Specials: one-off episodes outside the weekly shows (the `specials` collection). Players are the Trap's three.
+specials_info:
+  title: Specials
+  line: One-off episodes outside the regular shows.
+
 collections:
   episodes:
     output: true
@@ -96,6 +101,9 @@ collections:
   shapes:
     output: true
     permalink: /shapes/:name:output_ext # _shapes/episode-1.md -> /shapes/episode-1.html
+  specials:
+    output: true
+    permalink: /specials/:name:output_ext # _specials/halloween.md -> /specials/halloween.html
 
 defaults:
   - scope: { type: episodes }
@@ -104,6 +112,8 @@ defaults:
     values: { layout: trap, show: trap }
   - scope: { type: shapes }
     values: { layout: shapes, show: shapes }
+  - scope: { type: specials }
+    values: { layout: scare, show: special }
 
 future: true      # publish on merge; Pages only rebuilds on push, so a future date would hide an episode
 markdown: kramdown
