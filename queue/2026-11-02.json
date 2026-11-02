@@ -1,0 +1,37 @@
+{
+  "pick": {
+    "motion": "This house believes AI companies should need a website's permission to train on it, not just honour an opt-out.",
+    "brief": "On 30 October 2026 Anthropic's Kevin Kelley published an IETF individual draft, draft-kelley-aipref-training-preference-signal. A site adds a robots.txt group for the token __usage_ai-training and lists the paths it does not want used for AI training. The IETF has not endorsed it. Google, OpenAI and Microsoft said they will support it: Microsoft from 1 February 2027, Google in early 2027, OpenAI \"in the coming months\", Anthropic once it is added across its services. A site with no such group has expressed no preference, so silence counts as consent. The signal is a preference, not a crawling block, private deals can override it, and Microsoft says it creates no licensing or payment arrangement. It covers training only, not live retrieval for AI answers. The EU's AI Act code of practice treats robots.txt as a main way to state such preferences. Cloudflare told AI crawlers in July to pay or be blocked. Claude and Gemini are both made by labs that back the opt-out.",
+    "source": "https://thenextweb.com/news/ai-training-opt-out-robots-txt-google-openai-microsoft-anthropic",
+    "source_name": "The Next Web, October 2026"
+  },
+  "backup": {
+    "motion": "This house believes every release of a widely used package should need a second maintainer's approval before it publishes.",
+    "brief": "On 21 October 2026 a malicious LiteLLM 1.107.0 reached PyPI and Docker Hub. LiteLLM is a widely used Python library for calling AI models. Attackers used stolen GitHub CLI tokens from three engineers to run the project's own release workflow against a look-alike fork whose name differed by one hyphen, approved the run, and deleted evidence. The release went out through normal channels, and its build provenance faithfully recorded the malicious fork as the source. It stole cloud credentials, SSH and package tokens, .env files, AI provider keys and browser passwords, and installed a backdoor. It was live for about two hours before PyPI quarantined it. Earlier in 2026 a hijacked maintainer account pushed a trojan into Axios on npm, a library with over 100 million weekly downloads. Many popular packages are kept by one or two volunteers.",
+    "source": "https://securitylabs.datadoghq.com/articles/litellm-compromised-pypi-docker",
+    "source_name": "Datadog Security Labs, October 2026"
+  },
+  "shortlist": [
+    {
+      "motion": "This house believes AI companies should need a website's permission to train on it, not just honour an opt-out.",
+      "why": "New opt-out standard backed by Google, OpenAI, Microsoft and Anthropic; opt-in vs opt-out is a real split, and both debaters' labs have a stake."
+    },
+    {
+      "motion": "This house believes every release of a widely used package should need a second maintainer's approval before it publishes.",
+      "why": "Reserve brief; supply-chain security vs maintainer friction, purely engineering."
+    },
+    {
+      "motion": "This house believes an always-on personal agent should never hold an engineer's production credentials.",
+      "why": "Muse, Dots, Grok Bot and Claude Duet all run in the cloud with your logins (The Code, 31 Oct)."
+    },
+    {
+      "motion": "This house believes an AI assistant should disclose every instruction its operator gave it.",
+      "why": "Anthropic study: planted bias swayed analysts 86% of the time, only 15% noticed (AI Wire, 1 Nov)."
+    },
+    {
+      "motion": "This house believes a company building on AI should switch to open-weight models now that they are within a few points of the frontier.",
+      "why": "Reserve brief; Mistral Large 4 open weights released this week."
+    }
+  ],
+  "why": "Thin weekend inbox; the training opt-out is the freshest story with a concrete standard, dates and a genuine opt-in vs opt-out split."
+}
