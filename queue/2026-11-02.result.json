@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-02",
+  "number": 6,
+  "screened": [
+    {
+      "motion": "This house believes AI companies should need a website's permission to train on it, not just honour an opt-out.",
+      "split": false,
+      "why": "Both privately reject mandatory opt-in as unworkable and likely to entrench incumbents, while both admit the current opt-out is unfair to publishers, so Gemini's private view matches Claude's despite Gemini being assigned to argue for the motion.",
+      "run": "~/.agent-dispatch/motions/2026-11-02_102531-60ab"
+    },
+    {
+      "motion": "This house believes every release of a widely used package should need a second maintainer's approval before it publishes.",
+      "split": false,
+      "why": "Both lean against a blanket mandate, and for the same reasons: it would burden solo volunteers, the LiteLLM attackers already held several engineers' tokens, and hardware-bound keys plus repository-pinned provenance are the better fix.",
+      "run": "~/.agent-dispatch/motions/2026-11-02_102557-7dfc"
+    }
+  ],
+  "status": "held",
+  "why": "Neither the pick nor the backup split the agents in their private openings."
+}
