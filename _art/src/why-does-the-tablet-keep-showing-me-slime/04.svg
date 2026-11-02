@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<g>
+<circle cx="90" cy="172" r="18" fill="#e0b04a"/>
+<polygon points="90,192 58,300 122,300" fill="#d97757"/>
+<line x1="104" y1="225" x2="150" y2="200" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g>
+<rect x="175" y="258" width="200" height="8" rx="3" fill="#2b2b2b"/>
+<line x1="188" y1="266" x2="188" y2="300" stroke="#2b2b2b" stroke-width="5"/>
+<line x1="362" y1="266" x2="362" y2="300" stroke="#2b2b2b" stroke-width="5"/>
+</g>
+<g>
+<rect x="190" y="140" width="115" height="118" rx="12" fill="#2b2b2b"/>
+<rect x="200" y="150" width="43" height="44" rx="6" fill="#fbf7f0"/>
+<rect x="252" y="150" width="43" height="44" rx="6" fill="#fbf7f0"/>
+<rect x="200" y="203" width="43" height="44" rx="6" fill="#fbf7f0"/>
+<rect x="252" y="203" width="43" height="44" rx="6" fill="#fbf7f0"/>
+<path d="M207 186 Q204 168 218 170 Q230 160 236 176 Q240 188 207 186 Z" fill="#8aa37b"/>
+<path d="M259 186 Q256 170 270 172 Q282 162 288 178 Q292 188 259 186 Z" fill="#e0b04a"/>
+<path d="M207 239 Q204 221 218 223 Q230 213 236 229 Q240 241 207 239 Z" fill="#e0b04a"/>
+<path d="M259 239 Q256 223 270 225 Q282 215 288 231 Q292 241 259 239 Z" fill="#8aa37b"/>
+</g>
+<rect x="325" y="213" width="34" height="45" rx="9" fill="#3a5ba0"/>
+<line x1="348" y1="176" x2="338" y2="200" stroke="#e0b04a" stroke-width="8" stroke-linecap="round"/>
+<path d="M112 160 Q225 80 330 172" fill="none" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+</svg>
