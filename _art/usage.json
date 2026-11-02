@@ -1,0 +1,462 @@
+{
+ "assets/books/art/the-slipper-that-wasnt-a-cat/01.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 603,
+  "candidatesTokenCount": 1607,
+  "totalTokenCount": 2210,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 345
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-slipper-that-wasnt-a-cat/02.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 601,
+  "candidatesTokenCount": 1598,
+  "totalTokenCount": 2199,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 343
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-slipper-that-wasnt-a-cat/03.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 603,
+  "candidatesTokenCount": 1592,
+  "totalTokenCount": 2195,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 345
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-slipper-that-wasnt-a-cat/04.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 604,
+  "candidatesTokenCount": 1558,
+  "totalTokenCount": 2162,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 346
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-slipper-that-wasnt-a-cat/05.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 600,
+  "candidatesTokenCount": 1643,
+  "totalTokenCount": 2243,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 342
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-slipper-that-wasnt-a-cat/06.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 598,
+  "candidatesTokenCount": 1554,
+  "totalTokenCount": 2152,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 340
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-slipper-that-wasnt-a-cat/07.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 604,
+  "candidatesTokenCount": 1601,
+  "totalTokenCount": 2205,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 346
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-slipper-that-wasnt-a-cat/08.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 602,
+  "candidatesTokenCount": 1703,
+  "totalTokenCount": 2305,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 344
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-slipper-that-wasnt-a-cat/09.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 592,
+  "candidatesTokenCount": 1695,
+  "totalTokenCount": 2287,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 334
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-tadpole-girl-of-tower-bridge/01.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 696,
+  "candidatesTokenCount": 1661,
+  "totalTokenCount": 2357,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 438
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-tadpole-girl-of-tower-bridge/02.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 709,
+  "candidatesTokenCount": 1757,
+  "totalTokenCount": 2466,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 451
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-tadpole-girl-of-tower-bridge/03.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 713,
+  "candidatesTokenCount": 1603,
+  "totalTokenCount": 2316,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 455
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-tadpole-girl-of-tower-bridge/04.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 698,
+  "candidatesTokenCount": 1678,
+  "totalTokenCount": 2376,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 440
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-tadpole-girl-of-tower-bridge/05.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 1707,
+  "totalTokenCount": 2413,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 448
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/the-tadpole-girl-of-tower-bridge/06.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 1562,
+  "totalTokenCount": 2266,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 446
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/leo-and-the-paper-snake/01.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 698,
+  "candidatesTokenCount": 1785,
+  "totalTokenCount": 2483,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 440
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/leo-and-the-paper-snake/02.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 1752,
+  "totalTokenCount": 2458,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 448
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/leo-and-the-paper-snake/03.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 722,
+  "candidatesTokenCount": 1713,
+  "totalTokenCount": 2435,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 464
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/leo-and-the-paper-snake/04.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 714,
+  "candidatesTokenCount": 1779,
+  "totalTokenCount": 2493,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 456
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/leo-and-the-paper-snake/05.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 705,
+  "candidatesTokenCount": 1674,
+  "totalTokenCount": 2379,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 447
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ }
+}
