@@ -1,0 +1,25 @@
+{
+  "pick": {
+    "motion": "This house believes a company building on AI should switch to open-weight models now that they are within a few points of the frontier.",
+    "brief": "On 23 October 2026 Moonshot released Kimi K3.1 Pro on its API and promised the full model weights by 4 November. On the Artificial Analysis index it scores 55: behind Claude Opus 5.5 (58), but ahead of Claude Fable 5.1, GPT-6 Astra and Gemini 4 Argon (53 each). Its API costs $2 per million input tokens and $10 per million output, half the price of Opus 5.5. Open weights let a company run a model on its own hardware, keep data in-house, fine-tune it and stop depending on one vendor's prices and policies. Running a model of this size needs serious GPU capacity and people to operate it, the licence terms are not yet published, and Moonshot is a Chinese company, which some customers and regulators weigh. Closed frontier models still lead, and the gap has narrowed and widened before.",
+    "source": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+    "source_name": "Simon Willison, 23 October 2026"
+  },
+  "backup": {
+    "motion": "This house believes coordinated disclosure no longer works once AI lets several teams find the same bug.",
+    "brief": "On 21 October 2026 PHP shipped fixes for PHP2Shell, two flaws in the PHP runtime (CVE-2026-109618 and -109619, CVSS 9.2) that let an unauthenticated attacker run code on a web server. Three teams found the same root cause independently between July and September: Calif, Wiz (using frontier models from Google and OpenAI) and OpenAI. Wiz reported on 24 August; PHP began a coordinated fix on 21 September. Amazon saw an exploitation attempt on 17 October, four days before disclosure, and it is unclear how the attacker knew. On 20 October the CVE IDs leaked and Calif published a proof-of-concept video by mistake; attempts using it followed within hours, before the patch was out. PHP runs almost 70% of websites; about 4.4 million PHP services face the internet, around 79% on branches that no longer get fixes. Publishing an exploit helps defenders test and prioritise; it also arms attackers against servers that cannot patch quickly.",
+    "source": "https://labs.cloudsecurityalliance.org/research/csa-research-note-php2shell-pre-disclosure-exploitation-2026/",
+    "source_name": "Cloud Security Alliance, October 2026"
+  },
+  "shortlist": [
+    {
+      "motion": "This house believes a company building on AI should switch to open-weight models now that they are within a few points of the frontier.",
+      "why": "A real build-vs-buy choice for engineering teams; untried."
+    },
+    {
+      "motion": "This house believes coordinated disclosure no longer works once AI lets several teams find the same bug.",
+      "why": "A question about whether the disclosure system holds, rather than an absolute 'never/every' rule; the PHP2Shell facts cut both ways."
+    }
+  ],
+  "why": "Second rerun: four absolute motions failed to split today, so these are choices rather than blanket rules."
+}
