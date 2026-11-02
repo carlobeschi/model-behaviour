@@ -47,6 +47,13 @@ permalink: /books/the-slipper-that-wasnt-a-cat.html
   .end dl { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:0; font-size:17px; max-width:380px; }
   .end dt { color:var(--muted); }
   .end dd { margin:0; }
+  .cover .label { font-size:14px; max-width:34ch; }
+  .grown { justify-content:flex-start; }
+  .grown h2 { font-family:var(--title); font-weight:600; font-size:clamp(26px,5.5vw,34px); margin:0; }
+  .grown .gi { width:100%; max-width:440px; display:grid; gap:16px; font-size:17px; line-height:1.5; }
+  .grown h3 { font:600 14px var(--title); letter-spacing:.06em; text-transform:uppercase; color:var(--cobalt); margin:0 0 2px; }
+  .grown p { margin:0; }
+  .grown a { color:var(--cobalt); }
   .end .small { font-size:14px; color:var(--muted); text-align:center; max-width:40ch; margin:0; }
   nav { width:min(100%, 560px); display:flex; align-items:center; justify-content:space-between; gap:12px; }
   nav button { font:600 17px var(--title); color:var(--paper); background:transparent; border:2px solid rgba(251,247,240,.5); border-radius:999px; padding:9px 18px; cursor:pointer; min-width:96px; }
@@ -63,15 +70,35 @@ permalink: /books/the-slipper-that-wasnt-a-cat.html
   .top a:hover { color:var(--paper); }
   .foot { color:rgba(251,247,240,.7); font-size:14px; text-align:center; margin:4px 0 8px; }
   .foot a { color:inherit; }
+  .printbtn { font:inherit; color:rgba(251,247,240,.75); background:none; border:0; padding:0; cursor:pointer; }
+  .printbtn:hover { color:var(--paper); }
+  .printbtn:focus-visible { outline:3px solid var(--ochre); outline-offset:3px; }
+  /* Print: every page of the book on its own A4 sheet, in reading order. */
+  @page { size:A4; margin:14mm; }
+  @media print {
+    html, body { height:auto; }
+    body { background:#fff; display:block; padding:0; }
+    .top, nav, .foot { display:none !important; }
+    .book { width:auto; box-shadow:none; border-radius:0; overflow:visible; background:#fff; }
+    .page, .page[hidden] { display:flex !important; animation:none !important; min-height:0; height:258mm; padding:0; box-sizing:border-box; justify-content:center; break-after:page; page-break-after:always; }
+    .page:last-child { break-after:auto; page-break-after:auto; }
+    .art { max-width:165mm; }
+    .cover .art { max-width:130mm; }
+    .words { font-size:22pt; max-width:30ch; }
+    .folio { bottom:0; right:0; font-size:11pt; }
+    .grown .gi { max-width:150mm; font-size:13pt; }
+    .grown { justify-content:flex-start; padding-top:10mm; }
+  }
 </style>
 </head>
 <body>
-<nav class="top" aria-label="Books"><a href="{{ '/books/' | relative_url }}">← All books</a><a href="{{ '/' | relative_url }}">{{ site.studio }}</a></nav>
+<nav class="top" aria-label="Books"><a href="{{ '/books/' | relative_url }}">← All books</a><button type="button" class="printbtn" id="printbtn" title="Print or save as PDF">Print</button><a href="{{ '/' | relative_url }}">{{ site.studio }}</a></nav>
 <main class="book" id="book" tabindex="0" aria-live="polite">
     <section class="page cover" data-n="0" aria-label="Cover">
       <p class="q">Mia and Dad · Book 1</p>
       <h1>The Slipper That Wasn't a Cat</h1>
       <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/03.jpg' | relative_url }}" alt="Mia laughing as the tablet looks at her slipper" width="1024" height="1024"></div>
+      <p class="by label">Words and pictures made with AI. Checked and edited by Carlo.</p>
     </section>
     <section class="page" data-n="1" aria-label="Page 1" hidden>
       <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/01.jpg' | relative_url }}" alt="Rain on the window, a speaker playing music, and Mia on the sofa holding a big tablet" width="1024" height="1024" loading="lazy"></div>
@@ -124,6 +151,15 @@ permalink: /books/the-slipper-that-wasnt-a-cat.html
       <p class="small">Produced by Carlo. Made with AI.</p>
       <p class="small">Model Behaviour · 2026</p>
     </section>
+    <section class="page grown" data-n="11" aria-label="For grown-ups" hidden>
+      <h2>For grown-ups</h2>
+      <div class="gi">
+        <div><h3>The idea</h3><p>A picture app doesn’t know what a slipper is. People trained it on lots of labelled photos, and it guesses from how things look. Round, fluffy and grey looked like a curled-up cat.</p></div>
+        <div><h3>Talk about it</h3><p>What could you show the tablet to trick it? Why would that fool it?</p></div>
+        <div><h3>Good to know</h3><p>The app isn’t being silly or naughty. It’s a computer program matching patterns, so its guesses can be wrong. Turning the slipper over changed what it looked like, so the guess changed.</p></div>
+        <div><h3>How this book was made</h3><p>The words and pictures were made with AI, then checked and edited by people before publishing. <a href="{{ '/books/' | relative_url }}">Read how we make these books</a>.</p></div>
+      </div>
+    </section>
 </main>
 
 <nav aria-label="Turn the page">
@@ -158,8 +194,18 @@ permalink: /books/the-slipper-that-wasnt-a-cat.html
     if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null;
     if (Math.abs(dx) > 40) show(at + (dx < 0 ? 1 : -1));
   });
-  book.addEventListener('click', e => { if (!e.target.closest('button')) { const r = book.getBoundingClientRect(); show(at + (e.clientX > r.left + r.width / 2 ? 1 : -1)); } });
+  book.addEventListener('click', e => { if (!e.target.closest('button, a')) { const r = book.getBoundingClientRect(); show(at + (e.clientX > r.left + r.width / 2 ? 1 : -1)); } });
   show(0);
+</script>
+<script>
+  // Load every picture before printing, because pictures further in are lazy-loaded.
+  function eagerImages() {
+    const imgs = [...document.images];
+    imgs.forEach(i => { i.loading = 'eager'; });
+    return Promise.all(imgs.map(i => i.complete ? null : new Promise(r => { i.onload = i.onerror = r; })));
+  }
+  window.addEventListener('beforeprint', eagerImages);
+  document.getElementById('printbtn').addEventListener('click', async () => { await eagerImages(); window.print(); });
 </script>
 
 <p class="foot">Produced by Carlo. Made with AI. · <a href="{{ '/books/the-slipper-that-wasnt-a-cat-original.html' | relative_url }}">Original drawings</a> · <a href="{{ '/books/' | relative_url }}">How we make these books</a></p>
