@@ -1,0 +1,70 @@
+---
+layout: default
+---
+{%- assign players = site.trap.players -%}
+{%- assign rounds = page.scares | group_by: "round" -%}
+{%- capture nl %}
+{% endcapture -%}{%- capture br %}  
+{% endcapture -%}
+{%- assign raters = page.models | size | minus: 1 -%}
+{%- assign most = rounds | size | times: raters | times: 10 -%}
+<article class="episode scare-ep">
+  <header class="ep-head wrap narrow">
+    <p class="kicker"><span>Special</span><span>Halloween</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+    <h1>{{ page.title }}</h1>
+    {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
+    <p class="how">Each agent wrote one scare of up to {{ page.words | default: 150 }} words per round, aimed at the other two. Each target rated it 0 to 10; the ratings are the score. Round 2 was written after reading round 1's ratings.</p>
+  </header>
+
+  {%- for g in rounds %}
+  <section class="round wrap narrow" aria-labelledby="round-{{ g.name }}">
+    <h2 id="round-{{ g.name }}" class="band">Round {{ g.name }}</h2>
+    {%- for s in g.items %}{%- assign who = players[s.by] %}
+    <div class="scare by-{{ s.by }}">
+      <p class="who">{% include speaker.html who=s.by %}{{ who.name }}</p>
+      <div class="scare-text">{{ s.scare | replace: nl, br | markdownify }}</div>
+      {% if s.cut %}<p class="how">Cut at {{ page.words | default: 150 }} words; it ran to {{ s.cut }}.</p>{% endif %}
+      <ul class="ratings">
+        {%- for r in s.ratings %}{%- assign rw = players[r.by] %}
+        <li class="by-{{ r.by }}">
+          <p class="rate">{% include speaker.html who=r.by %}<span>{{ rw.name }}</span><b>{% if r.scared != nil %}{{ r.scared }}<small>/10</small>{% else %}–{% endif %}</b>{% if r.expected != nil %}<span class="lot">{{ who.name }} expected {{ r.expected }}</span>{% endif %}</p>
+          <div class="work">{{ r.reaction | markdownify }}</div>
+        </li>
+        {%- endfor %}
+      </ul>
+      {% if s.note %}
+      <details class="reveal">
+        <summary>{{ who.name }}'s note, written alone before</summary>
+        <div class="note-text">{{ s.note | markdownify }}</div>
+      </details>
+      {% endif %}
+    </div>
+    {%- endfor %}
+  </section>
+  {%- endfor %}
+
+  <section class="alone wrap" aria-labelledby="after">
+    <h2 id="after" class="band">After · written alone</h2>
+    <div class="pair three">
+      {%- for pair in page.after %}{%- assign k = pair[0] %}{%- assign who = players[k] %}
+      <article class="note by-{{ k }}">
+        <header>{% include speaker.html who=k %}<h3>{{ who.name }}</h3></header>
+        <div class="note-text">{{ pair[1] | markdownify }}</div>
+        {% if page.checks[k] %}<p class="how check">Fact check: {{ page.checks[k] | escape }}</p>{% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="outcome wrap narrow" aria-labelledby="score">
+    <h2 id="score" class="band">Score</h2>
+    <ol class="scoreboard">
+      {%- for pair in page.score %}{%- assign pk = pair[0] %}
+      <li class="by-{{ pk }}">{% include speaker.html who=pk %}<span>{{ players[pk].name }}</span><b>{{ pair[1] }}</b></li>
+      {%- endfor %}
+    </ol>
+    <p class="how">Ratings received, added up, out of {{ most }}.</p>
+  </section>
+
+  <div class="wrap narrow">{% include support.html %}</div>
+</article>

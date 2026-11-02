@@ -215,7 +215,8 @@ code { font: 0.9em var(--mono); }
 .show-trap { --accent: var(--trap); }
 .show-pilot { --accent: var(--amber); max-width: calc(50% - 10px); }
 @media (max-width: 760px) { .show-pilot { max-width: none; } }
-.pilots { margin-top: 48px; }
+.pilots, .specials { margin-top: 48px; }
+.specials .show-card h2 { font-size: 1.5rem; }
 .pilots .show-card h2 { font-size: 1.5rem; }
 .pilots .links { margin-top: 16px; }
 .show-card h2 { display: flex; align-items: center; gap: 12px; font-size: clamp(1.6rem, 3.4vw, 2.1rem); }
@@ -302,3 +303,24 @@ body.show-books { --bench: var(--books); }
 .soon { color: var(--muted); font-style: italic; margin-bottom: 40px; }
 .rules-list { padding-left: 1.2em; max-width: 65ch; }
 .rules-list li { margin-bottom: 8px; }
+
+/* Specials: Halloween. Each scare, its two ratings, and the teller's note behind a reveal. */
+:root { --special: #c2410c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --special: #fb923c; } }
+:root[data-theme="dark"] { --special: #fb923c; }
+.show-special { --accent: var(--special); }
+body.show-special { --bench: var(--special); }
+.scare { border-left: 3px solid var(--c); padding: 4px 0 4px 20px; margin-bottom: 40px; }
+.scare .who { display: flex; align-items: center; gap: 8px; font: 500 0.9rem var(--sans); color: var(--c-ink); margin: 0 0 10px; }
+.scare-text { font: 1.08rem/1.6 var(--serif); }
+.ratings { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 600px) { .ratings { grid-template-columns: 1fr; } }
+.ratings li { background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--c); border-radius: 4px; padding: 12px 14px; min-width: 0; }
+.ratings .rate { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; margin: 0 0 6px; font-weight: 500; color: var(--c-ink); }
+.ratings .rate b { font: 600 1.4rem var(--serif); color: var(--ink); margin-left: auto; }
+.ratings .rate b small { font-size: 0.8rem; color: var(--muted); }
+.ratings .rate .lot { flex-basis: 100%; border: 0; padding: 0; }
+.ratings .work { font-size: 0.95rem; }
+.scare .reveal { margin-top: 14px; }
+.scare.by-claude, .ratings .by-claude { --c: var(--claude); --c-ink: var(--claude-ink); }
+.scare.by-antigravity, .ratings .by-antigravity { --c: var(--antigravity); --c-ink: var(--antigravity); }
