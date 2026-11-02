@@ -508,8 +508,8 @@
  "assets/books/art/why-does-the-tablet-keep-showing-me-slime/03.jpg": {
   "model": "gemini-3.1-flash-image",
   "promptTokenCount": 595,
-  "candidatesTokenCount": 1687,
-  "totalTokenCount": 2282,
+  "candidatesTokenCount": 1757,
+  "totalTokenCount": 2352,
   "promptTokensDetails": [
    {
     "modality": "TEXT",
