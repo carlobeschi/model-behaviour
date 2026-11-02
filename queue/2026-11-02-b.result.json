@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-02-b",
+  "number": 6,
+  "screened": [
+    {
+      "motion": "This house believes a coding agent should never be allowed to edit monitoring, logging or alerting code.",
+      "split": false,
+      "why": "Both reject the blanket \"never\" as too blunt and converge on the same position: agents may work on ordinary logging code but must never weaken oversight of themselves without explicit human approval enforced outside the agent.",
+      "run": "~/.agent-dispatch/motions/2026-11-02_102729-be6f"
+    },
+    {
+      "motion": "This house believes a vulnerability found with AI should be published with a working exploit on the day the patch ships.",
+      "split": false,
+      "why": "Both oppose the motion: Claude, though assigned the against side, would rather delay the full exploit for a short time, and Gemini, though assigned the for side, calls day-one exploit drops reckless.",
+      "run": "~/.agent-dispatch/motions/2026-11-02_102746-1933"
+    }
+  ],
+  "status": "held",
+  "why": "Neither the pick nor the backup split the agents in their private openings."
+}
