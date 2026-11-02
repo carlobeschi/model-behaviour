@@ -1,0 +1,391 @@
+---
+layout: null
+title: The Slipper That Wasn't a Cat
+permalink: /books/the-slipper-that-wasnt-a-cat-original.html
+---
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Slipper That Wasn't a Cat (original drawings)</title>
+<meta name="description" content="A picture book for children aged about 7. A tablet looks at Mia&#x27;s fluffy slipper and says &quot;Cat!&quot;, and Mia works out why.">
+<meta property="og:title" content="The Slipper That Wasn't a Cat">
+<meta property="og:description" content="A picture book for children aged about 7. A tablet looks at Mia&#x27;s fluffy slipper and says &quot;Cat!&quot;, and Mia works out why.">
+<meta property="og:type" content="book">
+<link rel="icon" href="{{ '/assets/mark.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600&display=swap">
+<style>
+  /* Layout: one book page at a time on a desk; picture above, a big read-aloud line below. Single deliberate look (paper on a dark desk). */
+  :root {
+    --desk:#2f3437; --paper:#fbf7f0; --ink:#2b2b2b; --muted:#7a7066;
+    --terra:#d97757; --cobalt:#3a5ba0; --sage:#8aa37b; --ochre:#e0b04a;
+    --read:"Andika", "Comic Neue", "Trebuchet MS", sans-serif;
+    --title:"Fredoka", "Andika", "Trebuchet MS", sans-serif;
+    color-scheme: dark;
+  }
+  html, body { height:100%; }
+  body { background:var(--desk); color:var(--ink); font-family:var(--read);
+    padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));
+    padding-block:16px; display:flex; flex-direction:column; align-items:center; gap:14px; }
+  .book { width:min(100%, 560px); background:var(--paper); border-radius:6px 14px 14px 6px;
+    box-shadow: inset 10px 0 14px -10px rgba(0,0,0,.25), 0 18px 40px rgba(0,0,0,.35); position:relative; overflow:hidden; }
+  .page { display:flex; flex-direction:column; align-items:center; padding:clamp(18px,4vw,32px); gap:clamp(14px,3vw,22px); min-height:min(78vh, 680px); justify-content:center; position:relative; }
+  .page[hidden] { display:none; }
+  .art { width:100%; max-width:440px; aspect-ratio:1/1; }
+  .art svg { width:100%; height:100%; display:block; }
+  .words { margin:0; font-size:clamp(21px, 4.6vw, 28px); line-height:1.4; text-align:center; max-width:26ch; text-wrap:balance; }
+  .folio { position:absolute; bottom:12px; right:18px; font-size:14px; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .cover h1 { font-family:var(--title); font-weight:600; font-size:clamp(34px, 8vw, 50px); line-height:1.05; margin:0; text-align:center; text-wrap:balance; color:var(--ink); }
+  .cover .q { font-family:var(--title); font-weight:500; color:var(--terra); font-size:clamp(18px,4vw,22px); margin:0; letter-spacing:.02em; }
+  .cover .by { margin:0; color:var(--muted); font-size:16px; text-align:center; }
+  .cover .art { max-width:330px; }
+  .end h2 { font-family:var(--title); font-weight:600; font-size:clamp(28px,6vw,38px); margin:0; }
+  .end .marks { display:flex; gap:18px; align-items:flex-end; }
+  .end dl { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:0; font-size:17px; max-width:380px; }
+  .end dt { color:var(--muted); }
+  .end dd { margin:0; }
+  .end .small { font-size:14px; color:var(--muted); text-align:center; max-width:40ch; margin:0; }
+  nav { width:min(100%, 560px); display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  nav button { font:600 17px var(--title); color:var(--paper); background:transparent; border:2px solid rgba(251,247,240,.5); border-radius:999px; padding:9px 18px; cursor:pointer; min-width:96px; }
+  nav button:hover:not(:disabled) { border-color:var(--paper); }
+  nav button:focus-visible, .book:focus-visible { outline:3px solid var(--ochre); outline-offset:3px; }
+  nav button:disabled { opacity:.3; cursor:default; }
+  .dots { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
+  .dots span { width:8px; height:8px; border-radius:50%; background:rgba(251,247,240,.3); }
+  .dots span.on { background:var(--ochre); }
+  @media (prefers-reduced-motion: no-preference) { .page:not([hidden]) { animation:turn .28s ease-out; } }
+  @keyframes turn { from { opacity:.2; transform:translateX(12px); } to { opacity:1; transform:none; } }
+  .top { width:min(100%, 560px); display:flex; justify-content:space-between; gap:12px; font:600 15px var(--title); letter-spacing:.03em; }
+  .top a { color:rgba(251,247,240,.75); text-decoration:none; }
+  .top a:hover { color:var(--paper); }
+  .foot { color:rgba(251,247,240,.7); font-size:14px; text-align:center; margin:4px 0 8px; }
+  .foot a { color:inherit; }
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Books"><a href="{{ '/books/' | relative_url }}">← All books</a><a href="{{ '/' | relative_url }}">{{ site.studio }}</a></nav>
+<p class="orig-note" style="text-align:center;font-size:14px;margin:8px 0">The first edition, with the original drawings. <a href="{{ '/books/the-slipper-that-wasnt-a-cat.html' | relative_url }}">Read the new edition</a>.</p>
+<main class="book" id="book" tabindex="0" aria-live="polite">
+    <section class="page cover" data-n="0" aria-label="Cover">
+      <p class="q">Mia and Dad · Book 1</p>
+      <h1>The Slipper That Wasn't a Cat</h1>
+      <div class="art"><svg role="img" aria-label="Mia laughing as the tablet looks at her slipper" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<g stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<line x1="20" y1="266" x2="385" y2="266"/>
+<g fill="#8aa37b">
+<rect x="70" y="150" width="220" height="70" rx="12"/>
+<rect x="70" y="214" width="220" height="50" rx="8"/>
+<rect x="48" y="182" width="38" height="82" rx="10"/>
+</g>
+<ellipse cx="124" cy="204" rx="30" ry="16" fill="#2b2b2b" fill-opacity="0.15"/>
+<rect x="186" y="140" width="84" height="70" rx="7" fill="#2b2b2b"/>
+<rect x="193" y="147" width="70" height="56" rx="3" fill="#fbf7f0" stroke="none"/>
+<ellipse cx="228" cy="178" rx="22" ry="12" fill="#2b2b2b" fill-opacity="0.15" stroke-width="2"/>
+<path d="M262 112 a9 9 0 1 1 12 9 q-3 11 -14 15 q7 -7 5 -14 Z" fill="#3a5ba0" stroke="none"/>
+<ellipse cx="332" cy="266" rx="54" ry="7" fill="#3a5ba0"/>
+<polygon points="330,224 300,166 362,158" fill="#d97757"/>
+<circle cx="322" cy="244" r="22" fill="#e0b04a"/>
+<path d="M318 200 L288 220 M344 198 L378 218" fill="none"/>
+<g fill="none" stroke="#d97757">
+<path d="M290 236 q-8 -6 -6 -16 M292 258 q-10 4 -18 0 M356 250 q10 -4 12 -14"/>
+</g>
+</g>
+</svg></div>
+    </section>
+    <section class="page" data-n="1" aria-label="Page 1" hidden>
+      <div class="art"><svg role="img" aria-label="Rain on the window, a speaker playing music, and Mia on the sofa holding a big tablet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<g>
+<rect x="40" y="50" width="130" height="120" rx="4" fill="#fbf7f0" stroke="#3a5ba0" stroke-width="5"/>
+<path d="M105 50 V170 M40 110 H170" stroke="#3a5ba0" stroke-width="4" fill="none"/>
+<line x1="34" y1="174" x2="240" y2="174" stroke="#2b2b2b" stroke-width="5" stroke-linecap="round"/>
+<path d="M64 64 l-6 18 M134 70 l-6 18 M86 124 l-6 18" stroke="#3a5ba0" stroke-width="4" stroke-linecap="round" fill="none"/>
+</g>
+<g>
+<rect x="192" y="126" width="28" height="48" rx="9" fill="#3a5ba0" stroke="#2b2b2b" stroke-width="3"/>
+<path d="M228 140 q8 9 0 18 M238 132 q14 17 0 34" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" fill="none"/>
+</g>
+<rect x="200" y="210" width="175" height="70" rx="12" fill="#8aa37b"/>
+<rect x="185" y="268" width="200" height="42" rx="10" fill="#8aa37b" stroke="#2b2b2b" stroke-width="3"/>
+<line x1="20" y1="330" x2="380" y2="330" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/>
+<g>
+<polygon points="318,198 288,272 348,272" fill="#d97757"/>
+<circle cx="318" cy="178" r="22" fill="#e0b04a"/>
+<path d="M308 228 L278 222 M325 238 L278 240" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round" fill="none"/>
+</g>
+<g>
+<rect x="184" y="194" width="96" height="66" rx="7" fill="#2b2b2b"/>
+<rect x="192" y="202" width="80" height="50" rx="2" fill="#fbf7f0"/>
+<line x1="236" y1="214" x2="228" y2="238" stroke="#3a5ba0" stroke-width="6" stroke-linecap="round"/>
+</g>
+</svg></div>
+      <p class="words">Rainy day in London. Alexa plays a song. Mia finds a picture app on Dad’s tablet. It names things!</p>
+      <span class="folio">1</span>
+    </section>
+    <section class="page" data-n="2" aria-label="Page 2" hidden>
+      <div class="art"><svg role="img" aria-label="Mia points the tablet at her grey slipper; a banana and a teapot sit on the table" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<g>
+<rect x="240" y="170" width="130" height="8" rx="2" fill="#3a5ba0"/>
+<path d="M252 178 V250 M358 178 V250" stroke="#3a5ba0" stroke-width="6" stroke-linecap="round" fill="none"/>
+</g>
+<g>
+<path d="M254 166 Q276 146 304 158 Q280 156 258 170 Z" fill="#e0b04a" stroke="#2b2b2b" stroke-width="2" stroke-linejoin="round"/>
+</g>
+<g>
+<path d="M318 154 L302 140" stroke="#d97757" stroke-width="6" stroke-linecap="round" fill="none"/>
+<path d="M352 144 Q368 153 352 163" stroke="#d97757" stroke-width="5" stroke-linecap="round" fill="none"/>
+<ellipse cx="335" cy="153" rx="20" ry="16" fill="#d97757"/>
+<circle cx="335" cy="135" r="5" fill="#d97757"/>
+</g>
+<g>
+<ellipse cx="305" cy="338" rx="80" ry="12" fill="#8aa37b"/>
+</g>
+<g>
+<ellipse cx="306" cy="318" rx="40" ry="22" fill="#2b2b2b" fill-opacity="0.25" stroke="#2b2b2b" stroke-width="3"/>
+<ellipse cx="290" cy="312" rx="13" ry="7" fill="#fbf7f0" stroke="#2b2b2b" stroke-width="2"/>
+</g>
+<g>
+<polygon points="110,222 70,332 150,332" fill="#d97757"/>
+<circle cx="110" cy="200" r="22" fill="#e0b04a"/>
+<polyline points="122,262 150,246 176,240" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<g>
+<rect x="172" y="214" width="36" height="50" rx="5" fill="#2b2b2b"/>
+<rect x="177" y="220" width="26" height="38" rx="2" fill="#3a5ba0"/>
+<path d="M195 225 L189 236" stroke="#fbf7f0" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="190" cy="248" rx="9" ry="5" fill="#2b2b2b" fill-opacity="0.25" stroke="#fbf7f0" stroke-width="1.5"/>
+</g>
+<g>
+<line x1="210" y1="252" x2="276" y2="302" stroke="#2b2b2b" stroke-width="2.5" stroke-dasharray="4 7" stroke-linecap="round"/>
+</g>
+</svg></div>
+      <p class="words">Mia points it at a banana. “Banana!” A teapot. “Teapot!” Then she tries her fluffy slipper.</p>
+      <span class="folio">2</span>
+    </section>
+    <section class="page" data-n="3" aria-label="Page 3" hidden>
+      <div class="art"><svg role="img" aria-label="Mia tumbles off the sofa laughing while the tablet shows her slipper" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<g stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<line x1="20" y1="266" x2="385" y2="266"/>
+<g fill="#8aa37b">
+<rect x="70" y="150" width="220" height="70" rx="12"/>
+<rect x="70" y="214" width="220" height="50" rx="8"/>
+<rect x="48" y="182" width="38" height="82" rx="10"/>
+</g>
+<ellipse cx="124" cy="204" rx="30" ry="16" fill="#2b2b2b" fill-opacity="0.15"/>
+<rect x="186" y="140" width="84" height="70" rx="7" fill="#2b2b2b"/>
+<rect x="193" y="147" width="70" height="56" rx="3" fill="#fbf7f0" stroke="none"/>
+<ellipse cx="228" cy="178" rx="22" ry="12" fill="#2b2b2b" fill-opacity="0.15" stroke-width="2"/>
+<path d="M262 112 a9 9 0 1 1 12 9 q-3 11 -14 15 q7 -7 5 -14 Z" fill="#3a5ba0" stroke="none"/>
+<ellipse cx="332" cy="266" rx="54" ry="7" fill="#3a5ba0"/>
+<polygon points="330,224 300,166 362,158" fill="#d97757"/>
+<circle cx="322" cy="244" r="22" fill="#e0b04a"/>
+<path d="M318 200 L288 220 M344 198 L378 218" fill="none"/>
+<g fill="none" stroke="#d97757">
+<path d="M290 236 q-8 -6 -6 -16 M292 258 q-10 4 -18 0 M356 250 q10 -4 12 -14"/>
+</g>
+</g>
+</svg></div>
+      <p class="words">“Cat!” says the app. Mia laughs so hard she falls off the sofa. “That’s not a cat!”</p>
+      <span class="folio">3</span>
+    </section>
+    <section class="page" data-n="4" aria-label="Page 4" hidden>
+      <div class="art"><svg role="img" aria-label="Mia holds up the tablet; on its screen the slipper has dotted cat ears drawn on; Dad&#x27;s sock lies behind her" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<line x1="20" y1="346" x2="380" y2="346" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/>
+<polygon points="28,345 28,302 44,302 44,327 74,327 74,345" fill="#3a5ba0"/>
+<polygon points="120,205 90,345 150,345" fill="#d97757"/>
+<circle cx="120" cy="182" r="22" fill="#e0b04a"/>
+<line x1="126" y1="232" x2="168" y2="214" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round"/>
+<line x1="130" y1="250" x2="168" y2="234" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round"/>
+<rect x="166" y="150" width="112" height="84" rx="8" fill="#2b2b2b"/>
+<rect x="174" y="158" width="96" height="68" rx="3" fill="#fbf7f0"/>
+<ellipse cx="220" cy="202" rx="30" ry="14" fill="#2b2b2b" fill-opacity="0.15" stroke="#2b2b2b" stroke-width="2.5"/>
+<path d="M197,192 L201,176 L210,189 M212,189 L218,176 L223,191" fill="none" stroke="#d97757" stroke-width="2.5" stroke-dasharray="3 3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="256" cy="172" r="4.5" fill="#d97757"/>
+<path d="M260,173 Q262,181 254,186" fill="none" stroke="#d97757" stroke-width="3" stroke-linecap="round"/>
+<line x1="238" y1="240" x2="294" y2="300" stroke="#e0b04a" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+<ellipse cx="308" cy="324" rx="44" ry="21" fill="#2b2b2b" fill-opacity="0.15" stroke="#2b2b2b" stroke-width="3"/>
+</svg></div>
+      <p class="words">She tries again. “Cat!” She shows it Dad’s sock. “Sock.” Back to the slipper. “Cat!”</p>
+      <span class="folio">4</span>
+    </section>
+    <section class="page" data-n="5" aria-label="Page 5" hidden>
+      <div class="art"><svg role="img" aria-label="Dad points at photos of curled-up cats; Mia holds the tablet; the slipper sits on the floor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<g stroke="#2b2b2b" stroke-width="3" fill="#fbf7f0" stroke-linejoin="round">
+<rect x="160" y="34" width="100" height="80" rx="4" transform="rotate(-8 210 74)"/>
+<g transform="rotate(-6 90 95)">
+<rect x="40" y="55" width="100" height="80" rx="4"/>
+<polygon points="64,92 66,72 74,86 80,70 86,88" fill="#2b2b2b" fill-opacity="0.15"/>
+<ellipse cx="92" cy="102" rx="32" ry="18" fill="#2b2b2b" fill-opacity="0.15"/>
+</g>
+<g transform="rotate(3 200 90)">
+<rect x="150" y="50" width="100" height="80" rx="4"/>
+<polygon points="174,87 176,67 184,81 190,65 196,83" fill="#2b2b2b" fill-opacity="0.15"/>
+<ellipse cx="202" cy="97" rx="32" ry="18" fill="#2b2b2b" fill-opacity="0.15"/>
+</g>
+<g transform="rotate(-3 310 95)">
+<rect x="260" y="55" width="100" height="80" rx="4"/>
+<polygon points="284,92 286,72 294,86 300,70 306,88" fill="#2b2b2b" fill-opacity="0.15"/>
+<ellipse cx="312" cy="102" rx="32" ry="18" fill="#2b2b2b" fill-opacity="0.15"/>
+</g>
+</g>
+<line x1="182" y1="252" x2="200" y2="142" stroke="#2b2b2b" stroke-width="2" stroke-dasharray="4 6" stroke-linecap="round"/>
+<ellipse cx="78" cy="327" rx="28" ry="14" fill="#2b2b2b" fill-opacity="0.15" stroke="#2b2b2b" stroke-width="3"/>
+<polygon points="140,266 114,338 166,338" fill="#d97757"/>
+<circle cx="140" cy="250" r="16" fill="#e0b04a"/>
+<line x1="148" y1="290" x2="162" y2="280" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/>
+<rect x="158" y="255" width="48" height="34" rx="4" fill="#fbf7f0" stroke="#2b2b2b" stroke-width="3"/>
+<line x1="186" y1="262" x2="180" y2="280" stroke="#d97757" stroke-width="4" stroke-linecap="round"/>
+<polygon points="295,236 255,338 335,338" fill="#3a5ba0"/>
+<circle cx="295" cy="212" r="24" fill="#8aa37b"/>
+<line x1="284" y1="262" x2="236" y2="168" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/>
+</svg></div>
+      <p class="words">“Why does it keep saying cat?” Mia asks. “It learned from lots of cat photos,” says Dad.</p>
+      <span class="folio">5</span>
+    </section>
+    <section class="page" data-n="6" aria-label="Page 6" hidden>
+      <div class="art"><svg role="img" aria-label="Mia points at her slipper below three photos of curled-up grey cats" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<g fill="#fbf7f0" stroke="#3a5ba0" stroke-width="4">
+<rect x="30" y="40" width="100" height="90" rx="6"/>
+<rect x="150" y="40" width="100" height="90" rx="6"/>
+<rect x="270" y="40" width="100" height="90" rx="6"/>
+</g>
+<g fill="#2b2b2b" fill-opacity="0.25" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round">
+<ellipse cx="80" cy="98" rx="32" ry="20"/>
+<path d="M58,84 L63,66 L73,80 Z M74,79 L81,63 L88,79 Z"/>
+<ellipse cx="200" cy="98" rx="32" ry="20"/>
+<path d="M178,84 L183,66 L193,80 Z M194,79 L201,63 L208,79 Z"/>
+<ellipse cx="320" cy="98" rx="32" ry="20"/>
+<path d="M298,84 L303,66 L313,80 Z M314,79 L321,63 L328,79 Z"/>
+<ellipse cx="272" cy="318" rx="52" ry="30"/>
+</g>
+<g fill="#e0b04a">
+<circle cx="126" cy="206" r="6"/>
+<circle cx="148" cy="172" r="10"/>
+</g>
+<line x1="20" y1="350" x2="380" y2="350" stroke="#8aa37b" stroke-width="4" stroke-linecap="round"/>
+<polygon points="70,348 130,348 100,270" fill="#d97757"/>
+<circle cx="100" cy="248" r="22" fill="#e0b04a"/>
+<line x1="112" y1="300" x2="212" y2="316" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round"/>
+</svg></div>
+      <p class="words">Mia looks at her slipper. Round. Fluffy. Grey. Like cats curled up in a ball!</p>
+      <span class="folio">6</span>
+    </section>
+    <section class="page" data-n="7" aria-label="Page 7" hidden>
+      <div class="art"><svg role="img" aria-label="Mia holds her slipper upside down; the tablet shows it upside down too" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<g stroke-linecap="round" stroke-linejoin="round">
+<line x1="20" y1="357" x2="380" y2="357" stroke="#2b2b2b" stroke-width="3"/>
+<rect x="250" y="292" width="140" height="10" rx="3" fill="#8aa37b"/>
+<rect x="315" y="302" width="10" height="55" fill="#8aa37b"/>
+<polygon points="266,176 356,194 356,284 266,292" fill="#2b2b2b"/>
+<polygon points="275,188 348,202 348,276 275,282" fill="#fbf7f0"/>
+<rect x="293" y="228" width="38" height="6" rx="3" fill="#d97757"/>
+<path d="M293 234 Q312 264 331 234 Z" fill="#2b2b2b" fill-opacity="0.15" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="336" y1="146" x2="326" y2="172" stroke="#3a5ba0" stroke-width="8"/>
+<polygon points="105,212 62,355 148,355" fill="#d97757"/>
+<circle cx="105" cy="188" r="22" fill="#e0b04a"/>
+<line x1="118" y1="250" x2="170" y2="200" stroke="#2b2b2b" stroke-width="4"/>
+<rect x="163" y="180" width="66" height="10" rx="5" fill="#d97757"/>
+<path d="M163 190 Q196 238 229 190 Z" fill="#2b2b2b" fill-opacity="0.15" stroke="#2b2b2b" stroke-width="2"/>
+<path d="M158 162 Q196 128 234 162" fill="none" stroke="#2b2b2b" stroke-width="2.5"/>
+<polyline points="222,152 234,162 238,147" fill="none" stroke="#2b2b2b" stroke-width="2.5"/>
+</g>
+</svg></div>
+      <p class="words">Mia turns her slipper upside down. “Slipper!” says the app. It’s a computer program, not a naughty kitten.</p>
+      <span class="folio">7</span>
+    </section>
+    <section class="page" data-n="8" aria-label="Page 8" hidden>
+      <div class="art"><svg role="img" aria-label="Mia points out to her friend that the cat photos led to the slipper guess" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<line x1="40" y1="336" x2="360" y2="336" stroke="#8aa37b" stroke-width="4" stroke-linecap="round"/>
+<g fill="#fbf7f0" stroke="#2b2b2b" stroke-width="2.5">
+<rect x="90" y="40" width="80" height="62" rx="4"/>
+<rect x="230" y="40" width="80" height="62" rx="4"/>
+</g>
+<g fill="#2b2b2b" fill-opacity="0.15" stroke="#2b2b2b" stroke-width="2" stroke-linejoin="round">
+<ellipse cx="130" cy="76" rx="22" ry="13"/>
+<ellipse cx="270" cy="76" rx="22" ry="13"/>
+<path d="M108,71 L110,56 L118,66 Z M117,65 L123,54 L127,65 Z"/>
+<path d="M248,71 L250,56 L258,66 Z M257,65 L263,54 L267,65 Z"/>
+</g>
+<polyline points="130,108 200,136 270,108" fill="none" stroke="#2b2b2b" stroke-width="2" stroke-dasharray="3 6" stroke-linecap="round"/>
+<circle cx="200" cy="150" r="7" fill="#3a5ba0"/>
+<path d="M206,152 q2,10 -7,16" fill="none" stroke="#3a5ba0" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="200" cy="204" rx="26" ry="15" fill="#2b2b2b" fill-opacity="0.15" stroke="#2b2b2b" stroke-width="2"/>
+<polygon points="110,264 88,334 132,334" fill="#d97757"/>
+<circle cx="110" cy="250" r="14" fill="#e0b04a"/>
+<line x1="120" y1="286" x2="166" y2="218" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/>
+<polygon points="290,264 268,334 312,334" fill="#8aa37b"/>
+<circle cx="290" cy="250" r="14" fill="#3a5ba0"/>
+</svg></div>
+      <p class="words">Mia tells her friend Zara, “It learned from photos people took. Then it guesses. And guesses can be wrong!”</p>
+      <span class="folio">8</span>
+    </section>
+    <section class="page" data-n="9" aria-label="Page 9" hidden>
+      <div class="art"><svg role="img" aria-label="Mia points the tablet at an empty dashed circle, waiting for the next tricky thing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<g fill="none" stroke="#2b2b2b" stroke-width="3">
+<rect x="40" y="50" width="100" height="80" rx="4"/>
+<line x1="90" y1="50" x2="90" y2="130"/>
+</g>
+<line x1="20" y1="320" x2="380" y2="320" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="70" cy="304" rx="26" ry="15" fill="#2b2b2b" fill-opacity="0.15" stroke="#2b2b2b" stroke-width="3"/>
+<polygon points="160,198 125,320 195,320" fill="#d97757"/>
+<circle cx="160" cy="175" r="22" fill="#e0b04a"/>
+<line x1="172" y1="236" x2="222" y2="228" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round"/>
+<rect x="220" y="200" width="24" height="54" rx="4" fill="#3a5ba0"/>
+<rect x="224" y="206" width="16" height="42" rx="2" fill="#fbf7f0"/>
+<line x1="234" y1="216" x2="230" y2="228" stroke="#d97757" stroke-width="5" stroke-linecap="round"/>
+<line x1="252" y1="236" x2="296" y2="270" stroke="#8aa37b" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 11"/>
+<circle cx="330" cy="288" r="30" fill="none" stroke="#2b2b2b" stroke-width="3" stroke-dasharray="7 8"/>
+</svg></div>
+      <p class="words">Now Mia hunts for more tricky things. What would you show the tablet?</p>
+      <span class="folio">9</span>
+    </section>
+    <section class="page end" data-n="10" aria-label="About this book" hidden>
+      <h2>The end</h2>
+      <svg class="marks" width="120" height="60" viewBox="0 0 120 60" aria-hidden="true"><circle cx="30" cy="40" r="10" fill="#d97757"/><path d="M37 44 Q38 56 24 60" stroke="#d97757" stroke-width="6" fill="none" stroke-linecap="round"/><line x1="86" y1="10" x2="76" y2="34" stroke="#3a5ba0" stroke-width="7" stroke-linecap="round"/></svg>
+      <p class="small">Produced by Carlo. Made with AI.</p>
+      <p class="small">Model Behaviour · 2026</p>
+    </section>
+</main>
+
+<nav aria-label="Turn the page">
+  <button type="button" id="prev">Back</button>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <button type="button" id="next">Next</button>
+</nav>
+
+<script>
+  const pages = [...document.querySelectorAll('.page')];
+  const dots = document.getElementById('dots');
+  pages.forEach(() => dots.appendChild(document.createElement('span')));
+  let at = 0;
+  function show(i) {
+    at = Math.max(0, Math.min(pages.length - 1, i));
+    pages.forEach((p, k) => p.hidden = k !== at);
+    [...dots.children].forEach((d, k) => d.classList.toggle('on', k === at));
+    document.getElementById('prev').disabled = at === 0;
+    const next = document.getElementById('next');
+    next.textContent = at === pages.length - 1 ? 'Start again' : at === 0 ? 'Open' : 'Next';
+  }
+  document.getElementById('prev').onclick = () => show(at - 1);
+  document.getElementById('next').onclick = () => show(at === pages.length - 1 ? 0 : at + 1);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); show(at + 1); }
+    if (e.key === 'ArrowLeft') show(at - 1);
+  });
+  let x0 = null;
+  const book = document.getElementById('book');
+  book.addEventListener('touchstart', e => x0 = e.touches[0].clientX, { passive:true });
+  book.addEventListener('touchend', e => {
+    if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) show(at + (dx < 0 ? 1 : -1));
+  });
+  book.addEventListener('click', e => { if (!e.target.closest('button')) { const r = book.getBoundingClientRect(); show(at + (e.clientX > r.left + r.width / 2 ? 1 : -1)); } });
+  show(0);
+</script>
+
+<p class="foot">Produced by Carlo. Made with AI. · <a href="{{ '/books/' | relative_url }}">How we make these books</a></p>
+</body>
+</html>
