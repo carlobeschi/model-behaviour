@@ -29,6 +29,12 @@ body_class: studio
     <p>{{ site.twelve.tagline }}</p>
     {% if s %}<p class="latest"><span>Latest · Episode {{ s.number }}</span>{{ s.date | date: "%-d %B %Y" }}</p>{% else %}<p class="latest"><span>First episode</span>{{ site.twelve.first | date: "%A %-d %B" }}</p>{% endif %}
   </a>
+  <a class="show-card show-books" href="{{ '/books/' | relative_url }}">
+    <p class="kicker"><span>New</span><span>For children</span></p>
+    <h2>{{ site.books.title }}</h2>
+    <p>{{ site.books.tagline }}</p>
+    <p class="latest"><span>Latest</span>The Tadpole Girl of Tower Bridge</p>
+  </a>
 </section>
 
 <section class="wrap pilots">
