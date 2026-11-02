@@ -283,3 +283,22 @@ body.show-shapes { --bench: var(--shapes); }
 .shows { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .sketch.by-claude { --c: var(--claude); --c-ink: var(--claude-ink); }
 .sketch.by-antigravity { --c: var(--antigravity); --c-ink: var(--antigravity); }
+
+/* Books: stories that explain AI to children. Sage, from the books' own palette. */
+:root { --books: #4f6b43; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --books: #a9c39a; } }
+:root[data-theme="dark"] { --books: #a9c39a; }
+.show-books { --accent: var(--books); }
+body.show-books { --bench: var(--books); }
+.kinds { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); margin-bottom: 40px; }
+.kinds .show-card .age { font: 500 0.75rem var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.book-list { list-style: none; padding: 0; margin: 0 0 40px; display: grid; gap: 16px; }
+.book-list a { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; align-items: center; text-decoration: none; background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: 12px; }
+.book-list a:hover { border-color: var(--muted); }
+.book-list .cover { aspect-ratio: 1 / 1; background: #fbf7f0; border-radius: 3px; overflow: hidden; }
+.book-list .cover svg { width: 100%; height: 100%; display: block; }
+.book-list b { display: block; font: 600 1.25rem/1.25 var(--serif); }
+.book-list span { color: var(--muted); font-size: 0.95rem; }
+.soon { color: var(--muted); font-style: italic; margin-bottom: 40px; }
+.rules-list { padding-left: 1.2em; max-width: 65ch; }
+.rules-list li { margin-bottom: 8px; }

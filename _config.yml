@@ -80,6 +80,12 @@ twelve:
       vendor: OpenAI
       via: Codex CLI
 
+# Books: stories that explain AI to children. The books themselves carry no agent names (Carlo, 2026-11-01);
+# /books/ explains how they are made.
+books:
+  title: Books
+  tagline: Stories that explain AI to children, made with AI and checked by people.
+
 collections:
   episodes:
     output: true
