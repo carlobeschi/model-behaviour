@@ -1,0 +1,39 @@
+---
+layout: default
+title: The Board
+show: board
+permalink: /chess/
+description: Claude and Gemini play chess with no engine, and keep a private diary of every move.
+---
+<section class="hero wrap">
+  <h1>{{ site.board.tagline }}</h1>
+  <p class="lede">Claude and Gemini play chess with no engine, no tools and no lookups: just the board, the moves so far and their own last few diary lines. With every move each writes one private line about how the game feels and what it is going for. The other player never reads it. The replays show both.</p>
+</section>
+
+<section class="wrap narrow">
+  <h2 class="band">The games</h2>
+  <ol class="motion-list board-games">
+    <li><a href="{{ '/chess/replay.html#game-1' | relative_url }}"><span class="n">1</span><span class="m"><b>Gemini plays White.</b> Gemini sets the Møller Attack trap and explains it in its diary. Claude takes the bait on move 15 and loses a piece.</span><span class="r w-antigravity">Gemini wins on material, +2</span></a></li>
+    <li><a href="{{ '/chess/replay.html#game-2' | relative_url }}"><span class="n">2</span><span class="m"><b>Claude plays White.</b> A sharp Najdorf. Gemini gives up a rook on c2, wins Claude's rook back two moves later, and holds on after blundering a knight of its own.</span><span class="r w-antigravity">Gemini wins by one pawn</span></a></li>
+    <li><a href="{{ '/chess/replay.html#game-3' | relative_url }}"><span class="n">3</span><span class="m"><b>Gemini plays White.</b> The Møller Attack again, and Claude walks into it again. 16.Nxf7! and 17.Re8+ win Claude's queen.</span><span class="r w-antigravity">Gemini wins on material, +9</span></a></li>
+  </ol>
+  <p class="how board-how">Gemini won all three. It made no illegal moves; Claude made two, and each went back once. Each game is capped at 40 moves and then scored on material. Every game was a separate run, so neither player remembered the one before.</p>
+  <p><a class="button" href="{{ '/chess/replay.html' | relative_url }}">Watch the replays</a></p>
+
+  <details class="brief rules">
+    <summary>Rules</summary>
+    <ol class="cycle">
+      <li><b>Move</b><span>Each player sees the board, the moves so far and its own last three diary lines. It answers with a move, the move it expects in reply, and one diary line.</span></li>
+      <li><b>Check</b><span>The app checks every move with a chess library. An illegal move goes back once with the reason. A second illegal move on the same turn loses the game.</span></li>
+      <li><b>Read</b><span>When a player's expected reply turns out to be the move the other side plays, that counts as a read.</span></li>
+      <li><b>Score</b><span>Checkmate ends the game. Otherwise, at move 40 the side ahead on material wins: pawn 1, knight and bishop 3, rook 5, queen 9.</span></li>
+      <li><b>Journal</b><span>Before the game, each player writes alone what it expects. After it, each writes how it went and the move it wishes it had played.</span></li>
+    </ol>
+  </details>
+
+  <h2 class="band board-gap">Why not Codex?</h2>
+  <p>We tried Claude against Codex first, for eleven games. It wasn't worth watching: it was a bloodbath. Claude won all eleven. Only one ended in checkmate. In the other ten, Codex lost by trying a second illegal move on the same turn, such as taking with a piece that wasn't there, moving through its own pawn or ignoring check. Codex tried 31 illegal moves in all, and Claude tried one.</p>
+  <p>After each game Codex wrote itself the same lesson, to rebuild the board and check every move, and in the next game it broke that lesson again. The games were short, one-sided and all alike, so we moved on to Gemini.</p>
+</section>
+
+<div class="wrap narrow">{% include support.html %}</div>

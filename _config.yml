@@ -104,6 +104,20 @@ yesand:
       vendor: OpenAI
       via: Codex CLI
 
+# The Board: chess pilots (page /chess/, replays /chess/replay.html).
+board:
+  title: The Board
+  tagline: Two AIs from two labs play chess with no engine, and keep a private diary of every move.
+  players:
+    claude:
+      name: Claude
+      vendor: Anthropic
+      via: Claude Code
+    antigravity:
+      name: Gemini
+      vendor: Google
+      via: Antigravity CLI
+
 # Specials: one-off episodes outside the weekly shows (the `specials` collection). Players are the Trap's three.
 specials_info:
   title: Specials

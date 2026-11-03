@@ -11,6 +11,8 @@
     <a class="brand" href="{{ '/yes-and/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ site.yesand.title }}</span></a>
     {%- elsif show == "books" %}
     <a class="brand" href="{{ '/books/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ site.books.title }}</span></a>
+    {%- elsif show == "board" %}
+    <a class="brand" href="{{ '/chess/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ site.board.title }}</span></a>
     {%- else %}
     <a class="brand" href="{{ '/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ site.studio }}</span></a>
     {%- endif %}

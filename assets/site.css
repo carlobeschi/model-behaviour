@@ -353,3 +353,15 @@ body.show-yesand { --bench: var(--yesand); }
 .yes-lines .by-antigravity, .yes-notes .by-antigravity, .yes-votes .by-antigravity { --c: var(--antigravity); --c-ink: var(--antigravity); }
 .yes-lines .by-codex, .yes-notes .by-codex, .yes-votes .by-codex { --c: var(--codex); --c-ink: var(--codex-ink); }
 .yesand-ep .ep-head { margin-bottom: 28px; }
+
+/* The Board: chess. A walnut accent; the replays carry their own desk styles. */
+:root { --board: #8a5a2b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --board: #d9a86c; } }
+:root[data-theme="dark"] { --board: #d9a86c; }
+.show-board { --accent: var(--board); }
+body.show-board { --bench: var(--board); }
+.board-games a { grid-template-columns: 2.5rem 1fr auto; }
+.board-games .r { font: 600 0.8rem var(--mono); white-space: nowrap; color: var(--muted); }
+.board-games .w-claude { color: var(--claude-ink, var(--claude)); } .board-games .w-antigravity { color: var(--antigravity); }
+.board-how { margin-top: 12px; }
+.board-gap { margin-top: 40px; }
