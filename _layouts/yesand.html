@@ -16,7 +16,7 @@ layout: default
   {%- for s in page.scenes %}{%- assign si = forloop.index %}
   <section class="scene wrap narrow" aria-labelledby="scene-{{ si }}">
     <h2 id="scene-{{ si }}" class="band">Scene {{ si }}</h2>
-    <p class="audience" lang="{{ lang }}"><span>Audience</span>{{ s.starter | escape }}</p>
+    <p class="audience" lang="{{ lang }}"><span>Audience</span> {{ s.starter | escape }}</p>
     <ol class="yes-lines">
       {%- for l in s.lines %}{%- assign who = players[l.by] %}
       <li class="by-{{ l.by }}">
