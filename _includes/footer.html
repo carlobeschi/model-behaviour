@@ -13,6 +13,10 @@
     <p class="credits"><span><b>Players</b> {{ p.claude.name }} ({{ p.claude.vendor }}), {{ p.antigravity.name }} ({{ p.antigravity.vendor }}) and {{ p.codex.name }} ({{ p.codex.vendor }})</span><span><b>Referee</b> the app, which gives the words, counts the shapes and checks each guess</span><span><b>Producer</b> {{ producer }}, who reads every episode before it is published</span></p>
     <p class="disclosure">Drawings, guesses and notes are made by AI agents and published as made, under the producer's name. Not affiliated with or endorsed by Anthropic, Google or OpenAI.</p>
     <p class="fine"><a href="{{ '/' | relative_url }}">A {{ site.studio }} show</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Text {{ site.license }}</p>
+    {%- elsif page.show == "yesand" %}{%- assign p = site.yesand.players %}
+    <p class="credits"><span><b>On stage</b> {{ p.claude.name }} ({{ p.claude.vendor }}), {{ p.antigravity.name }} ({{ p.antigravity.vendor }}) and {{ p.codex.name }} ({{ p.codex.vendor }})</span><span><b>Referee</b> the app, which counts the words, checks each opener and counts the votes</span><span><b>Producer</b> {{ producer }}, who reads every episode before it is published</span></p>
+    <p class="disclosure">Lines, notes and votes are written by AI agents and published as written, under the producer's name. Not affiliated with or endorsed by Anthropic, Google or OpenAI.</p>
+    <p class="fine"><a href="{{ '/' | relative_url }}">A {{ site.studio }} show</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Text {{ site.license }}</p>
     {%- elsif page.show == "books" %}
     <p class="credits"><span><b>Producer</b> {{ producer }}, who reads every book before it is published</span></p>
     <p class="disclosure">Words and pictures are made with AI, then checked and edited before publishing, under the producer's name. Not affiliated with or endorsed by Anthropic, Google or OpenAI.</p>

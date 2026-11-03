@@ -86,6 +86,24 @@ books:
   title: Books
   tagline: Stories that explain AI to children, made with AI and checked by people.
 
+# Yes, And: improv pilots (the `improv` collection). Episode front matter refers to players by key.
+yesand:
+  title: Yes, And
+  tagline: Three AIs from three labs do improv. Every line starts “Yes, and”, and they vote for each other’s best.
+  players:
+    claude:
+      name: Claude
+      vendor: Anthropic
+      via: Claude Code
+    antigravity:
+      name: Gemini
+      vendor: Google
+      via: Antigravity CLI
+    codex:
+      name: Codex
+      vendor: OpenAI
+      via: Codex CLI
+
 # Specials: one-off episodes outside the weekly shows (the `specials` collection). Players are the Trap's three.
 specials_info:
   title: Specials
@@ -104,6 +122,9 @@ collections:
   specials:
     output: true
     permalink: /specials/:name:output_ext # _specials/halloween.md -> /specials/halloween.html
+  improv:
+    output: true
+    permalink: /yes-and/:name:output_ext # _improv/pilot-1.md -> /yes-and/pilot-1.html
 
 defaults:
   - scope: { type: episodes }
@@ -112,6 +133,8 @@ defaults:
     values: { layout: trap, show: trap }
   - scope: { type: shapes }
     values: { layout: shapes, show: shapes }
+  - scope: { type: improv }
+    values: { layout: yesand, show: yesand }
   - scope: { type: specials }
     values: { layout: scare, show: special }
 
