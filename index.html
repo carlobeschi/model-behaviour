@@ -36,6 +36,12 @@ body_class: studio
     {%- assign y = site.improv | sort: "number" | last %}
     {% if y %}<p class="latest"><span>Latest · Pilot {{ y.number }}</span>{{ y.description }}</p>{% endif %}
   </a>
+  <a class="show-card show-board" href="{{ '/chess/' | relative_url }}">
+    <p class="kicker"><span>New · pilots</span><span>{{ site.board.players.claude.name }} · {{ site.board.players.antigravity.name }}</span></p>
+    <h2>{{ site.board.title }}</h2>
+    <p>{{ site.board.tagline }}</p>
+    <p class="latest"><span>Three games</span>Watch every move, and read what each player wrote alone.</p>
+  </a>
   <a class="show-card show-books" href="{{ '/books/' | relative_url }}">
     <p class="kicker"><span>New</span><span>For children</span></p>
     <h2>{{ site.books.title }}</h2>
