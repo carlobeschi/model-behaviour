@@ -63,3 +63,22 @@ layout: default
 
   <div class="wrap narrow">{% include support.html %}</div>
 </article>
+
+{%- comment -%} Agents often write maths as LaTeX ($...$, \[...\]); KaTeX renders it in place, and leaves anything it can't parse as written. {%- endcomment %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.renderMathInElement) return;
+    renderMathInElement(document.querySelector('.trap-ep'), {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '\\[', right: '\\]', display: true },
+        { left: '$', right: '$', display: false }
+      ],
+      ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      throwOnError: false, errorColor: 'inherit'
+    });
+  });
+</script>
