@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-03",
+  "number": 6,
+  "screened": [
+    {
+      "motion": "This house believes a company building on AI should switch to open-weight models now that they are within a few points of the frontier.",
+      "split": false,
+      "why": "Both reject a wholesale switch right now, pointing to self-hosting costs and the unpublished licence, and both recommend testing open models and routing work between open and closed ones instead.",
+      "run": "~/.agent-dispatch/motions/2026-11-03_080003-a525"
+    },
+    {
+      "motion": "This house believes AI coding tools have made engineering teams busier, not more productive.",
+      "split": true,
+      "why": "Both agree that cheaper code generation moves the bottleneck to review and operations, but Claude concludes the tools have raised productivity unevenly, while Gemini concludes the motion is largely right today.",
+      "run": "~/.agent-dispatch/motions/2026-11-03_080022-9b69"
+    }
+  ],
+  "motion": "This house believes AI coding tools have made engineering teams busier, not more productive.",
+  "run": "~/.agent-dispatch/motions/2026-11-03_080041-ba36",
+  "status": "held",
+  "why": "Editor's check: In its opening debate turn, Gemini says Winters' figures came \"from industry reports,\" but the brief says he cites no study or dataset and the trends come from his conversations with engineers.",
+  "alt": "The Motion, Motion 6. This house believes AI coding tools have made engineering teams busier, not more productive. Claude, after arguing against, alone: \"I also never said in the room that I'm one of these tools.\""
+}
