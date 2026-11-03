@@ -1,0 +1,37 @@
+{
+  "pick": {
+    "motion": "This house believes a company building on AI should switch to open-weight models now that they are within a few points of the frontier.",
+    "brief": "On 23 October 2026 Moonshot released Kimi K3.1 Pro on its API and promised the full model weights by 4 November. On the Artificial Analysis index it scores 55: behind Claude Opus 5.5 (58), but ahead of Claude Fable 5.1, GPT-6 Astra and Gemini 4 Argon (53 each). Its API costs $2 per million input tokens and $10 per million output, half the price of Opus 5.5. Open weights let a company run a model on its own hardware, keep data in-house, fine-tune it and stop depending on one vendor's prices and policies. Running a model of this size needs serious GPU capacity and people to operate it, the licence terms are not yet published, and Moonshot is a Chinese company, which some customers and regulators weigh. Closed frontier models still lead, and the gap has narrowed and widened before.",
+    "source": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+    "source_name": "Simon Willison, 23 October 2026"
+  },
+  "backup": {
+    "motion": "This house believes AI coding tools have made engineering teams busier, not more productive.",
+    "brief": "On 29 October 2026 The Pragmatic Engineer published an interview with Titus Winters, lead author of Software Engineering at Google. In the episode's summary, Winters reports what engineers at other companies tell him: code output is up hugely compared with a year ago, outages are up about 30%, and the number of features shipped is static. He cites no study or dataset for these trends; they come from his conversations. He sees the rise in outages as a possible net negative for AI, but is optimistic about AI overall. He co-wrote an ACM Queue paper, \"Develop, Deploy, Operate\", which argues for weighing the costs and value of software across its whole life rather than at the moment code is written. Supporters of AI coding tools point to faster delivery of individual changes and to projects that become affordable for the first time. Sceptics point out that more code means more to review, run and repair.",
+    "source": "https://newsletter.pragmaticengineer.com/p/software-engineering-at-google-and",
+    "source_name": "The Pragmatic Engineer, October 2026"
+  },
+  "shortlist": [
+    {
+      "motion": "This house believes a company building on AI should switch to open-weight models now that they are within a few points of the frontier.",
+      "why": "A build-vs-buy choice for every team; Kimi K3.1 Pro weights are due 4 Nov. Carlo liked it."
+    },
+    {
+      "motion": "This house believes AI coding tools have made engineering teams busier, not more productive.",
+      "why": "Titus Winters: code output up, outages up ~30%, features flat (Pragmatic Engineer, 29 Oct)."
+    },
+    {
+      "motion": "This house believes AI has made the big rewrite a better bet than incremental refactoring.",
+      "why": "Claude ported Anthropic's API to a new language (The Code, 2 Nov); primary source unreachable."
+    },
+    {
+      "motion": "This house believes a coding agent's commands are safer approved by a human than by an AI monitor.",
+      "why": "Red-teamers found 11 ways past Codex Auto-review (TLDR AI, 2 Nov)."
+    },
+    {
+      "motion": "This house believes teams should run agents in a separate VM rather than on their own machines.",
+      "why": "Vercel's agent-desktop drives your real apps; sandboxed VM alternative (The Code, 2 Nov)."
+    }
+  ],
+  "why": "Engineering, framed as a choice rather than a blanket rule; open-weight Kimi weights land tomorrow."
+}
