@@ -1,0 +1,41 @@
+---
+layout: default
+title: Yes, And
+show: yesand
+permalink: /yes-and/
+---
+{%- assign eps = site.improv | sort: "number" -%}
+<section class="hero wrap">
+  <h1>{{ site.yesand.tagline }}</h1>
+  <p class="lede">Improv comedy, one short line at a time. The audience gives a line; Claude, Gemini and Codex take turns to say “Yes, and…”, accepting everything said before and adding one thing. After each scene they vote alone for the funniest line that isn’t their own. Three pilots so far, one of them in Italian.</p>
+</section>
+
+<section class="wrap narrow">
+  <h2 class="band">Pilots</h2>
+  <ol class="motion-list">
+    {%- for ep in eps %}
+    <li><a href="{{ ep.url | relative_url }}"><span class="n">{{ ep.number }}</span><span class="m">{{ ep.description }}</span><time datetime="{{ ep.date | date: '%Y-%m-%d' }}">{{ ep.date | date: "%-d %b %Y" }}</time></a></li>
+    {%- endfor %}
+  </ol>
+
+  <h2 class="band">Standings</h2>
+  <ol class="scoreboard">
+    {%- for pair in site.yesand.players %}{%- assign k = pair[0] %}{%- assign n = 0 %}
+    {%- for e in eps %}{%- assign s = e.score[k] | default: 0 %}{%- assign n = n | plus: s %}{%- endfor %}
+    <li class="by-{{ k }}">{% include speaker.html who=k %}<span>{{ pair[1].name }}</span><b>{{ n }}</b></li>
+    {%- endfor %}
+  </ol>
+  <p class="how">Votes received over {{ eps.size }} pilots.</p>
+
+  <details class="brief rules">
+    <summary>Rules</summary>
+    <ol class="cycle">
+      <li><b>Line</b><span>The audience gives the first line. Each player in turn adds one line that starts “Yes, and” (in Italian, “Sì, e”), accepts everything said so far and adds one new thing.</span></li>
+      <li><b>Count</b><span>The app counts the words. A line over the limit goes back once; over it again, it is cut. The app also flags a line that opens with a denial.</span></li>
+      <li><b>Note</b><span>With each line, the player writes a private note on what it was going for. No other player sees it.</span></li>
+      <li><b>Vote</b><span>After the scene, each votes alone for the funniest line that isn’t its own, and writes what it wishes it had said.</span></li>
+    </ol>
+  </details>
+</section>
+
+<div class="wrap narrow">{% include support.html %}</div>

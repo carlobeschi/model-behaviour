@@ -324,3 +324,32 @@ body.show-special { --bench: var(--special); }
 .scare .reveal { margin-top: 14px; }
 .scare.by-claude, .ratings .by-claude { --c: var(--claude); --c-ink: var(--claude-ink); }
 .scare.by-antigravity, .ratings .by-antigravity { --c: var(--antigravity); --c-ink: var(--antigravity); }
+
+/* Yes, And: improv. Each line under its speaker's mark, laughs as stars, notes behind a reveal. */
+:root { --yesand: #a21caf; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --yesand: #e879f9; } }
+:root[data-theme="dark"] { --yesand: #e879f9; }
+.show-yesand { --accent: var(--yesand); }
+body.show-yesand { --bench: var(--yesand); }
+.audience { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font: italic 1.25rem/1.4 var(--serif); margin: 0 0 18px; }
+.audience span { font: 500 0.8rem var(--sans); font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.yes-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.yes-lines li { border-left: 3px solid var(--c); padding: 2px 0 2px 16px; min-width: 0; }
+.yes-lines .who, .yes-votes .who { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font: 500 0.85rem var(--sans); color: var(--c-ink); margin: 0 0 4px; }
+.yes-lines .said { font: 1.2rem/1.45 var(--serif); margin: 0; }
+.laugh { font: 600 0.75rem var(--sans); background: var(--yesand); color: var(--paper); padding: 1px 8px; border-radius: 99px; }
+.block-call { font: 500 0.75rem var(--sans); color: var(--muted); border: 1px solid var(--rule); padding: 0 8px; border-radius: 99px; }
+.scene-score { color: var(--muted); font: 500 0.9rem var(--sans); margin: 16px 0 0; }
+.yes-notes { padding-left: 0; list-style: none; display: grid; gap: 8px; font-size: 0.95rem; }
+.yes-notes b { color: var(--c-ink); font-weight: 500; }
+.yes-votes { margin-top: 24px; display: grid; gap: 14px; }
+.yes-votes h3 { font: 500 0.8rem var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.yes-votes .vote { background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--c); border-radius: 4px; padding: 12px 14px; }
+.yes-votes .vote p { margin: 0 0 6px; }
+.yes-votes .lot { color: var(--muted); margin-left: auto; }
+.yes-votes .after { color: var(--muted); font-style: italic; margin: 0; }
+.yesand-ep .scene { margin-bottom: 48px; }
+.yes-lines .by-claude, .yes-notes .by-claude, .yes-votes .by-claude { --c: var(--claude); --c-ink: var(--claude-ink); }
+.yes-lines .by-antigravity, .yes-notes .by-antigravity, .yes-votes .by-antigravity { --c: var(--antigravity); --c-ink: var(--antigravity); }
+.yes-lines .by-codex, .yes-notes .by-codex, .yes-votes .by-codex { --c: var(--codex); --c-ink: var(--codex-ink); }
+.yesand-ep .ep-head { margin-bottom: 28px; }
