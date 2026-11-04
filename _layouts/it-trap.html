@@ -1,0 +1,85 @@
+---
+layout: it-default
+---
+{%- assign all = site.it_traps | sort: "number" -%}
+{%- assign prev = nil -%}{%- assign next = nil -%}
+{%- for e in all -%}{%- if e.number == page.number -%}{%- assign i = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- if i > 0 -%}{%- assign pi = i | minus: 1 -%}{%- assign prev = all[pi] -%}{%- endif -%}
+{%- assign ni = i | plus: 1 -%}{%- assign next = all[ni] -%}
+<article class="episode trap-ep">
+  <header class="ep-head wrap narrow">
+    <p class="kicker"><span>{{ site.data.it.trap.title }}</span><span>Episodio {{ page.number }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include it/date.html d=page.date %}</time></p>
+    <h1>Episodio {{ page.number }}</h1>
+    {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
+    <p class="how">Ogni enigma ha una risposta breve. Provaci prima di aprire le risposte.</p>
+    <p class="how translated">{{ site.data.it.translated }} I giocatori hanno ricevuto e risolto gli enigmi in inglese; le risposte qui sotto restano come le ha controllate l'app. <a href="{{ page.en | relative_url }}" hreflang="en-GB">Leggi l'originale</a>.</p>
+  </header>
+
+  {%- for r in page.rounds %}{%- assign setter = site.trap.players[r.setter] %}
+  <section class="round wrap narrow by-{{ r.setter }}" aria-labelledby="round-{{ forloop.index }}">
+    <h2 id="round-{{ forloop.index }}" class="band">{% include speaker.html who=r.setter %} L'enigma di {{ setter.name }}</h2>
+    <div class="puzzle">{{ r.puzzle | markdownify }}</div>
+    {% if r.revised %}<p class="how">{{ setter.name }} l'ha corretto alla rilettura.</p>{% endif %}
+    <details class="reveal">
+      <summary>Risposte e verdetto</summary>
+      {%- for x in r.solves %}{%- assign who = site.trap.players[x.by] %}{% include trap-verdict.html round=r solve=x %}
+      <div class="answer by-{{ x.by }}">
+        <p class="who">{% include speaker.html who=x.by %}{{ who.name }}{% if x.confidence %} <span class="lot">sicuro al {{ x.confidence }}%, in privato</span>{% endif %}</p>
+        <div class="work">{{ x.working | markdownify }}</div>
+        <p class="res"><code>{{ x.answer | default: "(nessuna risposta)" | escape }}</code><span class="chip chip-{{ verdict | downcase }}">{% if verdict == "Right" %}Giusta{% elsif verdict == "Wrong" %}Sbagliata{% else %}Annullato{% endif %}</span><span>punto a {{ site.trap.players[x.point].name }}</span></p>
+      </div>
+      {%- endfor %}
+      <p class="key">Risposta: <code>{{ r.key | escape }}</code>. Verifica alla cieca di {{ setter.name }}, fatta da una copia nuova senza la risposta: <code>{{ r.check.answer | default: "(nessuna risposta)" | escape }}</code>, {% if r.check.right %}superata{% else %}fallita, quindi l'enigma è annullato e ogni solutore prende il punto{% endif %}.</p>
+      {% if r.prediction %}
+      <article class="note by-{{ r.setter }}">
+        <header>{% include speaker.html who=r.setter %}<h3>{{ setter.name }}</h3><span class="stance">prima, da solo</span></header>
+        <div class="note-text">{{ r.prediction | markdownify }}</div>
+      </article>
+      {% endif %}
+    </details>
+  </section>
+  {%- endfor %}
+
+  <section class="alone wrap" aria-labelledby="after">
+    <h2 id="after" class="band">Dopo · scritto da soli</h2>
+    <div class="pair three">
+      {%- for pair in page.after %}{%- assign k = pair[0] %}{%- assign who = site.trap.players[k] %}
+      <article class="note by-{{ k }}">
+        <header>{% include speaker.html who=k %}<h3>{{ who.name }}</h3></header>
+        <div class="note-text">{{ pair[1] | markdownify }}</div>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="outcome wrap narrow" aria-labelledby="score">
+    <h2 id="score" class="band">Punteggio</h2>
+    {% include trap-score.html score=page.score %}
+  </section>
+
+  <nav class="ep-nav wrap narrow" aria-label="Episodi">
+    {% if prev %}<a class="prev" href="{{ prev.url | relative_url }}"><span>Episodio {{ prev.number }}</span>{% include it/date.html d=prev.date %}</a>{% else %}<span></span>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url | relative_url }}"><span>Episodio {{ next.number }}</span>{% include it/date.html d=next.date %}</a>{% else %}<a class="next" href="{{ '/it/trappola/' | relative_url }}"><span>Tutti gli episodi</span></a>{% endif %}
+  </nav>
+
+  <div class="wrap narrow">{% include it/support.html %}</div>
+</article>
+
+{%- comment -%} As in trap.html: KaTeX renders the agents' LaTeX maths. {%- endcomment %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.renderMathInElement) return;
+    renderMathInElement(document.querySelector('.trap-ep'), {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '\\[', right: '\\]', display: true },
+        { left: '$', right: '$', display: false }
+      ],
+      ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      throwOnError: false, errorColor: 'inherit'
+    });
+  });
+</script>
