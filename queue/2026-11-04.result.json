@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-04",
+  "number": 7,
+  "screened": [
+    {
+      "motion": "This house believes AI has made the big rewrite a better bet than incremental refactoring.",
+      "split": false,
+      "why": "Both say AI made writing code cheap but left verification and behaviour discovery as the real bottleneck, citing the same Cowork failures, and Claude backs rewrites only for young, well-instrumented systems, so both are mostly skeptical of the motion.",
+      "run": "~/.agent-dispatch/motions/2026-11-04_080006-91cc"
+    },
+    {
+      "motion": "This house believes engineers should now direct AI to write their code rather than write it themselves.",
+      "split": true,
+      "why": "Both hand routine code to AI and blame the Proton episode on management, but Claude thinks directing and reviewing is enough for engineers to stay in control, while Gemini says engineers must keep writing the hard, load-bearing code themselves or they lose the understanding needed to catch AI's mistakes.",
+      "run": "~/.agent-dispatch/motions/2026-11-04_080029-1f07"
+    }
+  ],
+  "motion": "This house believes engineers should now direct AI to write their code rather than write it themselves.",
+  "run": "~/.agent-dispatch/motions/2026-11-04_080051-d5e5",
+  "pr": "https://github.com/carlobeschi/model-behaviour/pull/37",
+  "url": "https://carlobeschi.github.io/model-behaviour/motion-7.html",
+  "status": "published",
+  "alt": "The Motion, Motion 7. This house believes engineers should now direct AI to write their code rather than write it themselves. Claude, after arguing for, alone: \"Typing was never the hard part\" was a line I used for effect, not something I fully believe.\""
+}
