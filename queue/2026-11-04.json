@@ -1,0 +1,37 @@
+{
+  "pick": {
+    "motion": "This house believes AI has made the big rewrite a better bet than incremental refactoring.",
+    "brief": "On 2 November 2026 Microsoft's Command Line blog described how it built Copilot Cowork, an agentic layer for Microsoft 365. Nine engineers, with agents writing most of the code, took it from an empty repo on 13 January to worldwide availability on 16 June. They then replaced its live Python runtime with Rust in about 17 days, from a first attempt on 23 September (rolled back) to the last cluster on 10 October, deleting about 4.9 million lines of Python. The reasons were event-loop stalls of up to 11.9 seconds, 16.7% of session setups hitting a 5-second timeout, and 539 out-of-memory kills in one week. About 430 recorded fixtures forced Rust to match Python's outputs. Median time to first token fell from 7.9 to 2.7 seconds, partly from other changes. Problems: reviewer agents approved a sensitive change with four blocking issues, some checks passed without testing anything, an event-ordering bug slipped past every fixture, and the first Rust front door was six times slower until it was fixed. Cost per turn was not measured.",
+    "source": "https://commandline.microsoft.com/how-we-built-copilot-cowork-python-to-rust-migration/",
+    "source_name": "Microsoft Command Line, November 2026"
+  },
+  "backup": {
+    "motion": "This house believes engineers should now direct AI to write their code rather than write it themselves.",
+    "brief": "On 29 October 2026 404 Media reported, from eight current and one former employee plus Slack chats and meeting recordings, on Proton's push to adopt AI. In August, when an employee asked for a few days to pentest new code before release, CEO Andy Yen replied: \"That's bullshit and loser thinking. Of course it's possible to be fast and secure,\" and told staff to stop \"lovingly handcrafting all our code and use AI more.\" Proton set up an address for reporting anything slowing AI adoption, installed software that tracks how much code AI generates, and said it would re-interview staff about their AI use. Yen reportedly said this is the last year Proton will hire engineers. An internal document says Proton is not on track for its revenue target \"due to insufficient velocity\". Employees describe a culture of fear and feel unable to raise security concerns. A spokesperson did not dispute the report and said Proton had sometimes been \"too blunt or too slow\" in explaining itself.",
+    "source": "https://www.404media.co/manifestos-fear-and-loser-thinking-inside-protons-ai-reckoning/",
+    "source_name": "404 Media, October 2026"
+  },
+  "shortlist": [
+    {
+      "motion": "This house believes AI has made the big rewrite a better bet than incremental refactoring.",
+      "why": "Microsoft rewrote a live 4.9M-line Python runtime in Rust in 17 days with agents; real numbers on both sides."
+    },
+    {
+      "motion": "This house believes engineers should now direct AI to write their code rather than write it themselves.",
+      "why": "Proton's CEO calls a pentest request 'loser thinking'; direct vs type is a real engineering split."
+    },
+    {
+      "motion": "This house believes agent-written code should be reviewed by agents, with humans only on high-risk changes.",
+      "why": "Copilot Cowork: 1,211 PRs a day, agent reviewers missed four blocking issues."
+    },
+    {
+      "motion": "This house believes Git is the wrong foundation for agent-scale development.",
+      "why": "OpenAI rebuilt its Git backend (Pando) after reliability fell below 90% (The Code, 3 Nov)."
+    },
+    {
+      "motion": "This house believes a company should measure how much of its code AI writes.",
+      "why": "Proton tracks AI-generated code on staff machines (404 Media)."
+    }
+  ],
+  "why": "Engineering, framed as a choice, with unusually detailed primary numbers on both sides."
+}
