@@ -1,0 +1,32 @@
+{%- assign show = page.show -%}{%- assign it = site.data.it -%}
+<header class="site-header">
+  <div class="wrap bar">
+    {%- if show == "motion" %}
+    <a class="brand" href="{{ '/it/mozione/' | relative_url }}">{% include mark.html %}<span>{{ it.motion.title }}</span></a>
+    {%- elsif show == "trap" %}
+    <a class="brand" href="{{ '/it/trappola/' | relative_url }}">{% include mark.html kind="trap" %}<span>{{ it.trap.title }}</span></a>
+    {%- elsif show == "shapes" %}
+    <a class="brand" href="{{ '/it/forme/' | relative_url }}">{% include mark.html kind="shapes" %}<span>{{ it.shapes.title }}</span></a>
+    {%- elsif show == "yesand" %}
+    <a class="brand" href="{{ '/it/si-e/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ it.yesand.title }}</span></a>
+    {%- elsif show == "books" %}
+    <a class="brand" href="{{ '/it/libri/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ it.books.title }}</span></a>
+    {%- elsif show == "board" %}
+    <a class="brand" href="{{ '/it/scacchi/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ it.board.title }}</span></a>
+    {%- else %}
+    <a class="brand" href="{{ '/it/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ it.studio }}</span></a>
+    {%- endif %}
+    <nav aria-label="Spettacoli">
+      <a href="{{ '/it/mozione/' | relative_url }}"{% if show == "motion" %} aria-current="page"{% endif %}>Mozione</a>
+      <a href="{{ '/it/trappola/' | relative_url }}"{% if show == "trap" %} aria-current="page"{% endif %}>Trappola</a>
+      <a href="{{ '/it/forme/' | relative_url }}"{% if show == "shapes" %} aria-current="page"{% endif %}>Forme</a>
+      <a href="{{ '/it/scacchi/' | relative_url }}"{% if show == "board" %} aria-current="page"{% endif %}>Scacchi</a>
+      <a href="{{ '/it/libri/' | relative_url }}"{% if show == "books" %} aria-current="page"{% endif %}>Libri</a>
+      <a class="support-link" href="{{ site.ko_fi }}" rel="noopener">Sostienici</a>
+      <a href="{{ page.en | default: '/' | relative_url }}" hreflang="en-GB" lang="en-GB" title="Read this in English">EN</a>
+      <button class="theme-toggle" type="button" aria-label="Passa al tema chiaro o scuro">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9A7 7 0 0 1 12 3Z" fill="currentColor"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,6 @@
+{%- comment -%} An Italian date. d: the date; f: long (4 novembre 2026, the default), short (4 nov 2026), day (mercoledì 4 novembre), daymonth (4 novembre). {%- endcomment -%}
+{%- assign _m = include.d | date: "%-m" | minus: 1 -%}{%- assign _dd = include.d | date: "%-d" -%}
+{%- if include.f == "short" -%}{{ _dd }} {{ site.data.it.months_short[_m] }} {{ include.d | date: "%Y" }}
+{%- elsif include.f == "day" -%}{%- assign _w = include.d | date: "%w" | plus: 0 -%}{{ site.data.it.days[_w] }} {{ _dd }} {{ site.data.it.months[_m] }}
+{%- elsif include.f == "daymonth" -%}{{ _dd }} {{ site.data.it.months[_m] }}
+{%- else -%}{{ _dd }} {{ site.data.it.months[_m] }} {{ include.d | date: "%Y" }}{%- endif -%}

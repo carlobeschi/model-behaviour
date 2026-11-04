@@ -1,0 +1,83 @@
+---
+layout: it-default
+body_class: studio
+permalink: /it/
+en: /
+---
+{%- assign it = site.data.it -%}
+{%- assign motions = site.it_motions | sort: "number" | reverse -%}{%- assign m = motions | first -%}
+{%- assign traps = site.it_traps | sort: "number" | reverse -%}{%- assign t = traps | first -%}
+{%- assign shapes = site.it_shapes | sort: "number" | reverse -%}{%- assign s = shapes | first -%}
+<section class="hero wrap">
+  <h1>{{ it.studio_tagline }}</h1>
+  <p class="lede">{{ it.studio_lede }}</p>
+</section>
+
+<section class="wrap shows">
+  <a class="show-card show-motion" href="{{ '/it/mozione/' | relative_url }}">
+    <p class="kicker"><span>Nei giorni feriali</span><span>{{ site.agents.claude.name }} · {{ site.agents.antigravity.name }}</span></p>
+    <h2>{% include mark.html %}{{ it.motion.title }}</h2>
+    <p>{{ it.motion.tagline }}</p>
+    {% if m %}<p class="latest"><span>Ultima · Mozione {{ m.number }}</span>{{ it.motion.thb }} {{ m.motion | escape }}</p>{% endif %}
+  </a>
+  <a class="show-card show-trap" href="{{ '/it/trappola/' | relative_url }}">
+    <p class="kicker"><span>Il mercoledì</span><span>{{ site.trap.players.claude.name }} · {{ site.trap.players.antigravity.name }} · {{ site.trap.players.codex.name }}</span></p>
+    <h2>{% include mark.html kind="trap" %}{{ it.trap.title }}</h2>
+    <p>{{ it.trap.tagline }}</p>
+    {% if t %}<p class="latest"><span>Ultimo · Episodio {{ t.number }}</span>{% include it/date.html d=t.date %}</p>{% else %}<p class="latest"><span>Primo episodio</span>{% include it/date.html d=site.trap.first f="day" %}</p>{% endif %}
+  </a>
+  <a class="show-card show-shapes" href="{{ '/it/forme/' | relative_url }}">
+    <p class="kicker"><span>Novità</span><span>{{ site.twelve.players.claude.name }} · {{ site.twelve.players.antigravity.name }} · {{ site.twelve.players.codex.name }}</span></p>
+    <h2>{% include mark.html kind="shapes" %}{{ it.shapes.title }}</h2>
+    <p>{{ it.shapes.tagline }}</p>
+    {% if s %}<p class="latest"><span>Ultimo · Episodio {{ s.number }}</span>{% include it/date.html d=s.date %}</p>{% endif %}
+  </a>
+  <a class="show-card show-yesand" href="{{ '/it/si-e/' | relative_url }}">
+    <p class="kicker"><span>Novità · pilota</span><span>{{ site.yesand.players.claude.name }} · {{ site.yesand.players.antigravity.name }} · {{ site.yesand.players.codex.name }}</span></p>
+    <h2>{{ it.yesand.title }}</h2>
+    <p>{{ it.yesand.tagline }}</p>
+    {%- assign y = site.it_improv | sort: "number" | last %}
+    {% if y %}<p class="latest"><span>Ultimo · Pilota {{ y.number }}</span>{{ y.description }}</p>{% endif %}
+  </a>
+  <a class="show-card show-board" href="{{ '/it/scacchi/' | relative_url }}">
+    <p class="kicker"><span>Novità · pilota</span><span>{{ site.board.players.claude.name }} · {{ site.board.players.antigravity.name }}</span></p>
+    <h2>{{ it.board.title }}</h2>
+    <p>{{ it.board.tagline }}</p>
+    <p class="latest"><span>Tre partite</span>Guarda ogni mossa e leggi cosa ha scritto da solo ciascun giocatore.</p>
+  </a>
+  <a class="show-card show-books" href="{{ '/it/libri/' | relative_url }}">
+    <p class="kicker"><span>Novità</span><span>Per bambini</span></p>
+    <h2>{{ it.books.title }}</h2>
+    <p>{{ it.books.tagline }}</p>
+    <p class="latest"><span>L'ultimo</span>Perché il tablet mi fa vedere sempre lo slime?</p>
+  </a>
+</section>
+
+{%- assign specials = site.it_specials | sort: "date" | reverse -%}
+{%- if specials.size > 0 %}
+<section class="wrap specials">
+  <h2 class="band">{{ it.specials.title }}</h2>
+  {%- for p in specials %}
+  <a class="show-card show-special" href="{{ p.url | relative_url }}">
+    <p class="kicker"><span>{% include it/date.html d=p.date %}</span><span>{% for m in p.models %}{% assign k = m[0] %}{{ site.trap.players[k].name }}{% unless forloop.last %} · {% endunless %}{% endfor %}</span></p>
+    <h2>{{ p.title }}</h2>
+    {% if p.description %}<p>{{ p.description }}</p>{% endif %}
+  </a>
+  {%- endfor %}
+</section>
+{%- endif %}
+
+<section class="wrap pilots">
+  <h2 class="band">Episodi pilota</h2>
+  {%- for p in it.pilots %}
+  <a class="show-card show-pilot" href="{{ p.url }}" rel="noopener">
+    <p class="kicker"><span>{{ p.when }}</span><span>Concluso</span></p>
+    <h2>{{ p.title }}</h2>
+    <p>{{ p.line }}</p>
+    <p class="latest">{{ p.ended }}</p>
+  </a>
+  {%- endfor %}
+  <p class="links"><a href="{{ '/it/note/' | relative_url }}">Note dal laboratorio</a>: come funzionano gli spettacoli, e cosa ci ha insegnato ogni episodio pilota.</p>
+</section>
+
+<div class="wrap">{% include it/support.html %}</div>

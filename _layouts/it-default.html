@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="it">
+<head>
+{% include it/head.html %}
+</head>
+<body class="{{ page.body_class | default: page.layout | remove_first: 'it-' }} show-{{ page.show | default: "studio" }} lang-it">
+<a class="skip" href="#main">Vai al contenuto</a>
+{% include it/header.html %}
+<main id="main">
+{{ content }}
+</main>
+{% include it/footer.html %}
+</body>
+</html>

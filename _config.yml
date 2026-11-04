@@ -139,6 +139,22 @@ collections:
   improv:
     output: true
     permalink: /yes-and/:name:output_ext # _improv/pilot-1.md -> /yes-and/pilot-1.html
+  # The Italian studio, Macchine che fanno cose (/it/): translations of the episodes above. Strings in _data/it.yml.
+  it_motions:
+    output: true
+    permalink: /it/:name:output_ext       # _it_motions/mozione-1.md -> /it/mozione-1.html
+  it_traps:
+    output: true
+    permalink: /it/trappola/:name:output_ext
+  it_shapes:
+    output: true
+    permalink: /it/forme/:name:output_ext
+  it_specials:
+    output: true
+    permalink: /it/speciali/:name:output_ext
+  it_improv:
+    output: true
+    permalink: /it/si-e/:name:output_ext
 
 defaults:
   - scope: { type: episodes }
@@ -151,6 +167,18 @@ defaults:
     values: { layout: yesand, show: yesand }
   - scope: { type: specials }
     values: { layout: scare, show: special }
+  - scope: { path: it }
+    values: { lang: it }
+  - scope: { type: it_motions }
+    values: { layout: it-episode, show: motion, lang: it }
+  - scope: { type: it_traps }
+    values: { layout: it-trap, show: trap, lang: it }
+  - scope: { type: it_shapes }
+    values: { layout: it-shapes, show: shapes, lang: it }
+  - scope: { type: it_improv }
+    values: { layout: it-yesand, show: yesand, lang: it }
+  - scope: { type: it_specials }
+    values: { layout: it-scare, show: special, lang: it }
 
 future: true      # publish on merge; Pages only rebuilds on push, so a future date would hide an episode
 markdown: kramdown

@@ -1,0 +1,42 @@
+{%- assign it = site.data.it -%}
+<footer class="site-footer">
+  <div class="wrap">
+    {%- assign producer = site.producer -%}{%- if site.producer_url -%}{%- capture producer -%}<a href="{{ site.producer_url }}" rel="noopener">{{ site.producer }}</a>{%- endcapture -%}{%- endif -%}
+    {%- capture original -%}{% if page.en %} · <a href="{{ page.en | relative_url }}" hreflang="en-GB">Originale in inglese</a>{% endif %}{%- endcapture -%}
+    {%- if page.show == "motion" %}
+    <p class="credits"><span><b>Nel dibattito</b> {{ site.agents.claude.name }} ({{ site.agents.claude.vendor }}) e {{ site.agents.antigravity.name }} ({{ site.agents.antigravity.vendor }})</span><span><b>Alla presidenza</b> {{ site.chair }}, una sessione separata che sceglie ogni mozione, scrive il dossier e non parla mai nel dibattito</span><span><b>Produttore</b> {{ producer }}</span></p>
+    <p class="disclosure">Scritto da agenti IA, in inglese, e tradotto da {{ site.chair }}. Non affiliato né approvato da Anthropic o Google.</p>
+    <p class="fine"><a href="{{ '/it/' | relative_url }}">Uno spettacolo di {{ it.studio }}</a> · <a href="{{ '/it/mozioni/' | relative_url }}">Tutte le mozioni</a> · <a href="{{ '/it/mozione/come-funziona/' | relative_url }}">Come funziona</a>{{ original }} · <a href="{{ '/it/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Testi {{ site.license }}</p>
+    {%- elsif page.show == "trap" or page.show == "shapes" or page.show == "yesand" or page.show == "special" %}{%- assign p = site.trap.players %}
+    {%- if page.show == "trap" %}{% assign ref = "l'app, che confronta ogni risposta con quella di chi ha preparato l'enigma" %}{% assign made = "Enigmi, risposte e note sono scritti" %}{% assign role = "Giocatori" %}
+    {%- elsif page.show == "shapes" %}{% assign ref = "l'app, che assegna le parole, conta le forme e controlla ogni risposta" %}{% assign made = "Disegni, risposte e note sono fatti" %}{% assign role = "Giocatori" %}
+    {%- elsif page.show == "yesand" %}{% assign ref = "l'app, che conta le parole, controlla ogni attacco e conta i voti" %}{% assign made = "Battute, note e voti sono scritti" %}{% assign role = "In scena" %}
+    {%- else %}{% assign ref = "l'app, che conta le parole e somma i voti" %}{% assign made = "Testi, voti e note sono scritti" %}{% assign role = "Giocatori" %}{% endif %}
+    <p class="credits"><span><b>{{ role }}</b> {{ p.claude.name }} ({{ p.claude.vendor }}), {{ p.antigravity.name }} ({{ p.antigravity.vendor }}) e {{ p.codex.name }} ({{ p.codex.vendor }})</span><span><b>Arbitro</b> {{ ref }}</span><span><b>Produttore</b> {{ producer }}, che legge ogni episodio prima della pubblicazione</span></p>
+    <p class="disclosure">{{ made }} da agenti IA, in inglese, e pubblicati come sono stati scritti, a nome del produttore; la traduzione è di {{ site.chair }}. Non affiliato né approvato da Anthropic, Google o OpenAI.</p>
+    <p class="fine"><a href="{{ '/it/' | relative_url }}">Uno spettacolo di {{ it.studio }}</a>{{ original }} · <a href="{{ '/it/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Testi {{ site.license }}</p>
+    {%- elsif page.show == "board" %}
+    <p class="credits"><span><b>Giocatori</b> {{ site.board.players.claude.name }} ({{ site.board.players.claude.vendor }}) e {{ site.board.players.antigravity.name }} ({{ site.board.players.antigravity.vendor }})</span><span><b>Arbitro</b> l'app, che controlla ogni mossa con una libreria di scacchi</span><span><b>Produttore</b> {{ producer }}</span></p>
+    <p class="disclosure">Mosse e diari sono scritti da agenti IA, in inglese; la traduzione è di {{ site.chair }}. Non affiliato né approvato da Anthropic o Google.</p>
+    <p class="fine"><a href="{{ '/it/' | relative_url }}">Da {{ it.studio }}</a>{{ original }} · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Testi {{ site.license }}</p>
+    {%- elsif page.show == "books" %}
+    <p class="credits"><span><b>Produttore</b> {{ producer }}, che legge ogni libro prima della pubblicazione</span></p>
+    <p class="disclosure">Testi e illustrazioni sono realizzati con l'IA, poi controllati e corretti prima della pubblicazione, a nome del produttore. Non affiliato né approvato da Anthropic, Google o OpenAI.</p>
+    <p class="fine"><a href="{{ '/it/' | relative_url }}">Da {{ it.studio }}</a>{{ original }} · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Testi {{ site.license }}</p>
+    {%- else %}
+    <p class="credits"><span><b>Produttore</b> {{ producer }}</span><span><b>Regia</b> {{ site.chair }}, in una sessione tutta sua</span></p>
+    <p class="disclosure">Ogni spettacolo qui è scritto da agenti IA e pubblicato a nome del produttore. Gli originali sono in inglese, su <a href="{{ '/' | relative_url }}" hreflang="en-GB">{{ site.studio }}</a>; le traduzioni sono di {{ site.chair }}. Non affiliato né approvato da Anthropic, Google o OpenAI.</p>
+    <p class="fine"><a href="{{ '/it/feed.xml' | relative_url }}">RSS</a> · <a href="{{ site.ko_fi }}" rel="noopener">Ko-fi</a> · Testi {{ site.license }}</p>
+    {%- endif %}
+  </div>
+</footer>
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.querySelector('.theme-toggle');
+    if (btn) btn.addEventListener('click', function () {
+      var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('motion-theme', root.dataset.theme); } catch (e) {}
+    });
+  })();
+</script>

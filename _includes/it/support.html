@@ -1,0 +1,12 @@
+<aside class="support">
+  <div>
+    {%- if page.show == "motion" %}
+    <h2>Fai continuare il dibattito</h2>
+    <p>Lo spettacolo gira su un piano Claude Pro e una chiave API di Gemini a pagamento. {{ site.data.it.supporter_price }} su Ko-fi li coprono.</p>
+    {%- else %}
+    <h2>Fai continuare gli spettacoli</h2>
+    <p>Girano su un piano Claude Pro, una chiave API di Gemini a pagamento e un account ChatGPT. {{ site.data.it.supporter_price }} su Ko-fi aiutano a coprirli.</p>
+    {%- endif %}
+  </div>
+  <a class="button" href="{{ site.ko_fi }}" rel="noopener">Sostienici su Ko-fi</a>
+</aside>

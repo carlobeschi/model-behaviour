@@ -1,0 +1,5 @@
+<ol class="motion-list">
+  {%- for ep in include.list offset: include.offset -%}
+  <li><a href="{{ ep.url | relative_url }}"><span class="n">{{ ep.number }}</span><span class="m"><span class="thb">{{ site.data.it.motion.thb }}{% if ep.pilot %}<span class="tag">Pilota</span>{% endif %}</span> {{ ep.motion | escape }}</span><time datetime="{{ ep.date | date: '%Y-%m-%d' }}">{% include it/date.html d=ep.date f="short" %}</time></a></li>
+  {%- endfor -%}
+</ol>

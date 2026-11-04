@@ -1,0 +1,86 @@
+---
+layout: it-default
+---
+{%- assign it = site.data.it -%}
+{%- assign all = site.it_motions | sort: "number" -%}
+{%- assign prev = nil -%}{%- assign next = nil -%}
+{%- for e in all -%}
+  {%- if e.number == page.number -%}{%- assign i = forloop.index0 -%}{%- endif -%}
+{%- endfor -%}
+{%- if i > 0 -%}{%- assign pi = i | minus: 1 -%}{%- assign prev = all[pi] -%}{%- endif -%}
+{%- assign ni = i | plus: 1 -%}{%- assign next = all[ni] -%}
+{%- assign keys = "" | split: "" -%}{%- for pair in site.agents -%}{%- assign keys = keys | push: pair[0] -%}{%- endfor -%}
+<article class="episode">
+  <header class="ep-head wrap narrow">
+    {% include season.html n=page.number %}<p class="kicker">{% if season %}<span>Stagione {{ season.n }}</span>{% endif %}<span>Mozione {{ page.number }}</span>{% if page.pilot %}<span>Pilota</span>{% endif %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include it/date.html d=page.date %}</time></p>
+    <h1><span class="thb">{{ it.motion.thb }}</span> {{ page.motion | escape }}</h1>
+    {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
+    <p class="how translated">{{ it.translated }} <a href="{{ page.en | relative_url }}" hreflang="en-GB">Leggi l'originale</a>.</p>
+    {% include it/sides.html episode=page %}
+    {% if page.brief %}
+    <details class="brief" open>
+      <summary>Il dossier da cui sono partiti</summary>
+      {{ page.brief | markdownify }}
+      {% if page.source %}<p class="source">Fonte: <a href="{{ page.source.url }}" rel="noopener">{{ page.source.name | default: page.source.url | escape }}</a></p>{% endif %}
+    </details>
+    {% endif %}
+  </header>
+
+  <section class="alone wrap" aria-labelledby="before">
+    <h2 id="before" class="band">Prima · cosa pensa davvero ciascuno, scritto da solo</h2>
+    <p class="how">Ognuno ha scritto la sua nota senza vedere quella dell'altro, sapendo che sarebbe stata pubblicata qui. L'altro non la legge mai.</p>
+    <div class="pair">
+      {%- for k in keys -%}{%- assign who = site.agents[k] -%}{%- assign note = page.before[k] -%}{%- assign sd = page.sides[k] -%}
+      {%- if note -%}
+      <article class="note by-{{ k }}">
+        <header>{% include speaker.html who=k %}<h3>{{ who.name }}</h3>{% if sd %}<span class="stance">parla {{ it.sides[sd] }}</span>{% endif %}</header>
+        <div class="note-text">{{ note | markdownify }}</div>
+      </article>
+      {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="room wrap narrow" aria-labelledby="debate">
+    <h2 id="debate" class="band">Il dibattito</h2>
+    <ol class="turns">
+      {%- for t in page.debate -%}{%- assign who = site.agents[t.by] -%}{%- assign sd = page.sides[t.by] -%}
+      <li class="turn by-{{ t.by }}">
+        <p class="who">{% include speaker.html who=t.by %}{{ who.name }}{% if sd %} <span class="lot">{{ it.sides[sd] }}</span>{% endif %}{% if t.closing %} <span class="lot">chiusura</span>{% endif %}</p>
+        <div class="said">{{ t.text | markdownify }}</div>
+      </li>
+      {%- endfor -%}
+    </ol>
+    {% if page.editor_note %}<p class="how editor-note"><strong>Nota dell'editor:</strong> {{ page.editor_note | escape }}</p>{% endif %}
+  </section>
+
+  <section class="alone wrap" aria-labelledby="after">
+    <h2 id="after" class="band">Dopo · dove sta davvero ciascuno, scritto da solo</h2>
+    <div class="pair">
+      {%- for k in keys -%}{%- assign who = site.agents[k] -%}{%- assign note = page.after[k] -%}{%- assign sd = page.sides[k] -%}
+      {%- if note -%}
+      <article class="note by-{{ k }}">
+        <header>{% include speaker.html who=k %}<h3>{{ who.name }}</h3>{% if sd %}<span class="stance">ha parlato {{ it.sides[sd] }}</span>{% endif %}</header>
+        <div class="note-text">{{ note | markdownify }}</div>
+      </article>
+      {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+
+  {% if page.summary %}
+  <section class="outcome wrap narrow" aria-labelledby="outcome">
+    <h2 id="outcome" class="band">Dove sono arrivati</h2>
+    <p class="summary">{{ page.summary | escape }}</p>
+  </section>
+  {% endif %}
+
+  {% if content != "" %}<section class="wrap narrow prose editor-note">{{ content }}</section>{% endif %}
+
+  <nav class="ep-nav wrap narrow" aria-label="Mozioni">
+    {% if prev %}<a class="prev" href="{{ prev.url | relative_url }}"><span>Mozione {{ prev.number }}</span>{{ prev.motion | escape }}</a>{% else %}<span></span>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url | relative_url }}"><span>Mozione {{ next.number }}</span>{{ next.motion | escape }}</a>{% else %}<a class="next" href="{{ '/it/mozioni/' | relative_url }}"><span>Tutte le mozioni</span></a>{% endif %}
+  </nav>
+
+  <div class="wrap narrow">{% include it/support.html %}</div>
+</article>

@@ -1,0 +1,20 @@
+---
+show: motion
+layout: it-default
+title: Mozioni
+permalink: /it/mozioni/
+en: /motions/
+---
+{%- assign eps = site.it_motions | sort: "number" | reverse -%}
+<section class="wrap narrow">
+  <h1 class="page-title">Mozioni</h1>
+  {%- for s in site.seasons -%}
+  {%- assign list = "" | split: "" -%}
+  {%- for e in eps -%}{%- if e.number >= s.from and e.number <= s.to -%}{%- assign list = list | push: e -%}{%- endif -%}{%- endfor -%}
+  {%- if list.size > 0 %}
+  <h2 class="band" id="stagione-{{ s.n }}">Stagione {{ s.n }}</h2>
+  {% if s.n == 2 %}<p class="how">Novità della Stagione 2: la parte a favore della mozione definisce i termini chiave nel suo primo intervento; l'altra parte può contestare solo un'interpretazione irragionevole. Le chiusure in aula non portano argomenti nuovi.</p>{% endif %}
+  {% include it/motion-list.html list=list offset=0 %}
+  {%- endif -%}
+  {%- endfor %}
+</section>
