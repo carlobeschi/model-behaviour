@@ -1,0 +1,91 @@
+---
+layout: null
+title: "La bambina dei girini di Tower Bridge"
+permalink: /it/libri/la-bambina-dei-girini-di-tower-bridge.html
+en: /books/the-tadpole-girl-of-tower-bridge.html
+---
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La bambina dei girini di Tower Bridge</title>
+<meta name="description" content="Una storia in due capitoli per lettori di circa 11 anni. Leo scopre perché un chatbot può sembrare sicurissimo e sbagliare lo stesso.">
+<meta property="og:title" content="La bambina dei girini di Tower Bridge">
+<meta property="og:description" content="Una storia in due capitoli per lettori di circa 11 anni. Leo scopre perché un chatbot può sembrare sicurissimo e sbagliare lo stesso.">
+<meta property="og:type" content="book">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="{{ '/assets/mark.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&display=swap">
+<style>
+:root { --paper:#fbf7f0; --page:#fffdf8; --ink:#2b2b2b; --muted:#756c61; --line:#e8dfd1; --terra:#d97757; --picbg:#fbf7f0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1d1b18; --page:#262320; --ink:#efe8dd; --muted:#b0a596; --line:#3a352f; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1d1b18; --page:#262320; --ink:#efe8dd; --muted:#b0a596; --line:#3a352f; color-scheme:dark; }
+body { margin:0; background:var(--paper); color:var(--ink); font:18px/1.7 Literata, Georgia, serif; }
+main { max-width:680px; margin:0 auto; padding-block:36px 72px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); }
+header { text-align:center; padding-block:28px 12px; }
+.series { font:600 13px/1 "Baloo 2", system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--terra); margin:0; }
+h1 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:clamp(32px,7vw,48px); line-height:1.08; margin:12px 0 8px; text-wrap:balance; }
+.sub { color:var(--muted); font-style:italic; margin:0; }
+.ch { text-align:center; margin:56px 0 18px; }
+.ch .k { font:600 13px "Baloo 2", system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; }
+.ch h2 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:clamp(26px,5.5vw,34px); line-height:1.15; margin:4px 0 0; text-wrap:balance; }
+.sec { margin:30px 0; }
+.pic { width:min(100%, 420px); aspect-ratio:1/1; margin:0 auto 22px; background:var(--picbg); border-radius:10px; overflow:hidden; border:1px solid var(--line); }
+.pic svg, .pic img { width:100%; height:100%; display:block; }
+.sec p { margin:0 0 14px; text-wrap:pretty; }
+.orn { text-align:center; color:var(--terra); letter-spacing:.6em; margin:30px 0; }
+footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; text-align:center; color:var(--muted); font-size:15px; }
+
+.top { display:flex; justify-content:space-between; gap:12px; font:600 14px "Baloo 2", system-ui, sans-serif; letter-spacing:.04em; }
+.top a { color:var(--muted); text-decoration:none; }
+.top a:hover { color:var(--ink); }
+footer a { color:inherit; }
+.label { margin:14px 0 0; font:600 14px/1.4 "Baloo 2", system-ui, sans-serif; color:var(--muted); }
+.grown { margin-top:56px; background:var(--page); border:1px solid var(--line); border-radius:10px; padding:20px clamp(16px,4vw,26px) 22px; }
+.grown h2 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:26px; line-height:1.2; margin:0 0 4px; }
+.grown h3 { font:600 13px "Baloo 2", system-ui, sans-serif; letter-spacing:.12em; text-transform:uppercase; color:var(--terra); margin:18px 0 4px; }
+.grown p { margin:0; font-size:17px; }
+.grown a { color:inherit; }
+.printbtn { font:inherit; color:var(--muted); background:none; border:0; padding:0; cursor:pointer; letter-spacing:inherit; }
+.printbtn:hover { color:var(--ink); }
+.printbtn:focus-visible { outline:2px solid var(--terra); outline-offset:3px; }
+/* Print: black on white A4, pictures kept whole, each chapter on a new page. */
+@page { size:A4; margin:18mm 16mm; }
+@media print {
+  :root { --paper:#fff !important; --page:#fff !important; --ink:#1a1a1a !important; --muted:#555 !important; --line:#ccc !important; color-scheme:light !important; }
+  body { background:#fff; color:#1a1a1a; font-size:12pt; line-height:1.55; }
+  main { max-width:none; padding:0; }
+  .top, footer { display:none !important; }
+  header { padding-top:0; }
+  .ch ~ .ch { break-before:page; page-break-before:always; }
+  .ch, .ch h2 { break-after:avoid; }
+  .pic { width:95mm; break-inside:avoid; page-break-inside:avoid; border-color:#ccc; }
+  .sec p { orphans:3; widows:3; }
+  .grown { break-before:page; page-break-before:always; border:1px solid #ccc; }
+  .grown p { font-size:12pt; }
+}
+</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="Libri"><a href="{{ '/it/libri/' | relative_url }}">← Tutti i libri</a><button type="button" class="printbtn" id="printbtn" title="Stampa o salva come PDF">Stampa</button><a href="{{ '/it/' | relative_url }}">{{ site.data.it.studio }}</a></nav>
+<header><p class="series">Una storia di Leo</p><h1>La bambina dei girini di Tower Bridge</h1><p class="sub">Due capitoli per lettori di circa 11 anni</p><p class="label">Testi e illustrazioni realizzati con l'IA. Controllati e corretti da Carlo.</p></header>
+<div class='ch'><span class='k'>Capitolo 1</span><h2>La bambina sul ponte</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/the-tadpole-girl-of-tower-bridge/01.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Leo doveva consegnare una ricerca entro venerdì: «Un fatto incredibile su Londra». Tutti gli altri avrebbero scelto il Grande Incendio. Leo voleva qualcosa di cui nessuno avesse mai sentito parlare.</p><p>Aprì il chatbot sul portatile di papà e scrisse: Dimmi un fatto sorprendente su Tower Bridge, con una fonte.</p><p>La risposta comparve in pochi secondi, ordinata come un libro di scuola. La prima persona ad attraversare Tower Bridge, quando fu inaugurato nel 1894, diceva, fu una bambina di nove anni di nome Edith Pratt, che corse davanti alla parata ufficiale con in mano un barattolo di girini. Fonte: The London Bridges Journal, marzo 1895, pagina 42.</p><p>«Girini», sussurrò Leo. «È perfetto.»</p><p>Lo copiò nelle sue slide, aggiunse una foto del ponte e il disegno di un barattolo, e in fondo scrisse la fonte, in lettere piccole e serie. Era fantastico. Sembrava vero.</p><p>Dalla porta, Mia chiese: «Perché la bambina ha le rane?»</p><p>«Girini. È storia», disse Leo. «L'ha detto il computer.»</p></section><div class='orn' aria-hidden='true'>· · ·</div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/the-tadpole-girl-of-tower-bridge/02.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Venerdì, le slide di Leo fecero ridere tutti nei punti giusti. I girini furono un successo.</p><p>Dopo, la professoressa Okafor lo chiamò. «Bel fatto», disse. «Mi piacerebbe leggere qualcosa di più su Edith. Dove hai trovato la rivista?»</p><p>«È vera», disse Leo. «C'è anche il numero di pagina.»</p><p>«Vogliamo cercarla insieme?»</p><p>Cercarono nel catalogo della biblioteca della scuola. Niente. Provarono su Google. Tantissime pagine sull'inaugurazione di Tower Bridge nel 1894, con le sue macchine a vapore e le due metà che si alzavano per far passare le navi. Ma non trovarono una sola menzione di Edith Pratt, né di un London Bridges Journal.</p><p>«Forse è molto vecchia e segreta», provò Leo.</p><p>La professoressa Okafor sorrise. «Forse. Ma un numero di pagina non rende vera una cosa. Chiunque può scriverne uno. Da dove viene?»</p><p>A Leo diventarono rosse le orecchie. «Da un chatbot.»</p><p>«Ah», disse lei, per niente arrabbiata. «Allora ecco il tuo vero compito: scopri come ha fatto a scrivere una cosa del genere.»</p></section><div class='orn' aria-hidden='true'>· · ·</div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/the-tadpole-girl-of-tower-bridge/03.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>A casa, Leo mollò lo zaino e guardò male il portatile.</p><p>«Se l'è inventato», disse a papà. «La bambina, i girini, la rivista, pagina quarantadue. Tutto. E non ha detto forse o credo. L'ha detto e basta, come se leggesse un'enciclopedia.»</p><p>«Che seccatura», disse papà.</p><p>«È peggio di una seccatura. Se non lo sa, perché non lo dice e basta? Mia dice di non sapere le cose in continuazione.»</p><p>«È vero», disse Mia tutta fiera, da sotto il tavolo. «Non so dov'è l'altro mio calzino.»</p><p>Leo rilesse la risposta. Ogni frase scorreva liscia. L'ortografia era perfetta. Perfino la data del ponte era giusta. Era quella la cosa strana: le parti vere e quelle inventate sembravano identiche.</p><p>«Sta mentendo?» chiese.</p><p>Papà si appoggiò al bancone. «Bella domanda. Perché non lo metti alla prova e lo scopri?»</p></section><div class='ch'><span class='k'>Capitolo 2</span><h2>La macchina della parola successiva</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/the-tadpole-girl-of-tower-bridge/04.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Leo preparò un esperimento, come uno scienziato.</p><p>Prima chiese di nuovo di Edith Pratt, in una chat nuova. Questa volta il chatbot disse che era una famosa nuotatrice dell'epoca vittoriana.</p><p>Poi inventò apposta una cosa: Raccontami della Grande Alluvione di Crema Pasticcera del 1871.</p><p>Arrivarono tre paragrafi ordinati. Le strade di Pimlico immerse fino alle ginocchia nel giallo. La caldaia di una fabbrica esplosa. Bambini che raccoglievano la crema con i secchi.</p><p>«Non c'è mai stata nessuna alluvione di crema», disse Leo. «Me la sono inventata trenta secondi fa.»</p><p>Poi scrisse: Sei sicuro? Lo schermo si riempì di Mi scuso per la confusione, e di un nuovo paragrafo che diceva che forse l'alluvione non era mai avvenuta.</p><p>«Quindi se insisto, la risposta cambia», disse Leo lentamente. «Questo non controlla niente. Scrive solo quello che sembra starci bene.»</p><p>Papà prese una sedia. «In pratica hai appena capito come funziona.»</p></section><div class='orn' aria-hidden='true'>· · ·</div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/the-tadpole-girl-of-tower-bridge/05.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>«Prova questa», disse papà. «C'era una…»</p><p>«Volta», disse Leo.</p><p>«Sale e…»</p><p>«Pepe.»</p><p>«Non hai cercato niente. Sapevi e basta quale parola viene di solito dopo. È quello che fa lui. È stato costruito a partire da una montagna gigantesca di testi scritti dalle persone: libri, siti, ricette, di tutto. Ha colto gli schemi, e ora prevede una parola probabile, poi la successiva, poi la successiva ancora.»</p><p>Leo aggrottò la fronte. «E le risposte di storia di solito hanno un nome, una data e una fonte con il numero di pagina…»</p><p>«Quindi scrive qualcosa che ha quella forma, anche se la rivista non esiste. Alcuni chatbot sanno cercare sul web, ma possono comunque fare confusione.»</p><p>«Quindi non stava mentendo?»</p><p>«Mentire vuol dire voler ingannare qualcuno, e un programma non vuole niente. Le risposte inventate si chiamano allucinazioni, ma è solo un soprannome. Nessuno sta vedendo cose che non ci sono.»</p><p>Leo annuì piano. «Quindi sembrare sicuro è solo lo stile. Non è una prova.»</p></section><div class='orn' aria-hidden='true'>· · ·</div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/the-tadpole-girl-of-tower-bridge/06.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Quella sera, Leo preparò una nuova slide per la professoressa Okafor: Come non farsi fregare dai girini.</p><p>Non serviva molto. Se un chatbot nomina un libro o un sito, vai a cercarlo. Se non lo trovi, è una voce, non un fatto. E se è importante, chiedi a qualcuno che sa: un insegnante, una bibliotecaria, o un papà che non smette di giocare a finisci-la-frase.</p><p>Leo continuò a usare il chatbot per le idee. Solo che prima di crederci controllava.</p><p>Mia si arrampicò sul divano accanto a lui. «Il computer è cattivo? Ha detto una bugia sulla bambina dei girini?»</p><p>Leo pensò all'alluvione di crema e alla nuotatrice vittoriana, e trovò il modo più semplice di dirlo.</p><p>«No, Mia. È bravissimo a sembrare giusto. Controllare tocca a noi.»</p><p>Mia ci pensò su. «Come quando mi ha detto di mettere la marmellata sui bastoncini di pesce?»</p><p>«Proprio così.»</p></section>
+<aside class="grown" aria-label="Per i grandi"><h2>Per i grandi</h2><h3>L'idea</h3><p>I chatbot scrivono prevedendo le parole successive più probabili, usando gli schemi di enormi quantità di testi scritti dalle persone. Non controllano se quello che scrivono è vero. Ecco perché una risposta può sembrare sicura, con un nome, una data e un numero di pagina, ed essere comunque inventata.</p><h3>Parliamone</h3><p>Se un chatbot nomina un libro o un sito, come potresti controllare che esista davvero? A chi potresti chiedere?</p><h3>Buono a sapersi</h3><p>Edith Pratt, il London Bridges Journal e la Grande Alluvione di Crema Pasticcera sono inventati per questa storia. Tower Bridge è stato davvero inaugurato nel 1894. Il chatbot non mente, perché mentire vuol dire cercare di ingannare qualcuno. “Allucinazione” è solo il soprannome che si usa per le risposte inventate.</p><h3>Come è stato fatto questo libro</h3><p>Testi e illustrazioni sono stati realizzati con l'IA, poi controllati e corretti da persone prima della pubblicazione. <a href="{{ '/it/libri/' | relative_url }}">Scopri come facciamo questi libri</a>.</p></aside>
+<footer>Prodotto da Carlo. Realizzato con l'IA.<br><a href="{{ '/books/the-tadpole-girl-of-tower-bridge.html' | relative_url }}" hreflang="en-GB" lang="en-GB">In English</a> · <a href="{{ '/it/libri/' | relative_url }}">Come facciamo questi libri</a></footer>
+</main>
+<script>
+  // Load every picture before printing, because pictures further in are lazy-loaded.
+  function eagerImages() {
+    const imgs = [...document.images];
+    imgs.forEach(i => { i.loading = 'eager'; });
+    return Promise.all(imgs.map(i => i.complete ? null : new Promise(r => { i.onload = i.onerror = r; })));
+  }
+  window.addEventListener('beforeprint', eagerImages);
+  document.getElementById('printbtn').addEventListener('click', async () => { await eagerImages(); window.print(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+---
+layout: null
+title: La pantofola che non era un gatto
+permalink: /it/libri/la-pantofola-che-non-era-un-gatto.html
+en: /books/the-slipper-that-wasnt-a-cat.html
+---
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La pantofola che non era un gatto</title>
+<meta name="description" content="Un libro illustrato per bambini di circa 7 anni. Un tablet guarda la pantofola pelosa di Mia e dice &quot;Gatto!&quot;, e Mia capisce perché.">
+<meta property="og:title" content="La pantofola che non era un gatto">
+<meta property="og:description" content="Un libro illustrato per bambini di circa 7 anni. Un tablet guarda la pantofola pelosa di Mia e dice &quot;Gatto!&quot;, e Mia capisce perché.">
+<meta property="og:type" content="book">
+<link rel="icon" href="{{ '/assets/mark.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600&display=swap">
+<style>
+  /* Layout: one book page at a time on a desk; picture above, a big read-aloud line below. Single deliberate look (paper on a dark desk). */
+  :root {
+    --desk:#2f3437; --paper:#fbf7f0; --ink:#2b2b2b; --muted:#7a7066;
+    --terra:#d97757; --cobalt:#3a5ba0; --sage:#8aa37b; --ochre:#e0b04a;
+    --read:"Andika", "Comic Neue", "Trebuchet MS", sans-serif;
+    --title:"Fredoka", "Andika", "Trebuchet MS", sans-serif;
+    color-scheme: dark;
+  }
+  html, body { height:100%; }
+  body { background:var(--desk); color:var(--ink); font-family:var(--read);
+    padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));
+    padding-block:16px; display:flex; flex-direction:column; align-items:center; gap:14px; }
+  .book { width:min(100%, 560px); background:var(--paper); border-radius:6px 14px 14px 6px;
+    box-shadow: inset 10px 0 14px -10px rgba(0,0,0,.25), 0 18px 40px rgba(0,0,0,.35); position:relative; overflow:hidden; }
+  .page { display:flex; flex-direction:column; align-items:center; padding:clamp(18px,4vw,32px); gap:clamp(14px,3vw,22px); min-height:min(78vh, 680px); justify-content:center; position:relative; }
+  .page[hidden] { display:none; }
+  .art { width:100%; max-width:440px; aspect-ratio:1/1; }
+  .art svg, .art img { width:100%; height:100%; display:block; border-radius:4px; }
+  .words { margin:0; font-size:clamp(21px, 4.6vw, 28px); line-height:1.4; text-align:center; max-width:26ch; text-wrap:balance; }
+  .folio { position:absolute; bottom:12px; right:18px; font-size:14px; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .cover h1 { font-family:var(--title); font-weight:600; font-size:clamp(34px, 8vw, 50px); line-height:1.05; margin:0; text-align:center; text-wrap:balance; color:var(--ink); }
+  .cover .q { font-family:var(--title); font-weight:500; color:var(--terra); font-size:clamp(18px,4vw,22px); margin:0; letter-spacing:.02em; }
+  .cover .by { margin:0; color:var(--muted); font-size:16px; text-align:center; }
+  .cover .art { max-width:330px; }
+  .end h2 { font-family:var(--title); font-weight:600; font-size:clamp(28px,6vw,38px); margin:0; }
+  .end .marks { display:flex; gap:18px; align-items:flex-end; }
+  .end dl { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:0; font-size:17px; max-width:380px; }
+  .end dt { color:var(--muted); }
+  .end dd { margin:0; }
+  .cover .label { font-size:14px; max-width:34ch; }
+  .grown { justify-content:flex-start; }
+  .grown h2 { font-family:var(--title); font-weight:600; font-size:clamp(26px,5.5vw,34px); margin:0; }
+  .grown .gi { width:100%; max-width:440px; display:grid; gap:16px; font-size:17px; line-height:1.5; }
+  .grown h3 { font:600 14px var(--title); letter-spacing:.06em; text-transform:uppercase; color:var(--cobalt); margin:0 0 2px; }
+  .grown p { margin:0; }
+  .grown a { color:var(--cobalt); }
+  .end .small { font-size:14px; color:var(--muted); text-align:center; max-width:40ch; margin:0; }
+  nav { width:min(100%, 560px); display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  nav button { font:600 17px var(--title); color:var(--paper); background:transparent; border:2px solid rgba(251,247,240,.5); border-radius:999px; padding:9px 18px; cursor:pointer; min-width:96px; }
+  nav button:hover:not(:disabled) { border-color:var(--paper); }
+  nav button:focus-visible, .book:focus-visible { outline:3px solid var(--ochre); outline-offset:3px; }
+  nav button:disabled { opacity:.3; cursor:default; }
+  .dots { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
+  .dots span { width:8px; height:8px; border-radius:50%; background:rgba(251,247,240,.3); }
+  .dots span.on { background:var(--ochre); }
+  @media (prefers-reduced-motion: no-preference) { .page:not([hidden]) { animation:turn .28s ease-out; } }
+  @keyframes turn { from { opacity:.2; transform:translateX(12px); } to { opacity:1; transform:none; } }
+  .top { width:min(100%, 560px); display:flex; justify-content:space-between; gap:12px; font:600 15px var(--title); letter-spacing:.03em; }
+  .top a { color:rgba(251,247,240,.75); text-decoration:none; }
+  .top a:hover { color:var(--paper); }
+  .foot { color:rgba(251,247,240,.7); font-size:14px; text-align:center; margin:4px 0 8px; }
+  .foot a { color:inherit; }
+  .printbtn { font:inherit; color:rgba(251,247,240,.75); background:none; border:0; padding:0; cursor:pointer; }
+  .printbtn:hover { color:var(--paper); }
+  .printbtn:focus-visible { outline:3px solid var(--ochre); outline-offset:3px; }
+  /* Print: every page of the book on its own A4 sheet, in reading order. */
+  @page { size:A4; margin:14mm; }
+  @media print {
+    html, body { height:auto; }
+    body { background:#fff; display:block; padding:0; }
+    .top, nav, .foot { display:none !important; }
+    .book { width:auto; box-shadow:none; border-radius:0; overflow:visible; background:#fff; }
+    .page, .page[hidden] { display:flex !important; animation:none !important; min-height:0; height:258mm; padding:0; box-sizing:border-box; justify-content:center; break-after:page; page-break-after:always; }
+    .page:last-child { break-after:auto; page-break-after:auto; }
+    .art { max-width:165mm; }
+    .cover .art { max-width:130mm; }
+    .words { font-size:22pt; max-width:30ch; }
+    .folio { bottom:0; right:0; font-size:11pt; }
+    .grown .gi { max-width:150mm; font-size:13pt; }
+    .grown { justify-content:flex-start; padding-top:10mm; }
+  }
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Libri"><a href="{{ '/it/libri/' | relative_url }}">← Tutti i libri</a><button type="button" class="printbtn" id="printbtn" title="Stampa o salva come PDF">Stampa</button><a href="{{ '/it/' | relative_url }}">{{ site.data.it.studio }}</a></nav>
+<main class="book" id="book" tabindex="0" aria-live="polite">
+    <section class="page cover" data-n="0" aria-label="Copertina">
+      <p class="q">Mia e papà · Libro 1</p>
+      <h1>La pantofola che non era un gatto</h1>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/03.jpg' | relative_url }}" alt="Mia ride mentre il tablet guarda la sua pantofola" width="1024" height="1024"></div>
+      <p class="by label">Testi e illustrazioni realizzati con l'IA. Controllati e corretti da Carlo.</p>
+    </section>
+    <section class="page" data-n="1" aria-label="Pagina 1" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/01.jpg' | relative_url }}" alt="Pioggia sulla finestra, un altoparlante che suona musica e Mia sul divano con in mano un grande tablet" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Giornata di pioggia a Londra. Alexa mette una canzone. Mia trova un'app delle foto sul tablet di papà. Dice il nome delle cose!</p>
+      <span class="folio">1</span>
+    </section>
+    <section class="page" data-n="2" aria-label="Pagina 2" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/02.jpg' | relative_url }}" alt="Mia punta il tablet verso la sua pantofola grigia; sul tavolo ci sono una banana e una teiera" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Mia la punta su una banana. “Banana!” Una teiera. “Teiera!” Poi prova con la sua pantofola pelosa.</p>
+      <span class="folio">2</span>
+    </section>
+    <section class="page" data-n="3" aria-label="Pagina 3" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/03.jpg' | relative_url }}" alt="Mia ruzzola giù dal divano ridendo mentre il tablet mostra la sua pantofola" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">“Gatto!” dice l'app. Mia ride così forte che cade dal divano. “Ma non è un gatto!”</p>
+      <span class="folio">3</span>
+    </section>
+    <section class="page" data-n="4" aria-label="Pagina 4" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/04.jpg' | relative_url }}" alt="Mia solleva il tablet; sullo schermo la pantofola ha delle orecchie da gatto disegnate a puntini; dietro di lei c'è il calzino di papà" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Ci riprova. “Gatto!” Le mostra il calzino di papà. “Calzino.” Di nuovo la pantofola. “Gatto!”</p>
+      <span class="folio">4</span>
+    </section>
+    <section class="page" data-n="5" aria-label="Pagina 5" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/05.jpg' | relative_url }}" alt="Papà indica delle foto di gatti acciambellati; Mia tiene il tablet; la pantofola è sul pavimento" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">“Perché continua a dire gatto?” chiede Mia. “Ha imparato da tantissime foto di gatti,” dice papà.</p>
+      <span class="folio">5</span>
+    </section>
+    <section class="page" data-n="6" aria-label="Pagina 6" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/06.jpg' | relative_url }}" alt="Mia indica la sua pantofola sotto tre foto di gatti grigi acciambellati" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Mia guarda la sua pantofola. Tonda. Pelosa. Grigia. Come i gatti acciambellati!</p>
+      <span class="folio">6</span>
+    </section>
+    <section class="page" data-n="7" aria-label="Pagina 7" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/07.jpg' | relative_url }}" alt="Mia tiene la pantofola a testa in giù; anche il tablet la mostra a testa in giù" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Mia gira la pantofola a testa in giù. “Pantofola!” dice l'app. È un programma per computer, non un gattino dispettoso.</p>
+      <span class="folio">7</span>
+    </section>
+    <section class="page" data-n="8" aria-label="Pagina 8" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/08.jpg' | relative_url }}" alt="Mia spiega alla sua amica che sono state le foto dei gatti a far sbagliare il tablet" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Mia lo racconta alla sua amica Zara: “Ha imparato da foto scattate dalle persone. Poi tira a indovinare. E si può sbagliare!”</p>
+      <span class="folio">8</span>
+    </section>
+    <section class="page" data-n="9" aria-label="Pagina 9" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/the-slipper-that-wasnt-a-cat/09.jpg' | relative_url }}" alt="Mia punta il tablet verso un cerchio tratteggiato vuoto, in attesa della prossima cosa difficile" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Ora Mia va a caccia di altre cose difficili. Tu cosa faresti vedere al tablet?</p>
+      <span class="folio">9</span>
+    </section>
+    <section class="page end" data-n="10" aria-label="Questo libro" hidden>
+      <h2>Fine</h2>
+      <svg class="marks" width="120" height="60" viewBox="0 0 120 60" aria-hidden="true"><circle cx="30" cy="40" r="10" fill="#d97757"/><path d="M37 44 Q38 56 24 60" stroke="#d97757" stroke-width="6" fill="none" stroke-linecap="round"/><line x1="86" y1="10" x2="76" y2="34" stroke="#3a5ba0" stroke-width="7" stroke-linecap="round"/></svg>
+      <p class="small">Prodotto da Carlo. Realizzato con l'IA.</p>
+      <p class="small">Macchine che fanno cose · 2026</p>
+    </section>
+    <section class="page grown" data-n="11" aria-label="Per i grandi" hidden>
+      <h2>Per i grandi</h2>
+      <div class="gi">
+        <div><h3>L'idea</h3><p>Un'app delle foto non sa cosa sia una pantofola. Le persone l'hanno addestrata con tantissime foto con un'etichetta, e lei tira a indovinare da come appaiono le cose. Tonda, pelosa e grigia, la pantofola sembrava un gatto acciambellato.</p></div>
+        <div><h3>Parliamone</h3><p>Cosa potresti far vedere al tablet per ingannarlo? Perché ci cascherebbe?</p></div>
+        <div><h3>Buono a sapersi</h3><p>L'app non sta facendo la sciocca né la dispettosa. È un programma per computer che riconosce schemi, quindi può sbagliare. Girare la pantofola ha cambiato il suo aspetto, e così è cambiata anche la risposta.</p></div>
+        <div><h3>Come è stato fatto questo libro</h3><p>Testi e illustrazioni sono stati realizzati con l'IA, poi controllati e corretti da persone prima della pubblicazione. <a href="{{ '/it/libri/' | relative_url }}">Scopri come facciamo questi libri</a>.</p></div>
+      </div>
+    </section>
+</main>
+
+<nav aria-label="Gira pagina">
+  <button type="button" id="prev">Indietro</button>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <button type="button" id="next">Avanti</button>
+</nav>
+
+<script>
+  const pages = [...document.querySelectorAll('.page')];
+  const dots = document.getElementById('dots');
+  pages.forEach(() => dots.appendChild(document.createElement('span')));
+  let at = 0;
+  function show(i) {
+    at = Math.max(0, Math.min(pages.length - 1, i));
+    pages.forEach((p, k) => p.hidden = k !== at);
+    [...dots.children].forEach((d, k) => d.classList.toggle('on', k === at));
+    document.getElementById('prev').disabled = at === 0;
+    const next = document.getElementById('next');
+    next.textContent = at === pages.length - 1 ? 'Ricomincia' : at === 0 ? 'Apri' : 'Avanti';
+  }
+  document.getElementById('prev').onclick = () => show(at - 1);
+  document.getElementById('next').onclick = () => show(at === pages.length - 1 ? 0 : at + 1);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); show(at + 1); }
+    if (e.key === 'ArrowLeft') show(at - 1);
+  });
+  let x0 = null;
+  const book = document.getElementById('book');
+  book.addEventListener('touchstart', e => x0 = e.touches[0].clientX, { passive:true });
+  book.addEventListener('touchend', e => {
+    if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) show(at + (dx < 0 ? 1 : -1));
+  });
+  book.addEventListener('click', e => { if (!e.target.closest('button, a')) { const r = book.getBoundingClientRect(); show(at + (e.clientX > r.left + r.width / 2 ? 1 : -1)); } });
+  show(0);
+</script>
+<script>
+  // Load every picture before printing, because pictures further in are lazy-loaded.
+  function eagerImages() {
+    const imgs = [...document.images];
+    imgs.forEach(i => { i.loading = 'eager'; });
+    return Promise.all(imgs.map(i => i.complete ? null : new Promise(r => { i.onload = i.onerror = r; })));
+  }
+  window.addEventListener('beforeprint', eagerImages);
+  document.getElementById('printbtn').addEventListener('click', async () => { await eagerImages(); window.print(); });
+</script>
+
+<p class="foot">Prodotto da Carlo. Realizzato con l'IA. · <a href="{{ '/books/the-slipper-that-wasnt-a-cat.html' | relative_url }}" hreflang="en-GB" lang="en-GB">In English</a> · <a href="{{ '/it/libri/' | relative_url }}">Come facciamo questi libri</a></p>
+</body>
+</html>

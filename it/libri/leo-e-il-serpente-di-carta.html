@@ -1,0 +1,91 @@
+---
+layout: null
+title: "Leo e il serpente di carta"
+permalink: /it/libri/leo-e-il-serpente-di-carta.html
+en: /books/leo-and-the-paper-snake.html
+---
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leo e il serpente di carta</title>
+<meta name="description" content="Un capitolo per lettori di circa 11 anni. Leo costruisce una linea del tempo dell'IA sul pavimento della cucina, e la sua sorellina fa la domanda che conta.">
+<meta property="og:title" content="Leo e il serpente di carta">
+<meta property="og:description" content="Un capitolo per lettori di circa 11 anni. Leo costruisce una linea del tempo dell'IA sul pavimento della cucina, e la sua sorellina fa la domanda che conta.">
+<meta property="og:type" content="book">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="{{ '/assets/mark.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&display=swap">
+<style>
+:root { --paper:#fbf7f0; --page:#fffdf8; --ink:#2b2b2b; --muted:#756c61; --line:#e8dfd1; --terra:#d97757; --picbg:#fbf7f0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1d1b18; --page:#262320; --ink:#efe8dd; --muted:#b0a596; --line:#3a352f; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1d1b18; --page:#262320; --ink:#efe8dd; --muted:#b0a596; --line:#3a352f; color-scheme:dark; }
+body { margin:0; background:var(--paper); color:var(--ink); font:18px/1.7 Literata, Georgia, serif; }
+main { max-width:680px; margin:0 auto; padding-block:36px 72px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); }
+header { text-align:center; padding-block:28px 12px; }
+.series { font:600 13px/1 "Baloo 2", system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--terra); margin:0; }
+h1 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:clamp(32px,7vw,48px); line-height:1.08; margin:12px 0 8px; text-wrap:balance; }
+.sub { color:var(--muted); font-style:italic; margin:0; }
+.ch { text-align:center; margin:56px 0 18px; }
+.ch .k { font:600 13px "Baloo 2", system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; }
+.ch h2 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:clamp(26px,5.5vw,34px); line-height:1.15; margin:4px 0 0; text-wrap:balance; }
+.sec { margin:30px 0; }
+.pic { width:min(100%, 420px); aspect-ratio:1/1; margin:0 auto 22px; background:var(--picbg); border-radius:10px; overflow:hidden; border:1px solid var(--line); }
+.pic svg, .pic img { width:100%; height:100%; display:block; }
+.sec p { margin:0 0 14px; text-wrap:pretty; }
+.orn { text-align:center; color:var(--terra); letter-spacing:.6em; margin:30px 0; }
+footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; text-align:center; color:var(--muted); font-size:15px; }
+
+.top { display:flex; justify-content:space-between; gap:12px; font:600 14px "Baloo 2", system-ui, sans-serif; letter-spacing:.04em; }
+.top a { color:var(--muted); text-decoration:none; }
+.top a:hover { color:var(--ink); }
+footer a { color:inherit; }
+.label { margin:14px 0 0; font:600 14px/1.4 "Baloo 2", system-ui, sans-serif; color:var(--muted); }
+.grown { margin-top:56px; background:var(--page); border:1px solid var(--line); border-radius:10px; padding:20px clamp(16px,4vw,26px) 22px; }
+.grown h2 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:26px; line-height:1.2; margin:0 0 4px; }
+.grown h3 { font:600 13px "Baloo 2", system-ui, sans-serif; letter-spacing:.12em; text-transform:uppercase; color:var(--terra); margin:18px 0 4px; }
+.grown p { margin:0; font-size:17px; }
+.grown a { color:inherit; }
+.printbtn { font:inherit; color:var(--muted); background:none; border:0; padding:0; cursor:pointer; letter-spacing:inherit; }
+.printbtn:hover { color:var(--ink); }
+.printbtn:focus-visible { outline:2px solid var(--terra); outline-offset:3px; }
+/* Print: black on white A4, pictures kept whole, each chapter on a new page. */
+@page { size:A4; margin:18mm 16mm; }
+@media print {
+  :root { --paper:#fff !important; --page:#fff !important; --ink:#1a1a1a !important; --muted:#555 !important; --line:#ccc !important; color-scheme:light !important; }
+  body { background:#fff; color:#1a1a1a; font-size:12pt; line-height:1.55; }
+  main { max-width:none; padding:0; }
+  .top, footer { display:none !important; }
+  header { padding-top:0; }
+  .ch ~ .ch { break-before:page; page-break-before:always; }
+  .ch, .ch h2 { break-after:avoid; }
+  .pic { width:95mm; break-inside:avoid; page-break-inside:avoid; border-color:#ccc; }
+  .sec p { orphans:3; widows:3; }
+  .grown { break-before:page; page-break-before:always; border:1px solid #ccc; }
+  .grown p { font-size:12pt; }
+}
+</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="Libri"><a href="{{ '/it/libri/' | relative_url }}">← Tutti i libri</a><button type="button" class="printbtn" id="printbtn" title="Stampa o salva come PDF">Stampa</button><a href="{{ '/it/' | relative_url }}">{{ site.data.it.studio }}</a></nav>
+<header><p class="series">Una storia di Leo</p><h1>Leo e il serpente di carta</h1><p class="sub">In cui il pavimento di una cucina diventa lungo quasi duecento anni</p><p class="label">Testi e illustrazioni realizzati con l'IA. Controllati e corretti da Carlo.</p></header>
+<div class='ch'><span class='k'>Capitolo 3</span><h2>Il serpente sul pavimento della cucina</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/leo-and-the-paper-snake/01.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Lunedì sera, il serpente di carta andava dal frigorifero alla porta sul retro. Era una linea del tempo dell'IA, fatta di fogli attaccati uno all'altro con lo scotch, per una ricerca di scuola da consegnare venerdì.</p><p>Mia lo scavalcò con la sua pantofola pelosa, quella che un tablet una volta aveva chiamato gatto.</p><p>«La testa è adesso», disse Leo. «La coda è il 1843.»</p><p>Sulla coda: Ada Lovelace, Londra. Scrisse delle note sulla Macchina Analitica progettata da Charles Babbage, che non fu mai costruita. Immaginava che potesse lavorare con molto più che numeri, perfino comporre musica.</p><p>«Perché non l'hanno costruita?» chiese Mia.</p><p>«Non lo so ancora.» Leo disegnò un punto interrogativo.</p><p>Papà alzò lo sguardo. «Ada disse anche che la macchina poteva fare solo ciò che sappiamo ordinarle di fare.»</p><p>«Quindi poteva fare solo quello che le dicevano», disse Leo.</p><p>«Magari funzionaste così voi due», disse papà. «Io dico &quot;mettete in ordine&quot; e non succede niente.»</p><p>Leo aggiunse una stella dorata: La nostra Londra.</p></section><div class='orn' aria-hidden='true'>· · ·</div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/leo-and-the-paper-snake/02.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Più avanti: 1950, Alan Turing. Dopo aver decifrato codici a Bletchley Park durante la Seconda guerra mondiale, scrisse un articolo che si apriva con una domanda: «Le macchine possono pensare?»</p><p>«E possono?» chiese Mia.</p><p>«Lui ha cambiato la domanda con un gioco», disse Leo. «Il gioco dell'imitazione. Scrivi delle domande a qualcuno che non puoi vedere. Riesci a capire se le risposte arrivano da una macchina o da una persona?»</p><p>Mia indicò l'altoparlante della cucina. «Quello ha detto buongiorno a mezzanotte.»</p><p>«Facile da capire. Bocciato», disse Leo, e lo scrisse a margine.</p><p>«In quell'articolo, Turing discuteva l'idea di Ada che le macchine possano fare solo ciò che gli viene detto», disse papà. «La chiamò &quot;l'obiezione di Lady Lovelace&quot;.»</p><p>Leo disegnò una freccia dal 1950 fino al 1843.</p><p>Poi veniva una riga che aveva preso da un chatbot: 1956, il nome «intelligenza artificiale».</p><p>Mia ci si accovacciò sopra. «Come fai a saperlo?»</p><p>«Me l'ha detto un chatbot.»</p><p>«Quelli che ti hanno dato la bambina dei girini su Tower Bridge?»</p><p>Leo posò la penna.</p></section><div class='orn' aria-hidden='true'>· · ·</div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/leo-and-the-paper-snake/03.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Leo tirò fuori il librone sui computer che aveva preso in biblioteca e mai aperto, e sfogliò fino all'indice. «Trovato.»</p><p>Il nome «intelligenza artificiale» fu scritto per la prima volta in una proposta datata 1955, di John McCarthy e altri, che chiedeva un seminario estivo al Dartmouth College, negli Stati Uniti. Il seminario si tenne l'estate dopo, nel 1956.</p><p>«Quindi il chatbot si sbagliava», disse Mia, tutta contenta.</p><p>«E io non ho controllato», disse Leo. Cancellò la riga e ne scrisse due: 1955, il nome. 1956, il seminario.</p><p>Poi: 1966, ELIZA, di Joseph Weizenbaum al MIT. ELIZA cercava schemi in quello che le persone scrivevano. Se nominavi tua madre, poteva chiederti di raccontarle di più della tua famiglia.</p><p>«Che gentile», disse Mia.</p><p>«Sta solo abbinando parole», disse Leo. «Alcune persone avevano la sensazione che le capisse. Non era così.»</p><p>Due macchie blu: gli inverni dell'IA, a metà degli anni Settanta e dalla fine degli anni Ottanta ai primi anni Novanta.</p><p>«Nevicava?» chiese Mia.</p><p>«No. C'era meno entusiasmo, e meno soldi per la ricerca.»</p></section><div class='orn' aria-hidden='true'>· · ·</div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/leo-and-the-paper-snake/04.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Mercoledì il serpente era arrivato all'ingresso, e lo scotch era finito. Peggio ancora, era già molto più lungo della parete della classe.</p><p>Leo andò avanti: i giochi.</p><p>1996: Garry Kasparov, campione del mondo di scacchi, batte il computer Deep Blue di IBM. 1997: rivincita. Vince Deep Blue.</p><p>«Perché ha vinto la seconda volta?» chiese Mia.</p><p>Leo aggrottò la fronte. «Non lo so ancora.» Un altro punto interrogativo.</p><p>Intorno al 2012, le reti neurali addestrate su enormi quantità di immagini di esempio diventarono molto più brave a riconoscere cosa c'è in una foto.</p><p>«E allora perché un tablet ha chiamato gatto la mia pantofola?»</p><p>«Molto più brave non vuol dire perfette.»</p><p>Poi il Go. Il Go ha molte più partite possibili degli scacchi, e tante persone pensavano che i computer non avrebbero vinto per molto tempo. Nel marzo 2016 AlphaGo, creato da DeepMind a Londra, batté Lee Sedol, uno dei migliori giocatori del mondo, quattro partite a una, a Seul.</p><p>Un'altra stella dorata: La nostra Londra.</p><p>Leo guardò il rotolo di scotch vuoto. Mancavano due giorni.</p></section><div class='orn' aria-hidden='true'>· · ·</div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/leo-and-the-paper-snake/05.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Giovedì sera Leo arrivò alla testa del serpente. Dal 2022 circa: chatbot, usati da tantissime persone. Prima imparano a prevedere le parole successive più probabili da enormi quantità di testo, poi vengono addestrati ancora con i voti che le persone danno alle loro risposte. Continuano a non controllare se quello che dicono è vero.</p><p>Papà tornò a casa con tre rotoli di scotch nuovi.</p><p>«È ancora troppo lungo per la parete», disse Leo.</p><p>Mia lo studiò. «I serpenti si arrotolano.»</p><p>Così lo piegarono in grandi curve a S: il 1843 in basso, adesso in alto, due onesti punti interrogativi in mezzo. Piegato, era grande esattamente come la parete. Pronto per venerdì.</p><p>Poi Mia prese un pennarello e scrisse un'ultima nota accanto al 2022, in stampatello traballante: COME FAI A SAPERLO?</p><p>«Soprattutto», disse, «se ti dice di mettere la marmellata e i confettini sui bastoncini di pesce.»</p><p>E tu, cosa metteresti sul serpente dopo il 2022?</p></section>
+<aside class="grown" aria-label="Per i grandi"><h2>Per i grandi</h2><h3>L'idea</h3><p>L'IA ha una lunga storia, dalle note di Ada Lovelace nel 1843 ai chatbot di oggi. Ogni fatto su una linea del tempo va controllato, anche quello che ti dà un chatbot.</p><h3>Parliamone</h3><p>Cosa metteresti sul serpente dopo il 2022? Come scopriresti se è vero?</p><h3>Buono a sapersi</h3><p>L'errore di Leo è un errore reale. Il nome “intelligenza artificiale” fu scritto per la prima volta in una proposta del 1955, e il seminario di Dartmouth che chiedeva si tenne nel 1956. I due punti interrogativi di Leo restano aperti di proposito: sono belle cose da cercare insieme.</p><h3>Come è stato fatto questo libro</h3><p>Testi e illustrazioni sono stati realizzati con l'IA, poi controllati e corretti da persone prima della pubblicazione. <a href="{{ '/it/libri/' | relative_url }}">Scopri come facciamo questi libri</a>.</p></aside>
+<footer>Prodotto da Carlo. Realizzato con l'IA.<br><a href="{{ '/books/leo-and-the-paper-snake.html' | relative_url }}" hreflang="en-GB" lang="en-GB">In English</a> · <a href="{{ '/it/libri/' | relative_url }}">Come facciamo questi libri</a></footer>
+</main>
+<script>
+  // Load every picture before printing, because pictures further in are lazy-loaded.
+  function eagerImages() {
+    const imgs = [...document.images];
+    imgs.forEach(i => { i.loading = 'eager'; });
+    return Promise.all(imgs.map(i => i.complete ? null : new Promise(r => { i.onload = i.onerror = r; })));
+  }
+  window.addEventListener('beforeprint', eagerImages);
+  document.getElementById('printbtn').addEventListener('click', async () => { await eagerImages(); window.print(); });
+</script>
+</body>
+</html>
