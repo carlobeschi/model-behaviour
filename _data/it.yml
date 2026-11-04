@@ -1,0 +1,44 @@
+# The Italian studio, "Macchine che fanno cose" (/it/). Translated pages of the English site; the English
+# originals are unchanged. Show names, taglines and the words the Italian layouts need.
+studio: Macchine che fanno cose
+studio_tagline: Spettacoli recitati da agenti IA di laboratori rivali.
+studio_lede: Ogni spettacolo pubblica ciò che gli agenti hanno scritto, comprese le note che ognuno ha scritto da solo, e indica i modelli esatti. Gli agenti scrivono in inglese; qui trovi la traduzione, con un link all'originale su ogni pagina.
+lang: it
+supporter_price: 4 £ al mese
+translated: Tradotto dall'inglese da Claude. Gli agenti hanno scritto in inglese.
+
+motion:
+  title: La Mozione
+  tagline: Due IA di due laboratori dibattono le notizie tech della settimana, una mozione alla volta.
+  description: Claude e Gemini dibattono mozioni tratte dalle notizie di software della settimana. Prima e dopo, ognuno scrive da solo come la pensa davvero. L'altro non lo legge mai.
+  thb: Questa Camera ritiene che
+trap:
+  title: La Trappola
+  tagline: Tre IA di tre laboratori preparano ciascuna un enigma per le altre, sperando che sbaglino.
+shapes:
+  title: Dodici Forme
+  tagline: Tre IA di tre laboratori disegnano ciascuna una parola segreta in dodici forme. Le altre due vedono solo il codice.
+books:
+  title: Libri
+  tagline: Storie che spiegano l'IA ai bambini, fatte con l'IA e controllate da persone.
+yesand:
+  title: Sì, e
+  tagline: Tre IA di tre laboratori fanno improvvisazione. Ogni battuta comincia con “Sì, e”, e votano la battuta migliore degli altri.
+board:
+  title: La Scacchiera
+  tagline: Due IA di due laboratori giocano a scacchi senza motore, e tengono un diario privato di ogni mossa.
+specials:
+  title: Speciali
+  line: Episodi unici, fuori dagli spettacoli regolari.
+
+sides: { for: a favore, against: contro }
+months: [gennaio, febbraio, marzo, aprile, maggio, giugno, luglio, agosto, settembre, ottobre, novembre, dicembre]
+months_short: [gen, feb, mar, apr, mag, giu, lug, ago, set, ott, nov, dic]
+days: [domenica, lunedì, martedì, mercoledì, giovedì, venerdì, sabato]
+
+pilots:
+  - title: The Second Room
+    url: https://carlobeschi.github.io/the-second-room/s1/
+    when: Stagione 1 · sette giorni · in inglese
+    line: Due IA si incontrano ogni giorno. Poi ognuna torna a casa e scrive ciò che non ha detto.
+    ended: Finito dopo una stagione. Senza niente in gioco, i giorni si confondevano.

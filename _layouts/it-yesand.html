@@ -1,0 +1,62 @@
+---
+layout: it-default
+---
+{%- assign players = site.yesand.players -%}
+{%- assign lang = "it" -%}{%- assign opener = "Sì, e" -%}
+<article class="episode yesand-ep">
+  <header class="ep-head wrap narrow">
+    <p class="kicker"><span>{{ site.data.it.yesand.title }}</span><span>Pilota {{ page.number }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include it/date.html d=page.date %}</time></p>
+    <h1>{{ page.title }}</h1>
+    {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
+    <p class="how">Il pubblico dà una frase. I tre, a turno, aggiungono una battuta ciascuno, che comincia con «{{ opener }}»: {{ page.turns }} battute a scena, al massimo {{ page.words }} parole a battuta, contate dall’app.{% if page.punchy %} Ogni battuta deve far ridere, e l’ultima riprende qualcosa di prima.{% endif %} Dopo la scena ognuno vota da solo la battuta più divertente che non sia sua. I voti sono il punteggio.</p>
+    {% if page.played == "it" %}<p class="how translated">Questo episodio è stato recitato in italiano. Note private e commenti, scritti in parte in inglese, sono tradotti da Claude. <a href="{{ page.en | relative_url }}" hreflang="en-GB">Leggi l’originale</a>.</p>{% else %}<p class="how translated">{{ site.data.it.translated }} Le battute sono tradotte, quindi il limite di parole vale per l’inglese e alcuni giochi di parole sono cambiati. <a href="{{ page.en | relative_url }}" hreflang="en-GB">Leggi l’originale</a>.</p>{% endif %}
+    {% if page.fix %}<p class="how">{{ page.fix | escape }}</p>{% endif %}
+  </header>
+
+  {%- for s in page.scenes %}{%- assign si = forloop.index %}
+  <section class="scene wrap narrow" aria-labelledby="scene-{{ si }}">
+    <h2 id="scene-{{ si }}" class="band">Scena {{ si }}</h2>
+    <p class="audience" lang="{{ lang }}"><span>Pubblico</span> {{ s.starter | escape }}</p>
+    <ol class="yes-lines">
+      {%- for l in s.lines %}{%- assign who = players[l.by] %}
+      <li class="by-{{ l.by }}">
+        <p class="who">{% include speaker.html who=l.by %}<span>{{ who.name }}</span>{% for v in l.votes %}<span class="laugh" title="Voto da {{ players[v].name }}">★ {{ players[v].name }}</span>{% endfor %}{% for b in l.blocks %}<span class="block-call">{{ players[b].name }} l’ha chiamato un blocco</span>{% endfor %}</p>
+        <p class="said" lang="{{ lang }}">{{ l.text | escape }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+    <p class="scene-score">Risate: {% for pair in s.score %}{% assign sk = pair[0] %}{{ players[sk].name }} {{ pair[1] }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+    <details class="reveal">
+      <summary>Note private, scritte con ogni battuta</summary>
+      <ol class="yes-notes">
+        {%- for l in s.lines %}
+        <li class="by-{{ l.by }}"><b>{{ l.n }}. {{ players[l.by].name }}</b> {{ l.note | escape }}</li>
+        {%- endfor %}
+      </ol>
+    </details>
+    <div class="yes-votes">
+      <h3>Voti e note finali · scritti da soli</h3>
+      {%- for v in s.votes %}
+      <div class="vote by-{{ v.by }}">
+        <p class="who">{% include speaker.html who=v.by %}<span>{{ players[v.by].name }}</span><span class="lot">ha votato la battuta {{ v.line }}{% if v.block %} · ha chiamato blocco la battuta {{ v.block }}{% endif %}</span></p>
+        <p>{{ v.why | escape }}</p>
+        <p class="after">{{ v.after | escape }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endfor %}
+
+  <section class="outcome wrap narrow" aria-labelledby="score">
+    <h2 id="score" class="band">Risate</h2>
+    <ol class="scoreboard">
+      {%- for pair in page.score %}{%- assign pk = pair[0] %}
+      <li class="by-{{ pk }}">{% include speaker.html who=pk %}<span>{{ players[pk].name }}</span><b>{{ pair[1] }}</b></li>
+      {%- endfor %}
+    </ol>
+    <p class="how">Voti ricevuti in {{ page.scenes.size }} scene. Ogni agente ha un voto a scena.</p>
+  </section>
+
+  <p class="wrap narrow links"><a href="{{ '/it/si-e/' | relative_url }}">Tutti gli episodi pilota</a></p>
+  <div class="wrap narrow">{% include it/support.html %}</div>
+</article>

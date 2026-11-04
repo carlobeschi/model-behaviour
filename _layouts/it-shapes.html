@@ -1,0 +1,83 @@
+---
+layout: it-default
+---
+{%- assign all = site.it_shapes | sort: "number" -%}
+{%- assign prev = nil -%}{%- assign next = nil -%}
+{%- for e in all -%}{%- if e.number == page.number -%}{%- assign i = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- if i > 0 -%}{%- assign pi = i | minus: 1 -%}{%- assign prev = all[pi] -%}{%- endif -%}
+{%- assign ni = i | plus: 1 -%}{%- assign next = all[ni] -%}
+{%- assign players = site.twelve.players -%}
+{%- assign cap = page.shapes | default: 12 -%}
+{%- assign rounds = page.drawings | group_by: "round" -%}
+<article class="episode shapes-ep">
+  <header class="ep-head wrap narrow">
+    <p class="kicker"><span>{{ site.data.it.shapes.title }}</span><span>Episodio {{ page.number }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include it/date.html d=page.date %}</time></p>
+    <h1>Episodio {{ page.number }}</h1>
+    {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
+    <p class="how">Indovina ogni parola prima di aprire le risposte.</p>
+    <p class="how translated">{{ site.data.it.translated }} I giocatori hanno ricevuto e indovinato le parole in inglese. <a href="{{ page.en | relative_url }}" hreflang="en-GB">Leggi l'originale</a>.</p>
+  </header>
+
+  {%- for g in rounds %}{%- assign first = g.items | first %}
+  <section class="round wrap" aria-labelledby="round-{{ g.name }}">
+    <h2 id="round-{{ g.name }}" class="band">Round {{ g.name }}{% if first.kind %} <span class="kind">{% if first.kind == "things" %}cose{% elsif first.kind == "ideas" %}idee{% else %}{{ first.kind }}{% endif %}</span>{% endif %}</h2>
+    {%- for d in g.items %}{%- assign who = players[d.by] %}
+    <div class="sketch by-{{ d.by }}">
+      <figure>
+        {% if d.svg %}{% capture alt %}Il disegno di {{ who.name }}{% if d.out %}, escluso{% endif %}{% endcapture %}{% include drawing.html svg=d.svg alt=alt %}{% else %}<div class="drawing blank">Nessun disegno</div>{% endif %}
+        <figcaption>{% include speaker.html who=d.by %}{{ who.name }}{% if d.count %}<span class="count">{{ d.count }} forme su {{ cap }}</span>{% endif %}</figcaption>
+      </figure>
+      <div class="sketch-body">
+        {% if d.out %}<p class="out-line"><span class="chip chip-void">Escluso</span> {% if d.redrawn %}Primo tentativo: {{ d.redrawn | remove: "it has " }}; secondo tentativo: {{ d.out | remove: "it has " }}{% else %}{{ d.out | remove: "it has " | capitalize }}{% endif %}. Nessuno ha dovuto indovinarlo.</p>{% elsif d.redrawn %}<p class="how">Ridisegnato: il primo tentativo aveva {{ d.redrawn | remove: "it has " }}.</p>{% endif %}
+        <details class="reveal">
+          <summary>La parola{% unless d.out %} e le risposte{% endunless %}</summary>
+          <p class="key">La parola: <code>{{ d.word | escape }}</code></p>
+          {%- for x in d.guesses %}{%- assign gw = players[x.by] %}
+          <div class="answer by-{{ x.by }}">
+            <p class="who">{% include speaker.html who=x.by %}{{ gw.name }}{% if x.confidence %} <span class="lot">sicuro al {{ x.confidence }}%, in privato</span>{% endif %}</p>
+            <div class="work">{{ x.working | markdownify }}</div>
+            <p class="res"><code>{{ x.answer | default: "(nessuna risposta)" | escape }}</code><span class="chip chip-{% if x.right %}right{% else %}wrong{% endif %}">{% if x.right %}Giusta{% else %}Sbagliata{% endif %}</span></p>
+          </div>
+          {%- endfor %}
+          {% if d.note %}
+          <article class="note by-{{ d.by }}">
+            <header>{% include speaker.html who=d.by %}<h3>{{ who.name }}</h3><span class="stance">prima, da solo</span></header>
+            <div class="note-text">{{ d.note | markdownify }}</div>
+          </article>
+          {% endif %}
+          {% if d.svg %}<details class="source"><summary>{% if d.out %}Il codice{% else %}Cosa hanno ricevuto gli altri{% endif %}</summary><pre><code>{{ d.svg | escape }}</code></pre></details>{% endif %}
+        </details>
+      </div>
+    </div>
+    {%- endfor %}
+  </section>
+  {%- endfor %}
+
+  <section class="alone wrap" aria-labelledby="after">
+    <h2 id="after" class="band">Dopo · scritto da soli</h2>
+    <div class="pair three">
+      {%- for pair in page.after %}{%- assign k = pair[0] %}{%- assign who = players[k] %}
+      <article class="note by-{{ k }}">
+        <header>{% include speaker.html who=k %}<h3>{{ who.name }}</h3></header>
+        <div class="note-text">{{ pair[1] | markdownify }}</div>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="outcome wrap narrow" aria-labelledby="score">
+    <h2 id="score" class="band">Punteggio</h2>
+    <ol class="scoreboard">
+      {%- for pair in page.score %}{%- assign pk = pair[0] %}
+      <li class="by-{{ pk }}">{% include speaker.html who=pk %}<span>{{ players[pk].name }}</span><b>{{ pair[1] }}</b></li>
+      {%- endfor %}
+    </ol>
+  </section>
+
+  <nav class="ep-nav wrap narrow" aria-label="Episodi">
+    {% if prev %}<a class="prev" href="{{ prev.url | relative_url }}"><span>Episodio {{ prev.number }}</span>{% include it/date.html d=prev.date %}</a>{% else %}<span></span>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url | relative_url }}"><span>Episodio {{ next.number }}</span>{% include it/date.html d=next.date %}</a>{% else %}<a class="next" href="{{ '/it/forme/' | relative_url }}"><span>Tutti gli episodi</span></a>{% endif %}
+  </nav>
+
+  <div class="wrap narrow">{% include it/support.html %}</div>
+</article>

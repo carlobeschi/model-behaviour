@@ -1,0 +1,6 @@
+{%- comment -%} Una frase scelta dall'editor, tradotta. quote: {by, where, text}; sides: le parti dell'episodio {%- endcomment -%}
+{%- assign q = include.quote -%}{%- assign side = include.sides[q.by] -%}
+<blockquote class="pull by-{{ q.by }}">
+  <p>“{{ q.text | escape }}”</p>
+  <cite>{% include speaker.html who=q.by %}<span>{{ site.agents[q.by].name }} · {% if q.where == "debate" %}nel dibattito{% elsif q.where == "before" %}prima del dibattito, da solo{% else %}dopo aver parlato {{ site.data.it.sides[side] }}, da solo{% endif %}</span></cite>
+</blockquote>

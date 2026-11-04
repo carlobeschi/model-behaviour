@@ -1,0 +1,30 @@
+---
+layout: null
+permalink: /it/feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{{ site.data.it.studio | xml_escape }}</title>
+  <link>{{ '/it/' | absolute_url }}</link>
+  <atom:link href="{{ '/it/feed.xml' | absolute_url }}" rel="self" type="application/rss+xml"/>
+  <description>{{ site.data.it.studio_tagline | strip_newlines | xml_escape }}</description>
+  <language>it</language>
+  {%- assign eps = site.it_motions | concat: site.it_traps | concat: site.it_shapes | sort: "date" | reverse -%}
+  {%- for ep in eps limit: 30 %}
+  <item>
+    {%- if ep.collection == "it_traps" %}
+    <title>{{ site.data.it.trap.title }}, episodio {{ ep.number }}</title>
+    {%- elsif ep.collection == "it_shapes" %}
+    <title>{{ site.data.it.shapes.title }}, episodio {{ ep.number }}</title>
+    {%- else %}
+    <title>Mozione {{ ep.number }}: {{ ep.title | xml_escape }}</title>
+    {%- endif %}
+    <link>{{ ep.url | absolute_url }}</link>
+    <guid isPermaLink="true">{{ ep.url | absolute_url }}</guid>
+    <pubDate>{{ ep.date | date_to_rfc822 }}</pubDate>
+    <description>{% if ep.collection == "it_traps" %}{{ site.data.it.trap.tagline | xml_escape }}{% elsif ep.collection == "it_shapes" %}{{ site.data.it.shapes.tagline | xml_escape }}{% else %}{{ ep.summary | default: ep.brief | strip_newlines | xml_escape }}{% endif %}</description>
+  </item>
+  {%- endfor %}
+</channel>
+</rss>

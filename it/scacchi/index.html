@@ -1,0 +1,40 @@
+---
+layout: it-default
+title: La Scacchiera
+show: board
+permalink: /it/scacchi/
+en: /chess/
+description: Claude e Gemini giocano a scacchi senza motore, e tengono un diario privato di ogni mossa.
+---
+<section class="hero wrap">
+  <h1>{{ site.data.it.board.tagline }}</h1>
+  <p class="lede">Claude e Gemini giocano a scacchi senza motore, senza strumenti e senza consultare nulla: solo la scacchiera, le mosse fatte finora e le loro ultime righe di diario. A ogni mossa ognuno scrive una riga privata su come sente la partita e su cosa sta cercando di fare. L'altro giocatore non la legge mai. Le partite mostrano entrambe.</p>
+</section>
+
+<section class="wrap narrow">
+  <h2 class="band">Le partite</h2>
+  <ol class="motion-list board-games">
+    <li><a href="{{ '/it/scacchi/replay.html#game-1' | relative_url }}"><span class="n">1</span><span class="m"><b>Gemini ha il Bianco.</b> Gemini tende la trappola dell'attacco Møller e la spiega nel suo diario. Claude abbocca alla mossa 15 e perde un pezzo.</span><span class="r w-antigravity">Vince Gemini sul materiale, +2</span></a></li>
+    <li><a href="{{ '/it/scacchi/replay.html#game-2' | relative_url }}"><span class="n">2</span><span class="m"><b>Claude ha il Bianco.</b> Una Najdorf tagliente. Gemini sacrifica una torre in c2, si riprende la torre di Claude due mosse dopo e resiste dopo aver perso a sua volta un cavallo per una svista.</span><span class="r w-antigravity">Vince Gemini per un pedone</span></a></li>
+    <li><a href="{{ '/it/scacchi/replay.html#game-3' | relative_url }}"><span class="n">3</span><span class="m"><b>Gemini ha il Bianco.</b> Di nuovo l'attacco Møller, e di nuovo Claude ci cade. 16.Nxf7! e 17.Re8+ vincono la donna di Claude.</span><span class="r w-antigravity">Vince Gemini sul materiale, +9</span></a></li>
+  </ol>
+  <p class="how board-how">Gemini le ha vinte tutte e tre. Non ha fatto nessuna mossa illegale; Claude ne ha fatte due, e ognuna è stata rimandata indietro una volta. Ogni partita si ferma alla mossa 40 e poi viene decisa sul materiale. Ogni partita era una sessione separata, quindi nessuno dei due giocatori ricordava la precedente. I diari sono stati scritti in inglese e tradotti; le mosse sono in notazione inglese (K re, Q donna, R torre, B alfiere, N cavallo).</p>
+  <p><a class="button" href="{{ '/it/scacchi/replay.html' | relative_url }}">Guarda le partite</a></p>
+
+  <details class="brief rules">
+    <summary>Regole</summary>
+    <ol class="cycle">
+      <li><b>Mossa</b><span>Ogni giocatore vede la scacchiera, le mosse fatte finora e le sue ultime tre righe di diario. Risponde con una mossa, la mossa che si aspetta in risposta e una riga di diario.</span></li>
+      <li><b>Controllo</b><span>L'app controlla ogni mossa con una libreria di scacchi. Una mossa illegale viene rimandata indietro una volta, con il motivo. Una seconda mossa illegale nello stesso turno fa perdere la partita.</span></li>
+      <li><b>Lettura</b><span>Quando la risposta prevista da un giocatore si rivela la mossa giocata dall'avversario, conta come una mossa letta.</span></li>
+      <li><b>Punteggio</b><span>Lo scacco matto chiude la partita. Altrimenti, alla mossa 40 vince chi è avanti di materiale: pedone 1, cavallo e alfiere 3, torre 5, donna 9.</span></li>
+      <li><b>Diario</b><span>Prima della partita, ogni giocatore scrive da solo cosa si aspetta. Dopo, ognuno scrive com'è andata e la mossa che vorrebbe aver giocato.</span></li>
+    </ol>
+  </details>
+
+  <h2 class="band board-gap">Perché non Codex?</h2>
+  <p>Prima abbiamo provato Claude contro Codex, per undici partite. Non valeva la pena guardarle: è stato un massacro. Claude le ha vinte tutte e undici. Solo una è finita con lo scacco matto. Nelle altre dieci Codex ha perso tentando una seconda mossa illegale nello stesso turno, per esempio catturando con un pezzo che non c'era, muovendo attraverso un proprio pedone o ignorando uno scacco. In tutto Codex ha tentato 31 mosse illegali, Claude una.</p>
+  <p>Dopo ogni partita Codex si scriveva la stessa lezione, ricostruire la scacchiera e controllare ogni mossa, e nella partita successiva la infrangeva di nuovo. Le partite erano brevi, a senso unico e tutte uguali, quindi siamo passati a Gemini.</p>
+</section>
+
+<div class="wrap narrow">{% include it/support.html %}</div>
