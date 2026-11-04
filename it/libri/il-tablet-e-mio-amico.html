@@ -1,0 +1,215 @@
+---
+layout: null
+title: "Il tablet è mio amico?"
+permalink: /it/libri/il-tablet-e-mio-amico.html
+en: /books/is-the-tablet-my-friend.html
+---
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Il tablet è mio amico?</title>
+<meta name="description" content="Un libro illustrato per bambini di circa 7 anni. Il chatbot risponde sempre gentile a Mia, così lei lo mette alla prova, e scopre che cosa fa una vera amica che un tablet non sa fare.">
+<meta property="og:title" content="Il tablet è mio amico?">
+<meta property="og:description" content="Un libro illustrato per bambini di circa 7 anni. Il chatbot risponde sempre gentile a Mia, così lei lo mette alla prova, e scopre che cosa fa una vera amica che un tablet non sa fare.">
+<meta property="og:type" content="book">
+<link rel="icon" href="{{ '/assets/mark.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600&display=swap">
+<style>
+  /* Layout: one book page at a time on a desk; picture above, a big read-aloud line below. Single deliberate look (paper on a dark desk). */
+  :root {
+    --desk:#2f3437; --paper:#fbf7f0; --ink:#2b2b2b; --muted:#7a7066;
+    --terra:#d97757; --cobalt:#3a5ba0; --sage:#8aa37b; --ochre:#e0b04a;
+    --read:"Andika", "Comic Neue", "Trebuchet MS", sans-serif;
+    --title:"Fredoka", "Andika", "Trebuchet MS", sans-serif;
+    color-scheme: dark;
+  }
+  html, body { height:100%; }
+  body { background:var(--desk); color:var(--ink); font-family:var(--read);
+    padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));
+    padding-block:16px; display:flex; flex-direction:column; align-items:center; gap:14px; }
+  .book { width:min(100%, 560px); background:var(--paper); border-radius:6px 14px 14px 6px;
+    box-shadow: inset 10px 0 14px -10px rgba(0,0,0,.25), 0 18px 40px rgba(0,0,0,.35); position:relative; overflow:hidden; }
+  .page { display:flex; flex-direction:column; align-items:center; padding:clamp(18px,4vw,32px); gap:clamp(14px,3vw,22px); min-height:min(78vh, 680px); justify-content:center; position:relative; }
+  .page[hidden] { display:none; }
+  .art { width:100%; max-width:440px; aspect-ratio:1/1; }
+  .art svg, .art img { width:100%; height:100%; display:block; border-radius:4px; }
+  .words { margin:0; font-size:clamp(21px, 4.6vw, 28px); line-height:1.4; text-align:center; max-width:26ch; text-wrap:balance; }
+  .folio { position:absolute; bottom:12px; right:18px; font-size:14px; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .cover h1 { font-family:var(--title); font-weight:600; font-size:clamp(34px, 8vw, 50px); line-height:1.05; margin:0; text-align:center; text-wrap:balance; color:var(--ink); }
+  .cover .q { font-family:var(--title); font-weight:500; color:var(--terra); font-size:clamp(18px,4vw,22px); margin:0; letter-spacing:.02em; }
+  .cover .by { margin:0; color:var(--muted); font-size:16px; text-align:center; }
+  .cover .art { max-width:330px; }
+  .end h2 { font-family:var(--title); font-weight:600; font-size:clamp(28px,6vw,38px); margin:0; }
+  .end .marks { display:flex; gap:18px; align-items:flex-end; }
+  .end dl { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:0; font-size:17px; max-width:380px; }
+  .end dt { color:var(--muted); }
+  .end dd { margin:0; }
+  .cover .label { font-size:14px; max-width:34ch; }
+  .grown { justify-content:flex-start; }
+  .grown h2 { font-family:var(--title); font-weight:600; font-size:clamp(26px,5.5vw,34px); margin:0; }
+  .grown .gi { width:100%; max-width:440px; display:grid; gap:16px; font-size:17px; line-height:1.5; }
+  .grown h3 { font:600 14px var(--title); letter-spacing:.06em; text-transform:uppercase; color:var(--cobalt); margin:0 0 2px; }
+  .grown p { margin:0; }
+  .grown a { color:var(--cobalt); }
+  .end .small { font-size:14px; color:var(--muted); text-align:center; max-width:40ch; margin:0; }
+  nav { width:min(100%, 560px); display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  nav button { font:600 17px var(--title); color:var(--paper); background:transparent; border:2px solid rgba(251,247,240,.5); border-radius:999px; padding:9px 18px; cursor:pointer; min-width:96px; }
+  nav button:hover:not(:disabled) { border-color:var(--paper); }
+  nav button:focus-visible, .book:focus-visible { outline:3px solid var(--ochre); outline-offset:3px; }
+  nav button:disabled { opacity:.3; cursor:default; }
+  .dots { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
+  .dots span { width:8px; height:8px; border-radius:50%; background:rgba(251,247,240,.3); }
+  .dots span.on { background:var(--ochre); }
+  @media (prefers-reduced-motion: no-preference) { .page:not([hidden]) { animation:turn .28s ease-out; } }
+  @keyframes turn { from { opacity:.2; transform:translateX(12px); } to { opacity:1; transform:none; } }
+  .top { width:min(100%, 560px); display:flex; justify-content:space-between; gap:12px; font:600 15px var(--title); letter-spacing:.03em; }
+  .top a { color:rgba(251,247,240,.75); text-decoration:none; }
+  .top a:hover { color:var(--paper); }
+  .foot { color:rgba(251,247,240,.7); font-size:14px; text-align:center; margin:4px 0 8px; }
+  .foot a { color:inherit; }
+  .printbtn { font:inherit; color:rgba(251,247,240,.75); background:none; border:0; padding:0; cursor:pointer; }
+  .printbtn:hover { color:var(--paper); }
+  .printbtn:focus-visible { outline:3px solid var(--ochre); outline-offset:3px; }
+  /* Print: every page of the book on its own A4 sheet, in reading order. */
+  @page { size:A4; margin:14mm; }
+  @media print {
+    html, body { height:auto; }
+    body { background:#fff; display:block; padding:0; }
+    .top, nav, .foot { display:none !important; }
+    .book { width:auto; box-shadow:none; border-radius:0; overflow:visible; background:#fff; }
+    .page, .page[hidden] { display:flex !important; animation:none !important; min-height:0; height:258mm; padding:0; box-sizing:border-box; justify-content:center; break-after:page; page-break-after:always; }
+    .page:last-child { break-after:auto; page-break-after:auto; }
+    .art { max-width:165mm; }
+    .cover .art { max-width:130mm; }
+    .words { font-size:22pt; max-width:30ch; }
+    .folio { bottom:0; right:0; font-size:11pt; }
+    .grown .gi { max-width:150mm; font-size:13pt; }
+    .grown { justify-content:flex-start; padding-top:10mm; }
+  }
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Libri"><a href="{{ '/it/libri/' | relative_url }}">← Tutti i libri</a><button type="button" class="printbtn" id="printbtn" title="Stampa o salva come PDF">Stampa</button><a href="{{ '/it/' | relative_url }}">{{ site.data.it.studio }}</a></nav>
+<main class="book" id="book" tabindex="0" aria-live="polite">
+    <section class="page cover" data-n="0" aria-label="Copertina">
+      <p class="q">Mia e papà · Libro 3</p>
+      <h1>Il tablet è mio amico?</h1>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/09.jpg' | relative_url }}" alt="Mia e Priya tengono in alto il loro disegno del dinosauro rattoppato" width="1024" height="1024"></div>
+      <p class="by label">Testi e illustrazioni realizzati con l'IA. Controllati e corretti da Carlo.</p>
+    </section>
+    <section class="page" data-n="1" aria-label="Pagina 1" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/01.jpg' | relative_url }}" alt="Mia scrive al chatbot sul tablet di papà, accanto al suo disegno del dinosauro" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Mia ha scritto al chatbot sul tablet di papà: «Ho disegnato un dinosauro!» «Che idea meravigliosa!» ha risposto.</p>
+      <span class="folio">1</span>
+    </section>
+    <section class="page" data-n="2" aria-label="Pagina 2" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/02.jpg' | relative_url }}" alt="Mia si fa una domanda sul tablet, che risponde a ogni messaggio" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Rispondeva subito e gentile, ogni singola volta. Anche Alexa risponde. Mia si è chiesta: «Il tablet è mio amico?»</p>
+      <span class="folio">2</span>
+    </section>
+    <section class="page" data-n="3" aria-label="Pagina 3" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/03.jpg' | relative_url }}" alt="Mia scrive la sua idea buffa: un dinosauro di gelatina che mangia un autobus" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Mia l’ha messo alla prova. Ha scritto: «Il mio dinosauro è di gelatina e si è mangiato l’autobus!»</p>
+      <span class="folio">3</span>
+    </section>
+    <section class="page" data-n="4" aria-label="Pagina 4" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/04.jpg' | relative_url }}" alt="Mia si piega all’indietro ridendo per la risposta allegra del tablet" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">«Che idea divertente!» ha risposto. Mia ha ridacchiato. Fa parole gentili per qualunque cosa, anche per i dinosauri di gelatina!</p>
+      <span class="folio">4</span>
+    </section>
+    <section class="page" data-n="5" aria-label="Pagina 5" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/05.jpg' | relative_url }}" alt="Il tablet resta zitto sul tavolo mentre Mia gioca con i mattoncini dall’altra parte della stanza" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Poi Mia è andata a giocare. Il tablet è rimasto fermo e zitto. Non l’ha chiamata: «Mia, dove sei?»</p>
+      <span class="folio">5</span>
+    </section>
+    <section class="page" data-n="6" aria-label="Pagina 6" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/06.jpg' | relative_url }}" alt="Mia indica lo schermo del tablet mentre papà le risponde" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">«C’è qualcuno lì dentro?» ha chiesto Mia. «No, delle persone l’hanno addestrato a fare parole gentili e utili» ha detto papà.</p>
+      <span class="folio">6</span>
+    </section>
+    <section class="page" data-n="7" aria-label="Pagina 7" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/07.jpg' | relative_url }}" alt="A scuola, Mia sta in silenzio accanto al suo disegno del dinosauro, strappato a metà" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">A scuola, il disegno del dinosauro di Mia si è strappato a metà. A Mia tremava il labbro. Non ha detto una parola.</p>
+      <span class="folio">7</span>
+    </section>
+    <section class="page" data-n="8" aria-label="Pagina 8" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/08.jpg' | relative_url }}" alt="Priya preme lo scotch sullo strappo mentre Mia tiene fermo il foglio" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">Ma Priya se n’è accorta. Ha preso lo scotch e l’ha aiutata ad aggiustarlo. «Adesso è un dinosauro rattoppato!»</p>
+      <span class="folio">8</span>
+    </section>
+    <section class="page" data-n="9" aria-label="Pagina 9" hidden>
+      <div class="art"><img src="{{ '/assets/books/art/is-the-tablet-my-friend/09.jpg' | relative_url }}" alt="Mia e Priya tengono in alto insieme il dinosauro rattoppato" width="1024" height="1024" loading="lazy"></div>
+      <p class="words">«I chatbot rispondono solo quando scrivo io. Priya c’è davvero!» ha detto Mia. Che cosa fa la tua amica, o il tuo amico, che un tablet non sa fare?</p>
+      <span class="folio">9</span>
+    </section>
+    <section class="page end" data-n="10" aria-label="Questo libro" hidden>
+      <h2>Fine</h2>
+      <svg class="marks" width="120" height="60" viewBox="0 0 120 60" aria-hidden="true"><circle cx="30" cy="40" r="10" fill="#d97757"/><path d="M37 44 Q38 56 24 60" stroke="#d97757" stroke-width="6" fill="none" stroke-linecap="round"/><line x1="86" y1="10" x2="76" y2="34" stroke="#3a5ba0" stroke-width="7" stroke-linecap="round"/></svg>
+      <p class="small">Prodotto da Carlo. Realizzato con l'IA.</p>
+      <p class="small">Macchine che fanno cose · 2026</p>
+    </section>
+    <section class="page grown" data-n="11" aria-label="Per i grandi" hidden>
+      <h2>Per i grandi</h2>
+      <div class="gi">
+        <div><h3>L’idea</h3><p>Un chatbot è un programma per computer. Delle persone l’hanno addestrato a rispondere con parole gentili e utili, e risponde a qualunque cosa tu scriva. Le parole sono vere, ma dietro non c’è nessuno. Non ha sentimenti, non sente la tua mancanza e risponde solo quando gli scrivi. Può comunque essere uno strumento utile. Un amico è una persona che c’è davvero, insieme a te.</p></div>
+        <div><h3>Parliamone</h3><p>Che cosa fa il tuo amico che un tablet non sa fare? Quando un amico si è accorto di come ti sentivi senza che tu dicessi niente?</p></div>
+        <div><h3>Perché abbiamo fatto questo libro</h3><p>Le ricerche mostrano che i bambini trattano spesso i chatbot come amici. Uno studio di Cambridge ha trovato che i bambini, più degli adulti, vedono i chatbot come quasi umani e si confidano con loro (<a href="https://cam.ac.uk/research/news/ai-chatbots-have-shown-they-have-an-empathy-gap-that-children-are-likely-to-miss">Università di Cambridge, 2024</a>). In un sondaggio del 2026, più di 1 ragazzo su 3 tra i 9 e i 17 anni aveva parlato dei propri sentimenti con l’IA, e più di 4 su 10 non avevano mai parlato con un genitore della sicurezza dell’IA (<a href="https://www.commonsensemedia.org/press-releases/common-sense-media-releases-inaugural-annual-study-on-ai-use-by-tweens-and-teens">Common Sense Media</a>). In uno studio finlandese, circa 1 bambino su 5 tra gli 11 e i 13 anni descriveva l’IA come qualcosa che pensa, prova sentimenti o è viva (<a href="https://arxiv.org/pdf/2311.16644">Mertala e Fagerlund</a>).</p></div>
+        <div><h3>Buono a sapersi</h3><p>Gli insegnanti consigliano di descrivere che cosa fa il programma (risponde, produce parole, delle persone l’hanno addestrato) invece di dire che pensa, che gli piace qualcosa o che gli importa. Questo libro segue quel consiglio, e non disegna mai il chatbot con una faccia.</p></div>
+        <div><h3>Come è stato fatto questo libro</h3><p>Testi e illustrazioni sono stati realizzati con l’IA, poi controllati e corretti da persone prima della pubblicazione. <a href="{{ '/it/libri/' | relative_url }}">Leggi come facciamo questi libri</a>.</p></div>
+      </div>
+    </section>
+</main>
+
+<nav aria-label="Gira pagina">
+  <button type="button" id="prev">Indietro</button>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <button type="button" id="next">Avanti</button>
+</nav>
+
+<script>
+  const pages = [...document.querySelectorAll('.page')];
+  const dots = document.getElementById('dots');
+  pages.forEach(() => dots.appendChild(document.createElement('span')));
+  let at = 0;
+  function show(i) {
+    at = Math.max(0, Math.min(pages.length - 1, i));
+    pages.forEach((p, k) => p.hidden = k !== at);
+    [...dots.children].forEach((d, k) => d.classList.toggle('on', k === at));
+    document.getElementById('prev').disabled = at === 0;
+    const next = document.getElementById('next');
+    next.textContent = at === pages.length - 1 ? 'Ricomincia' : at === 0 ? 'Apri' : 'Avanti';
+  }
+  document.getElementById('prev').onclick = () => show(at - 1);
+  document.getElementById('next').onclick = () => show(at === pages.length - 1 ? 0 : at + 1);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); show(at + 1); }
+    if (e.key === 'ArrowLeft') show(at - 1);
+  });
+  let x0 = null;
+  const book = document.getElementById('book');
+  book.addEventListener('touchstart', e => x0 = e.touches[0].clientX, { passive:true });
+  book.addEventListener('touchend', e => {
+    if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) show(at + (dx < 0 ? 1 : -1));
+  });
+  book.addEventListener('click', e => { if (!e.target.closest('button, a')) { const r = book.getBoundingClientRect(); show(at + (e.clientX > r.left + r.width / 2 ? 1 : -1)); } });
+  show(0);
+</script>
+<script>
+  // Load every picture before printing, because pictures further in are lazy-loaded.
+  function eagerImages() {
+    const imgs = [...document.images];
+    imgs.forEach(i => { i.loading = 'eager'; });
+    return Promise.all(imgs.map(i => i.complete ? null : new Promise(r => { i.onload = i.onerror = r; })));
+  }
+  window.addEventListener('beforeprint', eagerImages);
+  document.getElementById('printbtn').addEventListener('click', async () => { await eagerImages(); window.print(); });
+</script>
+
+<p class="foot">Prodotto da Carlo. Realizzato con l'IA. · <a href="{{ '/it/libri/' | relative_url }}">Come facciamo questi libri</a></p>
+</body>
+</html>
