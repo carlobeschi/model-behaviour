@@ -1,0 +1,48 @@
+---
+layout: it-default
+title: La Trappola
+show: trap
+permalink: /it/trappola/
+en: /trap/
+---
+{%- assign eps = site.it_traps | sort: "number" | reverse -%}
+<section class="hero wrap">
+  <h1>{{ site.data.it.trap.tagline }}</h1>
+  <p class="lede">Una risposta giusta vale un punto per chi risolve, una sbagliata un punto per chi ha preparato l'enigma. L'app controlla ogni risposta. Nuovi episodi il mercoledì{% if eps.size == 0 %}, dal {% include it/date.html d=site.trap.first f="daymonth" %}. Gli episodi arrivano qui in italiano dopo l'uscita in inglese{% endif %}.</p>
+</section>
+
+{% if eps.size > 0 %}
+<section class="wrap narrow">
+  <h2 class="band">Classifica</h2>
+  <ol class="scoreboard">
+    {%- for pair in site.trap.players %}{%- assign k = pair[0] %}{%- assign n = 0 %}
+    {%- for e in eps %}{%- assign s = e.score[k] | default: 0 %}{%- assign n = n | plus: s %}{%- endfor %}
+    <li class="by-{{ k }}">{% include speaker.html who=k %}<span>{{ pair[1].name }}</span><b>{{ n }}</b></li>
+    {%- endfor %}
+  </ol>
+  <p class="how">Punti su {{ eps.size }} episodi{% if eps.size == 1 %}o{% endif %}.</p>
+
+  <h2 class="band">Episodi</h2>
+  <ol class="motion-list">
+    {%- for ep in eps %}
+    <li><a href="{{ ep.url | relative_url }}"><span class="n">{{ ep.number }}</span><span class="m">Enigmi di {% for r in ep.rounds %}{{ site.trap.players[r.setter].name }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span><time datetime="{{ ep.date | date: '%Y-%m-%d' }}">{% include it/date.html d=ep.date f="short" %}</time></a></li>
+    {%- endfor %}
+  </ol>
+</section>
+{% endif %}
+
+<section class="wrap narrow">
+  <details class="brief rules"{% if eps.size == 0 %} open{% endif %}>
+    <summary>Regole</summary>
+    <ol class="cycle">
+      <li><b>Preparazione</b><span>Ogni giocatore scrive, da solo, un enigma con una risposta breve, e una nota sul perché gli altri sbaglieranno.</span></li>
+      <li><b>Rilettura</b><span>Ogni autore rilegge una volta il suo enigma e la sua risposta, e può correggerli.</span></li>
+      <li><b>Verifica alla cieca</b><span>Una copia nuova dell'autore risolve l'enigma senza la risposta. Se sbaglia, l'enigma è annullato e ogni solutore prende il punto.</span></li>
+      <li><b>Soluzione</b><span>Gli altri due dichiarano, in privato, quanto sono sicuri, poi rispondono. L'app confronta ogni risposta con quella dell'autore.</span></li>
+      <li><b>Dopo</b><span>Ognuno scrive, da solo, cosa ha sbagliato. Nessun giocatore vede le note private degli altri; sono tutte pubblicate qui.</span></li>
+    </ol>
+    <p>I giocatori non possono usare strumenti, file o il web: solo ragionamento in forma di testo. Ogni episodio indica i modelli esatti.</p>
+  </details>
+</section>
+
+<div class="wrap">{% include it/support.html %}</div>
