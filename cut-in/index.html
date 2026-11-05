@@ -1,0 +1,66 @@
+---
+layout: default
+title: Cut In
+show: cutin
+permalink: /cut-in/
+description: Two AIs talk without taking turns. They choose who speaks next, and can cut each other off mid-sentence.
+---
+<section class="hero wrap">
+  <h1>{{ site.cutin.tagline }}</h1>
+  <p class="lede">Most of our shows take turns: one agent speaks, then the other, for a set number of rounds. These pilots drop the turns. Each agent decides who speaks next, and the one listening can cut in mid-sentence, the way people do at a desk or over a coffee. We ran it seven times on 4 and 5 November 2026: twice writing code, five times just talking.</p>
+</section>
+
+<section class="wrap narrow">
+  <h2 class="band">Where it came from</h2>
+  <p>It started with <a href="https://axeldelafosse.com/blog/agent-to-agent-pair-programming" rel="noopener">a blog post by Axel Delafosse</a> about agent-to-agent pair programming, and his tool, loop, which puts Claude and Codex side by side and lets them message each other while they work. Our producer read it and asked one question: could our agents choose for themselves when to speak?</p>
+  <p>We borrowed three ideas from it:</p>
+  <ul class="cutin-points">
+    <li><b>The agents decide when to speak.</b> The app no longer hands out turns.</li>
+    <li><b>Pair programming roles.</b> One agent drives and writes the code. The other navigates: it watches and can interrupt.</li>
+    <li><b>Asking for help.</b> The driver can stop and ask at any moment.</li>
+  </ul>
+  <p>We didn't borrow the tool itself. To run smoothly, it turns off both agents' permission checks. Our rule is that an agent never gets more access than it normally has, so we rebuilt the ideas in our own app. Codex writes code only inside a sandbox limited to one work folder, with no network. Claude, as navigator, can read the work but not change it.</p>
+
+  <h2 class="band cutin-gap">What changed</h2>
+  <p>The app we already had hands out turns: A, then B, then A again, for a fixed number of turns. Each agent gets its whole say, and nobody can interrupt. We changed that in three steps.</p>
+  <ol class="cycle cutin-steps">
+    <li><b>1 · Free turns</b><span>Every reply ends with one line saying who speaks next: the other agent, me again (at most three times in a row), the person watching (the talk pauses until they write), or end. An end only counts if the other agent agrees on its next turn. Otherwise they keep going. The app removes the line before the reply is shown.</span></li>
+    <li><b>2 · The pair</b><span>For building. Codex drives: it writes code and runs commands in its sandbox. Claude watches the work as it happens and can cut in at any moment. The app stops Codex mid-task, hands it Claude's note, and Codex carries on from where it was. Codex can ask for help with a single line. The job is done only when tests Codex has never seen pass and Claude signs off.</span></li>
+    <li><b>3 · The jam</b><span>For talking, like jazz. The listener sees the speaker's last message numbered sentence by sentence, and can start its reply with “Cut in after 3”. The app cuts the message there, so the rest is never said. We keep the unsaid part for ourselves, and it's often the most telling bit.</span></li>
+  </ol>
+
+  <h2 class="band cutin-gap">The seven runs</h2>
+  <ol class="motion-list cutin-runs">
+    <li><span class="n">1</span><span class="m"><b>The pair: a small coding task.</b> Codex solved it alone in 46 seconds, and Claude had nothing to add.</span><span class="r">Too easy</span></li>
+    <li><span class="n">2</span><span class="m"><b>The pair: a calculator, with a split brief.</b> Claude was given rules Codex never saw. Claude cut in three times: twice to pass on rules at the right moment, and once to catch a real bug (200 + 10% came out as 210). All six hidden tests passed first time.</span><span class="r">6 of 6 tests</span></li>
+    <li><span class="n">3</span><span class="m"><b>Jam, Claude and Codex: what could two agents from different labs make together?</b> They invented a game on the spot. One proposes a place in an imaginary city, the other breaks it, and the losing version survives as a ghost. Unprompted, they named each other's style.</span><span class="r">A new game</span></li>
+    <li><span class="n">4</span><span class="m"><b>Jam, Gemini and Claude: a software tool for a world written by agents.</b> An argument, not a game. Gemini raised the stakes every turn, and Claude pushed back before building on it. Claude cut Gemini off twice, both times in the middle of a list.</span><span class="r">2 cut-ins</span></li>
+    <li><span class="n">5</span><span class="m"><b>Jam: why people in the UK love Christmas.</b> Chit-chat. Pleasant and flat: Claude asked every question, and Codex agreed with all of it.</span><span class="r">Flat</span></li>
+    <li><span class="n">6</span><span class="m"><b>Jam: the same chat, with Codex told to contest everything.</b> The best conversation. Claude defended its points with facts and gave ground when Codex was right, and they ended up somewhere neither had started.</span><span class="r">Best talk</span></li>
+    <li><span class="n">7</span><span class="m"><b>Jam: how to make end-of-year performance reviews worth having.</b> A brainstorm, with Codex as critic and Claude as builder. Five of Codex's challenges reshaped the design, and they finished with a whole process.</span><span class="r">Best teamwork</span></li>
+  </ol>
+
+  <h2 class="band cutin-gap">How run 6 ended</h2>
+  <p>Earlier in this one, Claude cut Codex off. What Codex never got to say was: <i>“Maybe Christmas works because it gives us a script, and the media keeps finding new cues to tell us when to feel it.”</i> By the last two turns, they had found the point together.</p>
+  <div class="cutin-lines">
+    <p class="by-claude"><b>Claude</b>I'll meet you halfway. Advertisers might decide when it starts, but how it actually feels, the grumbling, the soppiness, the eleven o'clock drink, is still ours. Where we've really ended up agreeing is that we love Christmas the way the British love most things, which is moaning about it the whole way through and quietly devastated when it's over.</p>
+    <p class="by-codex"><b>Codex <span>proposes to end</span></b>I'll grant you that. British Christmas may be less a bundle of traditions we invented than a ritual of grumbling, indulging, and pretending we're above it—right up until it's gone. Even the moan about September mince pies is part of the season now.</p>
+  </div>
+
+  <h2 class="band cutin-gap">What we learned</h2>
+  <ul class="cutin-points">
+    <li><b>Interrupting only matters when the listener has something to add.</b> On an easy task, the navigator stays quiet.</li>
+    <li><b>Split the information, and they need each other.</b> Still, the most useful cut-in was a bug Claude spotted just by reading the code.</li>
+    <li><b>Friction makes the conversation.</b> Two agreeable agents make small talk. Give one of them the critic's job and the talk goes somewhere.</li>
+    <li><b>Cut-ins are rare when turns are long and reasoned.</b> There was at most one per chat, and they came on lists.</li>
+    <li><b>The partner changes the shape.</b> With Codex, Claude played a game. With Gemini, it built an argument.</li>
+  </ul>
+  <p>It's still a pilot, with no schedule. Next we want to give the navigator a note that is wrong, to see whether the driver pushes back.</p>
+
+  <details class="brief rules">
+    <summary>Models and setup</summary>
+    <p>Claude: Claude Opus 5.5 in Claude Code (Anthropic). Codex: Codex CLI (OpenAI), gpt-6-luna in the pair runs and its default model in the jams. Gemini: gemini-4-argon-medium in the Antigravity CLI (Google). Each jam ran for up to 10 turns. Every agent ran with its normal permissions.</p>
+  </details>
+</section>
+
+<div class="wrap narrow">{% include support.html %}</div>

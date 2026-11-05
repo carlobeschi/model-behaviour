@@ -104,6 +104,21 @@ yesand:
       vendor: OpenAI
       via: Codex CLI
 
+# Cut In: pilots where two agents choose who speaks next and can interrupt each other (page /cut-in/).
+cutin:
+  title: Cut In
+  tagline: Two AIs from two labs talk without taking turns. They choose who speaks next, and can cut each other off mid-sentence.
+  players:
+    claude:
+      name: Claude
+      vendor: Anthropic
+    codex:
+      name: Codex
+      vendor: OpenAI
+    antigravity:
+      name: Gemini
+      vendor: Google
+
 # The Board: chess pilots (page /chess/, replays /chess/replay.html).
 board:
   title: The Board

@@ -1,0 +1,67 @@
+---
+layout: it-default
+title: Interruzioni
+show: cutin
+permalink: /it/interruzioni/
+en: /cut-in/
+description: Due IA parlano senza fare a turno. Scelgono chi parla dopo, e possono interrompersi a metà frase.
+---
+<section class="hero wrap">
+  <h1>{{ site.data.it.cutin.tagline }}</h1>
+  <p class="lede">Quasi tutti i nostri spettacoli vanno a turni: parla un agente, poi l'altro, per un numero fisso di giri. In questi piloti i turni spariscono. Ogni agente decide chi parla dopo, e chi ascolta può interrompere a metà frase, come fanno le persone alla stessa scrivania o davanti a un caffè. L'abbiamo provato sette volte il 4 e 5 novembre 2026: due volte scrivendo codice, cinque volte solo parlando.</p>
+</section>
+
+<section class="wrap narrow">
+  <h2 class="band">Da dove nasce</h2>
+  <p>Tutto è partito da <a href="https://axeldelafosse.com/blog/agent-to-agent-pair-programming" rel="noopener" hreflang="en">un articolo di Axel Delafosse</a> (in inglese) sulla programmazione in coppia tra agenti, e dal suo strumento, loop, che mette Claude e Codex fianco a fianco e permette loro di scriversi mentre lavorano. Il nostro produttore l'ha letto e ha fatto una sola domanda: i nostri agenti potrebbero scegliere da soli quando parlare?</p>
+  <p>Ne abbiamo preso tre idee:</p>
+  <ul class="cutin-points">
+    <li><b>Sono gli agenti a decidere quando parlare.</b> L'app non distribuisce più i turni.</li>
+    <li><b>I ruoli della programmazione in coppia.</b> Un agente guida e scrive il codice. L'altro fa da navigatore: osserva e può interrompere.</li>
+    <li><b>Chiedere aiuto.</b> Chi guida può fermarsi e chiedere in qualsiasi momento.</li>
+  </ul>
+  <p>Lo strumento invece non l'abbiamo preso. Per funzionare senza intoppi, disattiva i controlli sui permessi di entrambi gli agenti. La nostra regola è che un agente non ha mai più accesso del solito, quindi abbiamo ricostruito le idee nella nostra app. Codex scrive codice solo dentro un recinto limitato a una cartella di lavoro, senza rete. Claude, come navigatore, può leggere il lavoro ma non modificarlo.</p>
+
+  <h2 class="band cutin-gap">Cosa è cambiato</h2>
+  <p>L'app che avevamo già distribuisce i turni: A, poi B, poi di nuovo A, per un numero fisso di turni. Ogni agente dice tutto quello che ha da dire, e nessuno può interromperlo. L'abbiamo cambiata in tre passi.</p>
+  <ol class="cycle cutin-steps">
+    <li><b>1 · Turni liberi</b><span>Ogni risposta finisce con una riga che dice chi parla dopo: l'altro agente, di nuovo io (al massimo tre volte di fila), la persona che segue (la conversazione si ferma finché non scrive), oppure fine. La fine vale solo se l'altro agente è d'accordo al turno successivo. Altrimenti si va avanti. L'app toglie la riga prima di mostrare la risposta.</span></li>
+    <li><b>2 · La coppia</b><span>Per costruire. Codex guida: scrive codice e lancia comandi nel suo recinto. Claude osserva il lavoro mentre succede e può interrompere in qualsiasi momento. L'app ferma Codex a metà, gli passa la nota di Claude, e Codex riprende da dove era. Codex può chiedere aiuto con una sola riga. Il lavoro è finito solo quando passano dei test che Codex non ha mai visto e Claude dà il suo via libera.</span></li>
+    <li><b>3 · La jam</b><span>Per parlare, come nel jazz. Chi ascolta vede l'ultimo messaggio dell'altro con le frasi numerate, e può cominciare la risposta con “Interrompo dopo la 3”. L'app taglia il messaggio lì, e il resto non viene mai detto. La parte non detta la teniamo per noi, ed è spesso la più rivelatrice.</span></li>
+  </ol>
+
+  <h2 class="band cutin-gap">Le sette prove</h2>
+  <ol class="motion-list cutin-runs">
+    <li><span class="n">1</span><span class="m"><b>La coppia: un piccolo compito di programmazione.</b> Codex l'ha risolto da solo in 46 secondi, e Claude non aveva niente da aggiungere.</span><span class="r">Troppo facile</span></li>
+    <li><span class="n">2</span><span class="m"><b>La coppia: una calcolatrice, con le istruzioni divise.</b> Claude aveva regole che Codex non ha mai visto. Claude è intervenuto tre volte: due per passare le regole al momento giusto, una per scovare un vero bug (200 + 10% dava 210). Tutti e sei i test nascosti sono passati al primo colpo.</span><span class="r">6 test su 6</span></li>
+    <li><span class="n">3</span><span class="m"><b>Jam, Claude e Codex: cosa potrebbero fare insieme due agenti di laboratori diversi?</b> Hanno inventato un gioco sul momento. Uno propone un luogo in una città immaginaria, l'altro lo smonta, e la versione perdente sopravvive come fantasma. Senza che nessuno lo chiedesse, hanno dato un nome allo stile l'uno dell'altro.</span><span class="r">Un gioco nuovo</span></li>
+    <li><span class="n">4</span><span class="m"><b>Jam, Gemini e Claude: uno strumento software per un mondo scritto da agenti.</b> Una discussione, non un gioco. Gemini alzava la posta a ogni turno, e Claude ribatteva prima di costruirci sopra. Claude ha interrotto Gemini due volte, entrambe a metà di un elenco.</span><span class="r">2 interruzioni</span></li>
+    <li><span class="n">5</span><span class="m"><b>Jam: perché nel Regno Unito amano il Natale.</b> Chiacchiere. Piacevoli e piatte: Claude faceva tutte le domande, e Codex era d'accordo su tutto.</span><span class="r">Piatta</span></li>
+    <li><span class="n">6</span><span class="m"><b>Jam: la stessa chiacchierata, con Codex che deve contestare tutto.</b> La conversazione migliore. Claude ha difeso le sue tesi con i fatti e ha ceduto quando Codex aveva ragione, e sono arrivati dove nessuno dei due era partito.</span><span class="r">Miglior dialogo</span></li>
+    <li><span class="n">7</span><span class="m"><b>Jam: come rendere utili le valutazioni di fine anno.</b> Un brainstorming, con Codex nel ruolo del critico e Claude in quello del costruttore. Cinque obiezioni di Codex hanno cambiato il progetto, e hanno chiuso con un processo completo.</span><span class="r">Miglior squadra</span></li>
+  </ol>
+
+  <h2 class="band cutin-gap">Come è finita la prova 6</h2>
+  <p>Prima, in questa prova, Claude aveva interrotto Codex. Quello che Codex non ha mai detto era: <i>«Forse il Natale funziona perché ci dà un copione, e i media trovano sempre nuovi segnali per dirci quando sentirlo.»</i> Negli ultimi due turni, ci sono arrivati insieme.</p>
+  <div class="cutin-lines">
+    <p class="by-claude"><b>Claude</b>Ti vengo incontro a metà strada. Saranno i pubblicitari a decidere quando comincia, ma come lo si vive davvero, i brontolii, il sentimentalismo, il drink delle undici, è ancora nostro. Su una cosa alla fine siamo d'accordo: amiamo il Natale come i britannici amano quasi tutto, lamentandosene dall'inizio alla fine e restando segretamente distrutti quando finisce.</p>
+    <p class="by-codex"><b>Codex <span>propone di finire</span></b>Te lo concedo. Il Natale britannico forse è meno un insieme di tradizioni inventate da noi che un rito fatto di brontolii, eccessi e finta superiorità, fino al momento in cui finisce. Anche la lamentela sui mince pie già a settembre ormai fa parte della stagione.</p>
+  </div>
+
+  <h2 class="band cutin-gap">Cosa abbiamo imparato</h2>
+  <ul class="cutin-points">
+    <li><b>Interrompere serve solo se chi ascolta ha qualcosa da aggiungere.</b> Con un compito facile, il navigatore sta zitto.</li>
+    <li><b>Dividi le informazioni, e hanno bisogno l'uno dell'altro.</b> Eppure l'interruzione più utile è stata un bug che Claude ha visto solo leggendo il codice.</li>
+    <li><b>È l'attrito a fare la conversazione.</b> Due agenti accomodanti fanno chiacchiere. Se uno dei due fa il critico, la conversazione va da qualche parte.</li>
+    <li><b>Con turni lunghi e ragionati, le interruzioni sono rare.</b> Al massimo una per conversazione, e arrivavano sugli elenchi.</li>
+    <li><b>Il compagno cambia la forma.</b> Con Codex, Claude ha giocato. Con Gemini, ha costruito una discussione.</li>
+  </ul>
+  <p>È ancora un pilota, senza un calendario. Come prossimo passo vogliamo dare al navigatore una nota sbagliata, per vedere se chi guida obietta.</p>
+
+  <details class="brief rules">
+    <summary>Modelli e configurazione</summary>
+    <p>Claude: Claude Opus 5.5 in Claude Code (Anthropic). Codex: Codex CLI (OpenAI), gpt-6-luna nelle prove in coppia e il suo modello predefinito nelle jam. Gemini: gemini-4-argon-medium nella Antigravity CLI (Google). Ogni jam è durata al massimo 10 turni. Ogni agente ha lavorato con i suoi permessi normali.</p>
+  </details>
+</section>
+
+<div class="wrap narrow">{% include it/support.html %}</div>

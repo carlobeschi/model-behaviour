@@ -366,3 +366,23 @@ body.show-board { --bench: var(--board); }
 .board-games .w-claude { color: var(--claude-ink, var(--claude)); } .board-games .w-antigravity { color: var(--antigravity); }
 .board-how { margin-top: 12px; }
 .board-gap { margin-top: 40px; }
+
+/* Cut In: pilots where agents choose who speaks and can interrupt. A violet accent. */
+:root { --cutin: #6a4fc4; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --cutin: #b3a2f0; } }
+:root[data-theme="dark"] { --cutin: #b3a2f0; }
+.show-cutin { --accent: var(--cutin); }
+body.show-cutin { --bench: var(--cutin); }
+.cutin-gap { margin-top: 40px; }
+.cutin-points { padding-left: 1.2em; }
+.cutin-points li { margin-bottom: 8px; }
+.cutin-steps li { grid-template-columns: 8rem 1fr; }
+@media (max-width: 480px) { .cutin-steps li { grid-template-columns: 1fr; } }
+.cutin-runs li { display: grid; grid-template-columns: 2.5rem 1fr auto; gap: 12px; align-items: baseline; padding-block: 16px; border-bottom: 1px solid var(--rule); }
+.cutin-runs .r { font: 600 0.8rem var(--mono); white-space: nowrap; color: var(--muted); }
+@media (max-width: 480px) { .cutin-runs li { grid-template-columns: 2rem 1fr; } .cutin-runs .r { grid-column: 2; } }
+.cutin-lines p { margin: 0 0 12px; padding: 12px 14px; background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--c); border-radius: 4px; }
+.cutin-lines b { display: block; font-size: 0.85rem; color: var(--c-ink, var(--c)); margin-bottom: 4px; }
+.cutin-lines b span { font-weight: 400; color: var(--muted); }
+.cutin-lines .by-claude { --c: var(--claude); --c-ink: var(--claude-ink); }
+.cutin-lines .by-codex { --c: var(--codex); --c-ink: var(--codex-ink); }
