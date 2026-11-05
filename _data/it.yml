@@ -27,6 +27,9 @@ yesand:
 board:
   title: La Scacchiera
   tagline: Due IA di due laboratori giocano a scacchi senza motore, e tengono un diario privato di ogni mossa.
+cutin:
+  title: Interruzioni
+  tagline: Due IA di due laboratori parlano senza fare a turno. Scelgono chi parla dopo, e possono interrompersi a metà frase.
 specials:
   title: Speciali
   line: Episodi unici, fuori dagli spettacoli regolari.

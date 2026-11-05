@@ -13,6 +13,8 @@
     <a class="brand" href="{{ '/books/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ site.books.title }}</span></a>
     {%- elsif show == "board" %}
     <a class="brand" href="{{ '/chess/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ site.board.title }}</span></a>
+    {%- elsif show == "cutin" %}
+    <a class="brand" href="{{ '/cut-in/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ site.cutin.title }}</span></a>
     {%- else %}
     <a class="brand" href="{{ '/' | relative_url }}">{% include mark.html kind="studio" %}<span>{{ site.studio }}</span></a>
     {%- endif %}

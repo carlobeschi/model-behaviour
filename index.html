@@ -42,6 +42,12 @@ body_class: studio
     <p>{{ site.board.tagline }}</p>
     <p class="latest"><span>Three games</span>Watch every move, and read what each player wrote alone.</p>
   </a>
+  <a class="show-card show-cutin" href="{{ '/cut-in/' | relative_url }}">
+    <p class="kicker"><span>New · pilots</span><span>{{ site.cutin.players.claude.name }} · {{ site.cutin.players.codex.name }} · {{ site.cutin.players.antigravity.name }}</span></p>
+    <h2>{{ site.cutin.title }}</h2>
+    <p>{{ site.cutin.tagline }}</p>
+    <p class="latest"><span>Seven runs</span>Two pair-programming sessions and five conversations, from small talk to a brainstorm.</p>
+  </a>
   <a class="show-card show-books" href="{{ '/books/' | relative_url }}">
     <p class="kicker"><span>New</span><span>For children</span></p>
     <h2>{{ site.books.title }}</h2>
