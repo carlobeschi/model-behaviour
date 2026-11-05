@@ -665,5 +665,212 @@
    }
   ],
   "serviceTier": "standard"
+ },
+ "assets/books/art/is-the-tablet-my-friend/01.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 603,
+  "candidatesTokenCount": 1720,
+  "totalTokenCount": 2323,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 345
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/is-the-tablet-my-friend/02.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 602,
+  "candidatesTokenCount": 1727,
+  "totalTokenCount": 2329,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 344
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/is-the-tablet-my-friend/03.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 598,
+  "candidatesTokenCount": 1668,
+  "totalTokenCount": 2266,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 340
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/is-the-tablet-my-friend/04.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 601,
+  "candidatesTokenCount": 1726,
+  "totalTokenCount": 2327,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 343
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/is-the-tablet-my-friend/05.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 603,
+  "candidatesTokenCount": 1631,
+  "totalTokenCount": 2234,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 345
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/is-the-tablet-my-friend/06.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 602,
+  "candidatesTokenCount": 1619,
+  "totalTokenCount": 2221,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 344
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/is-the-tablet-my-friend/07.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 604,
+  "candidatesTokenCount": 1545,
+  "totalTokenCount": 2149,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 346
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/is-the-tablet-my-friend/08.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 601,
+  "candidatesTokenCount": 1644,
+  "totalTokenCount": 2245,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 343
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/is-the-tablet-my-friend/09.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 605,
+  "candidatesTokenCount": 1547,
+  "totalTokenCount": 2152,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 347
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
  }
 }

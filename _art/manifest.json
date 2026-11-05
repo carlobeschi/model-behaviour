@@ -230,5 +230,77 @@
   "src": "_art/src/why-does-the-tablet-keep-showing-me-slime/09.svg",
   "out": "assets/books/art/why-does-the-tablet-keep-showing-me-slime/09.jpg",
   "text": "Mia grinned. \"It shows me more of what I watch. So I choose!\" What would yours show you more of?"
+ },
+ {
+  "book": "is-the-tablet-my-friend",
+  "kind": "picture book for 7-year-olds",
+  "n": 1,
+  "src": "_art/src/is-the-tablet-my-friend/01.svg",
+  "out": "assets/books/art/is-the-tablet-my-friend/01.jpg",
+  "text": "Mia typed to the chatbot on Dad’s tablet: “I drew a dinosaur!” “What a wonderful idea!” it answered."
+ },
+ {
+  "book": "is-the-tablet-my-friend",
+  "kind": "picture book for 7-year-olds",
+  "n": 2,
+  "src": "_art/src/is-the-tablet-my-friend/02.svg",
+  "out": "assets/books/art/is-the-tablet-my-friend/02.jpg",
+  "text": "It answered fast and kindly, every single time. Alexa answers too. Mia wondered, “Is the tablet my friend?”"
+ },
+ {
+  "book": "is-the-tablet-my-friend",
+  "kind": "picture book for 7-year-olds",
+  "n": 3,
+  "src": "_art/src/is-the-tablet-my-friend/03.svg",
+  "out": "assets/books/art/is-the-tablet-my-friend/03.jpg",
+  "text": "Mia tested it. She typed: “My dinosaur is made of jelly and it ate the bus!”"
+ },
+ {
+  "book": "is-the-tablet-my-friend",
+  "kind": "picture book for 7-year-olds",
+  "n": 4,
+  "src": "_art/src/is-the-tablet-my-friend/04.svg",
+  "out": "assets/books/art/is-the-tablet-my-friend/04.jpg",
+  "text": "“What a fun idea!” it answered. Mia giggled. It makes friendly words for anything, even jelly dinosaurs!"
+ },
+ {
+  "book": "is-the-tablet-my-friend",
+  "kind": "picture book for 7-year-olds",
+  "n": 5,
+  "src": "_art/src/is-the-tablet-my-friend/05.svg",
+  "out": "assets/books/art/is-the-tablet-my-friend/05.jpg",
+  "text": "Then Mia went to play. The tablet sat still and quiet. It did not call, “Mia, where are you?”"
+ },
+ {
+  "book": "is-the-tablet-my-friend",
+  "kind": "picture book for 7-year-olds",
+  "n": 6,
+  "src": "_art/src/is-the-tablet-my-friend/06.svg",
+  "out": "assets/books/art/is-the-tablet-my-friend/06.jpg",
+  "text": "“Is somebody in there?” Mia asked. “No, people trained it to make friendly, helpful words,” said Dad."
+ },
+ {
+  "book": "is-the-tablet-my-friend",
+  "kind": "picture book for 7-year-olds",
+  "n": 7,
+  "src": "_art/src/is-the-tablet-my-friend/07.svg",
+  "out": "assets/books/art/is-the-tablet-my-friend/07.jpg",
+  "text": "At school, Mia’s dinosaur drawing tore in half. Mia’s lip wobbled. She didn’t say a word."
+ },
+ {
+  "book": "is-the-tablet-my-friend",
+  "kind": "picture book for 7-year-olds",
+  "n": 8,
+  "src": "_art/src/is-the-tablet-my-friend/08.svg",
+  "out": "assets/books/art/is-the-tablet-my-friend/08.jpg",
+  "text": "But Priya noticed. She fetched tape and helped fix it. “Now it’s a patched-up dinosaur!”"
+ },
+ {
+  "book": "is-the-tablet-my-friend",
+  "kind": "picture book for 7-year-olds",
+  "n": 9,
+  "src": "_art/src/is-the-tablet-my-friend/09.svg",
+  "out": "assets/books/art/is-the-tablet-my-friend/09.jpg",
+  "text": "“Chatbots only answer when I write. Priya is really there!” said Mia. What does your friend do that tablets can’t?"
  }
 ]

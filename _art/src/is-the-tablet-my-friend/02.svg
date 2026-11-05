@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<rect x="200" y="50" width="160" height="260" rx="18" fill="#2b2b2b"/>
+<rect x="212" y="62" width="136" height="236" rx="10" fill="#fbf7f0"/>
+<g stroke="#fbf7f0" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round">
+<rect x="270" y="78" width="66" height="28" rx="10" fill="#d97757" stroke="none"/>
+<line x1="281" y1="92" x2="325" y2="92"/>
+<rect x="222" y="120" width="88" height="28" rx="10" fill="#3a5ba0" stroke="none"/>
+<line x1="233" y1="134" x2="299" y2="134"/>
+<rect x="270" y="162" width="66" height="28" rx="10" fill="#d97757" stroke="none"/>
+<line x1="281" y1="176" x2="325" y2="176"/>
+<rect x="222" y="204" width="88" height="28" rx="10" fill="#3a5ba0" stroke="none"/>
+<line x1="233" y1="218" x2="299" y2="218"/>
+</g>
+<circle cx="240" cy="258" r="7" fill="#3a5ba0"/>
+<path d="M246 260 q2 10 -7 17" fill="none" stroke="#3a5ba0" stroke-width="4" stroke-linecap="round"/>
+<polygon points="60,350 120,350 90,262" fill="#d97757"/>
+<circle cx="90" cy="240" r="22" fill="#e0b04a"/>
+<circle cx="116" cy="202" r="6" fill="#8aa37b"/>
+<ellipse cx="140" cy="140" rx="46" ry="34" fill="#fbf7f0" stroke="#8aa37b" stroke-width="4"/>
+<rect x="125" y="119" width="30" height="42" rx="6" fill="#2b2b2b"/>
+<rect x="300" y="332" width="36" height="48" rx="10" fill="#2b2b2b"/>
+<ellipse cx="318" cy="334" rx="18" ry="5" fill="#3a5ba0"/>
+<line x1="346" y1="324" x2="353" y2="302" stroke="#e0b04a" stroke-width="6" stroke-linecap="round"/>
+</svg>
