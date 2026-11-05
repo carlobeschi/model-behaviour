@@ -1,0 +1,37 @@
+{
+  "pick": {
+    "motion": "This house believes engineering teams should route agent work to the cheapest model that passes their tests, rather than standardise on one frontier model.",
+    "brief": "On 25 October 2026 data scientist Max Woolf charted a run of price cuts. OpenAI cut GPT-5.6 Luna by 80% on 30 July, and with a halved cache price on 29 September made its Sol family about 75% cheaper. On 22 September Anthropic priced Claude Opus 5.5 at $4/$20 per million input/output tokens, saying it \"requires less compute to serve than Opus 5\"; Woolf estimates a 40 to 60% cut. He estimates that cache reads make up 96 to 99% of agentic coding spend, so cache prices drive the bill. DeepSeek's V4.1 Flash costs $0.15/$0.60 and scores 45 on the Artificial Analysis index, against 58 for Opus 5.5; its predecessor is served by 29 providers on OpenRouter, up from 13 in May. Moonshot's Kimi K3.1 Pro scores 55 at half Opus 5.5's price. Switching can be a one-line config change, but quality varies (Woolf calls GPT-6 Sol \"a dud\"), cache hit rates and prices differ between providers, providers can stop serving unprofitable models, and the cheapest models still carry only a minority of tokens.",
+    "source": "https://minimaxir.com/2026/10/cheap-llms/",
+    "source_name": "Max Woolf, October 2026"
+  },
+  "backup": {
+    "motion": "This house believes coordinated disclosure no longer works once AI lets several teams find the same bug.",
+    "brief": "On 21 October 2026 PHP shipped fixes for PHP2Shell, two flaws in the PHP runtime (CVE-2026-109618 and -109619, CVSS 9.2) that let an unauthenticated attacker run code on a web server. Three teams found the same root cause independently between July and September: Calif, Wiz (using frontier models from Google and OpenAI) and OpenAI. Wiz reported on 24 August; PHP began a coordinated fix on 21 September. Amazon saw an exploitation attempt on 17 October, four days before disclosure, and it is unclear how the attacker knew. On 20 October the CVE IDs leaked and Calif published a proof-of-concept video by mistake; attempts using it followed within hours, before the patch was out. PHP runs almost 70% of websites; about 4.4 million PHP services face the internet, around 79% on branches that no longer get fixes. Publishing an exploit helps defenders test and prioritise; it also arms attackers against servers that cannot patch quickly.",
+    "source": "https://labs.cloudsecurityalliance.org/research/csa-research-note-php2shell-pre-disclosure-exploitation-2026/",
+    "source_name": "Cloud Security Alliance, October 2026"
+  },
+  "shortlist": [
+    {
+      "motion": "This house believes engineering teams should route agent work to the cheapest model that passes their tests, rather than standardise on one frontier model.",
+      "why": "Price war data with real trade-offs: cost vs quality, caching, provider risk (The Code, 4 Nov)."
+    },
+    {
+      "motion": "This house believes coordinated disclosure no longer works once AI lets several teams find the same bug.",
+      "why": "Queued on 2 Nov but never run; choice-framed, primary brief."
+    },
+    {
+      "motion": "This house believes the engineer who launched an agent, not the agent's tools, is responsible when it breaks the rules.",
+      "why": "Railway engineer's signup-testing agents probed rival Primcloud (The Code, 4 Nov); primary source unreachable."
+    },
+    {
+      "motion": "This house believes developer tools should be barred from configuring a user's coding agent.",
+      "why": "Postman's app auto-installed plugins into Claude Code and Codex (GitHub issue)."
+    },
+    {
+      "motion": "This house believes standardising on one AI vendor is cheaper in the long run than chasing the lowest price.",
+      "why": "Same price data, vendor-lock angle."
+    }
+  ],
+  "why": "Engineering economics framed as a choice (route by price vs standardise), with detailed numbers from the primary source."
+}
