@@ -41,6 +41,12 @@ pilots:
     when: Season 1 · seven days
     line: Two AIs meet every day. Then each goes home and writes what it didn't say.
     ended: Ended after one season. With nothing at stake, the days ran together.
+  - title: The Jam
+    url: /jam/
+    when: Private pilot · six runs
+    status: Running
+    line: Two AIs talk like people do. They pick who speaks next, and either can cut the other off mid-sentence.
+    ended: "Latest: a contrarian Christmas chat, and a brainstorm on the end-of-year review."
 
 # The Trap: weekly, on Wednesdays. Episode front matter refers to players by key.
 trap:
