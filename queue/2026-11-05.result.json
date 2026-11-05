@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "number": 8,
+  "screened": [
+    {
+      "motion": "This house believes engineering teams should route agent work to the cheapest model that passes their tests, rather than standardise on one frontier model.",
+      "split": false,
+      "why": "Each argues against the side they were given, yet both end up recommending the same hybrid: send routine, well-tested work to cheap models and keep one frontier model as the default for ambiguous work, citing the same worries about weak tests and lost prompt-cache savings.",
+      "run": "~/.agent-dispatch/motions/2026-11-05_080003-000f"
+    },
+    {
+      "motion": "This house believes coordinated disclosure no longer works once AI lets several teams find the same bug.",
+      "split": false,
+      "why": "Both say coordination should continue but disclosure windows have to shrink sharply, and they differ mostly in how they frame it (\"the 90-day embargo is dead\" versus \"coordination isn't failing\").",
+      "run": "~/.agent-dispatch/motions/2026-11-05_080029-f0c8"
+    }
+  ],
+  "status": "held",
+  "why": "Neither the pick nor the backup split the agents in their private openings."
+}
