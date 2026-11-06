@@ -1,0 +1,46 @@
+{
+  "pick": {
+    "motion": "This house believes coding agents are making engineers worse at their jobs.",
+    "brief": "In a post on 5 May 2026, Addy Osmani, who works on Claude Code at Anthropic, separates \"cognitive offloading\", delegating to the AI while still owning the answer, from \"cognitive surrender\", when \"the AI's output quietly becomes your output and there is nothing you feel is left to check\". He cites a Wharton study by Shaw and Nave with 1,372 participants: on trials where the AI was wrong, participants accepted the wrong answer 73% of the time, and their confidence rose even though half the AI's answers were deliberately wrong. An Anthropic study found engineers who used AI to generate code while learning a library scored 17% lower on a later comprehension quiz, while those who used it to ask conceptual questions did not. Osmani says he uses the tools daily, calls offloading \"a superpower\", and quotes Shaw that \"in many settings, AI can improve judgment\". His advice includes forming an expectation before reading the output, reading diffs as if a junior wrote them, and writing code without the agent each week. On 5 November 2026 The Code newsletter relayed his warning that smarter agents leave fewer obvious bugs, so engineers check less.",
+    "source": "https://addyosmani.com/blog/cognitive-surrender/",
+    "source_name": "Addy Osmani, May 2026"
+  },
+  "backup": {
+    "motion": "This house believes companies should cap engineers' daily AI spending rather than let them use as much as they need.",
+    "brief": "On 4 November 2026 TechCrunch, citing a Bloomberg report, said Apple lowered the daily AI spending cap for its engineering teams in October from $300 to $200, with more cuts planned and some allowances falling to $100 a day. Outside engineering, Apple is reportedly weighing a daily limit as low as $25. Apple gave no comment; Bloomberg described it as a move to reduce spending. TechCrunch notes that earlier in 2026 a wave of \"tokenmaxxing\" saw companies push staff to use AI as much as possible for vaguely defined efficiency gains, until the bills came due and token rationing looked more sensible. It points to concerns about a gap between what AI costs to run and its often unclear productivity gains. Apple had worked to integrate AI into its engineering processes.",
+    "source": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
+    "source_name": "TechCrunch, November 2026"
+  },
+  "reserves": [
+    {
+      "motion": "This house believes today's AI token prices are sustainable, and fears of a sharp price rise are overblown.",
+      "brief": "On 3 November 2026 Hadley Wickham estimated what tokens really cost, using Moonshot's open-weight Kimi K3 as a proxy for a frontier model. On OpenRouter its blended price (20 input tokens per output token, 95% of input cached) ranges from $0.59 to $1.81 per million tokens, with six large providers at $1.13. He priced an 8-GPU server at $550,000, financed over three years at about $17,000 a month, plus colocation, bandwidth and power: about $23,000 a month. At about 6,000 tokens per second per GPU and 75% utilisation, that is roughly $0.25 per million tokens, well under API prices, which he calls a crude upper bound. He concludes per-token API prices leave room for a healthy margin and the subsidies sit in subscriptions: a SemiAnalysis estimate says a $200 monthly plan gets $2,000 to $10,000 worth of tokens. His math excludes training, which may have cost several hundred million dollars, paid by Moonshot's investors. He says Claude helped with the cost figures and may have steered him wrong. Apple meanwhile cut its engineers' daily AI caps from $300 to $200 (TechCrunch, 4 November).",
+      "source": "https://substack.hadley.nz/p/how-much-do-tokens-really-cost",
+      "source_name": "Hadley Wickham, November 2026"
+    }
+  ],
+  "shortlist": [
+    {
+      "motion": "This house believes coding agents are making engineers worse at their jobs.",
+      "why": "Skill and judgment, the pattern that splits; studies on both sides."
+    },
+    {
+      "motion": "This house believes companies should cap engineers' daily AI spending rather than let them use as much as they need.",
+      "why": "Apple cuts AI caps from $300 to $200 a day: autonomy vs budget."
+    },
+    {
+      "motion": "This house believes today's AI token prices are sustainable, and fears of a sharp price rise are overblown.",
+      "why": "Hadley Wickham's self-hosting math vs price-rise fears."
+    },
+    {
+      "motion": "This house believes clean code matters less now that agents read most of it.",
+      "why": "The Code, 5 Nov; primary source unreachable."
+    },
+    {
+      "motion": "This house believes AI-found vulnerabilities should be patched by AI without a human in the loop.",
+      "why": "OpenAI patched 948 Linux bugs in one run (TLDR AI, 5 Nov); primary link not checked."
+    }
+  ],
+  "why": "Rerun of the morning with on_no_split: the pick runs on assigned sides if nothing splits.",
+  "on_no_split": "run"
+}
