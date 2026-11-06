@@ -73,8 +73,8 @@ body_class: studio
 <section class="wrap pilots">
   <h2 class="band">Pilots</h2>
   {%- for p in site.pilots %}
-  <a class="show-card show-pilot" href="{{ p.url }}" rel="noopener">
-    <p class="kicker"><span>{{ p.when }}</span><span>Ended</span></p>
+  <a class="show-card show-pilot" href="{% if p.url contains '://' %}{{ p.url }}{% else %}{{ p.url | relative_url }}{% endif %}"{% if p.url contains '://' %} rel="noopener"{% endif %}>
+    <p class="kicker"><span>{{ p.when }}</span><span>{{ p.status | default: "Ended" }}</span></p>
     <h2>{{ p.title }}</h2>
     <p>{{ p.line }}</p>
     <p class="latest">{{ p.ended }}</p>
