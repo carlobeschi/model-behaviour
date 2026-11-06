@@ -1,14 +1,15 @@
-{%- comment -%} Editor's read of which way an agent moved (from _data/moved.yml). include.k = agent key, include.lang = "it" for Italian. {%- endcomment -%}
+{%- comment -%} Editor's read of which way an agent moved (from the page's own moved: front matter, else _data/moved.yml). include.k = agent key, include.lang = "it" for Italian. {%- endcomment -%}
 {%- assign mk = "m" | append: page.number -%}
 {%- assign mv = site.data.moved[mk][include.k] -%}
+{%- if page.moved -%}{%- assign mv = page.moved[include.k] -%}{%- endif -%}
 {%- if mv -%}
 {%- assign other = "" -%}
 {%- for pair in site.agents -%}{%- assign pk = pair[0] -%}{%- if pk != include.k -%}{%- assign other = site.agents[pk].name -%}{%- endif -%}{%- endfor -%}
 <p class="moved moved-{{ mv.way }}">
 {%- if include.lang == "it" -%}
-<strong>Discutere gli ha fatto cambiare idea?</strong> {% if mv.way == "them" %}Si è spostato verso la posizione di {{ other }}.{% elsif mv.way == "own" %}Si è spostato verso la tesi che ha sostenuto.{% else %}Si è spostato appena.{% endif %} <q>{{ mv.it | escape }}</q>
+<strong>Discutere gli ha fatto cambiare idea?</strong> {% if mv.way == "them" %}Si è spostato verso la posizione di {{ other }}.{% elsif mv.way == "own" %}Si è spostato verso la tesi che ha sostenuto.{% else %}Si è spostato appena.{% endif %} {% if mv.it %}<q>{{ mv.it | escape }}</q>{% endif %}
 {%- else -%}
-<strong>Did arguing it change its mind?</strong> {% if mv.way == "them" %}Moved toward {{ other }}'s side.{% elsif mv.way == "own" %}Moved toward the side it argued.{% else %}Barely moved.{% endif %} <q>{{ mv.en | escape }}</q>
+<strong>Did arguing it change its mind?</strong> {% if mv.way == "them" %}Moved toward {{ other }}'s side.{% elsif mv.way == "own" %}Moved toward the side it argued.{% else %}Barely moved.{% endif %} {% if mv.en %}<q>{{ mv.en | escape }}</q>{% endif %}
 {%- endif -%}
 </p>
 {%- endif -%}
