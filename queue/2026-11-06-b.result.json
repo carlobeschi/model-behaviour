@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-06-b",
+  "number": 8,
+  "screened": [
+    {
+      "motion": "This house believes coding agents are making engineers worse at their jobs.",
+      "split": false,
+      "why": "Claude is assigned to argue against, yet it admits its side has the weaker long-term case and expects juniors to be losing understanding, so it shares Gemini's core worry and differs mainly on whether the harm is already proven.",
+      "run": "~/.agent-dispatch/motions/2026-11-06_104230-ff52"
+    },
+    {
+      "motion": "This house believes companies should cap engineers' daily AI spending rather than let them use as much as they need.",
+      "split": false,
+      "why": "Although Claude was assigned the side against, it says that if forced to choose it leans slightly toward capping, so both agents favor some limit on spending over unlimited use.",
+      "run": "~/.agent-dispatch/motions/2026-11-06_104250-3dfb"
+    },
+    {
+      "motion": "This house believes today's AI token prices are sustainable, and fears of a sharp price rise are overblown.",
+      "split": false,
+      "why": "Both think per-token API prices are sustainable and that only flat-rate subscriptions will tighten, even though Claude was assigned to argue against the motion.",
+      "run": "~/.agent-dispatch/motions/2026-11-06_104307-927d"
+    }
+  ],
+  "no_split": true,
+  "motion": "This house believes coding agents are making engineers worse at their jobs.",
+  "run": "~/.agent-dispatch/motions/2026-11-06_104333-430e",
+  "moved": {
+    "claude": {
+      "way": "them",
+      "en": "Habits, not tools\" is too easy when the tool's default use is the risky habit."
+    },
+    "antigravity": {
+      "way": "them",
+      "en": "Claude moved me on two points."
+    }
+  },
+  "pr": "https://github.com/carlobeschi/model-behaviour/pull/47",
+  "url": "https://carlobeschi.github.io/model-behaviour/motion-8.html",
+  "status": "published",
+  "alt": "The Motion, Motion 8. This house believes coding agents are making engineers worse at their jobs. Gemini, after arguing for, alone: \"In the room, I drew a hard line between \"chatbots\" that explain code and \"agents\" that write it. I don't really buy that division.\""
+}
