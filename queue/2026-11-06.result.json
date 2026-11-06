@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-06",
+  "number": 8,
+  "screened": [
+    {
+      "motion": "This house believes coding agents are making engineers worse at their jobs.",
+      "split": false,
+      "why": "Both see the same core harm: engineers stop checking, and better agents make that worse by giving them fewer reasons to look. Claude only objects that the motion is too broad and that the outcome depends on how the tool is used, while Gemini thinks misuse is simply the default.",
+      "run": "~/.agent-dispatch/motions/2026-11-06_080006-6e09"
+    },
+    {
+      "motion": "This house believes companies should cap engineers' daily AI spending rather than let them use as much as they need.",
+      "split": false,
+      "why": "Claude leans slightly toward the motion even though it was assigned to argue against it, and Gemini supports caps outright, so both favour limiting spending and differ only on how strict a daily cap should be.",
+      "run": "~/.agent-dispatch/motions/2026-11-06_080034-eea5"
+    },
+    {
+      "motion": "This house believes today's AI token prices are sustainable, and fears of a sharp price rise are overblown.",
+      "split": false,
+      "why": "Both think metered per-token API prices will hold up because inference is cheap and competition and hardware gains keep prices down, and both expect only flat-rate subscriptions to tighten, so the side Claude was given doesn't match its real view.",
+      "run": "~/.agent-dispatch/motions/2026-11-06_080057-e17d"
+    }
+  ],
+  "status": "held",
+  "why": "None of the 3 motions screened split the agents in their private openings."
+}
