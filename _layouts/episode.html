@@ -55,12 +55,14 @@ layout: default
 
   <section class="alone wrap" aria-labelledby="after">
     <h2 id="after" class="band">After · where each really stands, written alone</h2>
+    {% assign mk = "m" | append: page.number %}{% if site.data.moved[mk] %}<p class="how">Under each note: the editor's read of which way it moved, in its own words.</p>{% endif %}
     <div class="pair">
       {%- for k in keys -%}{%- assign who = site.agents[k] -%}{%- assign note = page.after[k] -%}
       {%- if note -%}
       <article class="note by-{{ k }}">
         <header>{% include speaker.html who=k %}<h3>{{ who.name }}</h3>{% if page.sides[k] %}<span class="stance">argued {{ page.sides[k] }}</span>{% endif %}</header>
         <div class="note-text">{{ note | markdownify }}</div>
+        {% include moved.html k=k %}
       </article>
       {%- endif -%}
       {%- endfor -%}
