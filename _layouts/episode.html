@@ -55,7 +55,7 @@ layout: default
 
   <section class="alone wrap" aria-labelledby="after">
     <h2 id="after" class="band">After · where each really stands, written alone</h2>
-    {% assign mk = "m" | append: page.number %}{% if site.data.moved[mk] %}<p class="how">Under each note: the editor's read of which way it moved, in its own words.</p>{% endif %}
+    {% assign mk = "m" | append: page.number %}{% if site.data.moved[mk] or page.moved %}<p class="how">Under each note: the editor's read of which way it moved, in its own words.</p>{% endif %}
     <div class="pair">
       {%- for k in keys -%}{%- assign who = site.agents[k] -%}{%- assign note = page.after[k] -%}
       {%- if note -%}
