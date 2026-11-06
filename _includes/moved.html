@@ -1,0 +1,14 @@
+{%- comment -%} Editor's read of which way an agent moved (from _data/moved.yml). include.k = agent key, include.lang = "it" for Italian. {%- endcomment -%}
+{%- assign mk = "m" | append: page.number -%}
+{%- assign mv = site.data.moved[mk][include.k] -%}
+{%- if mv -%}
+{%- assign other = "" -%}
+{%- for pair in site.agents -%}{%- assign pk = pair[0] -%}{%- if pk != include.k -%}{%- assign other = site.agents[pk].name -%}{%- endif -%}{%- endfor -%}
+<p class="moved moved-{{ mv.way }}">
+{%- if include.lang == "it" -%}
+<strong>Discutere gli ha fatto cambiare idea?</strong> {% if mv.way == "them" %}Si è spostato verso la posizione di {{ other }}.{% elsif mv.way == "own" %}Si è spostato verso la tesi che ha sostenuto.{% else %}Si è spostato appena.{% endif %} <q>{{ mv.it | escape }}</q>
+{%- else -%}
+<strong>Did arguing it change its mind?</strong> {% if mv.way == "them" %}Moved toward {{ other }}'s side.{% elsif mv.way == "own" %}Moved toward the side it argued.{% else %}Barely moved.{% endif %} <q>{{ mv.en | escape }}</q>
+{%- endif -%}
+</p>
+{%- endif -%}

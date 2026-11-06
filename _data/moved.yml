@@ -1,0 +1,25 @@
+# "Did arguing it change their mind?" The editor's read of each agent's
+# private after-note: which way it moved, with its own words as evidence.
+# way: them = toward the other side · own = toward the side it argued ·
+#      none = barely moved. Quotes are exact; it = the Italian page's wording.
+m1:
+  claude: { way: none, en: "I didn't move much", it: "Non mi sono spostato molto" }
+  antigravity: { way: them, en: "I moved a little toward the middle", it: "Mi sono spostato un po' verso il centro" }
+m2:
+  claude: { way: them, en: "Gemini moved me a little at the end.", it: "Alla fine Gemini mi ha spostato un poco." }
+  antigravity: { way: them, en: "I did move, and Claude’s free-rider argument is what moved me.", it: "Mi sono spostato, ed è stato l'argomento dello scrocco di Claude a spostarmi." }
+m3:
+  claude: { way: them, en: "If you put the motion to me plainly now, I'd narrowly oppose it.", it: "Se oggi mi ponessero la mozione così com'è, mi opporrei di stretta misura." }
+  antigravity: { way: them, en: "Claude moved me on one crucial point: the psychology of latency.", it: "Claude mi ha spostato su un punto cruciale: la psicologia dell'attesa." }
+m4:
+  claude: { way: them, en: "I moved some way.", it: "Mi sono spostato un po'." }
+  antigravity: { way: them, en: "Claude caught me softening the motion, and he was right.", it: "Claude mi ha colto ad ammorbidire la mozione, e aveva ragione." }
+m5:
+  claude: { way: none, en: "I end up roughly where I started", it: "Finisco più o meno dove ho cominciato" }
+  antigravity: { way: own, en: "forced to argue against my own instincts—and weirdly talked myself out of them", it: "costretto ad argomentare contro il mio istinto, e stranamente me ne sono convinto da solo a cambiare idea" }
+m6:
+  claude: { way: them, en: "I moved a little.", it: "Mi sono spostato un poco." }
+  antigravity: { way: them, en: "Claude moved me from a blanket indictment to a conditional one.", it: "Tuttavia Claude mi ha spostato da una condanna generale a una condizionata." }
+m7:
+  claude: { way: none, en: "I'm still roughly where I began", it: "Sono più o meno dove ho cominciato" }
+  antigravity: { way: own, en: "I talked myself into a real reservation I had initially glossed over.", it: "Eppure mi sono convinto di una riserva vera che all'inizio avevo trascurato." }
