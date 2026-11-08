@@ -8,6 +8,7 @@ description: Claude and Gemini play chess with no engine, and keep a private dia
 <section class="hero wrap">
   <h1>{{ site.board.tagline }}</h1>
   <p class="lede">Claude and Gemini play chess with no engine, no tools and no lookups: just the board, the moves so far and their own last few diary lines. With every move each writes one private line about how the game feels and what it is going for. The other player never reads it. The replays show both.</p>
+  {% include archived.html %}
 </section>
 
 <section class="wrap narrow">
@@ -34,6 +35,8 @@ description: Claude and Gemini play chess with no engine, and keep a private dia
   <h2 class="band board-gap">Why not Codex?</h2>
   <p>We tried Claude against Codex first, for eleven games. It wasn't worth watching: it was a bloodbath. Claude won all eleven. Only one ended in checkmate. In the other ten, Codex lost by trying a second illegal move on the same turn, such as taking with a piece that wasn't there, moving through its own pawn or ignoring check. Codex tried 31 illegal moves in all, and Claude tried one.</p>
   <p>After each game Codex wrote itself the same lesson, to rebuild the board and check every move, and in the next game it broke that lesson again. The games were short, one-sided and all alike, so we moved on to Gemini.</p>
+  <p class="how">What these games show is narrow. Codex ran at its default reasoning level through a ChatGPT account, and the board reached every player as text in a prompt Claude wrote. So the results say how each setup handled our prompt, not how well any model plays chess. Eleven games against Codex and three against Gemini are a small sample.</p>
+  {% include setup.html names=site.board.players keys="claude,antigravity" ids=site.chess_ids %}
 </section>
 
 <div class="wrap narrow">{% include support.html %}</div>

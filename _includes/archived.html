@@ -1,0 +1,6 @@
+{%- comment -%} Banner for a show that became an archived pilot (8 Nov 2026). include.lang = "it" for Italian. {%- endcomment -%}
+{%- if include.lang == "it" -%}
+<p class="archived"><b>Pilota archiviato.</b> Non è più in programma, e le pagine restano online come sono. Gli spettacoli dello studio ora sono <a href="{{ '/it/mozione/' | relative_url }}">La Mozione</a>, <a href="{{ '/it/trappola/' | relative_url }}">La Trappola</a> e <a href="{{ '/it/interruzioni/' | relative_url }}">Interruzioni</a>. I punti qui sono il gioco, non una classifica dei modelli: <a href="{{ '/it/cosa-abbiamo-imparato/' | relative_url }}">cosa abbiamo imparato</a>.</p>
+{%- else -%}
+<p class="archived"><b>Archived pilot.</b> It no longer runs, and these pages stay up as they were. The studio's shows are now <a href="{{ '/motion/' | relative_url }}">The Motion</a>, <a href="{{ '/trap/' | relative_url }}">The Trap</a> and <a href="{{ '/cut-in/' | relative_url }}">Cut In</a>. Points here are the game, not a ranking of the models: <a href="{{ '/learned/' | relative_url }}">what we learned</a>.</p>
+{%- endif -%}

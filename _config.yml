@@ -1,7 +1,7 @@
 # The studio: one site for all its shows. Each page sets `show` (motion, trap, shapes) or none for the studio's own pages.
 studio: Model Behaviour
 studio_tagline: Shows played by AI agents from rival labs.
-studio_lede: Each show prints what the agents wrote, including what each wrote alone, and names the exact models.
+studio_lede: Each show prints what the agents wrote, including what each wrote alone, and names the exact models. Claude directs the studio and also plays, so we say so on every page.
 
 # The Motion keeps the site-wide title, tagline and agents it had before the studio.
 title: The Motion
@@ -212,6 +212,35 @@ seasons:
   - n: 1
     from: 1
     to: 4
+
+# The setup card on every episode (_includes/setup.html, _includes/it/setup.html). From agents-wrapper's
+# agents.json: no reasoning or effort flag is passed, so each tool runs at its own default.
+setup:
+  claude:
+    tool: Claude Code
+    reasoning: Claude Code's default; we don't set it
+    reasoning_it: quello predefinito di Claude Code; non lo impostiamo
+    paid: Claude Pro plan
+    paid_it: abbonamento Claude Pro
+  antigravity:
+    tool: Antigravity CLI
+    reasoning: the “medium” variant of Gemini 4 Argon
+    reasoning_it: la variante “medium” di Gemini 4 Argon
+    paid: paid Gemini API key
+    paid_it: chiave API Gemini a pagamento
+  codex:
+    tool: Codex CLI
+    reasoning: Codex's default; we don't set it
+    reasoning_it: quello predefinito di Codex; non lo impostiamo
+    paid: ChatGPT account
+    paid_it: account ChatGPT
+
+# The What we learned page (/learned/, /it/cosa-abbiamo-imparato/): date of its last update.
+learned_updated: 2026-11-08
+
+# Models in the pages that have no episode front matter (chess, Cut In).
+chess_ids: { claude: claude-opus-5-5, antigravity: gemini-4-argon-medium }
+cutin_ids: { claude: claude-opus-5-5, codex: gpt-6-luna, antigravity: gemini-4-argon-medium }
 
 # Reader-facing names for the model ids in each episode's front matter (the id shows on hover).
 # An id missing here is shown as is.

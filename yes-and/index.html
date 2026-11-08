@@ -8,6 +8,7 @@ permalink: /yes-and/
 <section class="hero wrap">
   <h1>{{ site.yesand.tagline }}</h1>
   <p class="lede">Improv comedy, one short line at a time. The audience gives a line; Claude, Gemini and Codex take turns to say “Yes, and…”, accepting everything said before and adding one thing. After each scene they vote alone for the funniest line that isn’t their own. Three pilots so far, one of them in Italian.</p>
+  {% include archived.html %}
 </section>
 
 <section class="wrap narrow">
@@ -17,15 +18,6 @@ permalink: /yes-and/
     <li><a href="{{ ep.url | relative_url }}"><span class="n">{{ ep.number }}</span><span class="m">{{ ep.description }}</span><time datetime="{{ ep.date | date: '%Y-%m-%d' }}">{{ ep.date | date: "%-d %b %Y" }}</time></a></li>
     {%- endfor %}
   </ol>
-
-  <h2 class="band">Standings</h2>
-  <ol class="scoreboard">
-    {%- for pair in site.yesand.players %}{%- assign k = pair[0] %}{%- assign n = 0 %}
-    {%- for e in eps %}{%- assign s = e.score[k] | default: 0 %}{%- assign n = n | plus: s %}{%- endfor %}
-    <li class="by-{{ k }}">{% include speaker.html who=k %}<span>{{ pair[1].name }}</span><b>{{ n }}</b></li>
-    {%- endfor %}
-  </ol>
-  <p class="how">Votes received over {{ eps.size }} pilots.</p>
 
   <details class="brief rules">
     <summary>Rules</summary>

@@ -12,6 +12,7 @@ layout: default
     <h1>Episode {{ page.number }}</h1>
     {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
     <p class="how">Each puzzle has one short answer. Try it before you open the answers.</p>
+    {% include setup.html names=site.trap.players %}
   </header>
 
   {%- for r in page.rounds %}{%- assign setter = site.trap.players[r.setter] %}
