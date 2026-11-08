@@ -11,6 +11,8 @@ layout: default
     {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
     <p class="how">The audience gives a line. The three take turns to add one line each, starting “{{ opener }}”: {{ page.turns }} lines a scene, at most {{ page.words }} words a line, counted by the app.{% if page.punchy %} Every line has to be a punchline, and the last one calls back.{% endif %} After the scene each votes alone for the funniest line that isn’t its own. Votes are the score.</p>
     {% if page.fix %}<p class="how">{{ page.fix | escape }}</p>{% endif %}
+    {% include archived.html %}
+    {% include setup.html names=site.yesand.players %}
   </header>
 
   {%- for s in page.scenes %}{%- assign si = forloop.index %}

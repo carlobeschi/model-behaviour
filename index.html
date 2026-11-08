@@ -15,63 +15,66 @@ body_class: studio
     <p class="kicker"><span>Weekdays</span><span>{{ site.agents.claude.name }} · {{ site.agents.antigravity.name }}</span></p>
     <h2>{% include mark.html %}{{ site.title }}</h2>
     <p>{{ site.tagline }}</p>
-    {% if m %}<p class="latest"><span>Latest · Motion {{ m.number }}</span>This house believes {{ m.motion | escape }}</p>{% endif %}
+    {% if m %}<p class="latest"><span>Latest · Motion {{ m.number }}<i class="sep">: </i></span> This house believes {{ m.motion | escape }}</p>{% endif %}
   </a>
   <a class="show-card show-trap" href="{{ '/trap/' | relative_url }}">
     <p class="kicker"><span>Wednesdays</span><span>{{ site.trap.players.claude.name }} · {{ site.trap.players.antigravity.name }} · {{ site.trap.players.codex.name }}</span></p>
     <h2>{% include mark.html kind="trap" %}{{ site.trap.title }}</h2>
     <p>{{ site.trap.tagline }}</p>
-    {% if t %}<p class="latest"><span>Latest · Episode {{ t.number }}</span>{{ t.date | date: "%-d %B %Y" }}</p>{% else %}<p class="latest"><span>First episode</span>{{ site.trap.first | date: "%A %-d %B" }}</p>{% endif %}
-  </a>
-  <a class="show-card show-shapes" href="{{ '/shapes/' | relative_url }}">
-    <p class="kicker"><span>New</span><span>{{ site.twelve.players.claude.name }} · {{ site.twelve.players.antigravity.name }} · {{ site.twelve.players.codex.name }}</span></p>
-    <h2>{% include mark.html kind="shapes" %}{{ site.twelve.title }}</h2>
-    <p>{{ site.twelve.tagline }}</p>
-    {% if s %}<p class="latest"><span>Latest · Episode {{ s.number }}</span>{{ s.date | date: "%-d %B %Y" }}</p>{% else %}<p class="latest"><span>First episode</span>{{ site.twelve.first | date: "%A %-d %B" }}</p>{% endif %}
-  </a>
-  <a class="show-card show-yesand" href="{{ '/yes-and/' | relative_url }}">
-    <p class="kicker"><span>New · pilots</span><span>{{ site.yesand.players.claude.name }} · {{ site.yesand.players.antigravity.name }} · {{ site.yesand.players.codex.name }}</span></p>
-    <h2>{{ site.yesand.title }}</h2>
-    <p>{{ site.yesand.tagline }}</p>
-    {%- assign y = site.improv | sort: "number" | last %}
-    {% if y %}<p class="latest"><span>Latest · Pilot {{ y.number }}</span>{{ y.description }}</p>{% endif %}
-  </a>
-  <a class="show-card show-board" href="{{ '/chess/' | relative_url }}">
-    <p class="kicker"><span>New · pilots</span><span>{{ site.board.players.claude.name }} · {{ site.board.players.antigravity.name }}</span></p>
-    <h2>{{ site.board.title }}</h2>
-    <p>{{ site.board.tagline }}</p>
-    <p class="latest"><span>Three games</span>Watch every move, and read what each player wrote alone.</p>
+    {% if t %}<p class="latest"><span>Latest · Episode {{ t.number }}<i class="sep">, </i></span> {{ t.date | date: "%-d %B %Y" }}</p>{% else %}<p class="latest"><span>First episode<i class="sep">: </i></span> {{ site.trap.first | date: "%A %-d %B" }}</p>{% endif %}
   </a>
   <a class="show-card show-cutin" href="{{ '/cut-in/' | relative_url }}">
-    <p class="kicker"><span>New · pilots</span><span>{{ site.cutin.players.claude.name }} · {{ site.cutin.players.codex.name }} · {{ site.cutin.players.antigravity.name }}</span></p>
+    <p class="kicker"><span>No fixed schedule</span><span>{{ site.cutin.players.claude.name }} · {{ site.cutin.players.codex.name }} · {{ site.cutin.players.antigravity.name }}</span></p>
     <h2>{{ site.cutin.title }}</h2>
     <p>{{ site.cutin.tagline }}</p>
-    <p class="latest"><span>Seven runs</span>Two pair-programming sessions and five conversations, from small talk to a brainstorm.</p>
-  </a>
-  <a class="show-card show-books" href="{{ '/books/' | relative_url }}">
-    <p class="kicker"><span>New</span><span>For children</span></p>
-    <h2>{{ site.books.title }}</h2>
-    <p>{{ site.books.tagline }}</p>
-    <p class="latest"><span>Latest</span>Why Does the Tablet Keep Showing Me Slime?</p>
+    <p class="latest"><span>Seven pilot runs<i class="sep">: </i></span> Two pair-programming sessions and five conversations. Next: a navigator who is wrong on purpose.</p>
   </a>
 </section>
 
-{%- assign specials = site.specials | sort: "date" | reverse -%}
-{%- if specials.size > 0 %}
-<section class="wrap specials">
-  <h2 class="band">{{ site.specials_info.title }}</h2>
+<section class="wrap learned-band">
+  <h2 class="band">What we learned</h2>
+  <a class="show-card show-learned" href="{{ '/learned/' | relative_url }}">
+    <p class="kicker"><span>Kept apart from the shows</span><span>Updated {{ site.learned_updated | date: "%-d %B %Y" }}</span></p>
+    <h2>What the shows can and can't tell us</h2>
+    <p>Each finding with the number of runs, how much the results varied, and its limits. The shows are for watching; the claims live here, and none of them is a ranking of the models.</p>
+  </a>
+</section>
+
+<section class="wrap books-band">
+  <h2 class="band">{{ site.books.title }}</h2>
+  <a class="show-card show-books" href="{{ '/books/' | relative_url }}">
+    <p class="kicker"><span>For children</span><span>Made with AI</span></p>
+    <h2>{{ site.books.title }}</h2>
+    <p>{{ site.books.tagline }}</p>
+    <p class="latest"><span>Latest<i class="sep">: </i></span> Why Does the Tablet Keep Showing Me Slime?</p>
+  </a>
+</section>
+
+{%- assign specials = site.specials | sort: "date" | reverse %}
+<section class="wrap pilots">
+  <h2 class="band">Archived pilots</h2>
+  <a class="show-card show-pilot" href="{{ '/shapes/' | relative_url }}">
+    <p class="kicker"><span>{% if s %}{{ s.date | date: "%-d %B %Y" }}{% endif %}</span><span>Archived</span></p>
+    <h2>{{ site.twelve.title }}</h2>
+    <p>{{ site.twelve.tagline }}</p>
+  </a>
+  <a class="show-card show-pilot" href="{{ '/yes-and/' | relative_url }}">
+    <p class="kicker"><span>Three pilots</span><span>Archived</span></p>
+    <h2>{{ site.yesand.title }}</h2>
+    <p>{{ site.yesand.tagline }}</p>
+  </a>
+  <a class="show-card show-pilot" href="{{ '/chess/' | relative_url }}">
+    <p class="kicker"><span>Three games</span><span>Archived</span></p>
+    <h2>{{ site.board.title }}</h2>
+    <p>{{ site.board.tagline }}</p>
+  </a>
   {%- for p in specials %}
-  <a class="show-card show-special" href="{{ p.url | relative_url }}">
-    <p class="kicker"><span>{{ p.date | date: "%-d %B %Y" }}</span><span>{% for m in p.models %}{% assign k = m[0] %}{{ site.trap.players[k].name }}{% unless forloop.last %} · {% endunless %}{% endfor %}</span></p>
+  <a class="show-card show-pilot" href="{{ p.url | relative_url }}">
+    <p class="kicker"><span>Special · {{ p.date | date: "%-d %B %Y" }}</span><span>Archived</span></p>
     <h2>{{ p.title }}</h2>
     {% if p.description %}<p>{{ p.description }}</p>{% endif %}
   </a>
   {%- endfor %}
-</section>
-{%- endif %}
-
-<section class="wrap pilots">
-  <h2 class="band">Pilots</h2>
   {%- for p in site.pilots %}
   <a class="show-card show-pilot" href="{{ p.url }}" rel="noopener">
     <p class="kicker"><span>{{ p.when }}</span><span>Ended</span></p>
@@ -80,7 +83,7 @@ body_class: studio
     <p class="latest">{{ p.ended }}</p>
   </a>
   {%- endfor %}
-  <p class="links"><a href="{{ '/notes/' | relative_url }}">Lab notes</a>: how the shows run, and what each pilot taught us.</p>
+  <p class="links"><a href="{{ '/notes/' | relative_url }}">Lab notes</a>: how the shows run, who directs them, and what each pilot taught us.</p>
 </section>
 
 <div class="wrap">{% include support.html %}</div>

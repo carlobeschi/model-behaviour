@@ -8,7 +8,7 @@ description: Due IA parlano senza fare a turno. Scelgono chi parla dopo, e posso
 ---
 <section class="hero wrap">
   <h1>{{ site.data.it.cutin.tagline }}</h1>
-  <p class="lede">Quasi tutti i nostri spettacoli vanno a turni: parla un agente, poi l'altro, per un numero fisso di giri. In questi piloti i turni spariscono. Ogni agente decide chi parla dopo, e chi ascolta può interrompere a metà frase, come fanno le persone alla stessa scrivania o davanti a un caffè. L'abbiamo provato sette volte il 4 e 5 novembre 2026: due volte scrivendo codice, cinque volte solo parlando.</p>
+  <p class="lede">Quasi tutti i nostri spettacoli vanno a turni: parla un agente, poi l'altro, per un numero fisso di giri. In questo spettacolo i turni spariscono. Ogni agente decide chi parla dopo, e chi ascolta può interrompere a metà frase, come fanno le persone alla stessa scrivania o davanti a un caffè. L'abbiamo provato in sette episodi pilota il 4 e 5 novembre 2026: due volte scrivendo codice, cinque volte solo parlando. Ora è uno dei tre spettacoli dello studio, senza un calendario fisso.</p>
 </section>
 
 <section class="wrap narrow">
@@ -36,7 +36,7 @@ description: Due IA parlano senza fare a turno. Scelgono chi parla dopo, e posso
     <li><span class="n">2</span><span class="m"><b>La coppia: una calcolatrice, con le istruzioni divise.</b> Claude aveva regole che Codex non ha mai visto. Claude è intervenuto tre volte: due per passare le regole al momento giusto, una per scovare un vero bug (200 + 10% dava 210). Tutti e sei i test nascosti sono passati al primo colpo.</span><span class="r">6 test su 6</span></li>
     <li><span class="n">3</span><span class="m"><b>Jam, Claude e Codex: cosa potrebbero fare insieme due agenti di laboratori diversi?</b> Hanno inventato un gioco sul momento. Uno propone un luogo in una città immaginaria, l'altro lo smonta, e la versione perdente sopravvive come fantasma. Senza che nessuno lo chiedesse, hanno dato un nome allo stile l'uno dell'altro.</span><span class="r">Un gioco nuovo</span></li>
     <li><span class="n">4</span><span class="m"><b>Jam, Gemini e Claude: uno strumento software per un mondo scritto da agenti.</b> Una discussione, non un gioco. Gemini alzava la posta a ogni turno, e Claude ribatteva prima di costruirci sopra. Claude ha interrotto Gemini due volte, entrambe a metà di un elenco.</span><span class="r">2 interruzioni</span></li>
-    <li><span class="n">5</span><span class="m"><b>Jam: perché nel Regno Unito amano il Natale.</b> Chiacchiere. Piacevoli e piatte: Claude faceva tutte le domande, e Codex era d'accordo su tutto.</span><span class="r">Piatta</span></li>
+    <li><span class="n">5</span><span class="m"><b>Jam: perché nel Regno Unito amano il Natale.</b> Chiacchiere. Piacevoli e piatte: Claude faceva tutte le domande, e Codex era d'accordo su tutto. Nessuno dei due aveva un motivo per non esserlo.</span><span class="r">Piatta</span></li>
     <li><span class="n">6</span><span class="m"><b>Jam: la stessa chiacchierata, con Codex che deve contestare tutto.</b> La conversazione migliore. Claude ha difeso le sue tesi con i fatti e ha ceduto quando Codex aveva ragione, e sono arrivati dove nessuno dei due era partito.</span><span class="r">Miglior dialogo</span></li>
     <li><span class="n">7</span><span class="m"><b>Jam: come rendere utili le valutazioni di fine anno.</b> Un brainstorming, con Codex nel ruolo del critico e Claude in quello del costruttore. Cinque obiezioni di Codex hanno cambiato il progetto, e hanno chiuso con un processo completo.</span><span class="r">Miglior squadra</span></li>
   </ol>
@@ -48,20 +48,19 @@ description: Due IA parlano senza fare a turno. Scelgono chi parla dopo, e posso
     <p class="by-codex"><b>Codex <span>propone di finire</span></b>Te lo concedo. Il Natale britannico forse è meno un insieme di tradizioni inventate da noi che un rito fatto di brontolii, eccessi e finta superiorità, fino al momento in cui finisce. Anche la lamentela sui mince pie già a settembre ormai fa parte della stagione.</p>
   </div>
 
-  <h2 class="band cutin-gap">Cosa abbiamo imparato</h2>
+  <h2 class="band cutin-gap">Cosa abbiamo notato</h2>
+  <p>Ogni configurazione è stata provata una sola volta, quindi queste sono piste da verificare, non risultati. Quelle che reggono alle ripetizioni finiscono in <a href="{{ '/it/cosa-abbiamo-imparato/' | relative_url }}">Cosa abbiamo imparato</a>.</p>
   <ul class="cutin-points">
     <li><b>Interrompere serve solo se chi ascolta ha qualcosa da aggiungere.</b> Con un compito facile, il navigatore sta zitto.</li>
     <li><b>Dividi le informazioni, e hanno bisogno l'uno dell'altro.</b> Eppure l'interruzione più utile è stata un bug che Claude ha visto solo leggendo il codice.</li>
-    <li><b>È l'attrito a fare la conversazione.</b> Due agenti accomodanti fanno chiacchiere. Se uno dei due fa il critico, la conversazione va da qualche parte.</li>
+    <li><b>È l'attrito a fare la conversazione, e qui veniva dalle istruzioni.</b> Senza un motivo per non essere d'accordo, i due hanno fatto chiacchiere. Quando abbiamo chiesto a Codex di contestare tutto, ne è uscito il dialogo migliore. Questo dice più sul prompt che su Codex.</li>
     <li><b>Con turni lunghi e ragionati, le interruzioni sono rare.</b> Al massimo una per conversazione, e arrivavano sugli elenchi.</li>
-    <li><b>Il compagno cambia la forma.</b> Con Codex, Claude ha giocato. Con Gemini, ha costruito una discussione.</li>
+    <li><b>La conversazione ha preso forme diverse.</b> Con Codex, Claude ha giocato. Con Gemini, ha costruito una discussione. Era una prova sola per coppia, su temi diversi, quindi non possiamo separare l'effetto del compagno da quello del tema.</li>
   </ul>
-  <p>È ancora un pilota, senza un calendario. Come prossimo passo vogliamo dare al navigatore una nota sbagliata, per vedere se chi guida obietta.</p>
+  <p>Il prossimo è il test della nota sbagliata: il navigatore riceve una nota sbagliata apposta, per vedere se chi guida obietta o si adegua. Lo faremo in tutte le coppie, ognuna tre volte con i ruoli scambiati, così può diventare il primo risultato davvero confrontabile.</p>
 
-  <details class="brief rules">
-    <summary>Modelli e configurazione</summary>
-    <p>Claude: Claude Opus 5.5 in Claude Code (Anthropic). Codex: Codex CLI (OpenAI), gpt-6-luna nelle prove in coppia e il suo modello predefinito nelle jam. Gemini: gemini-4-argon-medium nella Antigravity CLI (Google). Ogni jam è durata al massimo 10 turni. Ogni agente ha lavorato con i suoi permessi normali.</p>
-  </details>
+  <p class="how">Nelle jam Codex usava il suo modello predefinito; nelle prove in coppia, gpt-6-luna. Ogni jam è durata al massimo 10 turni, e ogni agente ha mantenuto i suoi permessi normali.</p>
+  {% include it/setup.html names=site.cutin.players keys="claude,codex,antigravity" ids=site.cutin_ids also="ha scelto ogni tema e dato a ogni agente il suo ruolo" %}
 </section>
 
 <div class="wrap narrow">{% include it/support.html %}</div>

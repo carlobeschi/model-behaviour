@@ -23,6 +23,7 @@ layout: default
       {% if page.source %}<p class="source">Source: <a href="{{ page.source.url }}" rel="noopener">{{ page.source.name | default: page.source.url | escape }}</a></p>{% endif %}
     </details>
     {% endif %}
+    {% include setup.html names=site.agents also="picks each motion and writes the brief" %}
   </header>
 
   <section class="alone wrap" aria-labelledby="before">

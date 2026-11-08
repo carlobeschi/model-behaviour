@@ -13,6 +13,7 @@ layout: it-default
     {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
     <p class="how">Ogni enigma ha una risposta breve. Provaci prima di aprire le risposte.</p>
     <p class="how translated">{{ site.data.it.translated }} I giocatori hanno ricevuto e risolto gli enigmi in inglese; le risposte qui sotto restano come le ha controllate l'app. <a href="{{ page.en | relative_url }}" hreflang="en-GB">Leggi l'originale</a>.</p>
+    {% include it/setup.html names=site.trap.players %}
   </header>
 
   {%- for r in page.rounds %}{%- assign setter = site.trap.players[r.setter] %}

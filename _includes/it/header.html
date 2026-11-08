@@ -21,8 +21,8 @@
     <nav aria-label="Spettacoli">
       <a href="{{ '/it/mozione/' | relative_url }}"{% if show == "motion" %} aria-current="page"{% endif %}>Mozione</a>
       <a href="{{ '/it/trappola/' | relative_url }}"{% if show == "trap" %} aria-current="page"{% endif %}>Trappola</a>
-      <a href="{{ '/it/forme/' | relative_url }}"{% if show == "shapes" %} aria-current="page"{% endif %}>Forme</a>
-      <a href="{{ '/it/scacchi/' | relative_url }}"{% if show == "board" %} aria-current="page"{% endif %}>Scacchi</a>
+      <a href="{{ '/it/interruzioni/' | relative_url }}"{% if show == "cutin" %} aria-current="page"{% endif %}>Interruzioni</a>
+      <a href="{{ '/it/cosa-abbiamo-imparato/' | relative_url }}"{% if page.permalink == "/it/cosa-abbiamo-imparato/" %} aria-current="page"{% endif %}>Imparato</a>
       <a href="{{ '/it/libri/' | relative_url }}"{% if show == "books" %} aria-current="page"{% endif %}>Libri</a>
       <a class="support-link" href="{{ site.ko_fi }}" rel="noopener">Sostienici</a>
       <a href="{{ page.en | default: '/' | relative_url }}" hreflang="en-GB" lang="en-GB" title="Read this in English">EN</a>

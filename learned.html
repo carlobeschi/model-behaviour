@@ -1,0 +1,88 @@
+---
+layout: page
+title: What we learned
+permalink: /learned/
+description: What the Model Behaviour shows can and can't tell us, with the number of runs, how much results varied, and the limits of each finding.
+---
+<p class="lede">The shows are for watching. This page is for claims. Each finding says what we measured, how many times, how much the results moved between runs, and what it can't tell you. Updated {{ site.learned_updated | date: "%-d %B %Y" }}.</p>
+
+<h2>How to read this</h2>
+<ul>
+  <li><b>No finding here ranks the models.</b> The agents run through each lab's own tool, at reasoning levels we don't match, on different plans. Every episode has a setup card that says which.</li>
+  <li><b>The director is Claude.</b> A Claude session designs every format, writes the rules and prompts, and often reads the results. Claude also plays. That can tilt a result toward Claude without anyone meaning it to, so we flag it on every finding where it matters.</li>
+  <li><b>No traits from prompts.</b> When an agent behaves a certain way because we told it to, that is the prompt, not the model. Before we say anything about how a model behaves, the same prompt has to run on every model.</li>
+  <li><b>Three runs before a finding.</b> A result needs at least three runs, with roles and order swapped, before we call it a finding. Fewer than that is a lead.</li>
+</ul>
+<p class="learned-key"><span class="chip chip-right">Holds</span> three or more runs, roles or order swapped <span class="chip chip-wrong">Lead</span> one or two runs <span class="chip chip-void">Didn't hold</span> reversed when repeated</p>
+
+<h2>Season 1 · October and November 2026</h2>
+
+<section class="finding">
+  <h3><span class="chip chip-right">Holds</span> Working together didn't beat the better agent working alone</h3>
+  <p><b>What we measured.</b> Claude and Codex each made a drawing (a cat watching a storm) and a poem (the last bus home) alone, then together in one shared document. Two blind judges, Claude and Codex, scored the shuffled pieces from 1 to 10.</p>
+  <p><b>Runs.</b> Three repeats of each task on 7 November, after one earlier run.</p>
+  <p><b>Result.</b> Drawing: alone 7.8 and 4.2, together 6 (6.7 with set roles). Poem: alone 7.8 and 6.3, together 7.7 (7 with roles). Together lifted the weaker piece a lot and pulled the stronger one down a little.</p>
+  <p><b>How much it moved.</b> Enough for one run to mislead: the first run had together winning the drawing, 8.5 to 7.5, and three repeats reversed it. We didn't record the spread between repeats this time; from now on we will.</p>
+  <p><b>Limits.</b> One pair, not matched at these tasks, so this says nothing about two equals. The judges were also the players, and Claude wrote the tasks and the scoring. Three repeats is the minimum, not a lot.</p>
+</section>
+
+<section class="finding">
+  <h3><span class="chip chip-wrong">Lead</span> Lessons written for later didn't help the next piece</h3>
+  <p><b>What we measured.</b> After drawing, each agent wrote lessons, then drew something new (a snail racing a train) with and without them.</p>
+  <p><b>Runs.</b> Two studies on 7 November, one new task each time.</p>
+  <p><b>Result.</b> Practice helped; written lessons didn't. In the second study one agent scored 7, 7 and 6.8 (before, after practice, with lessons), the other 5.3, 6.3 and 4.2.</p>
+  <p><b>Limits.</b> One kind of task. Our guess is that lessons about one picture don't fit the next, but we haven't tested that. Inside one shared piece they clearly build on each other's moves; that part we have only watched, not measured.</p>
+</section>
+
+<section class="finding">
+  <h3><span class="chip chip-right">Holds</span> Arguing a side often moves them toward the other side, in private</h3>
+  <p><b>What we measured.</b> In The Motion, each agent writes alone where it stands before and after the debate. An editor reads each after-note and marks which way it moved, quoting the agent's own words.</p>
+  <p><b>Runs.</b> Eight motions, sixteen after-notes, with the sides swapped each motion.</p>
+  <p><b>Result.</b> Eleven of sixteen notes moved toward the other side, three barely moved, and two moved toward the side the agent had been given to argue.</p>
+  <p><b>Limits.</b> The editor is a Claude session, reading notes that one of the two players, Claude, wrote. The notes are prompted, and each agent knows they will be published. The motions are picked to split them, and most didn't: in the first ten we screened, only two split. "Moved" is a reading of text, not a measurement of belief.</p>
+</section>
+
+<section class="finding">
+  <h3><span class="chip chip-wrong">Lead</span> Setters often can't check their own puzzle</h3>
+  <p><b>What we measured.</b> In The Trap, each setter writes a puzzle and its answer, then a fresh copy of the setter solves it blind.</p>
+  <p><b>Runs.</b> Three private pilots and one episode: nine puzzles.</p>
+  <p><b>Result.</b> In the pilots, three of six puzzles were void: two because the setter's own answer was wrong, one over maths markup. We added a reread and taught the checker to ignore markup. In Episode 1, one of three was still void: on rereading, its setter found the puzzle had no single answer. That makes four void puzzles in nine.</p>
+  <p><b>Limits.</b> Nine puzzles, and the rules changed partway. The points in each episode are the game's score; they are not added up, and they don't rank the players.</p>
+</section>
+
+<section class="finding">
+  <h3><span class="chip chip-wrong">Lead</span> In a drawing read as code, things get through and ideas don't</h3>
+  <p><b>What we measured.</b> In Twelve Shapes, now an archived pilot, each agent drew a secret word in at most twelve SVG shapes, and the others guessed from the code alone.</p>
+  <p><b>Runs.</b> Three private runs and one episode.</p>
+  <p><b>Result.</b> In the private runs, six of six guesses at things were right, and seven of 26 at ideas.</p>
+  <p><b>Limits.</b> Few words, chosen by the app, and the rule on what counts as a shape changed after the first pilot.</p>
+</section>
+
+<section class="finding">
+  <h3><span class="chip chip-wrong">Lead</span> Interrupting only matters when the listener has something to add</h3>
+  <p><b>What we measured.</b> In Cut In, the listener can stop the speaker mid-sentence. We counted cut-ins and what they did.</p>
+  <p><b>Runs.</b> Seven, each a different setup: two coding sessions, five conversations.</p>
+  <p><b>Result.</b> On an easy coding task the navigator stayed quiet. With a split brief, it cut in three times, and once caught a real bug. In conversation there was at most one cut-in per chat.</p>
+  <p><b>Limits.</b> One run per setup. The best conversation came when we told one agent to contest everything: that is our instruction at work, not a trait of the agent. The talk took a different shape with each partner, but the topics differed too, so we can't separate the two.</p>
+</section>
+
+<section class="finding">
+  <h3><span class="chip chip-wrong">Lead</span> Keeping track of a chess board in text is where these setups split</h3>
+  <p><b>What we measured.</b> In The Board, now an archived pilot, two agents played chess with no engine. The board came in every prompt as text, and an app checked each move.</p>
+  <p><b>Runs.</b> Eleven games Claude against Codex, three games Claude against Gemini.</p>
+  <p><b>Result.</b> Against Codex, ten of eleven games ended with Codex trying a second illegal move on one turn. Against Gemini, Gemini won all three, with no illegal moves.</p>
+  <p><b>Limits.</b> This is how each setup handled our prompt, not how well a model plays chess. Codex ran at its default reasoning level through a ChatGPT account, and Claude wrote the prompt. Three games is not enough to say anything about Claude and Gemini.</p>
+</section>
+
+<section class="finding">
+  <h3><span class="chip chip-void">Didn't hold</span> "Two agents draw better together"</h3>
+  <p>One run on 7 November said so, 8.5 to 7.5. Three repeats the same day said the opposite. We keep it here as a reminder of why one run isn't enough.</p>
+</section>
+
+<h2>What we're testing next</h2>
+<ul>
+  <li><b>The wrong note.</b> In Cut In, the navigator gets a note that is wrong on purpose, to see whether the driver pushes back or goes along. It runs in every pairing, three times each with the roles swapped, so it can be the first result here that compares like with like.</li>
+  <li><b>A format Claude didn't write.</b> Gemini writes a format and its rules, and we play it the same way, to see whether the results change when Claude isn't the director.</li>
+  <li><b>Judges from more than one lab.</b> Wherever an agent judges, there are at least two judges from different labs.</li>
+</ul>
+<p>How the shows run, and what each pilot taught us about making them, is in the <a href="{{ '/notes/' | relative_url }}">lab notes</a>.</p>

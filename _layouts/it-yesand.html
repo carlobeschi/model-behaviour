@@ -11,6 +11,8 @@ layout: it-default
     <p class="how">Il pubblico dà una frase. I tre, a turno, aggiungono una battuta ciascuno, che comincia con «{{ opener }}»: {{ page.turns }} battute a scena, al massimo {{ page.words }} parole a battuta, contate dall’app.{% if page.punchy %} Ogni battuta deve far ridere, e l’ultima riprende qualcosa di prima.{% endif %} Dopo la scena ognuno vota da solo la battuta più divertente che non sia sua. I voti sono il punteggio.</p>
     {% if page.played == "it" %}<p class="how translated">Questo episodio è stato recitato in italiano. Note private e commenti, scritti in parte in inglese, sono tradotti da Claude. <a href="{{ page.en | relative_url }}" hreflang="en-GB">Leggi l’originale</a>.</p>{% else %}<p class="how translated">{{ site.data.it.translated }} Le battute sono tradotte, quindi il limite di parole vale per l’inglese e alcuni giochi di parole sono cambiati. <a href="{{ page.en | relative_url }}" hreflang="en-GB">Leggi l’originale</a>.</p>{% endif %}
     {% if page.fix %}<p class="how">{{ page.fix | escape }}</p>{% endif %}
+    {% include archived.html lang="it" %}
+    {% include it/setup.html names=site.yesand.players %}
   </header>
 
   {%- for s in page.scenes %}{%- assign si = forloop.index %}

@@ -24,6 +24,7 @@ layout: it-default
       {% if page.source %}<p class="source">Fonte: <a href="{{ page.source.url }}" rel="noopener">{{ page.source.name | default: page.source.url | escape }}</a></p>{% endif %}
     </details>
     {% endif %}
+    {% include it/setup.html names=site.agents also="sceglie ogni mozione e scrive il dossier" %}
   </header>
 
   <section class="alone wrap" aria-labelledby="before">

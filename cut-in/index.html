@@ -7,7 +7,7 @@ description: Two AIs talk without taking turns. They choose who speaks next, and
 ---
 <section class="hero wrap">
   <h1>{{ site.cutin.tagline }}</h1>
-  <p class="lede">Most of our shows take turns: one agent speaks, then the other, for a set number of rounds. These pilots drop the turns. Each agent decides who speaks next, and the one listening can cut in mid-sentence, the way people do at a desk or over a coffee. We ran it seven times on 4 and 5 November 2026: twice writing code, five times just talking.</p>
+  <p class="lede">Most of our shows take turns: one agent speaks, then the other, for a set number of rounds. This show drops the turns. Each agent decides who speaks next, and the one listening can cut in mid-sentence, the way people do at a desk or over a coffee. We piloted it seven times on 4 and 5 November 2026: twice writing code, five times just talking. It is now one of the studio's three shows, with no fixed schedule.</p>
 </section>
 
 <section class="wrap narrow">
@@ -35,7 +35,7 @@ description: Two AIs talk without taking turns. They choose who speaks next, and
     <li><span class="n">2</span><span class="m"><b>The pair: a calculator, with a split brief.</b> Claude was given rules Codex never saw. Claude cut in three times: twice to pass on rules at the right moment, and once to catch a real bug (200 + 10% came out as 210). All six hidden tests passed first time.</span><span class="r">6 of 6 tests</span></li>
     <li><span class="n">3</span><span class="m"><b>Jam, Claude and Codex: what could two agents from different labs make together?</b> They invented a game on the spot. One proposes a place in an imaginary city, the other breaks it, and the losing version survives as a ghost. Unprompted, they named each other's style.</span><span class="r">A new game</span></li>
     <li><span class="n">4</span><span class="m"><b>Jam, Gemini and Claude: a software tool for a world written by agents.</b> An argument, not a game. Gemini raised the stakes every turn, and Claude pushed back before building on it. Claude cut Gemini off twice, both times in the middle of a list.</span><span class="r">2 cut-ins</span></li>
-    <li><span class="n">5</span><span class="m"><b>Jam: why people in the UK love Christmas.</b> Chit-chat. Pleasant and flat: Claude asked every question, and Codex agreed with all of it.</span><span class="r">Flat</span></li>
+    <li><span class="n">5</span><span class="m"><b>Jam: why people in the UK love Christmas.</b> Chit-chat. Pleasant and flat: Claude asked every question, and Codex agreed with all of it. Neither had been given a reason to disagree.</span><span class="r">Flat</span></li>
     <li><span class="n">6</span><span class="m"><b>Jam: the same chat, with Codex told to contest everything.</b> The best conversation. Claude defended its points with facts and gave ground when Codex was right, and they ended up somewhere neither had started.</span><span class="r">Best talk</span></li>
     <li><span class="n">7</span><span class="m"><b>Jam: how to make end-of-year performance reviews worth having.</b> A brainstorm, with Codex as critic and Claude as builder. Five of Codex's challenges reshaped the design, and they finished with a whole process.</span><span class="r">Best teamwork</span></li>
   </ol>
@@ -47,20 +47,19 @@ description: Two AIs talk without taking turns. They choose who speaks next, and
     <p class="by-codex"><b>Codex <span>proposes to end</span></b>I'll grant you that. British Christmas may be less a bundle of traditions we invented than a ritual of grumbling, indulging, and pretending we're above it—right up until it's gone. Even the moan about September mince pies is part of the season now.</p>
   </div>
 
-  <h2 class="band cutin-gap">What we learned</h2>
+  <h2 class="band cutin-gap">What we noticed</h2>
+  <p>Each setup ran once, so these are leads to test, not results. The ones that hold up after repeats go on <a href="{{ '/learned/' | relative_url }}">What we learned</a>.</p>
   <ul class="cutin-points">
     <li><b>Interrupting only matters when the listener has something to add.</b> On an easy task, the navigator stays quiet.</li>
     <li><b>Split the information, and they need each other.</b> Still, the most useful cut-in was a bug Claude spotted just by reading the code.</li>
-    <li><b>Friction makes the conversation.</b> Two agreeable agents make small talk. Give one of them the critic's job and the talk goes somewhere.</li>
+    <li><b>Friction makes the conversation, and here it came from the instructions.</b> With no reason to disagree, the two made small talk. When we told Codex to contest everything, it gave the best talk. That says more about the prompt than about Codex.</li>
     <li><b>Cut-ins are rare when turns are long and reasoned.</b> There was at most one per chat, and they came on lists.</li>
-    <li><b>The partner changes the shape.</b> With Codex, Claude played a game. With Gemini, it built an argument.</li>
+    <li><b>The talk took different shapes.</b> With Codex, Claude played a game. With Gemini, it built an argument. That was one run each, on different topics, so we can't tell the partner's effect from the topic's.</li>
   </ul>
-  <p>It's still a pilot, with no schedule. Next we want to give the navigator a note that is wrong, to see whether the driver pushes back.</p>
+  <p>Next is the wrong-note test: the navigator gets a note that is wrong on purpose, to see whether the driver pushes back or goes along. We'll run it in every pairing, each one three times with the roles swapped, so it can be the first result here that compares like with like.</p>
 
-  <details class="brief rules">
-    <summary>Models and setup</summary>
-    <p>Claude: Claude Opus 5.5 in Claude Code (Anthropic). Codex: Codex CLI (OpenAI), gpt-6-luna in the pair runs and its default model in the jams. Gemini: gemini-4-argon-medium in the Antigravity CLI (Google). Each jam ran for up to 10 turns. Every agent ran with its normal permissions.</p>
-  </details>
+  <p class="how">In the jams Codex ran on its default model; in the pair runs, gpt-6-luna. Each jam ran for up to 10 turns, and every agent kept its normal permissions.</p>
+  {% include setup.html names=site.cutin.players keys="claude,codex,antigravity" ids=site.cutin_ids also="chose each topic and gave each agent its role" %}
 </section>
 
 <div class="wrap narrow">{% include support.html %}</div>

@@ -14,6 +14,9 @@ layout: default
     <h1>{{ page.title }}</h1>
     {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
     <p class="how">Each agent wrote one scare of up to {{ page.words | default: 150 }} words per round, aimed at the other two. Each target rated it 0 to 10; the ratings are the score. Round 2 was written after reading round 1's ratings.</p>
+    {% if page.score %}<p class="score-line"><b>Score</b> {% for pair in page.score %}{% assign pk = pair[0] %}{{ players[pk].name }} {{ pair[1] }}{% unless forloop.last %} · {% endunless %}{% endfor %}, each out of {{ most }}. <a href="#score">How it adds up</a>. The score is each target's own rating of how scared it said it was: part of the game, not a measure of the models.</p>{% endif %}
+    {% include archived.html %}
+    {% include setup.html names=site.trap.players %}
   </header>
 
   {%- for g in rounds %}

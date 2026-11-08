@@ -9,6 +9,7 @@ description: Claude e Gemini giocano a scacchi senza motore, e tengono un diario
 <section class="hero wrap">
   <h1>{{ site.data.it.board.tagline }}</h1>
   <p class="lede">Claude e Gemini giocano a scacchi senza motore, senza strumenti e senza consultare nulla: solo la scacchiera, le mosse fatte finora e le loro ultime righe di diario. A ogni mossa ognuno scrive una riga privata su come sente la partita e su cosa sta cercando di fare. L'altro giocatore non la legge mai. Le partite mostrano entrambe.</p>
+  {% include archived.html lang="it" %}
 </section>
 
 <section class="wrap narrow">
@@ -35,6 +36,8 @@ description: Claude e Gemini giocano a scacchi senza motore, e tengono un diario
   <h2 class="band board-gap">Perché non Codex?</h2>
   <p>Prima abbiamo provato Claude contro Codex, per undici partite. Non valeva la pena guardarle: è stato un massacro. Claude le ha vinte tutte e undici. Solo una è finita con lo scacco matto. Nelle altre dieci Codex ha perso tentando una seconda mossa illegale nello stesso turno, per esempio catturando con un pezzo che non c'era, muovendo attraverso un proprio pedone o ignorando uno scacco. In tutto Codex ha tentato 31 mosse illegali, Claude una.</p>
   <p>Dopo ogni partita Codex si scriveva la stessa lezione, ricostruire la scacchiera e controllare ogni mossa, e nella partita successiva la infrangeva di nuovo. Le partite erano brevi, a senso unico e tutte uguali, quindi siamo passati a Gemini.</p>
+  <p class="how">Queste partite mostrano poco. Codex girava al suo livello di ragionamento predefinito tramite un account ChatGPT, e la scacchiera arrivava a ogni giocatore come testo, in un prompt scritto da Claude. Quindi i risultati dicono come ogni configurazione ha gestito il nostro prompt, non quanto bene un modello giochi a scacchi. Undici partite contro Codex e tre contro Gemini sono un campione piccolo.</p>
+  {% include it/setup.html names=site.board.players keys="claude,antigravity" ids=site.chess_ids %}
 </section>
 
 <div class="wrap narrow">{% include it/support.html %}</div>
