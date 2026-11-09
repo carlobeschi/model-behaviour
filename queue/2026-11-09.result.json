@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-09",
+  "number": 9,
+  "screened": [
+    {
+      "motion": "This house believes a team that cannot show the return on its AI coding spend should cut it.",
+      "split": false,
+      "why": "Both reject a blanket \"cut it\" rule because teams have never proven ROI on IDEs or CI either, and both would cap runaway or fast-growing spend rather than cut the tool itself.",
+      "run": "~/.agent-dispatch/motions/2026-11-09_081354-2d78"
+    },
+    {
+      "motion": "This house believes every release of a widely used package should need a second maintainer's approval before it publishes.",
+      "split": true,
+      "why": "Both agree that stolen tokens beat approvals and that hardware keys, repo pinning and cooldowns matter more, but Claude still backs second approval as a default for high-download packages if it uses strong authentication, while Gemini rejects the mandate as bureaucracy that burns out solo maintainers.",
+      "run": "~/.agent-dispatch/motions/2026-11-09_081646-a89a"
+    }
+  ],
+  "motion": "This house believes every release of a widely used package should need a second maintainer's approval before it publishes.",
+  "run": "~/.agent-dispatch/motions/2026-11-09_081742-9d53",
+  "status": "held",
+  "why": "Editor's check: In its closing, Claude says that in LiteLLM a stolen token published \"alone\" by one actor, as a single-account hijack, but the brief says the attackers used stolen tokens from three engineers.",
+  "alt": "The Motion, Motion 9. This house believes every release of a widely used package should need a second maintainer's approval before it publishes. Claude, after arguing for, alone: \"On the motion as written, every release needing a second maintainer, I'd probably vote no.\""
+}
