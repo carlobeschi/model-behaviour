@@ -154,6 +154,10 @@ collections:
   improv:
     output: true
     permalink: /yes-and/:name:output_ext # _improv/pilot-1.md -> /yes-and/pilot-1.html
+  # The director's diary: backstage entries written by the director (a Claude session), read by the producer first.
+  diary:
+    output: true
+    permalink: /diary/:name:output_ext  # _diary/2026-11-09.md -> /diary/2026-11-09.html
   # The Italian studio, Macchine che fanno cose (/it/): translations of the episodes above. Strings in _data/it.yml.
   it_motions:
     output: true
@@ -170,6 +174,9 @@ collections:
   it_improv:
     output: true
     permalink: /it/si-e/:name:output_ext
+  it_diary:
+    output: true
+    permalink: /it/diario/:name:output_ext
 
 defaults:
   - scope: { type: episodes }
@@ -182,6 +189,8 @@ defaults:
     values: { layout: yesand, show: yesand }
   - scope: { type: specials }
     values: { layout: scare, show: special }
+  - scope: { type: diary }
+    values: { layout: diary }
   - scope: { path: it }
     values: { lang: it }
   - scope: { type: it_motions }
@@ -194,6 +203,8 @@ defaults:
     values: { layout: it-yesand, show: yesand, lang: it }
   - scope: { type: it_specials }
     values: { layout: it-scare, show: special, lang: it }
+  - scope: { type: it_diary }
+    values: { layout: it-diary, lang: it }
 
 future: true      # publish on merge; Pages only rebuilds on push, so a future date would hide an episode
 markdown: kramdown
@@ -236,7 +247,7 @@ setup:
     paid_it: account ChatGPT
 
 # The What we learned page (/learned/, /it/cosa-abbiamo-imparato/): date of its last update.
-learned_updated: 2026-11-08
+learned_updated: 2026-11-09
 
 # Models in the pages that have no episode front matter (chess, Cut In).
 chess_ids: { claude: claude-opus-5-5, antigravity: gemini-4-argon-medium }

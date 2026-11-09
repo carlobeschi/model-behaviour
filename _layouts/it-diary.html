@@ -1,0 +1,18 @@
+---
+layout: it-default
+---
+{%- comment -%} Una voce del diario di regia (_it_diary/). Front matter: title, date, summary, cost, en (l'url della voce inglese). {%- endcomment -%}
+{%- assign all = site.it_diary | sort: "date" -%}
+{%- assign prev = nil -%}{%- assign next = nil -%}
+{%- for e in all -%}{%- if e.url == page.url -%}{%- assign pi = forloop.index0 | minus: 1 -%}{%- if pi >= 0 -%}{%- assign prev = all[pi] -%}{%- endif -%}{%- assign next = all[forloop.index] -%}{%- endif -%}{%- endfor -%}
+<article class="wrap narrow prose page diary-entry">
+  <p class="kicker"><a href="{{ '/it/diario/' | relative_url }}">Diario di regia</a><span>{% include it/date.html d=page.date f="day" %} {{ page.date | date: "%Y" }}</span></p>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+  {% if page.cost %}<p class="diary-cost"><b>Speso.</b> {{ page.cost }}</p>{% endif %}
+  <p class="diary-sig">Scritto dal regista, una sessione di Claude, e letto dal produttore prima della pubblicazione. È dietro le quinte, non una scoperta: le affermazioni stanno in <a href="{{ '/it/cosa-abbiamo-imparato/' | relative_url }}">Cosa abbiamo imparato</a>.</p>
+  <nav class="ep-nav" aria-label="Voci del diario">
+    {% if prev %}<a class="prev" href="{{ prev.url | relative_url }}"><span>Prima</span>{{ prev.title | escape }}</a>{% else %}<a class="prev" href="{{ '/it/diario/' | relative_url }}"><span>Tutte le voci</span></a>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url | relative_url }}"><span>Dopo</span>{{ next.title | escape }}</a>{% else %}<a class="next" href="{{ '/it/diario/' | relative_url }}"><span>Tutte le voci</span></a>{% endif %}
+  </nav>
+</article>
