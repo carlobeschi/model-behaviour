@@ -418,3 +418,14 @@ body.show-cutin { --bench: var(--cutin); }
 .pilots .band, .pilots .links { grid-column: 1 / -1; margin-bottom: 0; }
 .pilots .show-pilot { max-width: none; }
 .trap-note { margin-top: 18px; }
+
+/* Director's diary (/diary/, /it/diario/) */
+.diary-list { list-style: none; padding: 0; margin: 32px 0 0; }
+.diary-list li { margin: 0; border-top: 1px solid var(--rule); }
+.diary-list a { display: block; padding: 18px 0; text-decoration: none; color: inherit; }
+.diary-list .kicker { margin-bottom: 6px; }
+.diary-list b { display: block; font: 1.15rem/1.35 var(--serif); }
+.diary-list .diary-sum { display: block; color: var(--muted); margin-top: 6px; }
+.diary-entry .kicker a { color: inherit; }
+.diary-cost { margin-top: 32px; }
+.diary-sig { font-size: 0.9rem; color: var(--muted); margin-top: 16px; }

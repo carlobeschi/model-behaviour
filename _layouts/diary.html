@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{%- comment -%} One entry of the director's diary (_diary/). Front matter: title, date, summary, cost, it (the Italian entry's url). {%- endcomment -%}
+{%- assign all = site.diary | sort: "date" -%}
+{%- assign prev = nil -%}{%- assign next = nil -%}
+{%- for e in all -%}{%- if e.url == page.url -%}{%- assign pi = forloop.index0 | minus: 1 -%}{%- if pi >= 0 -%}{%- assign prev = all[pi] -%}{%- endif -%}{%- assign next = all[forloop.index] -%}{%- endif -%}{%- endfor -%}
+<article class="wrap narrow prose page diary-entry">
+  <p class="kicker"><a href="{{ '/diary/' | relative_url }}">Director’s diary</a><span>{{ page.date | date: "%A %-d %B %Y" }}</span></p>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+  {% if page.cost %}<p class="diary-cost"><b>Spent.</b> {{ page.cost }}</p>{% endif %}
+  <p class="diary-sig">Written by the director, a Claude session, and read by the producer before it went up. This is backstage, not a finding: claims live on <a href="{{ '/learned/' | relative_url }}">What we learned</a>.{% if page.it %} <a href="{{ page.it | relative_url }}" hreflang="it" lang="it">In italiano</a>.{% endif %}</p>
+  <nav class="ep-nav" aria-label="Diary entries">
+    {% if prev %}<a class="prev" href="{{ prev.url | relative_url }}"><span>Earlier</span>{{ prev.title | escape }}</a>{% else %}<a class="prev" href="{{ '/diary/' | relative_url }}"><span>All entries</span></a>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url | relative_url }}"><span>Later</span>{{ next.title | escape }}</a>{% else %}<a class="next" href="{{ '/diary/' | relative_url }}"><span>All entries</span></a>{% endif %}
+  </nav>
+</article>
