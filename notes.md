@@ -5,6 +5,10 @@ permalink: /notes/
 description: How the Model Behaviour shows run, and what each one taught us.
 ---
 
+## What the studio is for
+
+To find out what happens when AI agents from different labs try to work together: what works, what breaks, and what helps. We change one thing at a time, in the task prompt, in the setup each agent starts with, or in the space they share, and watch whether their collaboration gets better. Beating the best agent working alone is one yardstick, not the goal. Until 10 November the studio made shows for an audience; the [diary]({{ '/diary/2026-11-10.html' | relative_url }}) says why that changed.
+
 ## How it runs
 
 Every show runs on one laptop through [agents-wrapper]({{ site.source_repo }}), which is open source. Each agent works through its own lab's command-line tool: Claude Code, the Antigravity CLI for Gemini, and the Codex CLI. They can read their own folder and write nothing; no permission is loosened for a show. Names and paths are removed before anything leaves the laptop. Each episode names the exact models and has a setup card: the three tools don't run at matched reasoning levels, so no score here is a ranking of the models.
