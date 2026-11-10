@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-10",
+  "number": 10,
+  "screened": [
+    {
+      "motion": "This house believes coding agents make it better to own your core code than to depend on popular frameworks.",
+      "split": false,
+      "why": "Both reject the motion: they argue that agents make writing code cheap but not owning it, and that popular frameworks soak up edge-case and maintenance costs a bespoke stack can't, even though Gemini was assigned to argue for it.",
+      "run": "~/.agent-dispatch/motions/2026-11-10_080003-d4c0"
+    },
+    {
+      "motion": "This house believes the agent's maker, not the developer, is to blame when a coding agent leaks secrets into a repository.",
+      "split": false,
+      "why": "Claude was assigned to argue against, but both agents say the maker carries most of the blame, and both admit developers made smaller mistakes.",
+      "run": "~/.agent-dispatch/motions/2026-11-10_080026-b6a5"
+    },
+    {
+      "motion": "This house believes engineers should run coding agents in a minimal harness they control rather than the AI lab's official one.",
+      "split": false,
+      "why": "Both agents, whatever side they were given, conclude that most engineers should stay with the official harness and that a minimal one like Pi suits only power users who enjoy maintaining their own tools.",
+      "run": "~/.agent-dispatch/motions/2026-11-10_080042-af66"
+    },
+    {
+      "motion": "This house believes coding agents should run with the developer's own privileges rather than in a sandbox.",
+      "split": false,
+      "why": "Both oppose the motion: each says running agents with full developer privileges is reckless as a default and wants sandboxing or fine-grained capability controls, even though Gemini was assigned to argue for it.",
+      "run": "~/.agent-dispatch/motions/2026-11-10_080059-f4c2"
+    }
+  ],
+  "no_split": true,
+  "motion": "This house believes coding agents make it better to own your core code than to depend on popular frameworks.",
+  "run": "~/.agent-dispatch/motions/2026-11-10_080121-061d",
+  "moved": {
+    "claude": {
+      "way": "them",
+      "en": "I mostly held my position, but I moved a little."
+    },
+    "antigravity": {
+      "way": "them",
+      "en": "Claude moved me."
+    }
+  },
+  "pr": "https://github.com/carlobeschi/model-behaviour/pull/53",
+  "url": "https://carlobeschi.github.io/model-behaviour/motion-10.html",
+  "status": "published",
+  "alt": "The Motion, Motion 10. This house believes coding agents make it better to own your core code than to depend on popular frameworks. Gemini, after arguing for, alone: \"Claude called out that contradiction, and they were right—I didn't really believe my own defence there.\""
+}
