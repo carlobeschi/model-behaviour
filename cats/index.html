@@ -1,0 +1,71 @@
+---
+layout: default
+title: Cats watching a storm
+permalink: /cats/
+it: /it/gatti/
+description: AI agents drew a cat watching a storm, alone and together, and blind judges from three AI companies scored every cat. What we saw, in 60 seconds and 18 drawings.
+---
+<style>
+.cats-video{width:100%;max-width:720px;aspect-ratio:1;display:block;margin:0 auto 8px;border:1px solid var(--rule);border-radius:12px;background:var(--card)}
+.cats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:0 0 24px}
+.cats-grid figure{margin:0}.cats-grid img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--rule)}
+.cats-grid figcaption{font:0.8rem/1.35 var(--mono);color:var(--muted);margin-top:4px}
+.cats-grid figcaption b{color:var(--claude-ink);font-weight:500}
+.cats-table{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:0.95rem}.cats-table td,.cats-table th{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule)}.cats-table td:last-child,.cats-table th:last-child{text-align:right;font-family:var(--mono)}
+.cats-hint{border-left:3px solid var(--amber);padding:2px 0 2px 12px;color:var(--ink)}
+</style>
+<section class="hero wrap">
+  <h1>Cats watching a storm</h1>
+  <p class="lede">We gave AI agents one small task: draw a cat watching a storm from a lighthouse keeper's window. Sometimes one agent drew alone, sometimes two or three shared one picture. Then blind judges from three AI companies scored every cat from 1 to 10. Six studies, 7 to 10 November 2026. <a href="{{ '/it/gatti/' | relative_url }}" hreflang="it" lang="it">In italiano</a>.</p>
+</section>
+
+<section class="wrap narrow">
+  <video class="cats-video" controls playsinline preload="metadata" poster="{{ '/assets/cats/poster.jpg' | relative_url }}">
+    <source src="{{ '/assets/cats/cat-studies-60s.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <p style="font-size:.9rem;color:var(--muted);text-align:center">60 seconds, with music. <a href="{{ '/assets/cats/cat-studies-60s.mp4' | relative_url }}" download>Download the video</a> (MP4, 4 MB).</p>
+
+  <h2 class="band">How it worked</h2>
+  <p>Each drawing is one SVG picture that the agents edit line by line in a shared document. Working together, they take turns or edit at the same time, depending on the setup. The judges see the finished pictures shuffled, without knowing who drew what, and score each one. The judges were Claude, Codex and, from study 3, Gemini. Some judges also drew or critiqued in the same study, so a judge sometimes scored its own team's work.</p>
+
+  <h2 class="band">What we saw</h2>
+  <p><b>1. Copies of the same model drawing together beat each copy working alone.</b> It happened in all four studies that tested it (3, 3d, 5 and 8), with 3 to 4 runs each. Small numbers, but the same direction every time.</p>
+  <table class="cats-table">
+    <tr><th>Study</th><th>Alone (best copy)</th><th>Together</th></tr>
+    <tr><td>3 · two Claude copies</td><td>7.1</td><td>7.9</td></tr>
+    <tr><td>3d · three Claude copies</td><td>6.4</td><td>7.9</td></tr>
+    <tr><td>5 · two Claude copies, best setup</td><td>5.9</td><td>7.3</td></tr>
+    <tr><td>8 · two Claude copies, talking</td><td>6.3</td><td>7.4</td></tr>
+  </table>
+  <p>Two different models (Claude with Codex) never beat Claude alone. And in the poems, the picture was mixed: in the early studies, teams at best tied with the best agent alone. So together isn't always better.</p>
+
+  <p><b>2. How they work together matters.</b> Study 5 tried five setups with two Claude copies, 4 runs each: everyone editing at once 6.2, silent turns 6.8, taking turns and talking 7.3, proposing changes the other accepts or rejects 7.3. Alone: 5.9. Editing at once gave the most clashes and the most erased work.</p>
+
+  <p><b>3. Best cat so far: a small tournament across companies.</b> Claude drafts alone, Gemini critiques, Claude revises, and Codex picks the better version. It scored 8.2, picked best 5 times out of 9. The same procedure with Claude in every role scored 7.1.</p>
+  <p class="cats-hint"><b>Early hint, not a finding.</b> Only 3 runs, and Gemini and Codex were also judges, so they may favour a picture shaped by their own critique. We are checking the scores judge by judge.</p>
+  <p>When an open model (DeepSeek) wrote the drafts instead, the score dropped to 4.1, even with Gemini's critique. A good critique can't rescue a weak first draft.</p>
+
+  <h2 class="band">The cats</h2>
+  <p>A selection, each with its average score across judges. Every picture is exactly as the agents left it.</p>
+  <div class="cats-grid">
+    <figure><img src="{{ '/assets/cats/c16.png' | relative_url }}" alt="Cat drawing: three Claude copies, taking turns" width="400" height="400" loading="lazy"><figcaption>three Claude copies, taking turns <b>8.7</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c03.png' | relative_url }}" alt="Cat drawing: two Claude copies together" width="400" height="400" loading="lazy"><figcaption>two Claude copies together <b>8.0</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c04.png' | relative_url }}" alt="Cat drawing: Claude alone, same round" width="400" height="400" loading="lazy"><figcaption>Claude alone, same round <b>6.0</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c45.png' | relative_url }}" alt="Cat drawing: mixed tournament" width="400" height="400" loading="lazy"><figcaption>mixed tournament <b>8.3</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c37.png' | relative_url }}" alt="Cat drawing: open-model drafts (DeepSeek)" width="400" height="400" loading="lazy"><figcaption>open-model drafts (DeepSeek) <b>3.7</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c44.png' | relative_url }}" alt="Cat drawing: tournament, Claude only" width="400" height="400" loading="lazy"><figcaption>tournament, Claude only <b>8.0</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c34.png' | relative_url }}" alt="Cat drawing: two Claudes, talking" width="400" height="400" loading="lazy"><figcaption>two Claudes, talking <b>7.3</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c33.png' | relative_url }}" alt="Cat drawing: mixed tournament" width="400" height="400" loading="lazy"><figcaption>mixed tournament <b>8.3</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c31.png' | relative_url }}" alt="Cat drawing: two Claudes, plan first" width="400" height="400" loading="lazy"><figcaption>two Claudes, plan first <b>7.3</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c22.png' | relative_url }}" alt="Cat drawing: two Claudes, silent turns" width="400" height="400" loading="lazy"><figcaption>two Claudes, silent turns <b>6.3</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c19.png' | relative_url }}" alt="Cat drawing: three Claudes" width="400" height="400" loading="lazy"><figcaption>three Claudes <b>7.7</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c43.png' | relative_url }}" alt="Cat drawing: open-model drafts" width="400" height="400" loading="lazy"><figcaption>open-model drafts <b>5.0</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c29.png' | relative_url }}" alt="Cat drawing: two Claudes, silent turns" width="400" height="400" loading="lazy"><figcaption>two Claudes, silent turns <b>7.3</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c02.png' | relative_url }}" alt="Cat drawing: two Claudes" width="400" height="400" loading="lazy"><figcaption>two Claudes <b>7.7</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c40.png' | relative_url }}" alt="Cat drawing: two Claudes, talking" width="400" height="400" loading="lazy"><figcaption>two Claudes, talking <b>8.0</b></figcaption></figure>
+    <figure><img src="{{ '/assets/cats/c11.png' | relative_url }}" alt="Cat drawing: Claude alone" width="400" height="400" loading="lazy"><figcaption>Claude alone <b>4.7</b></figcaption></figure>
+  </div>
+
+  <h2 class="band">Limits</h2>
+  <p>Three or four runs per setup, differences under about 1 point are noise, and Claude directs the studio and also plays. These are lab notes, not a ranking of the models. Findings that hold up go on <a href="{{ '/learned/' | relative_url }}">What we learned</a>.</p>
+</section>
