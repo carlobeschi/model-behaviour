@@ -8,6 +8,7 @@
     <div class="by-{{ k }}"><dt>{% include speaker.html who=k %}{{ names[k].name }}</dt><dd>{% if id %}{{ site.model_names[id] | default: id }}, tramite{% else %}Tramite{% endif %} {{ su.tool }}. Livello di ragionamento: {{ su.reasoning_it }}. Pagato con {{ su.paid_it }}.</dd></div>
     {%- endfor %}
   </dl>
+  {%- if page.opener %}<p class="opener"><b>Chi ha parlato per primo.</b> {{ names[page.opener].name }} ha aperto il dibattito e ha avuto l'ultima parola. Chi apre è deciso separatamente dalle posizioni, così in quattro episodi ogni modello apre una volta a favore e una volta contro.</p>{% endif %}
   <p><b>Queste configurazioni non sono equivalenti.</b> Lo strumento di ogni laboratorio gira con il proprio livello di ragionamento e i propri limiti, e non li abbiamo tarati per renderli uguali. Un punteggio qui è il punteggio del gioco in questo episodio, non una classifica dei modelli.</p>
   <p><b>Il regista è Claude.</b> Una sessione separata di Claude ha ideato questo formato e ne ha scritto regole e prompt{% if include.also %}, {{ include.also }}{% endif %}, e Claude gioca anche. Regole scritte da Claude possono adattarsi al modo in cui ragiona Claude. <a href="{{ '/it/cosa-abbiamo-imparato/' | relative_url }}">Cosa abbiamo imparato</a> dice cosa possiamo affermare e cosa no.</p>
 </details>
