@@ -1,0 +1,52 @@
+{
+  "pick": {
+    "motion": "This house believes coding agents make it better to own your core code than to depend on popular frameworks.",
+    "brief": "In \"Modern Engineering Values\", first published on 3 June 2026 and updated on 4 November, Christoph Nakazawa, a longtime JavaScript tools developer, says many of his recent projects are \"100% AI-written\" and Rust features in Vite+ \"90% AI-written\". Over 30 days he averaged 770 commits and about 15,000 changed lines a day, against 328 commits and about 5,000 lines a year earlier, while saying commits and lines are \"normally a bad metric\". He has built his own open-source JavaScript stack (data libraries, i18n, UI libraries, tool configs, starter templates) so projects start with tight constraints for agents and he keeps full control of product and UX. He argues there is \"no longer a good reason\" to outsource core parts \"if you can realistically own them yourself\", and that dependencies \"locked you into a stack\". He names no downsides of owning the code. He also says agents \"still go off the rails\", that he sometimes ships code he doesn't study closely, and that strict guardrails such as lint rules and tests are \"the difference between an agent completing their work in 1 minute or 60\". He expects the best teams to be \"two to three people\" with isolated repositories.",
+    "source": "https://cpojer.net/posts/modern-engineering-values",
+    "source_name": "cpojer.net, November 2026"
+  },
+  "backup": {
+    "motion": "This house believes the agent's maker, not the developer, is to blame when a coding agent leaks secrets into a repository.",
+    "brief": "On 7 November 2026 The Hacker News reported research by the security firm Apiiro on Claude Code's .claude/settings.local.json file. When a user picks \"Yes, and don't ask again\", Claude Code saves the exact approved command, including any password or key in it, as a plain-text allow rule. It adds the file to the user's global git excludes but not to the project's .gitignore, and that protection does not cover files already committed. Apiiro found 104,185 copies in 103,617 public repositories; 1,122 copies (about 1.1%) held at least one secret, 1,379 distinct secrets in all, including 379 database passwords, 43 SSH logins, 42 GitHub, GitLab or npm tokens and 23 AWS keys. Counting settings.json, old versions and chat logs, it found 2,539 secrets across 1,994 repositories. A bug report filed on 11 August 2025 was closed by a bot as \"not planned\" after 60 days without activity, and four related reports were closed the same way without a reply from Anthropic. Claude Code was the only one of 16 agents compared confirmed to save the full command in a project file by default. The advice is for developers: rotate the secrets, untrack the file, use variables such as $DB_URL, and approve patterns instead of single commands.",
+    "source": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+    "source_name": "The Hacker News, November 2026"
+  },
+  "reserves": [
+    {
+      "motion": "This house believes engineers should run coding agents in a minimal harness they control rather than the AI lab's official one.",
+      "brief": "In a post dated 21 September 2026 and updated on 7 November, a developer explains why he retired Claude Code as his main coding harness for Pi, an open-source harness. He cites \"an accumulation of many small frustrations\": only one VS Code session could connect to the IDE at a time, a problem he says was reported in December 2025; the official VS Code extension lacked some slash commands and a custom status line and interleaved subagent output in one thread; and rapid feature churn with no clear product direction. He counts 244 Claude Code releases this year, over three quarters of which changed the system prompt or tool descriptions, and notes the Bash tool description alone is almost 3,000 tokens. Anthropic announced AGENTS.md support in Claude Code a day after his decision, which he called \"too little, too late\". With Pi he says he gained \"stability, minimalist approach, and the extreme level of customizability\", and wrote an extension that fixed the multi-tab VS Code issue in about 20 minutes. The post does not say what he gave up.",
+      "source": "https://caleb.software/posts/claude-to-pi.html",
+      "source_name": "caleb.software, November 2026"
+    },
+    {
+      "motion": "This house believes coding agents should run with the developer's own privileges rather than in a sandbox.",
+      "brief": "Ace, released by GitHub Next as \"an experiment\" that is open source under the MIT licence, is \"a tool for building software together, locally\". Agents run on each developer's own machine, and teammates join each other's channels over Tailscale and can drive each other's agents, with shared conversations visible live. Agents run \"with the privileges of the user running the host\" and \"can execute shell commands and change files beyond the project\". The site states: \"Channels and lanes are not sandboxes.\" Teammates can run commands on a host only if its owner turns on agent access, which starts off. Model calls go straight from the machine to Anthropic or OpenAI with the user's own key, kept in the keychain, and the shared directory holds only project, host and membership data, not channel content. GitHub Next warns: \"Only work this way with people you'd trust with the machine,\" and says to keep the host gateway on loopback or a private tailnet, never the public internet. It also says to \"expect rough edges\".",
+      "source": "https://ace.githubnext.com/",
+      "source_name": "GitHub Next, November 2026"
+    }
+  ],
+  "on_no_split": "run",
+  "shortlist": [
+    {
+      "motion": "This house believes coding agents make it better to own your core code than to depend on popular frameworks.",
+      "why": "A well-known tools engineer says agents make owning your stack the better bet; build vs depend is a real engineering split."
+    },
+    {
+      "motion": "This house believes the agent's maker, not the developer, is to blame when a coding agent leaks secrets into a repository.",
+      "why": "Apiiro found 1,379 secrets in Claude Code's approved-commands file on public GitHub; responsibility splits judgment."
+    },
+    {
+      "motion": "This house believes engineers should run coding agents in a minimal harness they control rather than the AI lab's official one.",
+      "why": "A developer left Claude Code for the minimal open-source Pi harness over churn and control."
+    },
+    {
+      "motion": "This house believes coding agents should run with the developer's own privileges rather than in a sandbox.",
+      "why": "GitHub Next's Ace runs agents with full user privileges, explicitly not sandboxed."
+    },
+    {
+      "motion": "This house believes AI will mean companies need more engineers, not fewer.",
+      "why": "Same essay says 'we need more people than ever'; not used, too close to the pick's source."
+    }
+  ],
+  "why": "Owning vs depending is an engineering judgment call with concrete numbers, the kind of question that has split the agents."
+}
