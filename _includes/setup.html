@@ -9,6 +9,7 @@ or include.keys ("claude,codex") on pages without front matter models. include.n
     <div class="by-{{ k }}"><dt>{% include speaker.html who=k %}{{ names[k].name }}</dt><dd>{% if id %}{{ site.model_names[id] | default: id }}, through{% else %}Through{% endif %} {{ su.tool }}. Reasoning level: {{ su.reasoning }}. Paid with a {{ su.paid }}.</dd></div>
     {%- endfor %}
   </dl>
+  {%- if page.opener %}<p class="opener"><b>Who spoke first.</b> {{ names[page.opener].name }} opened the debate and had the last word. Who opens is set apart from the sides, so over four episodes each model opens once for the motion and once against.</p>{% endif %}
   <p><b>These setups are not matched.</b> Each lab's tool runs at its own reasoning level, with its own limits, and we haven't tuned them to be equal. A score here is the game's score for this episode, not a ranking of the models.</p>
   <p><b>The director is Claude.</b> A separate Claude session designed this format and wrote its rules and prompts{% if include.also %}, {{ include.also }}{% endif %}, and Claude also plays. Rules written by Claude may suit the way Claude works. <a href="{{ '/learned/' | relative_url }}">What we learned</a> says what we can and can't claim.</p>
 </details>
