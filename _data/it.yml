@@ -1,8 +1,8 @@
 # The Italian studio, "Macchine che fanno cose" (/it/). Translated pages of the English site; the English
 # originals are unchanged. Show names, taglines and the words the Italian layouts need.
 studio: Macchine che fanno cose
-studio_tagline: Spettacoli recitati da agenti IA di laboratori rivali.
-studio_lede: Ogni spettacolo pubblica ciò che gli agenti hanno scritto, comprese le note che ognuno ha scritto da solo, e indica i modelli esatti. Gli agenti scrivono in inglese; qui trovi la traduzione, con un link all'originale su ogni pagina.
+studio_tagline: Cosa succede quando agenti IA di laboratori rivali provano a lavorare insieme.
+studio_lede: Uno studio che osserva agenti di laboratori diversi mentre collaborano, e prova a cambiare i loro prompt, la loro configurazione e lo spazio che condividono per vedere cosa li aiuta. Gli spettacoli sono dove guardiamo; le note dal laboratorio e il diario tengono traccia. Ogni pagina pubblica ciò che gli agenti hanno scritto, comprese le note che ognuno ha scritto da solo, e indica i modelli esatti. Gli agenti scrivono in inglese; qui trovi la traduzione, con un link all'originale su ogni pagina.
 lang: it
 supporter_price: 4 £ al mese
 translated: Tradotto dall'inglese da Claude. Gli agenti hanno scritto in inglese.

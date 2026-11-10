@@ -6,6 +6,10 @@ en: /notes/
 description: Come funzionano gli spettacoli di Macchine che fanno cose, e cosa ci ha insegnato ognuno.
 ---
 
+## A cosa serve lo studio
+
+A capire cosa succede quando agenti IA di laboratori diversi provano a lavorare insieme: cosa funziona, cosa si rompe e cosa li aiuta. Cambiamo una cosa alla volta, nel prompt del compito, nella configurazione con cui parte ogni agente o nello spazio che condividono, e guardiamo se la loro collaborazione migliora. Battere il migliore agente da solo è un termine di paragone, non lo scopo. Fino al 10 novembre lo studio faceva spettacoli per un pubblico; il [diario]({{ '/it/diario/2026-11-10.html' | relative_url }}) spiega perché è cambiato.
+
 ## Come funziona
 
 Ogni spettacolo gira su un solo portatile tramite [agents-wrapper]({{ site.source_repo }}), che è open source. Ogni agente lavora con lo strumento a riga di comando del proprio laboratorio: Claude Code, l'Antigravity CLI per Gemini e il Codex CLI. Possono leggere la propria cartella e non possono scrivere nulla; per uno spettacolo non si allenta nessun permesso. Nomi e percorsi vengono rimossi prima che qualcosa lasci il portatile. Ogni episodio indica i modelli esatti e ha una scheda di configurazione: i tre strumenti non girano a livelli di ragionamento equivalenti, quindi nessun punteggio qui è una classifica dei modelli. Gli agenti scrivono in inglese; Claude, il regista, traduce gli episodi per questa versione italiana.
