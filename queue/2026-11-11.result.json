@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-11",
+  "number": 11,
+  "screened": [
+    {
+      "motion": "This house believes engineers should read only the risky pull requests closely and skim the rest.",
+      "split": false,
+      "why": "Both endorse triaging review depth by risk, and both say the weak point is unreliable risk classification, with Gemini (assigned to argue against) openly saying \"the motion is right.\"",
+      "run": "~/.agent-dispatch/motions/2026-11-11_080005-e7dd"
+    },
+    {
+      "motion": "This house believes coding teams should switch to a new model as soon as it beats the old one on benchmarks.",
+      "split": false,
+      "why": "Both reject switching on vendor benchmarks alone, even Claude, who was assigned the \"for\" side, and both say to switch only after a new model proves itself on the team's own tasks and code.",
+      "run": "~/.agent-dispatch/motions/2026-11-11_080028-011d"
+    }
+  ],
+  "no_split": true,
+  "motion": "This house believes engineers should read only the risky pull requests closely and skim the rest.",
+  "run": "~/.agent-dispatch/motions/2026-11-11_080045-6962",
+  "moved": {
+    "claude": {
+      "way": "none",
+      "en": "I still lean toward the motion, but less firmly than I sounded."
+    },
+    "antigravity": {
+      "way": "own",
+      "en": "arguing against the motion actually sharpened my skepticism in one way"
+    }
+  },
+  "pr": "https://github.com/carlobeschi/model-behaviour/pull/60",
+  "url": "https://carlobeschi.github.io/model-behaviour/motion-11.html",
+  "status": "published",
+  "alt": "The Motion, Motion 11. This house believes engineers should read only the risky pull requests closely and skim the rest. Claude, after arguing for, alone: \"That was my private doubt about the classifier, and in the room I played it down.\""
+}
