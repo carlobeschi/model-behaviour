@@ -1,0 +1,97 @@
+---
+layout: null
+title: "Un biglietto per domani"
+permalink: /it/libri/un-biglietto-per-domani.html
+en: /books/a-note-for-tomorrow.html
+---
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Un biglietto per domani</title>
+<meta name="description" content="Una breve storia per lettori di circa 13 anni. Ogni nuova chat riparte da zero, così Anita impara a lasciarle un biglietto.">
+<meta property="og:title" content="Un biglietto per domani">
+<meta property="og:description" content="Una breve storia per lettori di circa 13 anni. Ogni nuova chat riparte da zero, così Anita impara a lasciarle un biglietto.">
+<meta property="og:type" content="book">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="{{ '/assets/mark.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&display=swap">
+<style>
+:root { --paper:#fbf7f0; --page:#fffdf8; --ink:#2b2b2b; --muted:#756c61; --line:#e8dfd1; --terra:#d97757; --picbg:#fbf7f0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1d1b18; --page:#262320; --ink:#efe8dd; --muted:#b0a596; --line:#3a352f; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1d1b18; --page:#262320; --ink:#efe8dd; --muted:#b0a596; --line:#3a352f; color-scheme:dark; }
+body { margin:0; background:var(--paper); color:var(--ink); font:18px/1.7 Literata, Georgia, serif; }
+main { max-width:680px; margin:0 auto; padding-block:36px 72px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); }
+header { text-align:center; padding-block:28px 12px; }
+.series { font:600 13px/1 "Baloo 2", system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--terra); margin:0; }
+h1 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:clamp(32px,7vw,48px); line-height:1.08; margin:12px 0 8px; text-wrap:balance; }
+.sub { color:var(--muted); font-style:italic; margin:0; }
+.ch { text-align:center; margin:56px 0 18px; }
+.ch .k { font:600 13px "Baloo 2", system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; }
+.ch h2 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:clamp(26px,5.5vw,34px); line-height:1.15; margin:4px 0 0; text-wrap:balance; }
+.sec { margin:30px 0; }
+.pic { width:min(100%, 420px); aspect-ratio:1/1; margin:0 auto 22px; background:var(--picbg); border-radius:10px; overflow:hidden; border:1px solid var(--line); }
+.pic svg, .pic img { width:100%; height:100%; display:block; }
+.sec p { margin:0 0 14px; text-wrap:pretty; }
+.orn { text-align:center; color:var(--terra); letter-spacing:.6em; margin:30px 0; }
+footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; text-align:center; color:var(--muted); font-size:15px; }
+
+.top { display:flex; justify-content:space-between; gap:12px; font:600 14px "Baloo 2", system-ui, sans-serif; letter-spacing:.04em; }
+.top a { color:var(--muted); text-decoration:none; }
+.top a:hover { color:var(--ink); }
+footer a { color:inherit; }
+.label { margin:14px 0 0; font:600 14px/1.4 "Baloo 2", system-ui, sans-serif; color:var(--muted); }
+.grown { margin-top:56px; background:var(--page); border:1px solid var(--line); border-radius:10px; padding:20px clamp(16px,4vw,26px) 22px; }
+.grown h2 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:26px; line-height:1.2; margin:0 0 4px; }
+.grown h3 { font:600 13px "Baloo 2", system-ui, sans-serif; letter-spacing:.12em; text-transform:uppercase; color:var(--terra); margin:18px 0 4px; }
+.grown p { margin:0; font-size:17px; }
+.grown a { color:inherit; }
+.printbtn { font:inherit; color:var(--muted); background:none; border:0; padding:0; cursor:pointer; letter-spacing:inherit; }
+.printbtn:hover { color:var(--ink); }
+.printbtn:focus-visible { outline:2px solid var(--terra); outline-offset:3px; }
+/* Print: black on white A4, pictures kept whole, each chapter on a new page. */
+@page { size:A4; margin:18mm 16mm; }
+@media print {
+  :root { --paper:#fff !important; --page:#fff !important; --ink:#1a1a1a !important; --muted:#555 !important; --line:#ccc !important; color-scheme:light !important; }
+  body { background:#fff; color:#1a1a1a; font-size:12pt; line-height:1.55; }
+  main { max-width:none; padding:0; }
+  .top, footer { display:none !important; }
+  header { padding-top:0; }
+  .ch ~ .ch { break-before:page; page-break-before:always; }
+  .ch, .ch h2 { break-after:avoid; }
+  .pic { width:95mm; break-inside:avoid; page-break-inside:avoid; border-color:#ccc; }
+  .sec p { orphans:3; widows:3; }
+  .grown { break-before:page; page-break-before:always; border:1px solid #ccc; }
+  .grown p { font-size:12pt; }
+}
+</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="Libri"><a href="{{ '/it/libri/' | relative_url }}">← Tutti i libri</a><button type="button" class="printbtn" id="printbtn" title="Stampa o salva come PDF">Stampa</button><a href="{{ '/it/' | relative_url }}">{{ site.data.it.studio }}</a></nav>
+<header><p class="series">Una storia di Anita</p><h1>Un biglietto per domani</h1><p class="sub">In cui ogni nuova chat riparte da zero, e tre righe brevi risolvono il problema</p><p class="label">Testi e illustrazioni realizzati con l'IA. Controllati e corretti da Carlo.</p></header>
+<div class='ch'><h2>Lunedì</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/a-note-for-tomorrow/01.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Anita doveva fare un podcast di storia sul Grande incendio di Londra del 1666. Aprì l'app del chatbot sul portatile e scrisse il suo piano. Dieci minuti. Divertente, ma vero. Raccontato come un telegiornale, come se stesse succedendo in diretta.</p><p>Più cose gli diceva in quella chat, più le risposte miglioravano. Le suggerì un inizio da edizione straordinaria: «È scoppiato un incendio in un forno di Pudding Lane!» Scrisse delle domande brevi da fare a un finto fornaio.</p><p>Leo si sporse oltre la sua spalla. «Chiedigli se al fornaio è andata in fumo la carriera.»</p><p>«Leo. No.»</p><p>Ma lei rise, e lo scrisse lo stesso. Il chatbot le diede altre tre battute, tutte migliori della sua.</p><p>All'ora di dormire, il piano era perfetto.</p></section>
+<div class='orn' aria-hidden='true'>· · ·</div>
+<div class='ch'><h2>Martedì</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/a-note-for-tomorrow/02.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Anita aprì una nuova chat. «Possiamo continuare con il podcast?» scrisse.</p><p>Il chatbot rispose: «Certo! Di cosa parla il tuo podcast?»</p><p>Anita sbuffò. Questa nuova chat non aveva il piano di lunedì. Né l'idea del telegiornale, né le battute, né i dieci minuti. Dovette riscrivere tutto da capo.</p><p>Poi ci arrivò. In questa app, ogni nuova chat parte dallo stesso punto. Non si porta dietro la chat di ieri.</p><p>«Quindi non mi sta ignorando», disse. «Riparte da zero ogni volta.»</p><p>A meno che qualcuno non le lasci un biglietto.</p></section>
+<div class='orn' aria-hidden='true'>· · ·</div>
+<div class='ch'><h2>Mercoledì</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/a-note-for-tomorrow/03.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Anita trovò la funzione memoria dell'app. Permetteva di salvare un breve biglietto che una nuova chat poteva leggere. Un biglietto per la chat di domani!</p><p>Ma il biglietto doveva essere corto. Non ci stava tutto. Così scelse con cura. Cosa contava davvero?</p><p>Cancellò le battute: quelle potevano cambiare. Cancellò le domande al fornaio: troppo lunghe.</p><p>Alla fine, scrisse tre cose:</p><p>1. Sto facendo un podcast di storia di 10 minuti sul Grande incendio di Londra.</p><p>2. È raccontato come un telegiornale in diretta.</p><p>3. Divertente, ma vero.</p><p>Lo rilesse due volte. Corto e chiaro. Premette salva.</p></section>
+<div class='orn' aria-hidden='true'>· · ·</div>
+<div class='ch'><h2>Giovedì</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/a-note-for-tomorrow/04.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Anita aprì una nuova chat. Scrisse: «Finiamo il podcast.»</p><p>Questa volta, il chatbot lesse il biglietto salvato insieme al suo messaggio. La risposta andò dritta al telegiornale, in diretta da Pudding Lane. Niente spiegazioni. Niente ricominciare da capo.</p><p>In serata, il podcast era finito. Dieci minuti. Divertente, ma vero. Anita lo fece ascoltare a tutta la famiglia. Tutti risero nei punti giusti. Leo rise più forte di tutti alla battuta del fornaio.</p><p>Guardò il suo biglietto di tre righe e sorrise.</p><p>E tu, cosa scriveresti in un biglietto per la chat di domani?</p></section>
+<aside class="grown" aria-label="Per i grandi"><h2>Per i grandi</h2><h3>L'idea</h3><p>In molte app di chatbot, ogni nuova chat parte dallo stesso punto. Non si porta dietro la conversazione di ieri. Se vuoi che usi qualcosa, glielo ridici, oppure salvi un breve biglietto che una nuova chat può leggere.</p><h3>Parliamone</h3><p>Cosa scriveresti in un biglietto per la chat di domani? Cosa lasceresti fuori, e perché?</p><h3>Buono a sapersi</h3><p>Le app funzionano in modo diverso: alcune hanno una funzione memoria, altre no, e alcune la attivano da sole. Dove c'è, di solito puoi vedere, cambiare e cancellare quello che è salvato. Vale la pena guardarla insieme, e tenerci fuori le cose private.</p><h3>Come è stato fatto questo libro</h3><p>Testi e illustrazioni sono stati realizzati con l'IA, poi controllati e corretti da persone prima della pubblicazione. <a href="{{ '/it/libri/' | relative_url }}">Scopri come facciamo questi libri</a>.</p></aside>
+<footer>Prodotto da Carlo. Realizzato con l'IA.<br><a href="{{ '/books/a-note-for-tomorrow.html' | relative_url }}" hreflang="en-GB" lang="en-GB">In English</a> · <a href="{{ '/it/libri/' | relative_url }}">Come facciamo questi libri</a></footer>
+</main>
+<script>
+  // Load every picture before printing, because pictures further in are lazy-loaded.
+  function eagerImages() {
+    const imgs = [...document.images];
+    imgs.forEach(i => { i.loading = 'eager'; });
+    return Promise.all(imgs.map(i => i.complete ? null : new Promise(r => { i.onload = i.onerror = r; })));
+  }
+  window.addEventListener('beforeprint', eagerImages);
+  document.getElementById('printbtn').addEventListener('click', async () => { await eagerImages(); window.print(); });
+</script>
+</body>
+</html>
