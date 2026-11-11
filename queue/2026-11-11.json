@@ -1,0 +1,39 @@
+{
+  "pick": {
+    "motion": "This house believes engineers should read only the risky pull requests closely and skim the rest.",
+    "brief": "Warp has published an open-source skill, /merge-risk, that agents can run on any pull request \"to evaluate alignment, impact, verification, rollback cost, and error detection\". Alignment checks the change sticks to its issue and flags drive-by edits. Impact flags sensitive paths such as auth, permissions, payments, personal data, migrations, dependencies and infrastructure. Verification checks that tests cover the behaviour and that user-facing changes come with proof such as screenshots. Rollback cost \"separates reversible two-way doors from destructive or hard-to-undo changes\". Error detection checks whether logs, monitoring and alerts would show a failure. The scores are meant to \"focus human attention on the most important changes\". A similar /pr skill by Matt Pocock, updated on 5 October 2026, asks each PR to state its \"merge danger\" and says to \"skim a two-way door with a small blast radius, and read a one-way door slowly\", while warning that the agent's own door call needs the closest check. Neither page gives numbers on review time or missed bugs. On 10 November 2026 The Code newsletter reported that the skill's author at Warp still wants a human to sign off every merge.",
+    "source": "https://www.warp.dev/merge-risk",
+    "source_name": "Warp, November 2026"
+  },
+  "backup": {
+    "motion": "This house believes coding teams should switch to a new model as soon as it beats the old one on benchmarks.",
+    "brief": "On 9 November 2026 Anthropic released Claude Fable 5.2 and Mythos 5.2, \"the same underlying model\": Fable is open to everyone with cyber and biology safeguards, and Mythos is limited to vetted organisations. Both cost $8 per million input tokens and $40 per million output tokens, and Anthropic says output is \"up to 30% faster\" than Fable 5.1. In Anthropic's own table, Fable 5.2 at its highest effort scores 49.1% on FrontierCode 2.0 against 45.5% for Opus 5.5, and at high effort scores 45.3% at \"roughly half the cost per task\". It also leads on FrontierSWE v2 (69.9% vs 62.3%) and Terminal-Bench-Science (74.6% vs 58.7%). Opus 5.5 leads on one row, AA-Briefcase (1800 vs 1785). Anthropic says Fable's safeguards \"will block most cybersecurity-related tasks\". All scores are the vendor's own; the page gives no results from independent tests or from teams' own codebases.",
+    "source": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+    "source_name": "Anthropic, November 2026"
+  },
+  "reserves": [],
+  "on_no_split": "run",
+  "shortlist": [
+    {
+      "motion": "This house believes engineers should read only the risky pull requests closely and skim the rest.",
+      "why": "Warp's open-source /merge-risk skill scores PRs so humans focus on the risky ones; how much to trust a triage is a judgment split."
+    },
+    {
+      "motion": "This house believes coding teams should switch to a new model as soon as it beats the old one on benchmarks.",
+      "why": "Fable 5.2 beats Opus 5.5 on vendor benchmarks at half the cost; switch now or test first."
+    },
+    {
+      "motion": "This house believes agents should be told to stop and ask before bolting on a feature.",
+      "why": "The Code's anti-bolt-on prompt; source is a social post behind a blocked link."
+    },
+    {
+      "motion": "This house believes simple AI coding habits beat subagents and skills.",
+      "why": "Eric Raymond's 'deliberately primitive' approach; source link blocked."
+    },
+    {
+      "motion": "This house believes agent instructions files do more harm than good once they go stale.",
+      "why": "Study: agents follow outdated CLAUDE.md over code 90% of the time; source link blocked."
+    }
+  ],
+  "why": "Plain, engineering, and about human judgment: which reviews still need a person's full attention."
+}
