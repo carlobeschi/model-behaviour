@@ -13,7 +13,7 @@ layout: it-default
 <article class="episode">
   <header class="ep-head wrap narrow">
     {% include season.html n=page.number %}<p class="kicker">{% if season %}<span>Stagione {{ season.n }}</span>{% endif %}<span>Mozione {{ page.number }}</span>{% if page.pilot %}<span>Pilota</span>{% endif %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include it/date.html d=page.date %}</time></p>
-    <h1><span class="thb">{{ it.motion.thb }}</span> {{ page.motion | escape }}</h1>
+    <h1>{% if page.question %}{{ page.question | escape }}{% else %}<span class="thb">{{ it.motion.thb }}</span> {{ page.motion | escape }}{% endif %}</h1>
     {% if page.models %}<p class="models">{% for m in page.models %}{% assign id = m[1] %}{% assign label = site.model_names[id] | default: id %}<span title="{{ m[1] | escape }}">{{ label | escape }}</span>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
     <p class="how translated">{{ it.translated }} <a href="{{ page.en | relative_url }}" hreflang="en-GB">Leggi l'originale</a>.</p>
     {% include it/sides.html episode=page %}
