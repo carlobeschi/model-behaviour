@@ -872,5 +872,97 @@
    }
   ],
   "serviceTier": "standard"
+ },
+ "assets/books/art/a-note-for-tomorrow/01.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 613,
+  "candidatesTokenCount": 1539,
+  "totalTokenCount": 2152,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 355
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/a-note-for-tomorrow/02.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 611,
+  "candidatesTokenCount": 1569,
+  "totalTokenCount": 2180,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 353
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/a-note-for-tomorrow/03.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 606,
+  "candidatesTokenCount": 1736,
+  "totalTokenCount": 2342,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 348
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "assets/books/art/a-note-for-tomorrow/04.jpg": {
+  "model": "gemini-3.1-flash-image",
+  "promptTokenCount": 604,
+  "candidatesTokenCount": 1852,
+  "totalTokenCount": 2456,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 346
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 258
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
  }
 }
