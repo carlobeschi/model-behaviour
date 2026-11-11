@@ -945,8 +945,8 @@
  "assets/books/art/a-note-for-tomorrow/04.jpg": {
   "model": "gemini-3.1-flash-image",
   "promptTokenCount": 604,
-  "candidatesTokenCount": 1852,
-  "totalTokenCount": 2456,
+  "candidatesTokenCount": 1655,
+  "totalTokenCount": 2259,
   "promptTokensDetails": [
    {
     "modality": "TEXT",
