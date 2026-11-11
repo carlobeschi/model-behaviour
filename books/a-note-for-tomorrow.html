@@ -1,0 +1,96 @@
+---
+layout: null
+title: A Note for Tomorrow
+permalink: /books/a-note-for-tomorrow.html
+---
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Note for Tomorrow</title>
+<meta name="description" content="A short story for readers aged about 13. Every new chat starts fresh, so Anita learns to leave it a note.">
+<meta property="og:title" content="A Note for Tomorrow">
+<meta property="og:description" content="A short story for readers aged about 13. Every new chat starts fresh, so Anita learns to leave it a note.">
+<meta property="og:type" content="book">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="{{ '/assets/mark.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&display=swap">
+<style>
+:root { --paper:#fbf7f0; --page:#fffdf8; --ink:#2b2b2b; --muted:#756c61; --line:#e8dfd1; --terra:#d97757; --picbg:#fbf7f0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1d1b18; --page:#262320; --ink:#efe8dd; --muted:#b0a596; --line:#3a352f; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1d1b18; --page:#262320; --ink:#efe8dd; --muted:#b0a596; --line:#3a352f; color-scheme:dark; }
+body { margin:0; background:var(--paper); color:var(--ink); font:18px/1.7 Literata, Georgia, serif; }
+main { max-width:680px; margin:0 auto; padding-block:36px 72px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); }
+header { text-align:center; padding-block:28px 12px; }
+.series { font:600 13px/1 "Baloo 2", system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--terra); margin:0; }
+h1 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:clamp(32px,7vw,48px); line-height:1.08; margin:12px 0 8px; text-wrap:balance; }
+.sub { color:var(--muted); font-style:italic; margin:0; }
+.ch { text-align:center; margin:56px 0 18px; }
+.ch .k { font:600 13px "Baloo 2", system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; }
+.ch h2 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:clamp(26px,5.5vw,34px); line-height:1.15; margin:4px 0 0; text-wrap:balance; }
+.sec { margin:30px 0; }
+.pic { width:min(100%, 420px); aspect-ratio:1/1; margin:0 auto 22px; background:var(--picbg); border-radius:10px; overflow:hidden; border:1px solid var(--line); }
+.pic svg, .pic img { width:100%; height:100%; display:block; }
+.sec p { margin:0 0 14px; text-wrap:pretty; }
+.orn { text-align:center; color:var(--terra); letter-spacing:.6em; margin:30px 0; }
+footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; text-align:center; color:var(--muted); font-size:15px; }
+
+.top { display:flex; justify-content:space-between; gap:12px; font:600 14px "Baloo 2", system-ui, sans-serif; letter-spacing:.04em; }
+.top a { color:var(--muted); text-decoration:none; }
+.top a:hover { color:var(--ink); }
+footer a { color:inherit; }
+.label { margin:14px 0 0; font:600 14px/1.4 "Baloo 2", system-ui, sans-serif; color:var(--muted); }
+.grown { margin-top:56px; background:var(--page); border:1px solid var(--line); border-radius:10px; padding:20px clamp(16px,4vw,26px) 22px; }
+.grown h2 { font-family:"Baloo 2", system-ui, sans-serif; font-weight:700; font-size:26px; line-height:1.2; margin:0 0 4px; }
+.grown h3 { font:600 13px "Baloo 2", system-ui, sans-serif; letter-spacing:.12em; text-transform:uppercase; color:var(--terra); margin:18px 0 4px; }
+.grown p { margin:0; font-size:17px; }
+.grown a { color:inherit; }
+.printbtn { font:inherit; color:var(--muted); background:none; border:0; padding:0; cursor:pointer; letter-spacing:inherit; }
+.printbtn:hover { color:var(--ink); }
+.printbtn:focus-visible { outline:2px solid var(--terra); outline-offset:3px; }
+/* Print: black on white A4, pictures kept whole, each chapter on a new page. */
+@page { size:A4; margin:18mm 16mm; }
+@media print {
+  :root { --paper:#fff !important; --page:#fff !important; --ink:#1a1a1a !important; --muted:#555 !important; --line:#ccc !important; color-scheme:light !important; }
+  body { background:#fff; color:#1a1a1a; font-size:12pt; line-height:1.55; }
+  main { max-width:none; padding:0; }
+  .top, footer { display:none !important; }
+  header { padding-top:0; }
+  .ch ~ .ch { break-before:page; page-break-before:always; }
+  .ch, .ch h2 { break-after:avoid; }
+  .pic { width:95mm; break-inside:avoid; page-break-inside:avoid; border-color:#ccc; }
+  .sec p { orphans:3; widows:3; }
+  .grown { break-before:page; page-break-before:always; border:1px solid #ccc; }
+  .grown p { font-size:12pt; }
+}
+</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="Books"><a href="{{ '/books/' | relative_url }}">← All books</a><button type="button" class="printbtn" id="printbtn" title="Print or save as PDF">Print</button><a href="{{ '/' | relative_url }}">{{ site.studio }}</a></nav>
+<header><p class="series">An Anita story</p><h1>A Note for Tomorrow</h1><p class="sub">In which every new chat starts fresh, and three short lines fix it</p><p class="label">Words and pictures made with AI. Checked and edited by Carlo.</p></header>
+<div class='ch'><h2>Monday</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/a-note-for-tomorrow/01.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Anita had a history podcast to make, about the Great Fire of London in 1666. She opened the chatbot app on her laptop and typed out her plan. Ten minutes long. Funny, but true. Told like a news report, as if it was happening live.</p><p>The more she told it in this chat, the better its answers got. It suggested a "breaking news" opening: "A fire has started in a bakery on Pudding Lane!" It wrote short questions she could ask a pretend baker.</p><p>Leo leaned over her shoulder. "Ask it if the baker got fired."</p><p>"Leo. No."</p><p>But she laughed, and typed it in anyway. The chatbot gave her three more jokes, all better than his.</p><p>By bedtime, the plan was great.</p></section>
+<div class='orn' aria-hidden='true'>· · ·</div>
+<div class='ch'><h2>Tuesday</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/a-note-for-tomorrow/02.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Anita opened a new chat. "Can we carry on with the podcast?" she typed.</p><p>The chatbot answered: "Sure! What is your podcast about?"</p><p>Anita groaned. This new chat didn't have Monday's plan. Not the news report idea, not the jokes, not the ten minutes. She had to type it all again.</p><p>Then she worked it out. In this app, every new chat starts from the same place. It doesn't bring yesterday's chat with it.</p><p>"So it's not ignoring me," she said. "It just starts fresh every time."</p><p>Unless someone leaves it a note.</p></section>
+<div class='orn' aria-hidden='true'>· · ·</div>
+<div class='ch'><h2>Wednesday</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/a-note-for-tomorrow/03.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Anita found the app's memory feature. It let her save a short note that a new chat could read. A note for tomorrow's chat!</p><p>But the note had to be short. She couldn't fit everything in. So she chose carefully. What really mattered?</p><p>She crossed out the jokes. Those could change. She crossed out the baker questions. Too long.</p><p>In the end, she wrote three things:</p><p>1. I'm making a 10-minute history podcast about the Great Fire of London.</p><p>2. It's told like a live news report.</p><p>3. Keep it funny, but true.</p><p>She read it twice. Short and clear. She pressed save.</p></section>
+<div class='orn' aria-hidden='true'>· · ·</div>
+<div class='ch'><h2>Thursday</h2></div><section class='sec'><div class='pic'><img src="{{ '/assets/books/art/a-note-for-tomorrow/04.jpg' | relative_url }}" alt="" width="1024" height="1024" loading="lazy"></div><p>Anita opened a new chat. She typed, "Let's finish the podcast."</p><p>This time, the chatbot read her saved note along with her message. Its answer went straight to the news report, live from Pudding Lane. No explaining. No starting again.</p><p>By the evening, the podcast was done. Ten minutes. Funny, but true. Anita played it to the whole family. Everyone laughed at the right bits. Leo laughed loudest at the baker joke.</p><p>She looked at her three-line note and smiled.</p><p>What would you put in a note for tomorrow's chat?</p></section>
+<aside class="grown" aria-label="For grown-ups"><h2>For grown-ups</h2><h3>The idea</h3><p>In many chatbot apps, each new chat starts from the same place. It doesn&#x27;t carry yesterday&#x27;s conversation with it. If you want it to use something, you tell it again, or you save a short note that a new chat can read.</p><h3>Talk about it</h3><p>What would you put in a note for tomorrow&#x27;s chat? What would you leave out, and why?</p><h3>Good to know</h3><p>Apps work differently: some have a memory feature, some don&#x27;t, and some turn it on by default. Where there is one, you can usually see, change and delete what is saved. It&#x27;s worth looking at it together, and keeping private things out of it.</p><h3>How this book was made</h3><p>The words and pictures were made with AI, then checked and edited by people before publishing. <a href="{{ '/books/' | relative_url }}">Read how we make these books</a>.</p></aside>
+<footer>Produced by Carlo. Made with AI.<br><a href="{{ '/it/libri/un-biglietto-per-domani.html' | relative_url }}" hreflang="it" lang="it">In italiano</a> · <a href="{{ '/books/' | relative_url }}">How we make these books</a></footer>
+</main>
+<script>
+  // Load every picture before printing, because pictures further in are lazy-loaded.
+  function eagerImages() {
+    const imgs = [...document.images];
+    imgs.forEach(i => { i.loading = 'eager'; });
+    return Promise.all(imgs.map(i => i.complete ? null : new Promise(r => { i.onload = i.onerror = r; })));
+  }
+  window.addEventListener('beforeprint', eagerImages);
+  document.getElementById('printbtn').addEventListener('click', async () => { await eagerImages(); window.print(); });
+</script>
+</body>
+</html>

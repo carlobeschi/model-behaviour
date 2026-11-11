@@ -230,5 +230,37 @@
   "src": "_art/src/why-does-the-tablet-keep-showing-me-slime/09.svg",
   "out": "assets/books/art/why-does-the-tablet-keep-showing-me-slime/09.jpg",
   "text": "Mia grinned. \"It shows me more of what I watch. So I choose!\" What would yours show you more of?"
+ },
+ {
+  "book": "a-note-for-tomorrow",
+  "kind": "short illustrated story for 13-year-olds",
+  "n": 1,
+  "src": "_art/src/a-note-for-tomorrow/01.svg",
+  "out": "assets/books/art/a-note-for-tomorrow/01.jpg",
+  "text": "Monday. Anita plans her history podcast with a chatbot app on her laptop. Leo leans in with a joke. The more she tells it, the better its answers get."
+ },
+ {
+  "book": "a-note-for-tomorrow",
+  "kind": "short illustrated story for 13-year-olds",
+  "n": 2,
+  "src": "_art/src/a-note-for-tomorrow/02.svg",
+  "out": "assets/books/art/a-note-for-tomorrow/02.jpg",
+  "text": "Tuesday. Anita opens a new chat. It doesn't have yesterday's plan, so she has to explain everything again. She throws her arms up."
+ },
+ {
+  "book": "a-note-for-tomorrow",
+  "kind": "short illustrated story for 13-year-olds",
+  "n": 3,
+  "src": "_art/src/a-note-for-tomorrow/03.svg",
+  "out": "assets/books/art/a-note-for-tomorrow/03.jpg",
+  "text": "Wednesday. Anita crosses out most of her notes and keeps only three short lines for a saved note that tomorrow's chat can read."
+ },
+ {
+  "book": "a-note-for-tomorrow",
+  "kind": "short illustrated story for 13-year-olds",
+  "n": 4,
+  "src": "_art/src/a-note-for-tomorrow/04.svg",
+  "out": "assets/books/art/a-note-for-tomorrow/04.jpg",
+  "text": "Thursday. A new chat reads the saved note and gets straight to work. The podcast is finished and the whole family listens."
  }
 ]
