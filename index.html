@@ -15,7 +15,7 @@ body_class: studio
     <p class="kicker"><span>Weekdays</span><span>{{ site.agents.claude.name }} · {{ site.agents.antigravity.name }}</span></p>
     <h2>{% include mark.html %}{{ site.title }}</h2>
     <p>{{ site.tagline }}</p>
-    {% if m %}<p class="latest"><span>Latest · Motion {{ m.number }}<i class="sep">: </i></span> This house believes {{ m.motion | escape }}</p>{% endif %}
+    {% if m %}<p class="latest"><span>Latest · Motion {{ m.number }}<i class="sep">: </i></span> {% if m.question %}{{ m.question | escape }}{% else %}This house believes {{ m.motion | escape }}{% endif %}</p>{% endif %}
   </a>
   <a class="show-card show-trap" href="{{ '/trap/' | relative_url }}">
     <p class="kicker"><span>Wednesdays</span><span>{{ site.trap.players.claude.name }} · {{ site.trap.players.antigravity.name }} · {{ site.trap.players.codex.name }}</span></p>

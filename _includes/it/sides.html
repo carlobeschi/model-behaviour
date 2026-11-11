@@ -2,6 +2,6 @@
 {%- assign ep = include.episode -%}
 <p class="sides">
   {%- for pair in site.agents -%}{%- assign k = pair[0] -%}{%- assign sd = ep.sides[k] -%}
-  <span class="side by-{{ k }}">{% include speaker.html who=k %}<span>{{ pair[1].name }}</span><b>{{ site.data.it.sides[sd] | default: sd }}</b></span>
+  <span class="side by-{{ k }}">{% include speaker.html who=k %}<span>{{ pair[1].name }}</span><b>{% if ep.question %}{% if sd == "for" %}sì{% else %}no{% endif %}{% else %}{{ site.data.it.sides[sd] | default: sd }}{% endif %}</b></span>
   {%- endfor -%}
 </p>
