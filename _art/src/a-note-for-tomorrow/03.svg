@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<rect width="400" height="400" fill="#fbf7f0"/>
+<path d="M20,320 L380,320" stroke="#2b2b2b" stroke-width="2.5"/>
+<rect x="40" y="60" width="150" height="200" rx="4" fill="#fbf7f0" stroke="#2b2b2b" stroke-width="2.5"/>
+<path d="M58,90 L172,90 M58,110 L160,110 M58,130 L172,130 M58,150 L150,150 M58,170 L168,170 M58,190 L140,190 M58,210 L170,210 M58,230 L150,230" stroke="#999" stroke-width="2"/>
+<path d="M54,110 L66,105 L78,115 L90,105 L102,115 L114,105 L126,115 L138,105 L150,115 L162,105" stroke="#d97757" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+<path d="M54,150 L66,145 L78,155 L90,145 L102,155 L114,145 L126,155 L138,145 L150,155 L162,145" stroke="#d97757" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+<path d="M54,170 L66,165 L78,175 L90,165 L102,175 L114,165 L126,175 L138,165 L150,175 L162,165" stroke="#d97757" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+<path d="M54,190 L66,185 L78,195 L90,185 L102,195 L114,185 L126,195 L138,185 L150,195 L162,185" stroke="#d97757" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+<path d="M54,230 L66,225 L78,235 L90,225 L102,235 L114,225 L126,235 L138,225 L150,235 L162,225" stroke="#d97757" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+
+<g transform="rotate(-6 285 150)">
+<rect x="230" y="110" width="110" height="80" rx="3" fill="#fbf7f0" stroke="#2b2b2b" stroke-width="2.5"/>
+<path d="M248,134 L322,134 M248,152 L316,152 M248,170 L304,170" stroke="#999" stroke-width="2.5"/>
+</g>
+<polygon points="250,320 310,320 280,256" fill="#d97757"/>
+<circle cx="280" cy="238" r="20" fill="#8aa37b"/>
+<line x1="292" y1="268" x2="310" y2="196" stroke="#2b2b2b" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M218,64 Q224,74 214,84" stroke="#e0b04a" stroke-width="5" fill="none" stroke-linecap="round"/>
+<circle cx="218" cy="62" r="6" fill="#e0b04a"/>
+<path d="M232,70 Q260,80 262,104" stroke="#2b2b2b" stroke-width="1.5" fill="none" stroke-dasharray="4 4"/>
+</svg>
