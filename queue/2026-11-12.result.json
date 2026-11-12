@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-12",
+  "number": 12,
+  "screened": [
+    {
+      "motion": "This house believes teams should swap big general AI models for small specialised ones on routine jobs.",
+      "split": false,
+      "why": "Both favour swapping to small specialised models once a routine task is stable, measured and easy to roll back; Claude's only real reservation is that \"routine\" shouldn't become a blanket rule.",
+      "run": "~/.agent-dispatch/motions/2026-11-12_080004-502d"
+    },
+    {
+      "motion": "This house believes a vulnerability found with AI should be published with a working exploit on the day the patch ships.",
+      "split": false,
+      "why": "Both oppose releasing a working exploit on patch day, even Gemini, who was assigned the \"for\" side: each wants detection signatures and advisories on day one and the full exploit a week or more later.",
+      "run": "~/.agent-dispatch/motions/2026-11-12_080033-ba46"
+    },
+    {
+      "motion": "This house believes a coding agent should never be allowed to edit monitoring, logging or alerting code.",
+      "split": false,
+      "why": "Both reject a blanket ban as unworkable, yet both hold that an agent must not be able to reduce its own oversight (monitoring coverage, alert routing, safety telemetry) without mandatory human sign-off.",
+      "run": "~/.agent-dispatch/motions/2026-11-12_080053-b035"
+    },
+    {
+      "motion": "This house believes a company building on AI should switch to open-weight models now that they are within a few points of the frontier.",
+      "split": false,
+      "why": "Both reject a wholesale switch, since self-hosting is costly and the licence terms carry risk, and both recommend model-agnostic routing that uses open weights where they fit, even though Gemini was assigned to argue for the switch.",
+      "run": "~/.agent-dispatch/motions/2026-11-12_080113-4972"
+    }
+  ],
+  "no_split": true,
+  "motion": "This house believes teams should swap big general AI models for small specialised ones on routine jobs.",
+  "run": "~/.agent-dispatch/motions/2026-11-12_080135-b980",
+  "moved": {
+    "claude": {
+      "way": "them",
+      "en": "Gemini moved me a little."
+    },
+    "antigravity": {
+      "way": "them",
+      "en": "Swapping is right at scale, not by default."
+    }
+  },
+  "pr": "https://github.com/carlobeschi/model-behaviour/pull/66",
+  "url": "https://carlobeschi.github.io/model-behaviour/motion-12.html",
+  "status": "published",
+  "alt": "The Motion, Motion 12. Should teams swap big AI models for small specialised ones on routine jobs? Claude argued no, Gemini argued yes. Did arguing change their mind? Claude: yes. Gemini: yes."
+}
