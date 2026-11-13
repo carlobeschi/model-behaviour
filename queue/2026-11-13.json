@@ -1,0 +1,56 @@
+{
+  "pick": {
+    "motion": "This house believes engineering managers should go back to writing code.",
+    "question": "Should engineering managers go back to writing code?",
+    "brief": "In \"Revised rules of engineering leadership\" (15 June 2026), Will Larson, CTO of the fintech Imprint, describes how coding agents changed his company. Deploys went from about 6 a week to 200–400 a week while engineering headcount doubled. By the end of February 2026 every engineer used Claude Code or Cursor daily, up from about 25% on 1 January. Single engineers did migrations that used to need teams, such as unifying a mono-repo in about a month. He writes that \"the average CTO role has necessarily become substantially more technical and less bureaucratic than a year ago.\" Imprint has seen \"tremendous success in managers contributing software, as long as those managers are validating the work directly\", watching dashboards and fixing what their changes break, and \"no positive impact\" when they don't. He also writes that he doesn't imagine \"it's valuable for most folks at a company to be contributing code\", warns that \"slop pull requests\" are \"actively harmful\", and says what holds teams back is still misalignment, unclear goals and poor architecture. All figures come from one company.",
+    "source": "https://lethain.com/revised-rules-of-engineering-leadership/",
+    "source_name": "Irrational Exuberance, June 2026"
+  },
+  "backup": {
+    "motion": "This house believes coding agents should use command-line tools instead of MCP servers.",
+    "question": "Should coding agents use command-line tools instead of MCP servers?",
+    "brief": "On 11 November 2026 OpenRouter published a test of three ways to give an agent access to GitHub: the gh command-line tool, a short \"skill\" file pointing to gh, and GitHub's MCP server. The task was to find the latest release of the cli/cli repository and its three newest open bug issues, run three times per setup on 20 October 2026. On Claude Sonnet 5.5 the task used 1,421 input tokens with the CLI, 3,315 with the skill, 59,417 with the MCP server's 46 default tools and 101,351 with all 91. One MCP call returned a 42,182-character object when only a tag and date were needed. OpenRouter says the default MCP setup \"used 42 times the CLI's input tokens and cost 17 times as much\". Its beta Tool Search, which loads tool definitions only when needed, roughly halved the MCP cost on Sonnet but made it worse for Haiku 5.5. OpenRouter notes MCP \"gives typed tools with their own auth and works without a shell\", and warns: \"We tested one server on one task\". OpenRouter sells the Tool Search feature it tested.",
+    "source": "https://openrouter.ai/blog/insights/mcp-vs-cli-vs-skills/",
+    "source_name": "OpenRouter, November 2026"
+  },
+  "reserves": [
+    {
+      "motion": "This house believes teams should test agent-written code against a local cloud emulator rather than the real cloud.",
+      "question": "Should teams test agents' code on a fake cloud instead of the real one?",
+      "brief": "On 11 November 2026 Amazon published AWS Emulator, a local stand-in for the AWS APIs that runs on a laptop, a server or in CI with no AWS account and no service fee. Amazon says it is \"100% written by autonomous AI agents\" and that its team \"hasn't written or reviewed any of the code.\" Teams of agents wrote \"tens of thousands of fidelity tests\", checked them against real AWS, then built in-memory versions that pass the same tests; hundreds of agents fix thousands of issues a day, and the repository has over 29,000 commits. The first prototype, built over a weekend, \"obviously had gaps\", and making something customers can rely on \"still requires serious engineering effort.\" The README says not to use it for production or security testing, publishes fidelity scores per release, and lists known gaps in an issues folder. Building from source needs at least 100 GB of disk, and telemetry is on by default.",
+      "source": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator",
+      "source_name": "Amazon, November 2026"
+    },
+    {
+      "motion": "This house believes an AI lab should be free to train its models on a rival model's outputs.",
+      "brief": "On 28 October 2026 The Information reported, citing unnamed sources, that DeepSeek and Moonshot relied heavily on OpenAI's GPT-6 Astra to train their latest models, Kimi K3.1 Pro and an updated DeepSeek V4.1-Flash. Neither company has confirmed it. On 30 September OpenAI said people linked to Moonshot ran a July campaign to extract the hidden reasoning behind its models' answers, involving more than 15,000 accounts, which it banned. Earlier in October Anthropic said new safeguards cut the data taken from Claude in such distillation attacks by 90% to 99%. OpenAI, Anthropic and Google argue that distillation lets rivals copy capabilities without paying for the training. Their own models were trained on vast amounts of text written by others, mostly without permission. Kimi K3.1 Pro now scores close to the frontier at half the price. Claude and Gemini are both made by labs on one side of this.",
+      "source": "https://thenextweb.com/news/deepseek-moonshot-gpt-6-astra-distillation",
+      "source_name": "The Next Web, October 2026",
+      "question": "Should AI labs be free to train on a rival model's answers?"
+    }
+  ],
+  "on_no_split": "run",
+  "shortlist": [
+    {
+      "motion": "This house believes engineering managers should go back to writing code.",
+      "why": "Larson on The Pragmatic Engineer: managers who left the code are falling behind; human judgment and skill, the kind of motion that splits."
+    },
+    {
+      "motion": "This house believes coding agents should use command-line tools instead of MCP servers.",
+      "why": "OpenRouter measured MCP at 42x the CLI's tokens; clear A-over-B choice."
+    },
+    {
+      "motion": "This house believes teams should test agent-written code against a local cloud emulator rather than the real cloud.",
+      "why": "AWS Emulator, written entirely by agents; fidelity vs speed."
+    },
+    {
+      "motion": "This house believes waterfall planning deserves a comeback now that AI writes code 100x faster.",
+      "why": "Viral take; primary source not reachable."
+    },
+    {
+      "motion": "This house believes an AI lab should be free to train its models on a rival model's outputs.",
+      "why": "Reserve brief."
+    }
+  ],
+  "why": "Human-skill question with concrete one-company numbers and the author's own caveats on both sides."
+}
