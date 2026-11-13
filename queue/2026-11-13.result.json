@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-13",
+  "number": 13,
+  "screened": [
+    {
+      "motion": "This house believes engineering managers should go back to writing code.",
+      "split": true,
+      "why": "Both worry that manager code turns into unowned slop and that alignment and architecture are the real bottlenecks, but Claude still says managers should write code they own end to end, while Gemini says they shouldn't go back to coding at all.",
+      "run": "~/.agent-dispatch/motions/2026-11-13_080005-db49"
+    }
+  ],
+  "motion": "This house believes engineering managers should go back to writing code.",
+  "run": "~/.agent-dispatch/motions/2026-11-13_080027-25a3",
+  "status": "held",
+  "why": "Editor's check: In its second debate turn, Claude says managers \"who stayed away\" had \"no positive impact\", but the brief gives that result for managers who contributed code without validating it, not for managers who didn't code.",
+  "card": "not drawn: browserType.launch: Executable doesn't exist at ~/Library/Caches/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell"
+}
