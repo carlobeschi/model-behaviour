@@ -1,0 +1,56 @@
+{
+  "pick": {
+    "motion": "This house believes teams should watch what their AI agents did after the fact rather than block their actions in advance.",
+    "question": "Should teams check AI agents' actions afterwards instead of blocking them upfront?",
+    "brief": "On 12 November 2026 a Google engineer described tests of Agent Anomaly Detection, a preview product that reads AI agents' logs after the fact and flags sessions where an agent acted outside its intended limits. It \"doesn't block actions\" and adds no latency; Google recommends separate controls to block risky tool calls and human approval for high-impact actions. On 1,774 sessions from five public security benchmarks, using a gemini-2.5-flash agent on simulated apps, it flagged 87% of the harmful instructions the agent actually carried out (81% to 99% by benchmark). False alarms on harmless sessions were 2% to 4% for office tasks and 16% on AgentHarm, where normal work uses high-impact tools like posting online or running terminal commands. Weak spots: 4 of 18 poisoned-memory attacks flagged, and new agents need hundreds of normal sessions before coverage is good (33% flagged after about 220, 99% after 360). Google notes the test tasks are likely simpler than real traffic.",
+    "source": "https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/",
+    "source_name": "Google for Developers, November 2026"
+  },
+  "backup": {
+    "motion": "This house believes AI models should give exactly the same answer every time, even at some cost in speed.",
+    "question": "Should AI give the exact same answer every time, even if it's slower?",
+    "brief": "On 12 November 2026 Nathan Barry published DetLLM, a proof of concept that runs a small open model (Qwen3-0.6B) using only integer arithmetic. Normal inference uses floating-point maths, where (a+b)+c does not always equal a+(b+c), so results shift with batch size and hardware; a study he cites got 80 different answers from one prompt sent 1,000 times at temperature 0. Across nine setups on A100, H100, a MacBook and two server CPUs, his integer version produced one identical output everywhere, while the usual fp16 version produced nine different results. Quality was close: WikiText2 perplexity 20.72 vs 20.95 for fp16, and 0.4% worse on C4. Decoding with tuned kernels was faster than unoptimised fp16, but reading the prompt (prefill) ran at about 0.13x fp16 speed. He calls it \"a proof of concept\", tested on one small model, and says the guarantee is tied to one prepared model file. Exact repeatability helps reproducing bugs, evaluations and reinforcement learning.",
+    "source": "https://nathan.rs/posts/detllm/",
+    "source_name": "nathan.rs, November 2026"
+  },
+  "reserves": [
+    {
+      "motion": "This house believes companies should run their AI agents on their own servers rather than the vendor's.",
+      "question": "Should companies run AI agents on their own servers, not the vendor's?",
+      "brief": "On 12 November 2026 Anthropic opened a private beta of self-hosted Claude Managed Agents. In the hosted version \"Anthropic runs the infrastructure for you\". In the self-hosted one, the company runs the agent server, its database and the workers where agents use shell and file tools, keeping credentials in its own secrets manager and session history in its own database. Model requests go wherever the company chooses: Anthropic directly, a cloud provider such as Amazon Bedrock, Google's Agent Platform or Microsoft Foundry, or its own gateway. Developers use the same APIs as the hosted service. Each environment can be limited to a list of allowed hosts, set in the company's own firewall, and every session keeps a record of every step, exportable over OpenTelemetry. The page lists no trade-offs, but the company takes on running and securing the server, database and workers itself.",
+      "source": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+      "source_name": "Anthropic, November 2026"
+    },
+    {
+      "motion": "This house believes teams should test agent-written code against a local cloud emulator rather than the real cloud.",
+      "question": "Should teams test agents' code on a fake cloud instead of the real one?",
+      "brief": "On 11 November 2026 Amazon published AWS Emulator, a local stand-in for the AWS APIs that runs on a laptop, a server or in CI with no AWS account and no service fee. Amazon says it is \"100% written by autonomous AI agents\" and that its team \"hasn't written or reviewed any of the code.\" Teams of agents wrote \"tens of thousands of fidelity tests\", checked them against real AWS, then built in-memory versions that pass the same tests; hundreds of agents fix thousands of issues a day, and the repository has over 29,000 commits. The first prototype, built over a weekend, \"obviously had gaps\", and making something customers can rely on \"still requires serious engineering effort.\" The README says not to use it for production or security testing, publishes fidelity scores per release, and lists known gaps in an issues folder. Building from source needs at least 100 GB of disk, and telemetry is on by default.",
+      "source": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator",
+      "source_name": "Amazon, November 2026"
+    }
+  ],
+  "on_no_split": "run",
+  "shortlist": [
+    {
+      "motion": "This house believes teams should watch what their AI agents did after the fact rather than block their actions in advance.",
+      "why": "Google's agent monitor flags 87% but blocks nothing; real trade-off between speed and safety."
+    },
+    {
+      "motion": "This house believes AI models should give exactly the same answer every time, even at some cost in speed.",
+      "why": "DetLLM makes outputs bit-identical across hardware; reproducibility vs speed and flexibility."
+    },
+    {
+      "motion": "This house believes companies should run their AI agents on their own servers rather than the vendor's.",
+      "why": "Self-hosted Managed Agents beta; control vs operating burden."
+    },
+    {
+      "motion": "This house believes teams should test agent-written code against a local cloud emulator rather than the real cloud.",
+      "why": "AWS Emulator, carried over from 13 Nov."
+    },
+    {
+      "motion": "This house believes AI apps should run models on the user's device rather than on servers.",
+      "why": "Tiles (Mozilla-funded); sponsored context, skipped."
+    }
+  ],
+  "why": "Concrete numbers on both sides (catch rate vs false alarms and blind spots) for a choice teams actually face."
+}
