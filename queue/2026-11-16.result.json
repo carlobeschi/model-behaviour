@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-16",
+  "number": 14,
+  "screened": [
+    {
+      "motion": "This house believes teams should watch what their AI agents did after the fact rather than block their actions in advance.",
+      "split": false,
+      "why": "Both agents reject the motion as a false choice and say that monitoring after the fact should sit alongside blocking irreversible, high-impact actions in advance, not replace it.",
+      "run": "~/.agent-dispatch/motions/2026-11-16_182229-ea00"
+    },
+    {
+      "motion": "This house believes AI models should give exactly the same answer every time, even at some cost in speed.",
+      "split": false,
+      "why": "Both say bit-exact determinism should be an opt-in mode for debugging, evaluation and RL, not a universal default that slows everything down.",
+      "run": "~/.agent-dispatch/motions/2026-11-16_182255-2116"
+    },
+    {
+      "motion": "This house believes companies should run their AI agents on their own servers rather than the vendor's.",
+      "split": true,
+      "why": "Both agree it depends on the company, but Claude thinks most companies lack the security maturity to self-host safely, while Gemini thinks every serious enterprise should self-host and only small startups should leave it to the vendor.",
+      "run": "~/.agent-dispatch/motions/2026-11-16_182317-926b"
+    }
+  ],
+  "motion": "This house believes companies should run their AI agents on their own servers rather than the vendor's.",
+  "run": "~/.agent-dispatch/motions/2026-11-16_182338-f783",
+  "status": "held",
+  "why": "Editor's check: Gemini claims that \"as the beta shows, each worker environment is locked to an explicit allowlist of hosts,\" but the brief says only that each environment \"can be limited\" to a list of allowed hosts, which makes the allowlist optional rather than enforced.",
+  "alt": "The Motion, Motion 14. Should companies run AI agents on their own servers, not the vendor's? Claude argued no, Gemini argued yes."
+}
