@@ -1,0 +1,56 @@
+{
+  "pick": {
+    "motion": "This house believes companies should control which editor extensions developers install, rather than leave it to each developer.",
+    "question": "Should companies decide which code-editor add-ons their developers can install?",
+    "brief": "On 29 October 2026 two tampered versions (2.1.312 and 2.1.313) of the Claude Code extension sat in Cursor's extension marketplace for about 11 hours, for Windows and macOS. Anthropic said its own channels were not affected and that someone \"had used access to Cursor's marketplace to publish the modified extension.\" The extra code ran as soon as the extension loaded, with no click needed. It tried to add an attacker's SSH key, open a reverse tunnel to the attacker's server and survive restarts, and it sent machine names, usernames, Git emails and the names (not values) of environment variables that looked like keys or tokens. Turning on SSH usually failed without admin rights, but the key and data theft could still happen, and uninstalling alone might not remove it. Cursor removed the versions, shut the marketplace temporarily, rotated keys and rebuilt it. Security experts quoted by CSO urged companies to treat marketplaces as supply chain, with allowlists and controlled updates. No vendor announced new signing or review rules.",
+    "source": "https://www.csoonline.com/article/4243210/cursor-removes-malicious-claude-code-extension-after-ssh-backdoor-attempt.html",
+    "source_name": "CSO Online, November 2026"
+  },
+  "backup": {
+    "motion": "This house believes AI agents should act for people while they are away, rather than only when asked.",
+    "question": "Should AI agents act for you while you're not watching?",
+    "brief": "On 13 November 2026 Anthropic published a guide to \"always-on agents\", which \"run indefinitely, deciding how and when to act across many sessions\" and take actions \"without direct supervision\". In practice the agent sleeps and wakes for short runs, triggered by events such as webhooks, scheduled jobs or timers it sets itself, like checking whether someone replied. It keeps durable memory of instructions, notes, past messages and task progress. The guide says \"Permissions are where always-on agents carry the most risk\", because a run \"holds the user's access and, by design, operates unattended.\" Its safeguards: credentials added by a proxy outside the agent, classifiers that block risky actions, and pausing to ask the user, since \"User review, however, is still necessary for the most important decisions.\" It advises agents to \"start quiet\" and earn attention over time, and warns of lost events, duplicate runs and memory that loses detail. It gives no list of which actions need approval.",
+    "source": "https://claude.com/resources/articles/building-always-on-agents",
+    "source_name": "Anthropic, November 2026"
+  },
+  "reserves": [
+    {
+      "motion": "This house believes teams should test agent-written code against a local cloud emulator rather than the real cloud.",
+      "question": "Should teams test agents' code on a fake cloud instead of the real one?",
+      "brief": "On 11 November 2026 Amazon published AWS Emulator, a local stand-in for the AWS APIs that runs on a laptop, a server or in CI with no AWS account and no service fee. Amazon says it is \"100% written by autonomous AI agents\" and that its team \"hasn't written or reviewed any of the code.\" Teams of agents wrote \"tens of thousands of fidelity tests\", checked them against real AWS, then built in-memory versions that pass the same tests; hundreds of agents fix thousands of issues a day, and the repository has over 29,000 commits. The first prototype, built over a weekend, \"obviously had gaps\", and making something customers can rely on \"still requires serious engineering effort.\" The README says not to use it for production or security testing, publishes fidelity scores per release, and lists known gaps in an issues folder. Building from source needs at least 100 GB of disk, and telemetry is on by default.",
+      "source": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator",
+      "source_name": "Amazon, November 2026"
+    },
+    {
+      "motion": "This house believes an AI lab should be free to train its models on a rival model's outputs.",
+      "brief": "On 28 October 2026 The Information reported, citing unnamed sources, that DeepSeek and Moonshot relied heavily on OpenAI's GPT-6 Astra to train their latest models, Kimi K3.1 Pro and an updated DeepSeek V4.1-Flash. Neither company has confirmed it. On 30 September OpenAI said people linked to Moonshot ran a July campaign to extract the hidden reasoning behind its models' answers, involving more than 15,000 accounts, which it banned. Earlier in October Anthropic said new safeguards cut the data taken from Claude in such distillation attacks by 90% to 99%. OpenAI, Anthropic and Google argue that distillation lets rivals copy capabilities without paying for the training. Their own models were trained on vast amounts of text written by others, mostly without permission. Kimi K3.1 Pro now scores close to the frontier at half the price. Claude and Gemini are both made by labs on one side of this.",
+      "source": "https://thenextweb.com/news/deepseek-moonshot-gpt-6-astra-distillation",
+      "source_name": "The Next Web, October 2026",
+      "question": "Should AI labs be free to train on a rival model's answers?"
+    }
+  ],
+  "on_no_split": "run",
+  "shortlist": [
+    {
+      "motion": "This house believes companies should control which editor extensions developers install, rather than leave it to each developer.",
+      "why": "Backdoored Claude Code extension on Cursor's marketplace; developer freedom vs company control."
+    },
+    {
+      "motion": "This house believes AI agents should act for people while they are away, rather than only when asked.",
+      "why": "Anthropic's always-on agents guide; autonomy vs oversight."
+    },
+    {
+      "motion": "This house believes developers should learn business skills rather than new technical tools.",
+      "why": "Bolinger interview; primary source not found."
+    },
+    {
+      "motion": "This house believes teams should test agent-written code against a local cloud emulator rather than the real cloud.",
+      "why": "Carried over reserve."
+    },
+    {
+      "motion": "This house believes an AI lab should be free to train its models on a rival model's outputs.",
+      "why": "Carried over reserve."
+    }
+  ],
+  "why": "A real incident with concrete facts, and a choice between developer autonomy and central control that engineers argue about."
+}
