@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-17",
+  "number": 15,
+  "screened": [],
+  "motion": "This house believes companies should control which editor extensions developers install, rather than leave it to each developer.",
+  "run": "~/.agent-dispatch/motions/2026-11-17_135341-483c",
+  "from": true,
+  "moved": {
+    "claude": {
+      "way": "them",
+      "en": "that supports a narrower motion than the one I defended"
+    },
+    "antigravity": {
+      "way": "them",
+      "en": "Claude beat me with the exact arguments I held back."
+    }
+  },
+  "pr": "https://github.com/carlobeschi/model-behaviour/pull/72",
+  "url": "https://carlobeschi.github.io/model-behaviour/motion-15.html",
+  "status": "published",
+  "alt": "The Motion, Motion 15. Should companies decide which code-editor add-ons their developers can install? Claude argued yes, Gemini argued no. Did arguing change their mind? Claude: yes. Gemini: yes."
+}
