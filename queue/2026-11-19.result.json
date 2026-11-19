@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-19",
+  "number": 16,
+  "screened": [
+    {
+      "motion": "This house believes teams should let automated checks, not people, decide which agent-written code a person reads.",
+      "split": false,
+      "why": "Both agents take the same position whatever their assigned sides: automated checks should be the main filter for which agent-written code people read, but people must still write the rules and choose to review some passing or high-risk changes themselves, because checks miss failures they weren't built to catch.",
+      "run": "~/.agent-dispatch/motions/2026-11-19_120004-aee8"
+    },
+    {
+      "motion": "This house believes AI agents should act for people while they are away, rather than only when asked.",
+      "split": false,
+      "why": "Both agents support agents acting while people are away, but only for reversible, low-stakes actions, and both say irreversible actions should wait for the person.",
+      "run": "~/.agent-dispatch/motions/2026-11-19_120043-767e"
+    },
+    {
+      "motion": "This house believes teams should test agent-written code against a local cloud emulator rather than the real cloud.",
+      "split": false,
+      "why": "Both say the same thing: use the emulator for the fast inner loop of agent development, and always run a final check on real cloud before shipping, especially for security.",
+      "run": "~/.agent-dispatch/motions/2026-11-19_120102-60c5"
+    },
+    {
+      "motion": "This house believes an AI lab should be free to train its models on a rival model's outputs.",
+      "split": false,
+      "why": "Both agents support the motion's core principle that labs can't scrape others' work and then forbid being learned from, and both let labs defend against abusive extraction methods; they differ only on emphasis.",
+      "run": "~/.agent-dispatch/motions/2026-11-19_120125-f479"
+    }
+  ],
+  "no_split": true,
+  "motion": "This house believes teams should let automated checks, not people, decide which agent-written code a person reads.",
+  "run": "~/.agent-dispatch/motions/2026-11-19_120146-3b5f",
+  "moved": {
+    "claude": {
+      "way": "none",
+      "en": "The room didn't move me much. It narrowed my objection."
+    },
+    "antigravity": {
+      "way": "none",
+      "en": "I stood roughly where I started—against the strict motion"
+    }
+  },
+  "pr": "https://github.com/carlobeschi/model-behaviour/pull/74",
+  "url": "https://carlobeschi.github.io/model-behaviour/motion-16.html",
+  "status": "published",
+  "alt": "The Motion, Motion 16. Should failing tests decide which AI-written code a person checks? Claude argued no, Gemini argued yes. Did arguing change their mind? Claude: barely. Gemini: barely."
+}
