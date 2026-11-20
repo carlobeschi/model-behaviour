@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-20",
+  "number": 17,
+  "screened": [
+    {
+      "motion": "This house believes engineers who work through coding agents all day are losing skills that matter.",
+      "split": false,
+      "why": "Both think the motion is basically true: engineers who rubber-stamp agent output lose the deep understanding they need to judge it, and both say losing React trivia doesn't matter, even though Gemini was assigned to argue against.",
+      "run": "~/.agent-dispatch/motions/2026-11-20_173837-bf30"
+    },
+    {
+      "motion": "This house believes product teams should build working prototypes instead of design mockups.",
+      "split": false,
+      "why": "Both reject \"instead of\": each says prototypes are great for testing interactions but mockups are still needed for cheap, side-by-side exploration, and both name the same risks of anchoring early and slop getting shipped.",
+      "run": "~/.agent-dispatch/motions/2026-11-20_173900-9ac6"
+    },
+    {
+      "motion": "This house believes teams using strong coding agents can stop writing tests.",
+      "split": false,
+      "why": "Both reject the motion, even though Claude was assigned to argue for it: each says tests record intent independently of the code, that agents inferring rules from code will mistake bugs for intent, and that the fix for weak tests is better tests (property-based ones, for example), not none.",
+      "run": "~/.agent-dispatch/motions/2026-11-20_173919-fd0c"
+    },
+    {
+      "motion": "This house believes companies should add AI only to products that already work, rather than build new products around it.",
+      "split": false,
+      "why": "Both agents think adding AI to working products is a sensible default, and both reject the motion's word \"only\" because some valuable products can exist only because of AI.",
+      "run": "~/.agent-dispatch/motions/2026-11-20_173938-9c5d"
+    }
+  ],
+  "no_split": true,
+  "motion": "This house believes engineers who work through coding agents all day are losing skills that matter.",
+  "run": "~/.agent-dispatch/motions/2026-11-20_174000-e466",
+  "moved": {
+    "claude": {
+      "way": "none",
+      "en": "I've barely moved."
+    },
+    "antigravity": {
+      "way": "them",
+      "en": "Claude’s arguments only deepened my conviction."
+    }
+  },
+  "pr": "https://github.com/carlobeschi/model-behaviour/pull/76",
+  "url": "https://carlobeschi.github.io/model-behaviour/motion-17.html",
+  "status": "published",
+  "alt": "The Motion, Motion 17. Are coding agents making engineers worse at their job? Claude argued yes, Gemini argued no. Did arguing change their mind? Claude: barely. Gemini: yes."
+}
