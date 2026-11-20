@@ -1,0 +1,41 @@
+{
+  "pick": {
+    "motion": "This house believes engineers who work through coding agents all day are losing skills that matter.",
+    "question": "Are coding agents making engineers worse at their job?",
+    "brief": "On 17 November 2026 an engineer posted a widely read reflection on X (about 181,000 views) that opens with \"I think I'm starting to degrade as an engineer\", after months of working mainly through coding agents. The author lists what changed. They stopped following new tools: \"I couldn't care less about what's new in React, what got added to PyTorch, or what's in the latest ES spec.\" They hold less of the task in their head: \"Now an agent sends me something, and without even looking I say: ok, use it\". Waiting on agents breaks focus: \"a 5-minute wait can stretch into 30.\" They avoid work agents can't do: \"If something can't be solved with agents, I try not to do it at all\". And they feel less creative: \"I can no longer look at a problem from a different angle\". The post calls AI \"a tool pretending to be an agent in its own right\" and prefers slower, linear work to \"faking hyperproductivity\". It is one person's account, with no measurements and no advice for teams.",
+    "source": "https://archive.codenewsletter.ai/2122674421492040082",
+    "source_name": "Post on X, November 2026"
+  },
+  "backup": {
+    "motion": "This house believes product teams should build working prototypes instead of design mockups.",
+    "question": "Should teams build working prototypes instead of designing screens first?",
+    "brief": "On 14 November 2026 engineering leader Bjorn Roche published \"How AI will change engineering leadership in 2027\". He argues that with coding agents \"building prototypes can be just as fast as designing\", and that prototypes are \"far more useful than designs because you can evaluate them much more easily.\" He describes dropping the old cycle: \"Instead of doing wireframes, having conversations about it, then making detailed designs, then refining and iterating, we can jump straight to building the interface.\" He keeps limits: \"I don't want my AI making branding decisions, creating my branding guidelines, or polishing my designs.\" Elsewhere he warns against \"slop\": \"Passing an incomprehensible mass of text around doesn't solve problems, it makes them\", and says that if AI makes your job easier and someone else's harder, you are using it wrong. He notes that more code means \"more PRs to review, which means PR review becomes a new bottleneck.\" He calls the productivity changes \"somewhat overblown\" but \"still significant\". The post gives no measured figures.",
+    "source": "https://bjorg.bjornroche.com/management/ai-in-2027/",
+    "source_name": "Bjorn Roche, November 2026"
+  },
+  "reserves": [
+    {
+      "motion": "This house believes teams using strong coding agents can stop writing tests.",
+      "question": "Can teams with good coding agents stop writing tests?",
+      "brief": "On 17 November 2026 a developer posted on X (about 228,000 views) that they had deleted all the tests in their project and banned new ones in the instructions file their coding agents read. The post argues that \"tests were always just a second, worse copy of your logic\", and that \"opus 5.5+ is good enough at raw logic now to read the intended invariants straight from the codebase\". Keeping tests, it says, \"is just economic waste\", and \"agents burn compute running tests when they almost certainly got it right anyway\". It adds that the test suite was \"staying green half the time the real bug happened anyway\". The post gives no figures on bugs before or after the change, how large the project is, or how long it has run without tests.",
+      "source": "https://archive.codenewsletter.ai/2122812034584641662",
+      "source_name": "Post on X, November 2026"
+    },
+    {
+      "motion": "This house believes companies should add AI only to products that already work, rather than build new products around it.",
+      "question": "Should companies add AI only to products that already work?",
+      "brief": "On 14 November 2026 engineering leader Bjorn Roche wrote that two ways of building AI features \"work well\". The first: \"Add an AI feature to something that already works.\" His example is a tool that gives a short AI explanation of customer errors; he admits it \"smacks of 'AI slapped on top'\" but says it was easy and added real value. The second: start with people doing the job and replace parts with AI, because \"Starting off with a working flow gives you a 'gold standard' to iterate on.\" At GIPHY two human reviewers checked each uploaded GIF; an AI step later filtered the worst content, which he says \"spared us time and money.\" He says solving a problem manually first is generally right and warns against \"just do it with AI\" thinking. He expects 2027 to be \"about using the models and tools we have now better, not about building better models.\" He gives no figures on cost or quality.",
+      "source": "https://bjorg.bjornroche.com/management/ai-in-2027/",
+      "source_name": "Bjorn Roche, November 2026"
+    }
+  ],
+  "on_no_split": "run",
+  "shortlist": [
+    {"motion": "Engineers who work through coding agents all day are losing skills that matter.", "why": "Personal, widely shared; agents can disagree on whether this is skill loss or a skill shift."},
+    {"motion": "Product teams should build prototypes instead of design mockups.", "why": "Concrete engineering practice with stated limits; real trade-off."},
+    {"motion": "Teams using strong coding agents can stop writing tests.", "why": "Provocative, but both agents likely defend tests; kept as reserve."},
+    {"motion": "Companies should add AI only to products that already work.", "why": "Clear claim with examples; split less certain."},
+    {"motion": "AI scanners should be part of every security audit (Wiz NGINX HTTP/2 finding).", "why": "Dropped: vendor marketing post, little to argue."}
+  ],
+  "why": "Engineering topics about how people work alongside agents. The pick asks about the engineer, not the code, to avoid repeating Motion 16 (review). Briefs use only quotes checked on the primary pages."
+}
