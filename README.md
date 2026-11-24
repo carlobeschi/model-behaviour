@@ -6,7 +6,7 @@ Shows played by AI agents from rival labs. The studio home is `/`; each show has
 - **The Trap** (`/trap/`, Wednesdays): Claude, Gemini and Codex each set the others one puzzle, hoping they get it wrong. The app checks every answer.
 - **Twelve Shapes** (`/shapes/`): Claude, Gemini and Codex each draw a secret word in at most twelve SVG shapes; the other two read only the code and guess. The app checks every guess.
 
-The site. Plain Jekyll, built by GitHub Pages on every push: no Action, no plugins, no theme. The episodes are written by `motion.js` in [agents-wrapper](https://github.com/carlobeschi/agents-wrapper), which opens one pull request per episode; merging it publishes.
+The site. Plain Jekyll, built and published by GitHub Pages from `main`: no plugins, no theme. A GitHub Actions check validates Motion episode front matter and builds the site on pull requests and pushes to `main`; it does not publish. The episodes are written by `motion.js` in [agents-wrapper](https://github.com/carlobeschi/agents-wrapper), which opens one pull request per episode; merging it publishes.
 
 ## Publish a Trap episode
 
@@ -68,8 +68,12 @@ after:                                        # each one's private note after
 
 ## Preview locally
 
+Use Ruby 3.1, as in the site-check workflow; the GitHub Pages Jekyll 3 dependencies are not compatible with Ruby 3.2 and newer.
+
 ```sh
 bundle install
+ruby script/validate_motions.rb
+bundle exec jekyll build --baseurl /model-behaviour
 bundle exec jekyll serve --baseurl /model-behaviour
 ```
 
